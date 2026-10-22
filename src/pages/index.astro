@@ -1,0 +1,201 @@
+---
+import Base from '../layouts/Base.astro';
+import BiText from '../components/Bi.astro';
+import { chapters, readingMinutes } from '../data';
+import { accounts } from '../data/accounts';
+import { cycleSteps } from '../data/cycle';
+import { glossary } from '../data/glossary';
+import { site } from '../data/site';
+import { b } from '../data/types';
+---
+
+<Base active="home">
+  <header class="hero">
+    <div class="wrap">
+      <span class="hero-kicker">
+        <span class="bi-id">Rangkuman bilingual · 200 halaman pertama</span>
+        <span class="bi-en">Bilingual summary · first 200 pages</span>
+      </span>
+      <h1>
+        <span class="bi-id">Akuntansi, <em>jelas</em> dan terstruktur.</span>
+        <span class="bi-en">Accounting, <em>clearly</em> explained.</span>
+      </h1>
+      <p class="lead">
+        <span class="bi-id">
+          Empat bab pertama Kieso <em>Financial Accounting: IFRS</em> — dari persamaan dasar sampai
+          siklus akuntansi lengkap, disajikan berdampingan dalam bahasa Indonesia dan Inggris.
+        </span>
+        <span class="bi-en">
+          The first four chapters of Kieso <em>Financial Accounting: IFRS</em> — from the basic
+          equation to the complete accounting cycle, presented side by side in Indonesian and English.
+        </span>
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="/rangkuman/1">
+          <span class="bi-id">Mulai dari Bab 1</span>
+          <span class="bi-en">Start with Chapter 1</span>
+        </a>
+        <a class="btn btn-ghost" href="/saldo-normal">
+          <span class="bi-id">Tabel saldo normal</span>
+          <span class="bi-en">Normal-balance table</span>
+        </a>
+      </div>
+      <div class="badges">
+        <span>EN · ID</span>
+        <span class="bi-id">Bab 1–4</span>
+        <span class="bi-en">Chapters 1–4</span>
+        <span class="bi-id">200 halaman</span>
+        <span class="bi-en">200 pages</span>
+        <span>Kieso · IFRS</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap page-body">
+    <div class="stat-strip" aria-label="Ringkasan cakupan">
+      <div class="stat">
+        <b>{chapters.length}</b>
+        <span><span class="bi-id">bab diringkas</span><span class="bi-en">chapters covered</span></span>
+      </div>
+      <div class="stat">
+        <b>200</b>
+        <span><span class="bi-id">halaman PDF pertama</span><span class="bi-en">first PDF pages</span></span>
+      </div>
+      <div class="stat">
+        <b>{accounts.length}</b>
+        <span><span class="bi-id">akun dalam tabel saldo normal</span><span class="bi-en">accounts in the normal-balance table</span></span>
+      </div>
+      <div class="stat">
+        <b>{cycleSteps.length}</b>
+        <span><span class="bi-id">langkah siklus akuntansi</span><span class="bi-en">accounting-cycle steps</span></span>
+      </div>
+    </div>
+
+    <div class="sec-title">
+      <h2><span class="bi-id">Silabus</span><span class="bi-en">Syllabus</span></h2>
+      <span class="sec-hint">
+        <span class="bi-id">Empat bab · {glossary.length} istilah kunci</span>
+        <span class="bi-en">Four chapters · {glossary.length} key terms</span>
+      </span>
+    </div>
+
+    <ul class="syl">
+      {
+        chapters.map((chapter) => (
+          <li class="syl-chapter">
+            <div class="syl-chead">
+              <span class="syl-roman">{chapter.roman}</span>
+              <div class="syl-ctext">
+                <h3>
+                  <a href={`/rangkuman/${chapter.slug}`}>
+                    <BiText value={chapter.title} />
+                  </a>
+                </h3>
+                <p><BiText value={chapter.subtitle} /></p>
+              </div>
+              <a class="syl-count" href={`/rangkuman/${chapter.slug}`}>
+                {chapter.sections.length}
+                {' '}
+                <span class="bi-id">topik</span>
+                <span class="bi-en">topics</span>
+              </a>
+            </div>
+            <ul class="syl-topics">
+              {chapter.sections.map((section) => (
+                <li>
+                  <a class="syl-row" href={`/rangkuman/${chapter.slug}#${section.id}`}>
+                    <span class="syl-n">{section.num}</span>
+                    <span class="syl-main">
+                      <b><BiText value={section.title} /></b>
+                      <small><BiText value={section.tag ?? b('Topic', 'Topik')} /></small>
+                    </span>
+                    <span class="syl-arrow" aria-hidden="true">→</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p class="syl-meta">
+              <span class="bi-id">hlm. {chapter.sourcePages} · ±{readingMinutes(chapter)} menit baca</span>
+              <span class="bi-en">pp. {chapter.sourcePages} · ±{readingMinutes(chapter)} min read</span>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="sec-title">
+      <h2><span class="bi-id">Alat belajar</span><span class="bi-en">Study tools</span></h2>
+      <span class="sec-hint">
+        <span class="bi-id">Tiga halaman rujukan cepat</span>
+        <span class="bi-en">Three quick-reference pages</span>
+      </span>
+    </div>
+
+    <div class="quick-grid">
+      <a class="quick-card" href="/saldo-normal">
+        <span class="quick-num">01</span>
+        <span class="quick-body">
+          <b><span class="bi-id">Tabel Saldo Normal</span><span class="bi-en">Normal-Balance Table</span></b>
+          <small>
+            <span class="bi-id">{accounts.length} akun — klasifikasi, laporan, dan sisi saldo normalnya.</span>
+            <span class="bi-en">{accounts.length} accounts — classification, statement, and normal side.</span>
+          </small>
+        </span>
+      </a>
+      <a class="quick-card" href="/alur-akuntansi">
+        <span class="quick-num">02</span>
+        <span class="quick-body">
+          <b><span class="bi-id">Alur Akuntansi</span><span class="bi-en">Accounting Cycle</span></b>
+          <small>
+            <span class="bi-id">Sembilan langkah, plus studi kasus Yazici dari jurnal sampai neraca saldo penutupan.</span>
+            <span class="bi-en">Nine steps, plus the Yazici case from journal to post-closing trial balance.</span>
+          </small>
+        </span>
+      </a>
+      <a class="quick-card" href="/glosarium">
+        <span class="quick-num">03</span>
+        <span class="quick-body">
+          <b><span class="bi-id">Glosarium</span><span class="bi-en">Glossary</span></b>
+          <small>
+            <span class="bi-id">{glossary.length} istilah kunci, lengkap dengan padanan dan definisi dua bahasa.</span>
+            <span class="bi-en">{glossary.length} key terms with bilingual equivalents and definitions.</span>
+          </small>
+        </span>
+      </a>
+    </div>
+
+    <div class="sec-title">
+      <h2><span class="bi-id">Cara memakai situs ini</span><span class="bi-en">How to use this site</span></h2>
+    </div>
+
+    <div class="card">
+      <p>
+        <span class="bi-id">
+          Setiap bab dimulai dari tujuan pembelajaran, lalu dipecah menjadi bagian-bagian pendek.
+          Gunakan tombol <b>ID / EN</b> di kanan atas untuk berganti bahasa tanpa berpindah halaman,
+          dan <b>Ctrl + K</b> untuk mencari bab, akun, atau istilah.
+        </span>
+        <span class="bi-en">
+          Each chapter opens with learning objectives, then breaks into short sections. Use the
+          <b>ID / EN</b> switch at the top right to change language without leaving the page, and
+          <b>Ctrl + K</b> to search chapters, accounts, or terms.
+        </span>
+      </p>
+      <div class="callout">
+        <span class="callout-title">
+          <span class="bi-id">Tentang sumber</span>
+          <span class="bi-en">About the source</span>
+        </span>
+        <p><BiText value={site.sourceNote} /></p>
+      </div>
+      <p class="note">
+        <span class="bi-id">
+          Situs ini disusun untuk belajar dan merangkum — bukan pengganti buku aslinya.
+        </span>
+        <span class="bi-en">
+          This site is a study companion — not a substitute for the original book.
+        </span>
+      </p>
+    </div>
+  </div>
+</Base>

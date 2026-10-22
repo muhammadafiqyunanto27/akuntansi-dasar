@@ -1,0 +1,303 @@
+---
+import Base from '../layouts/Base.astro';
+import BiText from '../components/Bi.astro';
+import { accounts, groupLabels } from '../data/accounts';
+
+const debitCount = accounts.filter((account) => account.normal === 'debit').length;
+const creditCount = accounts.filter((account) => account.normal === 'credit').length;
+const variesCount = accounts.filter((account) => account.normal === 'varies').length;
+---
+
+<Base
+  title="Tabel Saldo Normal"
+  description="Tabel saldo normal 59 akun Kieso IFRS: klasifikasi, laporan keuangan, dan sisi debit atau kredit. Dilengkapi pencarian dan filter."
+  active="saldo-normal"
+>
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="crumb">
+        <span class="bi-id">Beranda / Saldo Normal</span>
+        <span class="bi-en">Home / Normal Balances</span>
+      </p>
+      <h1>
+        <span class="bi-id">Tabel saldo normal</span>
+        <span class="bi-en">The normal-balance table</span>
+      </h1>
+      <p>
+        <span class="bi-id">
+          Sisi tempat kenaikan dicatat. Untuk aset dan beban, sisi normalnya debit; untuk
+          liabilitas, ekuitas, dan pendapatan, sisi normalnya kredit.
+        </span>
+        <span class="bi-en">
+          The side on which increases are recorded. Assets and expenses normally carry debit
+          balances; liabilities, equity, and revenues normally carry credit balances.
+        </span>
+      </p>
+    </div>
+  </header>
+
+  <div class="wrap page-body">
+    <div class="stat-strip" aria-label="Ringkasan akun">
+      <div class="stat">
+        <b>{accounts.length}</b>
+        <span><span class="bi-id">akun</span><span class="bi-en">accounts</span></span>
+      </div>
+      <div class="stat">
+        <b>{debitCount}</b>
+        <span><span class="bi-id">saldo normal debit</span><span class="bi-en">normal debit</span></span>
+      </div>
+      <div class="stat">
+        <b>{creditCount}</b>
+        <span><span class="bi-id">saldo normal kredit</span><span class="bi-en">normal credit</span></span>
+      </div>
+      <div class="stat">
+        <b>{variesCount}</b>
+        <span><span class="bi-id">saldo bervariasi</span><span class="bi-en">varies</span></span>
+      </div>
+    </div>
+
+    <div class="norm-hero-grid">
+      <div class="rule-card debit">
+        <span class="rule-big">DEBIT · DR</span>
+        <h3><span class="bi-id">Sisi kiri</span><span class="bi-en">The left side</span></h3>
+        <p>
+          <span class="bi-id">
+            Menambah aset, beban, dan dividen. Mengurangi liabilitas, ekuitas, dan pendapatan.
+          </span>
+          <span class="bi-en">
+            Increases assets, expenses, and dividends. Decreases liabilities, equity, and revenues.
+          </span>
+        </p>
+      </div>
+      <div class="rule-card credit">
+        <span class="rule-big">CREDIT · CR</span>
+        <h3><span class="bi-id">Sisi kanan</span><span class="bi-en">The right side</span></h3>
+        <p>
+          <span class="bi-id">
+            Menambah liabilitas, ekuitas, dan pendapatan. Mengurangi aset, beban, dan dividen.
+          </span>
+          <span class="bi-en">
+            Increases liabilities, equity, and revenues. Decreases assets, expenses, and dividends.
+          </span>
+        </p>
+      </div>
+      <div class="rule-card">
+        <span class="rule-big"><span class="bi-id">Sisi kenaikan</span><span class="bi-en">The increase side</span></span>
+        <h3><span class="bi-id">Apa itu saldo normal?</span><span class="bi-en">What is a normal balance?</span></h3>
+        <p>
+          <span class="bi-id">
+            Saldo normal adalah sisi tempat akun bertambah. Akun kontra mengikuti kebalikannya —
+            misalnya akumulasi penyusutan bersaldo normal kredit meskipun ia bagian dari aset.
+          </span>
+          <span class="bi-en">
+            The normal balance is the side on which the account increases. Contra accounts reverse
+            this — accumulated depreciation has a normal credit balance although it is part of assets.
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="formula">
+      <span class="formula-label">
+        <span class="bi-id">Persamaan dasar dan bentuk diperluas</span>
+        <span class="bi-en">The basic and expanded equation</span>
+      </span>
+      <span>
+        <var>Assets</var> = <var>Liabilities</var> + <var>Equity</var>
+        <br />
+        <var>Assets</var> = <var>Liabilities</var> + <var>Share capital</var> +
+        <var>Revenues</var> − <var>Expenses</var> − <var>Dividends</var>
+      </span>
+      <span class="formula-note">
+        <span class="bi-id">
+          Pendapatan menambah ekuitas; beban dan dividen menguranginya.
+        </span>
+        <span class="bi-en">
+          Revenues increase equity; expenses and dividends reduce it.
+        </span>
+      </span>
+    </div>
+
+    <div class="t-account" aria-label="Contoh akun T kas">
+      <div class="t-title">Cash · Kas</div>
+      <div class="t-cols">
+        <div class="t-col">
+          <div class="t-head"><span>Debit</span><span>+</span></div>
+          <div class="t-row"><span>Share capital</span><span>10,000</span></div>
+          <div class="t-row"><span>Advance from customer</span><span>1,200</span></div>
+          <div class="t-row"><span>Service revenue</span><span>10,000</span></div>
+          <div class="t-row t-bal"><span>Balance</span><span>15,200</span></div>
+        </div>
+        <div class="t-col">
+          <div class="t-head"><span>Credit</span><span>−</span></div>
+          <div class="t-row"><span>Rent</span><span>900</span></div>
+          <div class="t-row"><span>Insurance</span><span>600</span></div>
+          <div class="t-row"><span>Dividends</span><span>500</span></div>
+          <div class="t-row"><span>Salaries</span><span>4,000</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-title">
+      <h2><span class="bi-id">Semua akun</span><span class="bi-en">All accounts</span></h2>
+      <span class="sec-hint">
+        <span class="bi-id">Dari lembar akhir buku Kieso · edisi 3</span>
+        <span class="bi-en">From the endpapers of Kieso · 3rd edition</span>
+      </span>
+    </div>
+
+    <div class="filter-bar">
+      <label class="filter-search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        <input
+          type="search"
+          id="normSearch"
+          placeholder="Cari akun… / Search accounts…"
+          autocomplete="off"
+          aria-label="Cari akun"
+        />
+      </label>
+      <select id="normGroup" aria-label="Filter kelompok akun">
+        <option value="">Semua kelompok · All groups</option>
+        {
+          Object.entries(groupLabels).map(([value, label]) => (
+            <option value={value}>{label.id} · {label.en}</option>
+          ))
+        }
+      </select>
+      <select id="normSide" aria-label="Filter saldo normal">
+        <option value="">Semua saldo · All balances</option>
+        <option value="debit">Debit</option>
+        <option value="credit">Kredit · Credit</option>
+        <option value="varies">Bervariasi · Varies</option>
+      </select>
+      <span class="filter-count" id="normCount" aria-live="polite">
+        <span class="bi-id" id="normCountId">{accounts.length} akun</span>
+        <span class="bi-en" id="normCountEn">{accounts.length} accounts</span>
+      </span>
+    </div>
+
+    <div class="norm-table-wrap">
+      <table class="norm-table" id="normTable">
+        <thead>
+          <tr>
+            <th><span class="bi-id">Akun</span><span class="bi-en">Account</span></th>
+            <th><span class="bi-id">Klasifikasi</span><span class="bi-en">Classification</span></th>
+            <th><span class="bi-id">Laporan</span><span class="bi-en">Statement</span></th>
+            <th><span class="bi-id">Saldo normal</span><span class="bi-en">Normal balance</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            accounts.map((account) => (
+              <tr
+                id={`account-${account.id}`}
+                data-account
+                data-group={account.group}
+                data-normal={account.normal}
+                data-search={`${account.name} ${account.id} ${account.classification.en} ${account.classification.id} ${account.statement.en} ${account.statement.id} ${account.note?.en ?? ''} ${account.note?.id ?? ''}`.toLowerCase()}
+              >
+                <td class="acc">
+                  <b><span class="bi-id">{account.id}</span><span class="bi-en">{account.name}</span></b>
+                  <small><span class="bi-id">{account.name}</span><span class="bi-en">{account.id}</span></small>
+                </td>
+                <td class="cls">
+                  <span class="cell-label"><span class="bi-id">Klasifikasi</span><span class="bi-en">Classification</span></span>
+                  <span class="cell-value"><BiText value={account.classification} /></span>
+                </td>
+                <td class="stmt">
+                  <span class="cell-label"><span class="bi-id">Laporan</span><span class="bi-en">Statement</span></span>
+                  <span class="cell-value"><BiText value={account.statement} /></span>
+                </td>
+                <td class="side-cell">
+                  <span class="cell-label"><span class="bi-id">Saldo normal</span><span class="bi-en">Normal balance</span></span>
+                  <span class="cell-value">
+                    {account.normal === 'debit' && (
+                      <span class="dr"><span class="bi-id">Debit</span><span class="bi-en">Debit</span></span>
+                    )}
+                    {account.normal === 'credit' && (
+                      <span class="cr"><span class="bi-id">Kredit</span><span class="bi-en">Credit</span></span>
+                    )}
+                    {account.normal === 'varies' && (
+                      <span class="varies">
+                        <span class="bi-id">Bervariasi</span>
+                        <span class="bi-en">Varies</span>
+                      </span>
+                    )}
+                    {account.note && (
+                      <small class="norm-note"><BiText value={account.note} /></small>
+                    )}
+                  </span>
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+      <div class="empty-state" id="normEmpty" hidden>
+        <span class="bi-id">Tidak ada akun yang cocok dengan filter.</span>
+        <span class="bi-en">No accounts match the current filters.</span>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span><span class="dr">Dr</span> <span class="bi-id">saldo normal debit</span><span class="bi-en">normal debit balance</span></span>
+      <span><span class="cr">Cr</span> <span class="bi-id">saldo normal kredit</span><span class="bi-en">normal credit balance</span></span>
+      <span><span class="varies">±</span> <span class="bi-id">tergantung laba atau rugi</span><span class="bi-en">depends on profit or loss</span></span>
+    </div>
+
+    <p class="note">
+      <span class="bi-id">
+        Catatan: akun kontra seperti akumulasi penyusutan dan penyisihan piutang tak tertagih
+        memiliki saldo normal berlawanan dengan kelompoknya. “Bervariasi” pada Ikhtisar Laba Rugi
+        berarti kredit saat laba, debit saat rugi.
+      </span>
+      <span class="bi-en">
+        Note: contra accounts such as accumulated depreciation and allowance for doubtful accounts
+        carry a normal balance opposite to their group. “Varies” for Income Summary means a credit
+        when there is net income and a debit when there is a net loss.
+      </span>
+    </p>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const table = document.getElementById('normTable');
+      const search = document.getElementById('normSearch');
+      const group = document.getElementById('normGroup');
+      const side = document.getElementById('normSide');
+      const empty = document.getElementById('normEmpty');
+      const countId = document.getElementById('normCountId');
+      const countEn = document.getElementById('normCountEn');
+      if (!table || !search || !group || !side || !empty || !countId || !countEn) return;
+
+      const rows = Array.from(table.querySelectorAll('tbody tr[data-account]'));
+      if (!rows.length) return;
+
+      const apply = () => {
+        const tokens = search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+        const groupValue = group.value;
+        const sideValue = side.value;
+        let visible = 0;
+
+        rows.forEach((row) => {
+          const haystack = row.dataset.search || '';
+          const matchesText = tokens.every((token) => haystack.includes(token));
+          const matchesGroup = !groupValue || row.dataset.group === groupValue;
+          const matchesSide = !sideValue || row.dataset.normal === sideValue;
+          const show = matchesText && matchesGroup && matchesSide;
+          row.hidden = !show;
+          if (show) visible += 1;
+        });
+
+        countId.textContent = visible + ' akun';
+        countEn.textContent = visible + ' accounts';
+        empty.hidden = visible > 0;
+      };
+
+      search.addEventListener('input', apply);
+      group.addEventListener('change', apply);
+      side.addEventListener('change', apply);
+    })();
+  </script>
+</Base>

@@ -1,0 +1,211 @@
+---
+import '../styles/global.css';
+import Topbar from '../components/Topbar.astro';
+import Drawer from '../components/Drawer.astro';
+import Footer from '../components/Footer.astro';
+import Search from '../components/Search.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  active?: string;
+}
+
+const {
+  title,
+  description = 'Rangkuman bilingual 200 halaman pertama Kieso Financial Accounting IFRS — bab 1–4, tabel saldo normal, dan alur akuntansi.',
+  active = '',
+} = Astro.props;
+
+const pageTitle = title
+  ? `${title} — Akuntansi Dasar · Kieso IFRS`
+  : 'Akuntansi Dasar — Rangkuman Bilingual Kieso IFRS';
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
+---
+
+<!doctype html>
+<html lang="id" data-lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical.href} />
+    <link rel="canonical" href={canonical.href} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    />
+    <title>{pageTitle}</title>
+    <script is:inline>
+      // Apply theme and language before first paint to avoid a flash.
+      (() => {
+        try {
+          const theme = localStorage.getItem('theme');
+          if (theme === 'dark' || theme === 'light') {
+            document.documentElement.setAttribute('data-theme', theme);
+          }
+          const lang = localStorage.getItem('lang');
+          if (lang === 'id' || lang === 'en') {
+            document.documentElement.setAttribute('data-lang', lang);
+            document.documentElement.lang = lang;
+          }
+        } catch {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#konten"><span class="bi-id">Lompat ke konten</span><span class="bi-en">Skip to content</span></a>
+    <Topbar active={active} />
+    <Drawer active={active} />
+    <main id="konten">
+      <slot />
+    </main>
+    <Footer />
+    <Search />
+
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        const burger = document.getElementById('burger');
+        const drawer = document.getElementById('drawer');
+        const scrim = document.getElementById('scrim');
+        const closeBtn = document.getElementById('drawerClose');
+
+        /* ---------- drawer ---------- */
+        if (burger && drawer && scrim && closeBtn) {
+          let lastFocus = null;
+
+          const openDrawer = () => {
+            lastFocus = document.activeElement;
+            scrim.hidden = false;
+            requestAnimationFrame(() => scrim.classList.add('show'));
+            drawer.classList.add('open');
+            drawer.setAttribute('aria-hidden', 'false');
+            burger.setAttribute('aria-expanded', 'true');
+            document.body.classList.add('nav-open');
+            closeBtn.focus();
+          };
+
+          const closeDrawer = () => {
+            scrim.classList.remove('show');
+            drawer.classList.remove('open');
+            drawer.setAttribute('aria-hidden', 'true');
+            burger.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('nav-open');
+            setTimeout(() => {
+              scrim.hidden = true;
+            }, 260);
+            (lastFocus || burger).focus();
+          };
+
+          burger.addEventListener('click', () => {
+            drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+          });
+          closeBtn.addEventListener('click', closeDrawer);
+          scrim.addEventListener('click', closeDrawer);
+
+          document.addEventListener('keydown', (e) => {
+            if (!drawer.classList.contains('open')) return;
+            if (e.key === 'Escape') {
+              closeDrawer();
+              return;
+            }
+            if (e.key === 'Tab') {
+              const focusables = drawer.querySelectorAll('a[href], button');
+              if (!focusables.length) return;
+              const first = focusables[0];
+              const last = focusables[focusables.length - 1];
+              if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+              } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+              }
+            }
+          });
+
+          drawer.addEventListener('click', (e) => {
+            if (e.target.closest('a')) closeDrawer();
+          });
+        }
+
+        /* ---------- theme ---------- */
+        const themeToggle = document.getElementById('themeToggle');
+        const systemDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = () => {
+          try {
+            return localStorage.getItem('theme');
+          } catch {
+            return null;
+          }
+        };
+        const currentTheme = () => root.getAttribute('data-theme') || (systemDark() ? 'dark' : 'light');
+        const syncTheme = () => {
+          if (!themeToggle) return;
+          themeToggle.setAttribute('aria-pressed', String(currentTheme() === 'dark'));
+        };
+
+        if (!savedTheme()) {
+          root.setAttribute('data-theme', systemDark() ? 'dark' : 'light');
+          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (savedTheme()) return;
+            root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+            syncTheme();
+          });
+        }
+
+        if (themeToggle) {
+          themeToggle.addEventListener('click', () => {
+            const next = currentTheme() === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', next);
+            try {
+              localStorage.setItem('theme', next);
+            } catch {}
+            syncTheme();
+          });
+        }
+        syncTheme();
+
+        /* ---------- language ---------- */
+        const langButtons = document.querySelectorAll('[data-lang-set]');
+        const syncLang = () => {
+          const lang = root.getAttribute('data-lang') || 'id';
+          root.lang = lang;
+          langButtons.forEach((btn) => {
+            btn.setAttribute('aria-pressed', String(btn.dataset.langSet === lang));
+          });
+        };
+        langButtons.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const lang = btn.dataset.langSet;
+            root.setAttribute('data-lang', lang);
+            try {
+              localStorage.setItem('lang', lang);
+            } catch {}
+            syncLang();
+            document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
+          });
+        });
+        syncLang();
+
+        /* ---------- active drawer link ---------- */
+        const normPath = (p) => (p || '/').replace(/\/+$/, '') || '/';
+        const cur = normPath(location.pathname);
+        document.querySelectorAll('.drawer-pages a[data-nav]').forEach((link) => {
+          link.classList.toggle('active', normPath(link.getAttribute('href')) === cur);
+        });
+        document.querySelectorAll('.drawer-link').forEach((link) => {
+          link.classList.toggle('active', normPath(link.getAttribute('href')) === cur);
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+---
+import { nav, ui } from '../data/site';
+
+interface Props {
+  active?: string;
+}
+const { active = '' } = Astro.props;
+---
+
+<nav class="topbar" aria-label="Navigasi utama">
+  <div class="wrap topbar-inner">
+    <button
+      type="button"
+      class="burger"
+      id="burger"
+      aria-label="Buka daftar isi"
+      aria-expanded="false"
+      aria-controls="drawer"
+    >
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="/" class="brand">
+      <span class="bi-id"><span class="brand-long">Akuntansi Dasar</span><span class="brand-short">Akuntansi</span></span>
+      <span class="bi-en"><span class="brand-long">Accounting Basics</span><span class="brand-short">Accounting</span></span>
+      <small>
+        <span class="bi-id">Kieso · IFRS · Bab 1–4</span>
+        <span class="bi-en">Kieso · IFRS · Chapters 1–4</span>
+      </small>
+    </a>
+
+    <div class="topbar-end">
+      <div class="main-links">
+        {
+          nav.map((item) => (
+            <a href={item.href} class:list={{ active: active === item.key }}>
+              <span class="bi-id">{item.label.id}</span>
+              <span class="bi-en">{item.label.en}</span>
+            </a>
+          ))
+        }
+      </div>
+
+      <button
+        type="button"
+        class="search-open"
+        id="searchOpen"
+        aria-label="Cari materi (Ctrl+K)"
+        aria-haspopup="dialog"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        <span class="search-open-label"><span class="bi-id">Cari</span><span class="bi-en">Search</span></span>
+        <kbd class="search-kbd">Ctrl K</kbd>
+      </button>
+
+      <div class="lang-toggle" role="group" aria-label={ui.langLabel.id}>
+        <button type="button" data-lang-set="id" aria-pressed="true" aria-label="Bahasa Indonesia">ID</button>
+        <button type="button" data-lang-set="en" aria-pressed="false" aria-label="English">EN</button>
+      </div>
+
+      <button
+        type="button"
+        class="icon-btn"
+        id="themeToggle"
+        aria-label={ui.theme.id}
+        aria-pressed="false"
+      >
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+        </svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>

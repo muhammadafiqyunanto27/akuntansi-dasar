@@ -1,0 +1,49 @@
+---
+import type { JournalEntry } from '../data/cycle';
+import BiText from './Bi.astro';
+
+interface Props {
+  entries: JournalEntry[];
+  caption?: string;
+}
+
+const { entries, caption } = Astro.props;
+---
+
+<div class="table-wrap journal-wrap">
+  <table class="journal-table">
+    <thead>
+      <tr>
+        <th class="je-date">Date</th>
+        <th>Account</th>
+        <th class="num">Debit</th>
+        <th class="num">Credit</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        entries.map((entry) => (
+          <>
+            {entry.lines.map((line, index) => (
+              <tr class="je-line">
+                <td class="je-date">{index === 0 ? entry.date : ''}</td>
+                <td class:list={['je-account', { 'je-indent': Boolean(line.credit) }]}>
+                  {line.account}
+                </td>
+                <td class="num je-amount">{line.debit ?? ''}</td>
+                <td class="num je-amount">{line.credit ?? ''}</td>
+              </tr>
+            ))}
+            <tr class="je-note">
+              <td class="je-date"></td>
+              <td colspan="3">
+                <BiText value={entry.note} />
+              </td>
+            </tr>
+          </>
+        ))
+      }
+    </tbody>
+  </table>
+  {caption && <p class="table-caption" set:html={caption}></p>}
+</div>

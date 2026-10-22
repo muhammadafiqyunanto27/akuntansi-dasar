@@ -1,0 +1,189 @@
+---
+import Base from '../../layouts/Base.astro';
+import BiText from '../../components/Bi.astro';
+import BlockRenderer from '../../components/BlockRenderer.astro';
+import { chapters, readingMinutes } from '../../data';
+import { glossary } from '../../data/glossary';
+import type { Chapter } from '../../data/types';
+
+export function getStaticPaths() {
+  return chapters.map((chapter) => ({
+    params: { slug: chapter.slug },
+    props: { chapter },
+  }));
+}
+
+interface Props {
+  chapter: Chapter;
+}
+
+const { chapter } = Astro.props;
+const index = chapters.findIndex((item) => item.slug === chapter.slug);
+const previous = index > 0 ? chapters[index - 1] : undefined;
+const next = index < chapters.length - 1 ? chapters[index + 1] : undefined;
+const terms = glossary.filter((term) => term.chapter === chapter.number);
+---
+
+<Base
+  title={`Bab ${chapter.number} — ${chapter.title.id}`}
+  description={`${chapter.subtitle.id} Rangkuman bilingual bab ${chapter.number} Kieso Financial Accounting IFRS.`}
+  active="rangkuman"
+>
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="crumb">
+        <span class="bi-id">Rangkuman / Bab {chapter.number}</span>
+        <span class="bi-en">Summaries / Chapter {chapter.number}</span>
+      </p>
+      <h1><BiText value={chapter.title} /></h1>
+      <p><BiText value={chapter.subtitle} /></p>
+      <div class="chapter-hero-meta">
+        <span><BiText value={chapter.kicker} /></span>
+        <span>
+          {chapter.sections.length}
+          {' '}
+          <span class="bi-id">topik</span>
+          <span class="bi-en">topics</span>
+        </span>
+        <span>
+          ±{readingMinutes(chapter)}
+          {' '}
+          <span class="bi-id">menit baca</span>
+          <span class="bi-en">min read</span>
+        </span>
+        <span>
+          <span class="bi-id">Dua bahasa</span>
+          <span class="bi-en">Bilingual</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap page-body narrow">
+    <section class="obj-card" aria-labelledby="tujuan">
+      <h2 id="tujuan">
+        <span class="bi-id">Tujuan pembelajaran</span>
+        <span class="bi-en">Learning objectives</span>
+      </h2>
+      <ol>
+        {chapter.objectives.map((objective) => (
+          <li><BiText value={objective} /></li>
+        ))}
+      </ol>
+    </section>
+
+    <nav class="jump" aria-label="Di halaman ini">
+      <span class="jump-label">
+        <span class="bi-id">Di halaman ini</span>
+        <span class="bi-en">On this page</span>
+      </span>
+      {chapter.sections.map((section) => (
+        <a href={`#${section.id}`}>
+          <b>{section.num}</b>
+          <BiText value={section.title} />
+        </a>
+      ))}
+    </nav>
+
+    {chapter.sections.map((section) => (
+      <article class="card" id={section.id}>
+        <h3>
+          <span class="tag">{section.num}</span>
+          <BiText value={section.title} />
+          {section.tag && <span class="tag tag-ghost"><BiText value={section.tag} /></span>}
+        </h3>
+        {section.blocks.map((block) => (
+          <BlockRenderer block={block} />
+        ))}
+      </article>
+    ))}
+
+    {terms.length > 0 && (
+      <section aria-labelledby="istilah-kunci">
+        <div class="sec-title">
+          <h2 id="istilah-kunci">
+            <span class="bi-id">Istilah kunci</span>
+            <span class="bi-en">Key terms</span>
+          </h2>
+          <a class="sec-hint" href="/glosarium">
+            <span class="bi-id">Lihat glosarium lengkap →</span>
+            <span class="bi-en">Open the full glossary →</span>
+          </a>
+        </div>
+        <div class="term-grid">
+          {terms.map((term) => (
+            <div class="term" id={`term-${term.id}`}>
+              <b>
+                <a href={`/glosarium#term-${term.id}`}>{term.term}</a>
+                <span class="term-id"> · {term.id}</span>
+              </b>
+              <p class="term-def"><BiText value={term.def} /></p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section aria-labelledby="uji-cepat">
+      <div class="sec-title">
+        <h2 id="uji-cepat">
+          <span class="bi-id">Uji cepat</span>
+          <span class="bi-en">Quick check</span>
+        </h2>
+        <span class="sec-hint">
+          <span class="bi-id">Klik untuk melihat jawaban</span>
+          <span class="bi-en">Click to reveal the answer</span>
+        </span>
+      </div>
+      <div class="quiz-list">
+        {chapter.quiz.map((item) => (
+          <details class="quiz-item">
+            <summary><BiText value={item.q} /></summary>
+            <div class="quiz-answer"><BiText value={item.a} /></div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <nav class="pager-nav" aria-label="Navigasi bab">
+      {previous ? (
+        <a href={`/rangkuman/${previous.slug}`}>
+          <span aria-hidden="true">←</span>
+          <span>
+            <small><span class="bi-id">Sebelumnya</span><span class="bi-en">Previous</span></small>
+            <span class="bi-id">Bab {previous.number} · {previous.title.id}</span>
+            <span class="bi-en">Chapter {previous.number} · {previous.title.en}</span>
+          </span>
+        </a>
+      ) : (
+        <a href="/rangkuman">
+          <span aria-hidden="true">←</span>
+          <span>
+            <small><span class="bi-id">Kembali</span><span class="bi-en">Back</span></small>
+            <span class="bi-id">Semua bab</span>
+            <span class="bi-en">All chapters</span>
+          </span>
+        </a>
+      )}
+      {next ? (
+        <a class="next" href={`/rangkuman/${next.slug}`}>
+          <span>
+            <small><span class="bi-id">Berikutnya</span><span class="bi-en">Next</span></small>
+            <span class="bi-id">Bab {next.number} · {next.title.id}</span>
+            <span class="bi-en">Chapter {next.number} · {next.title.en}</span>
+          </span>
+          <span aria-hidden="true">→</span>
+        </a>
+      ) : (
+        <a class="next" href="/alur-akuntansi">
+          <span>
+            <small><span class="bi-id">Lanjut</span><span class="bi-en">Continue</span></small>
+            <span class="bi-id">Alur akuntansi</span>
+            <span class="bi-en">Accounting cycle</span>
+          </span>
+          <span aria-hidden="true">→</span>
+        </a>
+      )}
+    </nav>
+  </div>
+</Base>

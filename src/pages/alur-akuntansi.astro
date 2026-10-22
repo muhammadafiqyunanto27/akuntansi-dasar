@@ -1,0 +1,373 @@
+---
+import Base from '../layouts/Base.astro';
+import BiText from '../components/Bi.astro';
+import JournalTable from '../components/JournalTable.astro';
+import TrialBalance from '../components/TrialBalance.astro';
+import {
+  cycleSteps,
+  optionalSteps,
+  yaziciJournal,
+  yaziciTrialBalance,
+  yaziciAdjustments,
+  yaziciAdjustedTrialBalance,
+  yaziciIncomeStatement,
+  yaziciRetainedEarnings,
+  yaziciStatementOfFinancialPosition,
+  yaziciClosing,
+  yaziciPostClosing,
+} from '../data/cycle';
+import { b } from '../data/types';
+
+const lineClass = (kind?: string) => ({
+  total: kind === 'total' || kind === 'subtotal' || kind === 'grand',
+  grand: kind === 'grand',
+});
+---
+
+<Base
+  title="Alur Akuntansi"
+  description="Sembilan langkah siklus akuntansi Kieso IFRS, dilengkapi studi kasus Yazici Advertising dari jurnal umum sampai neraca saldo setelah penutupan."
+  active="alur-akuntansi"
+>
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="crumb">
+        <span class="bi-id">Beranda / Alur Akuntansi</span>
+        <span class="bi-en">Home / Accounting Cycle</span>
+      </p>
+      <h1>
+        <span class="bi-id">Dari transaksi menjadi laporan</span>
+        <span class="bi-en">From transaction to statement</span>
+      </h1>
+      <p>
+        <span class="bi-id">
+          Siklus akuntansi adalah urutan pekerjaan yang berulang setiap periode. Sembilan langkah
+          berikut menghubungkan bukti transaksi dengan laporan keuangan yang siap dipakai.
+        </span>
+        <span class="bi-en">
+          The accounting cycle is the sequence of work repeated every period. These nine steps link
+          source documents to financial statements that are ready to use.
+        </span>
+      </p>
+      <div class="chapter-hero-meta">
+        <span>{cycleSteps.length} <span class="bi-id">langkah</span><span class="bi-en">steps</span></span>
+        <span><span class="bi-id">4 laporan utama</span><span class="bi-en">4 primary statements</span></span>
+        <span><span class="bi-id">2 langkah opsional</span><span class="bi-en">2 optional steps</span></span>
+        <span><span class="bi-id">Studi kasus Yazici</span><span class="bi-en">Yazici worked case</span></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap page-body narrow">
+    <div class="callout tip">
+      <span class="callout-title">
+        <span class="bi-id">Gagasan inti</span>
+        <span class="bi-en">The core idea</span>
+      </span>
+      <p>
+        <span class="bi-id">
+          Setiap langkah menghasilkan keluaran yang menjadi masukan langkah berikutnya. Jurnal
+          menghasilkan buku besar; buku besar menghasilkan neraca saldo; neraca saldo yang
+          disesuaikan menghasilkan laporan keuangan.
+        </span>
+        <span class="bi-en">
+          Each step produces an output that becomes the next step’s input. The journal feeds the
+          ledger; the ledger feeds the trial balance; the adjusted trial balance feeds the financial
+          statements.
+        </span>
+      </p>
+    </div>
+
+    <nav class="cycle-overview" aria-label="Langkah siklus akuntansi">
+      {cycleSteps.map((step) => (
+        <a class="cycle-chip" href={`#step-${step.n}`}>
+          <b>{step.n}</b>
+          <span><BiText value={step.short} /></span>
+        </a>
+      ))}
+    </nav>
+
+    <div class="sec-title">
+      <h2><span class="bi-id">Sembilan langkah</span><span class="bi-en">The nine steps</span></h2>
+      <span class="sec-hint"><span class="bi-id">Selama satu periode akuntansi</span><span class="bi-en">Across one accounting period</span></span>
+    </div>
+
+    <div class="flow">
+      {
+        cycleSteps.map((step) => (
+          <section class="flow-step" id={`step-${step.n}`}>
+            <span class="flow-num">{step.n}</span>
+            <div class="flow-card">
+              <h3><BiText value={step.title} /></h3>
+              <p class="flow-sub"><BiText value={step.short} /></p>
+              <p><BiText value={step.body} /></p>
+              <p class="flow-output">
+                <strong><span class="bi-id">Keluaran</span><span class="bi-en">Output</span></strong>
+                <BiText value={step.output} />
+              </p>
+              <p class="flow-tip">
+                <strong><span class="bi-id">Ingat</span><span class="bi-en">Keep in mind</span></strong>
+                <BiText value={step.tip} />
+              </p>
+            </div>
+          </section>
+        ))
+      }
+    </div>
+
+    <div class="sec-title">
+      <h2><span class="bi-id">Dua langkah opsional</span><span class="bi-en">Two optional steps</span></h2>
+    </div>
+
+    <div class="card">
+      {
+        optionalSteps.map((step) => (
+          <>
+            <h3><BiText value={step.title} /></h3>
+            <p><BiText value={step.body} /></p>
+          </>
+        ))
+      }
+      <p class="note">
+        <span class="bi-id">
+          Keduanya membantu pekerjaan, tetapi tidak wajib dan tidak mengubah angka pada laporan
+          keuangan.
+        </span>
+        <span class="bi-en">
+          Both support the work but are not required and do not change the numbers in the financial
+          statements.
+        </span>
+      </p>
+    </div>
+
+    <div class="sec-title">
+      <h2><span class="bi-id">Studi kasus: Yazici Advertising A.Ş.</span><span class="bi-en">Worked case: Yazici Advertising A.Ş.</span></h2>
+      <span class="sec-hint"><span class="bi-id">Buku bab 2–4 · semua angka dalam euro (€)</span><span class="bi-en">Book chapters 2–4 · all amounts in euros (€)</span></span>
+    </div>
+
+    <div class="card">
+      <h3><span class="bi-id">Satu bulan, satu siklus lengkap</span><span class="bi-en">One month, one complete cycle</span></h3>
+      <p>
+        <span class="bi-id">
+          Yazici Advertising mulai beroperasi pada 1 Oktober. Selama Oktober terjadi sembilan
+          transaksi, tujuh ayat penyesuaian, dan empat ayat penutup. Perhatikan bagaimana angka yang
+          sama berpindah dari jurnal ke laporan.
+        </span>
+        <span class="bi-en">
+          Yazici Advertising began operations on 1 October. During October it recorded nine
+          transactions, seven adjusting entries, and four closing entries. Follow the same numbers as
+          they move from the journal into the statements.
+        </span>
+      </p>
+      <div class="stat-strip case-stats">
+        <div class="stat">
+          <b>28,700</b>
+          <span><span class="bi-id">neraca saldo awal</span><span class="bi-en">unadjusted trial balance</span></span>
+        </div>
+        <div class="stat">
+          <b>30,190</b>
+          <span><span class="bi-id">setelah penyesuaian</span><span class="bi-en">adjusted trial balance</span></span>
+        </div>
+        <div class="stat">
+          <b>2,860</b>
+          <span><span class="bi-id">laba bersih</span><span class="bi-en">net income</span></span>
+        </div>
+        <div class="stat">
+          <b>21,950</b>
+          <span><span class="bi-id">setelah penutupan</span><span class="bi-en">post-closing total</span></span>
+        </div>
+      </div>
+    </div>
+
+    <article class="card" id="case-journal">
+      <h3>
+        <span class="tag">01</span>
+        <span class="bi-id">Jurnal umum</span><span class="bi-en">General journal</span>
+      </h3>
+      <p class="note">
+        <span class="bi-id">Sembilan transaksi Oktober. Debit ditulis lebih dulu; kredit menjorok.</span>
+        <span class="bi-en">Nine October transactions. Debits first; credits indented.</span>
+      </p>
+      <JournalTable entries={yaziciJournal} />
+    </article>
+
+    <article class="card" id="case-trial-balance">
+      <h3>
+        <span class="tag">02</span>
+        <span class="bi-id">Neraca saldo sebelum penyesuaian</span><span class="bi-en">Unadjusted trial balance</span>
+      </h3>
+      <p class="note">
+        <span class="bi-id">Total debit dan kredit sama-sama €28.700.</span>
+        <span class="bi-en">Debit and credit totals are both €28,700.</span>
+      </p>
+      <TrialBalance
+        rows={yaziciTrialBalance}
+        caption={b('Yazici Advertising A.Ş. — 31 October, before adjustments', 'Yazici Advertising A.Ş. — 31 Oktober, sebelum penyesuaian')}
+      />
+    </article>
+
+    <article class="card" id="case-adjustments">
+      <h3>
+        <span class="tag">03</span>
+        <span class="bi-id">Ayat penyesuaian</span><span class="bi-en">Adjusting entries</span>
+      </h3>
+      <p class="note">
+        <span class="bi-id">
+          Tujuh penyesuaian: perlengkapan, asuransi, penyusutan, pendapatan diterima di muka,
+          pendapatan akrual, gaji, dan bunga.
+        </span>
+        <span class="bi-en">
+          Seven adjustments: supplies, insurance, depreciation, unearned revenue, accrued revenue,
+          salaries, and interest.
+        </span>
+      </p>
+      <JournalTable entries={yaziciAdjustments} />
+    </article>
+
+    <article class="card" id="case-adjusted">
+      <h3>
+        <span class="tag">04</span>
+        <span class="bi-id">Neraca saldo setelah penyesuaian</span><span class="bi-en">Adjusted trial balance</span>
+      </h3>
+      <p class="note">
+        <span class="bi-id">Total debit dan kredit sama-sama €30.190.</span>
+        <span class="bi-en">Debit and credit totals are both €30,190.</span>
+      </p>
+      <TrialBalance
+        rows={yaziciAdjustedTrialBalance}
+        caption={b('Yazici Advertising A.Ş. — 31 October, after adjustments', 'Yazici Advertising A.Ş. — 31 Oktober, setelah penyesuaian')}
+      />
+    </article>
+
+    <div class="sec-title" id="case-statements">
+      <h2><span class="bi-id">Laporan keuangan</span><span class="bi-en">The financial statements</span></h2>
+      <span class="sec-hint"><span class="bi-id">Laba rugi → saldo laba → posisi keuangan</span><span class="bi-en">Income → retained earnings → financial position</span></span>
+    </div>
+
+    <div class="fin-grid">
+      <article class="card fin-card">
+        <h3><span class="bi-id">Laporan laba rugi</span><span class="bi-en">Income statement</span></h3>
+        <p class="note">
+          <span class="bi-id">Untuk bulan yang berakhir 31 Oktober</span>
+          <span class="bi-en">For the month ended 31 October</span>
+        </p>
+        {yaziciIncomeStatement.map((line) => (
+          <div class:list={['fx-line', { total: lineClass(line.kind).total, grand: lineClass(line.kind).grand }]}>
+            <span>{line.label}</span>
+            <span>{line.amount}</span>
+          </div>
+        ))}
+      </article>
+
+      <article class="card fin-card">
+        <h3><span class="bi-id">Laporan saldo laba</span><span class="bi-en">Retained earnings statement</span></h3>
+        <p class="note">
+          <span class="bi-id">Untuk bulan yang berakhir 31 Oktober</span>
+          <span class="bi-en">For the month ended 31 October</span>
+        </p>
+        {yaziciRetainedEarnings.map((line) => (
+          <div class:list={['fx-line', { total: lineClass(line.kind).total, grand: lineClass(line.kind).grand }]}>
+            <span>{line.label}</span>
+            <span>{line.amount}</span>
+          </div>
+        ))}
+      </article>
+    </div>
+
+    <article class="card fin-card">
+      <h3><span class="bi-id">Laporan posisi keuangan</span><span class="bi-en">Statement of financial position</span></h3>
+      <p class="note">
+        <span class="bi-id">Per 31 Oktober</span>
+        <span class="bi-en">As of 31 October</span>
+      </p>
+
+      <div class="fin-sections">
+        <div class="fin-section">
+          <h4><span class="bi-id">Aset</span><span class="bi-en">Assets</span></h4>
+          {yaziciStatementOfFinancialPosition.assets.map((line) => (
+            <div class:list={['fx-line', { total: lineClass(line.kind).total, grand: lineClass(line.kind).grand }]}>
+              <span>{line.label}</span>
+              <span>{line.amount}</span>
+            </div>
+          ))}
+        </div>
+
+        <div class="fin-section">
+          <h4><span class="bi-id">Liabilitas</span><span class="bi-en">Liabilities</span></h4>
+          {yaziciStatementOfFinancialPosition.liabilities.map((line) => (
+            <div class:list={['fx-line', { total: lineClass(line.kind).total, grand: lineClass(line.kind).grand }]}>
+              <span>{line.label}</span>
+              <span>{line.amount}</span>
+            </div>
+          ))}
+
+          <h4><span class="bi-id">Ekuitas</span><span class="bi-en">Equity</span></h4>
+          {yaziciStatementOfFinancialPosition.equity.map((line) => (
+            <div class:list={['fx-line', { total: lineClass(line.kind).total, grand: lineClass(line.kind).grand }]}>
+              <span>{line.label}</span>
+              <span>{line.amount}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </article>
+
+    <article class="card" id="case-closing">
+      <h3>
+        <span class="tag">05</span>
+        <span class="bi-id">Ayat penutup</span><span class="bi-en">Closing entries</span>
+      </h3>
+      <p class="note">
+        <span class="bi-id">
+          Pendapatan dan beban ditutup ke Ikhtisar Laba Rugi; laba bersih ditutup ke Saldo Laba;
+          dividen ditutup langsung ke Saldo Laba.
+        </span>
+        <span class="bi-en">
+          Revenues and expenses close to Income Summary; net income closes to Retained Earnings;
+          dividends close directly to Retained Earnings.
+        </span>
+      </p>
+      <JournalTable entries={yaziciClosing} />
+    </article>
+
+    <article class="card" id="case-post-closing">
+      <h3>
+        <span class="tag">06</span>
+        <span class="bi-id">Neraca saldo setelah penutupan</span><span class="bi-en">Post-closing trial balance</span>
+      </h3>
+      <p class="note">
+        <span class="bi-id">
+          Hanya akun permanen yang tersisa. Total debit dan kredit sama-sama €21.950.
+        </span>
+        <span class="bi-en">
+          Only permanent accounts remain. Debit and credit totals are both €21,950.
+        </span>
+      </p>
+      <TrialBalance
+        rows={yaziciPostClosing}
+        caption={b('Yazici Advertising A.Ş. — 31 October, after closing', 'Yazici Advertising A.Ş. — 31 Oktober, setelah penutupan')}
+      />
+    </article>
+
+    <div class="card">
+      <h3><span class="bi-id">Membaca hasilnya</span><span class="bi-en">Reading the result</span></h3>
+      <p>
+        <span class="bi-id">
+          Laba bersih €2.860 menambah saldo laba; dividen €500 menguranginya, sehingga saldo laba
+          akhir €2.360. Total aset €21.910 sama dengan total liabilitas dan ekuitas €21.910.
+        </span>
+        <span class="bi-en">
+          Net income of €2,860 increases retained earnings; dividends of €500 reduce it, leaving
+          ending retained earnings of €2,360. Total assets of €21,910 equal total liabilities and
+          equity of €21,910.
+        </span>
+      </p>
+      <p>
+        <a class="btn btn-ghost" href="/saldo-normal">
+          <span class="bi-id">Lihat tabel saldo normal →</span>
+          <span class="bi-en">Open the normal-balance table →</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</Base>

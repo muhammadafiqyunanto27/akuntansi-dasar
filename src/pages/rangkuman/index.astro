@@ -1,0 +1,139 @@
+---
+import Base from '../../layouts/Base.astro';
+import BiText from '../../components/Bi.astro';
+import { chapters, readingMinutes } from '../../data';
+import { glossary } from '../../data/glossary';
+import { site } from '../../data/site';
+---
+
+<Base
+  title="Rangkuman Bab 1–4"
+  description="Rangkuman bilingual bab 1–4 Kieso Financial Accounting IFRS: akuntansi dalam aksi, proses pencatatan, penyesuaian akun, dan penyelesaian siklus akuntansi."
+  active="rangkuman"
+>
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="crumb">
+        <span class="bi-id">Beranda / Rangkuman</span>
+        <span class="bi-en">Home / Summaries</span>
+      </p>
+      <h1>
+        <span class="bi-id">Empat bab, satu alur yang utuh</span>
+        <span class="bi-en">Four chapters, one continuous story</span>
+      </h1>
+      <p>
+        <span class="bi-id">
+          Bab 1 membangun gagasan dasar; bab 2 mengubahnya menjadi debit dan kredit; bab 3
+          menyesuaikan akun; bab 4 menutup siklus. Baca berurutan atau lompat ke topik yang dicari.
+        </span>
+        <span class="bi-en">
+          Chapter 1 builds the ideas; chapter 2 turns them into debits and credits; chapter 3
+          adjusts the accounts; chapter 4 closes the cycle. Read in order or jump to a topic.
+        </span>
+      </p>
+    </div>
+  </header>
+
+  <div class="wrap page-body narrow">
+    <div class="callout tip">
+      <span class="callout-title">
+        <span class="bi-id">Cara membaca</span>
+        <span class="bi-en">How to read</span>
+      </span>
+      <p>
+        <span class="bi-id">
+          Setiap bab punya tujuan pembelajaran, bagian bertopik, istilah kunci, dan uji cepat.
+          Gunakan tautan “Di halaman ini” untuk melompat antar bagian.
+        </span>
+        <span class="bi-en">
+          Every chapter has learning objectives, section-by-section notes, key terms, and a quick
+          check. Use “On this page” to jump between sections.
+        </span>
+      </p>
+    </div>
+
+    <ul class="syl">
+      {
+        chapters.map((chapter) => (
+          <li class="syl-chapter">
+            <div class="syl-chead">
+              <span class="syl-roman">{chapter.roman}</span>
+              <div class="syl-ctext">
+                <h2>
+                  <a href={`/rangkuman/${chapter.slug}`}>
+                    <BiText value={chapter.title} />
+                  </a>
+                </h2>
+                <p><BiText value={chapter.subtitle} /></p>
+              </div>
+              <span class="syl-count">
+                {chapter.sections.length}
+                {' '}
+                <span class="bi-id">topik</span>
+                <span class="bi-en">topics</span>
+              </span>
+            </div>
+
+            <div class="chapter-intro">
+              <p><BiText value={chapter.lead} /></p>
+              <p class="note">
+                <span class="bi-id">
+                  hlm. {chapter.sourcePages} · ±{readingMinutes(chapter)} menit baca ·
+                  {' '}
+                  {glossary.filter((term) => term.chapter === chapter.number).length} istilah kunci
+                </span>
+                <span class="bi-en">
+                  pp. {chapter.sourcePages} · ±{readingMinutes(chapter)} min read ·
+                  {' '}
+                  {glossary.filter((term) => term.chapter === chapter.number).length} key terms
+                </span>
+              </p>
+              <ol class="chapter-objectives">
+                {chapter.objectives.map((objective) => (
+                  <li><BiText value={objective} /></li>
+                ))}
+              </ol>
+            </div>
+
+            <ul class="syl-topics">
+              {chapter.sections.map((section) => (
+                <li>
+                  <a class="syl-row" href={`/rangkuman/${chapter.slug}#${section.id}`}>
+                    <span class="syl-n">{section.num}</span>
+                    <span class="syl-main">
+                      <b><BiText value={section.title} /></b>
+                      <small><BiText value={section.tag ?? { en: 'Topic', id: 'Topik' }} /></small>
+                    </span>
+                    <span class="syl-arrow" aria-hidden="true">→</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <p class="chapter-actions">
+              <a class="btn btn-solid" href={`/rangkuman/${chapter.slug}`}>
+                <span class="bi-id">Baca Bab {chapter.number}</span>
+                <span class="bi-en">Read Chapter {chapter.number}</span>
+              </a>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="card source-card">
+      <h3><span class="bi-id">Sumber dan cakupan</span><span class="bi-en">Source and scope</span></h3>
+      <p><BiText value={site.sourceNote} /></p>
+      <p>
+        <span class="bi-id">
+          Ringkasan ini mencakup bab 1–4. Tabel saldo normal dan alur akuntansi tersedia sebagai
+          halaman rujukan terpisah.
+        </span>
+        <span class="bi-en">
+          This summary covers chapters 1–4. The normal-balance table and the accounting cycle are
+          available as separate reference pages.
+        </span>
+      </p>
+    </div>
+  </div>
+</Base>

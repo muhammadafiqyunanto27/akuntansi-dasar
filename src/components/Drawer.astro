@@ -1,0 +1,59 @@
+---
+import { nav, ui, site } from '../data/site';
+import { chapters } from '../data';
+
+interface Props {
+  active?: string;
+}
+const { active = '' } = Astro.props;
+---
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-label={ui.menu.id} aria-hidden="true" tabindex="-1">
+  <div class="drawer-head">
+    <span><span class="bi-id">Daftar Isi</span><span class="bi-en">Contents</span></span>
+    <button type="button" class="drawer-close" id="drawerClose" aria-label="Tutup daftar isi">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </button>
+  </div>
+
+  <div class="drawer-pages">
+    {
+      nav.map((item) => (
+        <a href={item.href} data-nav={item.key} class:list={{ active: active === item.key }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            {item.key === 'home' && <><path d="M3 10.5 12 3l9 7.5V21H3z"></path></>}
+            {item.key === 'rangkuman' && <><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></>}
+            {item.key === 'saldo-normal' && <><path d="M4 4h16v16H4z"></path><path d="M8 8h8M8 12h8M8 16h4"></path></>}
+            {item.key === 'alur-akuntansi' && <><path d="M5 3v4M3 5h4M6 17v3M4.5 18.5h3M14 4h7v7h-7z"></path><path d="M21 14v7h-7v-7z"></path></>}
+            {item.key === 'glosarium' && <><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path d="M9 7h7M9 11h7"></path></>}
+          </svg>
+          <span class="bi-id">{item.label.id}</span>
+          <span class="bi-en">{item.label.en}</span>
+        </a>
+      ))
+    }
+  </div>
+
+  <div class="drawer-group">
+    <h4><span class="drawer-dot"></span><span class="bi-id">Bab 1–4</span><span class="bi-en">Chapters 1–4</span></h4>
+    <ul>
+      {
+        chapters.map((chapter) => (
+          <li>
+            <a href={`/rangkuman/${chapter.slug}`} class="drawer-link" data-topic={chapter.slug}>
+              <span class="drawer-num">{chapter.number}</span>
+              <span class="bi-id">{chapter.title.id}</span>
+              <span class="bi-en">{chapter.title.en}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <p class="drawer-note">
+    <span class="bi-id">{site.sourceNote.id}</span>
+    <span class="bi-en">{site.sourceNote.en}</span>
+  </p>
+</aside>

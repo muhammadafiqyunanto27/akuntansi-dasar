@@ -1,0 +1,154 @@
+---
+import Base from '../layouts/Base.astro';
+import BiText from '../components/Bi.astro';
+import { glossary } from '../data/glossary';
+
+const byChapter = (chapter: number) => glossary.filter((term) => term.chapter === chapter).length;
+---
+
+<Base
+  title="Glosarium"
+  description="Glosarium bilingual istilah akuntansi Kieso IFRS bab 1–4: definisi bahasa Indonesia dan Inggris, dengan pencarian dan filter bab."
+  active="glosarium"
+>
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="crumb">
+        <span class="bi-id">Beranda / Glosarium</span>
+        <span class="bi-en">Home / Glossary</span>
+      </p>
+      <h1>
+        <span class="bi-id">Glosarium istilah akuntansi</span>
+        <span class="bi-en">Accounting terminology</span>
+      </h1>
+      <p>
+        <span class="bi-id">
+          Padanan istilah Inggris–Indonesia beserta definisi singkat, diambil dari bab 1–4.
+          Gunakan pencarian untuk menemukan istilah dengan cepat.
+        </span>
+        <span class="bi-en">
+          English–Indonesian equivalents with short definitions, drawn from chapters 1–4. Use the
+          search box to find a term quickly.
+        </span>
+      </p>
+    </div>
+  </header>
+
+  <div class="wrap page-body narrow">
+    <div class="stat-strip" aria-label="Ringkasan glosarium">
+      <div class="stat">
+        <b>{glossary.length}</b>
+        <span><span class="bi-id">istilah</span><span class="bi-en">terms</span></span>
+      </div>
+      <div class="stat">
+        <b>{byChapter(1)}</b>
+        <span><span class="bi-id">dari bab 1</span><span class="bi-en">from chapter 1</span></span>
+      </div>
+      <div class="stat">
+        <b>{byChapter(2) + byChapter(3)}</b>
+        <span><span class="bi-id">dari bab 2–3</span><span class="bi-en">from chapters 2–3</span></span>
+      </div>
+      <div class="stat">
+        <b>{byChapter(4)}</b>
+        <span><span class="bi-id">dari bab 4</span><span class="bi-en">from chapter 4</span></span>
+      </div>
+    </div>
+
+    <div class="filter-bar">
+      <label class="filter-search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        <input
+          type="search"
+          id="glossarySearch"
+          placeholder="Cari istilah… / Search terms…"
+          autocomplete="off"
+          aria-label="Cari istilah"
+        />
+      </label>
+      <select id="glossaryChapter" aria-label="Filter bab">
+        <option value="">Semua bab · All chapters</option>
+        <option value="1">Bab 1 · Chapter 1</option>
+        <option value="2">Bab 2 · Chapter 2</option>
+        <option value="3">Bab 3 · Chapter 3</option>
+        <option value="4">Bab 4 · Chapter 4</option>
+      </select>
+      <span class="filter-count" id="glossaryCount" aria-live="polite">
+        <span id="glossaryCountId">{glossary.length} istilah</span>
+        <span id="glossaryCountEn">{glossary.length} terms</span>
+      </span>
+    </div>
+
+    <dl class="glossary-grid" id="glossaryList">
+      {
+        glossary.map((term) => (
+          <div
+            class="glossary-item"
+            id={`term-${term.id}`}
+            data-term
+            data-chapter={term.chapter}
+            data-search={`${term.term} ${term.id} ${term.def.en} ${term.def.id}`.toLowerCase()}
+          >
+            <dt>
+              {term.term}
+              <small>{term.id} · <span class="bi-id">Bab {term.chapter}</span><span class="bi-en">Chapter {term.chapter}</span></small>
+            </dt>
+            <dd><BiText value={term.def} /></dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    <div class="empty-state" id="glossaryEmpty" hidden>
+      <span class="bi-id">Tidak ada istilah yang cocok.</span>
+      <span class="bi-en">No terms match your search.</span>
+    </div>
+
+    <p class="note">
+      <span class="bi-id">
+        Istilah disusun mengikuti glosarium buku. Beberapa istilah muncul di lebih dari satu bab;
+        entri di sini memakai bab tempat istilah itu pertama kali diperkenalkan.
+      </span>
+      <span class="bi-en">
+        Terms follow the book’s glossary. Some appear in more than one chapter; entries here use the
+        chapter where the term is first introduced.
+      </span>
+    </p>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const list = document.getElementById('glossaryList');
+      const search = document.getElementById('glossarySearch');
+      const chapter = document.getElementById('glossaryChapter');
+      const empty = document.getElementById('glossaryEmpty');
+      const countId = document.getElementById('glossaryCountId');
+      const countEn = document.getElementById('glossaryCountEn');
+      if (!list || !search || !chapter || !empty || !countId || !countEn) return;
+
+      const terms = Array.from(list.querySelectorAll('[data-term]'));
+      if (!terms.length) return;
+
+      const apply = () => {
+        const tokens = search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+        const chapterValue = chapter.value;
+        let visible = 0;
+
+        terms.forEach((term) => {
+          const haystack = term.dataset.search || '';
+          const matchesText = tokens.every((token) => haystack.includes(token));
+          const matchesChapter = !chapterValue || term.dataset.chapter === chapterValue;
+          const show = matchesText && matchesChapter;
+          term.hidden = !show;
+          if (show) visible += 1;
+        });
+
+        countId.textContent = visible + ' istilah';
+        countEn.textContent = visible + ' terms';
+        empty.hidden = visible > 0;
+      };
+
+      search.addEventListener('input', apply);
+      chapter.addEventListener('change', apply);
+    })();
+  </script>
+</Base>

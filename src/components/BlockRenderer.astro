@@ -1,0 +1,132 @@
+---
+import type { Block, Cell, Bi } from '../data/types';
+import BiText from './Bi.astro';
+
+interface Props {
+  block: Block;
+}
+
+const { block } = Astro.props;
+
+const isBi = (cell: Cell): cell is Bi => typeof cell !== 'string';
+const alignClass = (index: number): string => {
+  if (block.type !== 'table') return '';
+  const align = block.align?.[index];
+  return align === 'right' ? 'num' : align === 'center' ? 'center' : '';
+};
+---
+
+{
+  block.type === 'p' && (
+    <p>
+      <BiText value={block.text} />
+    </p>
+  )
+}
+
+{
+  block.type === 'h4' && (
+    <h4>
+      <BiText value={block.text} />
+    </h4>
+  )
+}
+
+{
+  block.type === 'list' &&
+    (block.ordered ? (
+      <ol>
+        {block.items.map((item) => (
+          <li>
+            <BiText value={item} />
+          </li>
+        ))}
+      </ol>
+    ) : (
+      <ul>
+        {block.items.map((item) => (
+          <li>
+            <BiText value={item} />
+          </li>
+        ))}
+      </ul>
+    ))
+}
+
+{
+  block.type === 'table' && (
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            {block.head.map((cell, index) => (
+              <th class={alignClass(index)}>
+                {isBi(cell) ? <BiText value={cell} /> : cell}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {block.rows.map((row) => (
+            <tr>
+              {row.map((cell, index) => (
+                <td class={alignClass(index)}>
+                  {isBi(cell) ? <BiText value={cell} /> : cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {block.caption && <p class="table-caption"><BiText value={block.caption} /></p>}
+    </div>
+  )
+}
+
+{
+  block.type === 'formula' && (
+    <div class="formula">
+      {block.label && (
+        <span class="formula-label">
+          <BiText value={block.label} />
+        </span>
+      )}
+      <span set:html={block.expr} />
+      {block.note && (
+        <span class="formula-note">
+          <BiText value={block.note} />
+        </span>
+      )}
+    </div>
+  )
+}
+
+{
+  block.type === 'callout' && (
+    <div class:list={['callout', block.tone]}>
+      <span class="callout-title">
+        <BiText value={block.title} />
+      </span>
+      <p>
+        <BiText value={block.text} />
+      </p>
+    </div>
+  )
+}
+
+{
+  block.type === 'terms' && (
+    <div class="term-grid">
+      {block.items.map((item) => (
+        <div class="term" id={`term-${item.id}`}>
+          <b>
+            <a href={`/glosarium#term-${item.id}`}>{item.term}</a>
+          </b>
+          <p class="term-def">
+            <BiText value={item.def} />
+          </p>
+        </div>
+      ))}
+    </div>
+  )
+}

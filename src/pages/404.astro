@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Halaman tidak ditemukan" description="Halaman tidak ditemukan di Akuntansi Dasar.">
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="crumb">404</p>
+      <h1>
+        <span class="bi-id">Halaman tidak ditemukan</span>
+        <span class="bi-en">Page not found</span>
+      </h1>
+      <p>
+        <span class="bi-id">Tautan yang Anda buka tidak ada atau sudah dipindahkan.</span>
+        <span class="bi-en">The link you opened does not exist or has moved.</span>
+      </p>
+    </div>
+  </header>
+
+  <div class="wrap page-body narrow">
+    <div class="card">
+      <p>
+        <span class="bi-id">Kembali ke beranda atau langsung ke salah satu halaman rujukan:</span>
+        <span class="bi-en">Return home or go straight to one of the reference pages:</span>
+      </p>
+      <p>
+        <a class="btn btn-solid" href="/"><span class="bi-id">Beranda</span><span class="bi-en">Home</span></a>
+      </p>
+      <p>
+        <a href="/rangkuman">Rangkuman</a> ·
+        <a href="/saldo-normal"><span class="bi-id">Saldo normal</span><span class="bi-en">Normal balances</span></a> ·
+        <a href="/alur-akuntansi"><span class="bi-id">Alur akuntansi</span><span class="bi-en">Accounting cycle</span></a> ·
+        <a href="/glosarium">Glosarium</a>
+      </p>
+    </div>
+  </div>
+</Base>

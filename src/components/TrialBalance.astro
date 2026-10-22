@@ -1,0 +1,57 @@
+---
+import type { Bi } from '../data/types';
+import BiText from './Bi.astro';
+
+interface Row {
+  account: string;
+  debit: string;
+  credit: string;
+}
+
+interface Props {
+  rows: Row[];
+  caption?: Bi;
+}
+
+const { rows, caption } = Astro.props;
+
+const amount = (value: string): number => {
+  if (!value) return 0;
+  const negative = value.trim().startsWith('(');
+  const parsed = Number(value.replace(/[^0-9.]/g, ''));
+  return negative ? -parsed : parsed;
+};
+
+const format = (value: number): string =>
+  value === 0 ? '' : value.toLocaleString('en-US', { maximumFractionDigits: 0 });
+
+const totalDebit = rows.reduce((sum, row) => sum + amount(row.debit), 0);
+const totalCredit = rows.reduce((sum, row) => sum + amount(row.credit), 0);
+---
+
+<div class="table-wrap trial-wrap">
+  <table class="trial-table">
+    <thead>
+      <tr>
+        <th>Account</th>
+        <th class="num">Debit</th>
+        <th class="num">Credit</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((row) => (
+        <tr>
+          <td>{row.account}</td>
+          <td class="num">{row.debit}</td>
+          <td class="num">{row.credit}</td>
+        </tr>
+      ))}
+      <tr class="trial-total">
+        <td>Totals</td>
+        <td class="num">{format(totalDebit)}</td>
+        <td class="num">{format(totalCredit)}</td>
+      </tr>
+    </tbody>
+  </table>
+  {caption && <p class="table-caption"><BiText value={caption} /></p>}
+</div>
