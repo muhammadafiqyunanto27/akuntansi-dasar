@@ -21,6 +21,7 @@ export const nav = [
   { href: '/saldo-normal', label: b('Normal Balances', 'Saldo Normal'), key: 'saldo-normal' },
   { href: '/alur-akuntansi', label: b('Accounting Cycle', 'Alur Akuntansi'), key: 'alur-akuntansi' },
   { href: '/latihan', label: b('Practice Exercises', 'Latihan Soal'), key: 'latihan' },
+  { href: '/p-latihan', label: b('P-type Exercises', 'Latihan Tipe P'), key: 'p-latihan' },
   { href: '/glosarium', label: b('Glossary', 'Glosarium'), key: 'glosarium' },
 ];
 
