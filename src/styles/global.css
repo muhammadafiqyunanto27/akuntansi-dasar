@@ -1678,6 +1678,7 @@ footer.site-footer a { color: var(--on-inverse); }
   .card, .flow-card, .syl-chapter, .obj-card, .rule-card { break-inside: avoid; box-shadow: none; }
   .tag, .syl-roman, th, .dr { border: 1px solid #000; color: #000 !important; background: #fff !important; }
   .norm-table-wrap { max-height: none; overflow: visible; }
+}
 
 /* Exercise item styles - prevent title overflow */
 .exercise-item {
