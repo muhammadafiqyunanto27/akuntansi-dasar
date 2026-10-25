@@ -1,0 +1,12 @@
+import { b } from '../data/types';
+
+// P-type and BYP-type exercises for Chapter 1
+// Extracted from PDF Pages 1-20 (approx)
+
+export const chapter1PAndBYP = [
+  // P-type exercises for Chapter 1
+  { id: 'P1-1A', title: b('P1-1A: Kinney Repair Ltd', 'P1-1A: Perusahaan Kinney Memelihara'), question: b('Summary of May transactions for Kinney\'s Repair Ltd', 'Ringkasan transaksi Mei untuk Perbaikan Kinney'), parts: [], explanation: b('See PDF for full details', 'Lihat PDF untuk detail lengkap') }, { id: 'P1-1B', title: b('P1-1B: Holiday Travel Agency', 'P1-1B: Perjalanan Liburan Holiday'), question: b('Transactions for Holiday Travel Agency in April', 'Transaksi untuk Perjalanan Liburan Holiday pada April'), parts: [], explanation: b('See PDF for full details', 'Lihat PDF untuk detail lengkap') },
+
+  // BYP-type exercises for Chapter 1
+  { id: 'BYP1-1', title: b('BYP1-1: Ethics and Investments', 'BYP1-1: Etika dan Investasi'), question: b('Ethics scenario involving investments', 'Skenario etika yang melibatkan investasi'), parts: [], explanation: b('See PDF for full details', 'Lihat PDF untuk detail lengkap') }, { id: 'BYP1-2', title: b('BYP1-2: Comparative Analysis', 'BYP1-2: Analisis Perbandingan'), question: b('Comparative analysis exercise', 'Latihan analisis perbandingan'), parts: [], explanation: b('See PDF for full details', 'Lihat PDF untuk detail lengkap') }, { id: 'BYP1-3', title: b('BYP1-3: Missing Information', 'BYP1-3: Informasi yang Hilang'), question: b('Exercise with missing information', 'Latihan dengan informasi yang hilang'), parts: [], explanation: b('See PDF for full details', 'Lihat PDF untuk detail lengkap') }, { id: 'BYP1-4', title: b('BYP1-4: Comprehensive Problem', 'BYP1-4: Masalah Komprehensif'), question: b('Comprehensive problem covering chapter 1 concepts', 'Masalah komprehensif membutuhkan konsep bab 1'), parts: [], explanation: b('See PDF for full details', 'Lihat PDF untuk detail lengkap') }, { id: 'BYP1-5', title: b('BYP1-5: Analysis and Evaluation', 'BYP1-5: Analisis dan Evaluasi'), question: b('Analysis and evaluation exercise', 'Latihan analisis dan evaluasi'), parts: [], explanation: b('See PDF for full details', 'Lihat PDF untuk detail lengkap') }, { id: 'BYP1-6', title: b('BYP1-6: Full Chapter Review', 'BYP1-6: Ulasan Lengkap Bab'), question: b('Full chapter review exercise', 'Latihan ulasan lengkap bab'), parts: [], explanation: b('See PDF for full details', 'Lihat PDF untuk detail lengkap') },
+];
