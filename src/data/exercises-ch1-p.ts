@@ -50,7 +50,42 @@ export const chapter1PAndBYP = [
         answer: b(
           'Transaction analysis showing all 11 transactions with effects on each account. Key: Cash ends at €8,020; A/R €860; Supplies €700; Equipment €5,000; A/P €250; Share Capital €10,000; Retained Earnings €1,450 (Service Revenue €4,700 - Rent Expense €400 - Advertising Expense €250 - Salaries €1,000 - Utilities €160 - Dividends €1,000).',
           'Analisis transaksi menunjukkan 11 transaksi dengan efek pada setiap akun. Kunci: Kas akhir €8.020; Piutang Usaha €860; Perlengkapan €700; Peralatan €5.000; Hutang Usaha €250; Modal Saham €10.000; Laba Ditahan €1.450 (Pendapatan Jasa €4.700 - Beban Sewa €400 - Beban Iklan €250 - Gaji €1.000 - Utilitas €160 - Dividen €1.000).'
-        )
+        ),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Tabular Analysis - P1-1A Kinney Repair Ltd', 'Analisis Tabel - P1-1A Kinney Repair Ltd'),
+            head: [
+              b('Date', 'Tanggal'),
+              b('Cash\nKas', 'Cash\nKas'),
+              b('A/R\nPiutang', 'A/R\nPiutang'),
+              b('Supplies\nPerlengkapan', 'Supplies\nPerlengkapan'),
+              b('Equipment\nPeralatan', 'Equipment\nPeralatan'),
+              b('A/P\nHutang', 'A/P\nHutang'),
+              b('Share Capital\nModal Saham', 'Share Capital\nModal Saham'),
+              b('Rev.\nPend.', 'Rev.\nPend.'),
+              b('Exp.\nBeban', 'Exp.\nBeban'),
+              b('Div.\nDiv.', 'Div.\nDiv.'),
+              b('Laba Ditahan\nRetained Earnings', 'Laba Ditahan\nRetained Earnings')
+            ],
+            rows: [
+              ['1', '10,000', '', '', '', '', '10,000', '', '', '', ''],
+              ['2', '-5,000', '', '', '5,000', '', '', '', '', '', ''],
+              ['3', '-400', '', '', '', '', '', '', '400', '', '-400'],
+              ['4', '-700', '', '700', '', '', '', '', '', '', ''],
+              ['5', '', '', '', '', '250', '', '', '', '', ''],
+              ['6', '4,700', '', '', '', '', '', '4,700', '', '', '4,700'],
+              ['7', '-1,000', '', '', '', '', '', '', '', '1,000', '-1,000'],
+              ['8', '-1,000', '', '', '', '', '', '', '1,000', '', '-1,000'],
+              ['9', '-160', '', '', '', '', '', '', '160', '', '-160'],
+              ['10', '', '980', '', '', '', '', '980', '', '', '980'],
+              ['11', '120', '-120', '', '', '', '', '', '', '', ''],
+              ['Bal', '8,020', '860', '700', '5,000', '250', '10,000', '4,700', '3,250', '1,000', '1,450']
+            ],
+            align: ['center', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right'],
+            compact: false
+          }
+        ]
       },
       {
         label: '(b)',

@@ -56,12 +56,82 @@ export const chapter3PAndBYP = [
     ),
     parts: [
       { label: '1', given: b('Supplies adjustment: Beginning 2,500 + Purchases 4,200 - Ending 800 = Expense 5,900', 'Penyesuaian perlengkapan: Awal 2.500 + Pembelian 4.200 - Akhir 800 = Beban 5.900'), answer: b('Supplies Expense 5,900 / Supplies 5,900', 'Beban Perlengkapan 5.900 / Perlengkapan 5.900') },
+      { label: '1', given: b('Supplies Adjusting Entry', 'Entri Penyesuaian Perlengkapan'), blocks: [
+        { type: 'table', caption: b('Adjusting Entry - Supplies', 'Entri Penyesuaian - Perlengkapan'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Supplies Expense\nBeban Perlengkapan', '5,900', ''],
+          ['Supplies\nPerlengkapan', '', '5,900']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]},
       { label: '2', given: b('Prepaid insurance: 3,600 / 24 months = 150/month × 12 months = 1,800', 'Asuransi dibayar dimuka: 3.600 / 24 bulan = 150/bulan × 12 bulan = 1.800'), answer: b('Insurance Expense 1,800 / Prepaid Insurance 1,800', 'Beban Asuransi 1.800 / Asuransi Dibayar Dimuka 1.800') },
+      { label: '2', given: b('Prepaid Insurance Adjusting Entry', 'Entri Penyesuaian Asuransi Dibayar Dimuka'), blocks: [
+        { type: 'table', caption: b('Adjusting Entry - Prepaid Insurance', 'Entri Penyesuaian - Asuransi Dibayar Dimuka'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Insurance Expense\nBeban Asuransi', '1,800', ''],
+          ['Prepaid Insurance\nAsuransi Dibayar Dimuka', '', '1,800']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]},
       { label: '3', given: b('Depreciation: (50,000 - 5,000) / 10 = 4,500/year', 'Penyusutan: (50.000 - 5.000) / 10 = 4.500/tahun'), answer: b('Depreciation Expense 4,500 / Accumulated Depreciation 4,500', 'Beban Penyusutan 4.500 / Akumulasi Penyusutan 4.500') },
+      { label: '3', given: b('Depreciation Adjusting Entry', 'Entri Penyesuaian Penyusutan'), blocks: [
+        { type: 'table', caption: b('Adjusting Entry - Depreciation', 'Entri Penyesuaian - Penyusutan'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Depreciation Expense\nBeban Penyusutan', '4,500', ''],
+          ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '4,500']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]},
       { label: '4', given: b('Unearned revenue: Beg 5,000 + Received 15,000 - End 1,200 = Earned 18,800', 'Pendapatan blm diperoleh: Awal 5.000 + Diterima 15.000 - Akhir 1.200 = Diperoleh 18.800'), answer: b('Unearned Service Revenue 18,800 / Service Revenue 18,800', 'Pendapatan Jasa Blm Diperoleh 18.800 / Pendapatan Jasa 18.800') },
+      { label: '4', given: b('Unearned Revenue Adjusting Entry', 'Entri Penyesuaian Pendapatan Belum Diperoleh'), blocks: [
+        { type: 'table', caption: b('Adjusting Entry - Unearned Revenue', 'Entri Penyesuaian - Pendapatan Belum Diperoleh'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Unearned Service Revenue\nPendapatan Jasa Blm Diperoleh', '18,800', ''],
+          ['Service Revenue\nPendapatan Jasa', '', '18,800']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]},
       { label: '5', given: b('Accrued salaries: 5 employees × €480/week × 3 days (Mon-Wed) = 5 × 480 × 3/5 = 1,440', 'Gaji akrual: 5 karyawan × €480/minggu × 3 hari (Sen-Rab) = 5 × 480 × 3/5 = 1.440'), answer: b('Salaries Expense 1,440 / Salaries Payable 1,440', 'Beban Gaji 1.440 / Gaji Bayar 1.440') },
+      { label: '5', given: b('Accrued Salaries Adjusting Entry', 'Entri Penyesuaian Gaji Akrual'), blocks: [
+        { type: 'table', caption: b('Adjusting Entry - Accrued Salaries', 'Entri Penyesuaian - Gaji Akrual'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Salaries Expense\nBeban Gaji', '1,440', ''],
+          ['Salaries Payable\nGaji Bayar', '', '1,440']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]},
       { label: '6', given: b('Accrued interest: 20,000 × 6% × 3/12 = 300', 'Bunga akrual: 20.000 × 6% × 3/12 = 300'), answer: b('Interest Expense 300 / Interest Payable 300', 'Beban Bunga 300 / Bunga Bayar 300') },
-      { label: '7', given: b('Accrued revenue: Services performed but not billed €3,500', 'Pendapatan akrual: Jasa dilakukan tapi belum ditagih €3.500'), answer: b('Accounts Receivable 3,500 / Service Revenue 3,500', 'Piutang Usaha 3.500 / Pendapatan Jasa 3.500') }
+      { label: '6', given: b('Accrued Interest Adjusting Entry', 'Entri Penyesuaian Bunga Akrual'), blocks: [
+        { type: 'table', caption: b('Adjusting Entry - Accrued Interest', 'Entri Penyesuaian - Bunga Akrual'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Interest Expense\nBeban Bunga', '300', ''],
+          ['Interest Payable\nBunga Bayar', '', '300']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]},
+      { label: '7', given: b('Accrued revenue: Services performed but not billed €3,500', 'Pendapatan akrual: Jasa dilakukan tapi belum ditagih €3.500'), answer: b('Accounts Receivable 3,500 / Service Revenue 3,500', 'Piutang Usaha 3.500 / Pendapatan Jasa 3.500') },
+      { label: '7', given: b('Accrued Revenue Adjusting Entry', 'Entri Penyesuaian Pendapatan Akrual'), blocks: [
+        { type: 'table', caption: b('Adjusting Entry - Accrued Revenue', 'Entri Penyesuaian - Pendapatan Akrual'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Accounts Receivable\nPiutang Usaha', '3,500', ''],
+          ['Service Revenue\nPendapatan Jasa', '', '3,500']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]}
     ],
     explanation: b(
       'This problem covers all four types of adjusting entries: (1) Prepaid expenses (supplies, insurance), (2) Unearned revenues, (3) Accrued expenses (salaries, interest), (4) Accrued revenues. Each adjusting entry involves one balance sheet account and one income statement account. Cash is never involved in adjusting entries.',

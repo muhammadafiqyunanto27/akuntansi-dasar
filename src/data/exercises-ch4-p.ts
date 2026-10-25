@@ -48,9 +48,114 @@ export const chapter4PAndBYP = [
     ),
     parts: [
       { label: '(a)', given: b('Complete worksheet columns: TB, Adjustments, Adj TB, IS, SFP', 'Lengkapi kolom kertas kerja: NS, Penyesuaian, NS Disesuaikan, LR, LPK'), answer: b('Adjustments:\n1. Supplies Expense 1,300 / Supplies 1,300 (2,500 - 1,200)\n2. Depreciation Expense 3,000 / Accumulated Depreciation 3,000\n3. Salaries Expense 1,500 / Salaries Payable 1,500\n4. Insurance Expense 1,200 / Prepaid Insurance 1,200\n5. Interest Expense 400 / Interest Payable 400\n\nAdjusted TB totals: Debits = Credits = 87,700\nIncome Statement: Revenue 50,000; Expenses 26,700; Net Income 23,300\nSFP: Assets 62,000; Liabilities 15,500; Equity 46,500', 'Penyesuaian:\n1. Beban Perlengkapan 1.300 / Perlengkapan 1.300 (2.500 - 1.200)\n2. Beban Penyusutan 3.000 / Akumulasi Penyusutan 3.000\n3. Beban Gaji 1.500 / Gaji Bayar 1.500\n4. Beban Asuransi 1.200 / Asuransi Dibayar Dimuka 1.200\n5. Beban Bunga 400 / Bunga Bayar 400\n\nNS Disesuaikan total: Debet = Kredit = 87.700\nLaporan Laba Rugi: Pendapatan 50.000; Beban 26.700; Laba Bersih 23.300\nLPK: Aset 62.000; Liabilitas 15.500; Ekuitas 46.500') },
+      { label: '(a)', given: b('Adjusting Entries', 'Entri Penyesuaian'), blocks: [
+        { type: 'table', caption: b('Adjusting Entries - Martinez Company', 'Entri Penyesuaian - Perusahaan Martinez'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Supplies Expense\nBeban Perlengkapan', '1,300', ''],
+          ['Supplies\nPerlengkapan', '', '1,300'],
+          ['Depreciation Expense\nBeban Penyusutan', '3,000', ''],
+          ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '3,000'],
+          ['Salaries Expense\nBeban Gaji', '1,500', ''],
+          ['Salaries Payable\nGaji Bayar', '', '1,500'],
+          ['Insurance Expense\nBeban Asuransi', '1,200', ''],
+          ['Prepaid Insurance\nAsuransi Dibayar Dimuka', '', '1,200'],
+          ['Interest Expense\nBeban Bunga', '400', ''],
+          ['Interest Payable\nBunga Bayar', '', '400']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]},
+      { label: '(a)', given: b('Adjusted Trial Balance', 'Neraca Saldo Disesuaikan'), blocks: [
+        { type: 'table', caption: b('Adjusted Trial Balance - Martinez Company', 'Neraca Saldo Disesuaikan - Perusahaan Martinez'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Cash\nKas', '12,000', ''],
+          ['Accounts Receivable\nPiutang Usaha', '8,000', ''],
+          ['Supplies\nPerlengkapan', '1,200', ''],
+          ['Equipment\nPeralatan', '30,000', ''],
+          ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '12,000'],
+          ['Accounts Payable\nHutang Usaha', '', '5,000'],
+          ['Notes Payable\nCatatan Hutang', '', '15,000'],
+          ['Share Capital\nModal Saham', '', '20,000'],
+          ['Retained Earnings\nLaba Ditahan', '', '10,000'],
+          ['Dividends\nDividen', '4,000', ''],
+          ['Service Revenue\nPendapatan Jasa', '', '50,000'],
+          ['Salaries Expense\nBeban Gaji', '21,500', ''],
+          ['Rent Expense\nBeban Sewa', '10,000', ''],
+          ['Utilities Expense\nBeban Utilitas', '3,000', ''],
+          ['Advertising Expense\nBeban Iklan', '2,000', ''],
+          ['Insurance Expense\nBeban Asuransi', '2,700', ''],
+          ['Depreciation Expense\nBeban Penyusutan', '3,000', ''],
+          ['Interest Expense\nBeban Bunga', '400', ''],
+          ['TOTAL', '87,700', '87,700']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]},
       { label: '(b)', given: b('Prepare financial statements from worksheet', 'Siapkan laporan keuangan dari kertas kerja'), answer: b('Income Statement: Service Revenue €50,000; Expenses: Salaries €21,500, Rent €10,000, Utilities €3,000, Advertising €2,000, Insurance €2,700, Depreciation €3,000, Interest €400 = Total €26,700; Net Income €23,300\nRetained Earnings: Beg €10,000 + NI €23,300 - Div €4,000 = End €29,300\nStatement of Financial Position: Assets: Cash €12,000, A/R €?, Supplies €?, Equipment €30,000 - Acc Dep €? = Total; Liabilities: A/P €5,000, Notes Payable €15,000, Salaries Payable €?, Interest Payable €?; Equity: Share Capital €20,000 + RE €? = Total', 'Laporan Laba Rugi: Pendapatan Jasa €50.000; Beban: Gaji €21.500, Sewa €10.000, Utilitas €3.000, Iklan €2.000, Asuransi €2.700, Penyusutan €3.000, Bunga €400 = Total €26.700; Laba Bersih €23.300\nLaba Ditahan: Awal €10.000 + LB €23.300 - Div €4.000 = Akhir €29.300\nLaporan Posisi Keuangan: Aset: Kas €12.000, Piutang €?, Perlengkapan €?, Peralatan €30.000 - Akum Peny €? = Total; Liabilitas: H/Usaha €5.000, Catatan Hutang €15.000, Gaji Bayar €?, Bunga Bayar €?; Ekuitas: Modal Saham €20.000 + LD €? = Total') },
+      { label: '(b)', given: b('Income Statement', 'Laporan Laba Rugi'), blocks: [
+        { type: 'table', caption: b('Income Statement - Martinez Company', 'Laporan Laba Rugi - Perusahaan Martinez'), head: [
+          b('Item\nItem', 'Item\nItem'),
+          b('Amount\nJumlah', 'Amount\nJumlah')
+        ], rows: [
+          ['Service Revenue\nPendapatan Jasa', '50,000'],
+          ['Expenses:\nBeban:', '', ''],
+          ['  Salaries Expense\n  Beban Gaji', '21,500'],
+          ['  Rent Expense\n  Beban Sewa', '10,000'],
+          ['  Utilities Expense\n  Beban Utilitas', '3,000'],
+          ['  Advertising Expense\n  Beban Iklan', '2,000'],
+          ['  Insurance Expense\n  Beban Asuransi', '2,700'],
+          ['  Depreciation Expense\n  Beban Penyusutan', '3,000'],
+          ['  Interest Expense\n  Beban Bunga', '400'],
+          ['Total Expenses\nTotal Beban', '26,700'],
+          ['NET INCOME\nLABA BERSIH', '23,300']
+        ], align: ['left', 'right'], compact: false }
+      ]},
       { label: '(c)', given: b('Journalize closing entries', 'Jurnalikan entri penutupan'), answer: b('1. Dr Service Revenue 50,000 / Cr Income Summary 50,000\n2. Dr Income Summary 26,700 / Cr Salaries Exp 21,500, Rent Exp 10,000, Util Exp 3,000, Adv Exp 2,000, Ins Exp 2,700, Dep Exp 3,000, Interest Exp 400\n3. Dr Income Summary 23,300 / Cr Retained Earnings 23,300\n4. Dr Retained Earnings 4,000 / Cr Dividends 4,000', '1. Dr Pendapatan Jasa 50.000 / Cr Ikhtisar Laba Rugi 50.000\n2. Dr Ikhtisar Laba Rugi 26.700 / Cr Beban Gaji 21.500, Beban Sewa 10.000, Beban Util 3.000, Beban Iklan 2.000, Beban Asuransi 2.700, Beban Peny 3.000, Beban Bunga 400\n3. Dr Ikhtisar Laba Rugi 23.300 / Cr Laba Ditahan 23.300\n4. Dr Laba Ditahan 4.000 / Cr Dividen 4.000') },
-      { label: '(d)', given: b('Post-closing trial balance', 'Neraca saldo pasca tutup'), answer: b('Post-Closing Trial Balance:\nCash €12,000 | Accounts Receivable €? | Supplies €? | Equipment €30,000\nAccumulated Depreciation €? | Accounts Payable €5,000 | Notes Payable €15,000\nSalaries Payable €? | Interest Payable €?\nShare Capital €20,000 | Retained Earnings €29,300\nTotal Debits = Total Credits = ?\n(Only permanent accounts remain - all temporary accounts zero)', 'Neraca Saldo Pasca Tutup:\nKas €12.000 | Piutang Usaha €? | Perlengkapan €? | Peralatan €30.000\nAkum Penyusutan €? | Hutang Usaha €5.000 | Catatan Hutang €15.000\nGaji Bayar €? | Bunga Bayar €?\nModal Saham €20.000 | Laba Ditahan €29.300\nTotal Debet = Total Kredit = ?\n(Hanya akun permanen tersisa - semua akun sementara nol)') }
+      { label: '(c)', given: b('Closing Entries', 'Entri Penutupan'), blocks: [
+        { type: 'table', caption: b('Closing Entries - Martinez Company', 'Entri Penutupan - Perusahaan Martinez'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Service Revenue\nPendapatan Jasa', '50,000', ''],
+          ['Income Summary\nIkhtisar Laba Rugi', '', '50,000'],
+          ['Income Summary\nIkhtisar Laba Rugi', '26,700', ''],
+          ['Salaries Expense\nBeban Gaji', '', '21,500'],
+          ['Rent Expense\nBeban Sewa', '', '10,000'],
+          ['Utilities Expense\nBeban Utilitas', '', '3,000'],
+          ['Advertising Expense\nBeban Iklan', '', '2,000'],
+          ['Insurance Expense\nBeban Asuransi', '', '2,700'],
+          ['Depreciation Expense\nBeban Penyusutan', '', '3,000'],
+          ['Interest Expense\nBeban Bunga', '', '400'],
+          ['Income Summary\nIkhtisar Laba Rugi', '23,300', ''],
+          ['Retained Earnings\nLaba Ditahan', '', '23,300'],
+          ['Retained Earnings\nLaba Ditahan', '4,000', ''],
+          ['Dividends\nDividen', '', '4,000']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]},
+      { label: '(d)', given: b('Post-closing trial balance', 'Neraca saldo pasca tutup'), answer: b('Post-Closing Trial Balance:\nCash €12,000 | Accounts Receivable €? | Supplies €? | Equipment €30,000\nAccumulated Depreciation €? | Accounts Payable €5,000 | Notes Payable €15,000\nSalaries Payable €? | Interest Payable €?\nShare Capital €20,000 | Retained Earnings €29,300\nTotal Debits = Total Credits = ?\n(Only permanent accounts remain - all temporary accounts zero)', 'Neraca Saldo Pasca Tutup:\nKas €12.000 | Piutang Usaha €? | Perlengkapan €? | Peralatan €30.000\nAkum Penyusutan €? | Hutang Usaha €5.000 | Catatan Hutang €15.000\nGaji Bayar €? | Bunga Bayar €?\nModal Saham €20.000 | Laba Ditahan €29.300\nTotal Debet = Total Kredit = ?\n(Hanya akun permanen tersisa - semua akun sementara nol)') },
+      { label: '(d)', given: b('Post-Closing Trial Balance', 'Neraca Saldo Pasca Tutup'), blocks: [
+        { type: 'table', caption: b('Post-Closing Trial Balance - Martinez Company', 'Neraca Saldo Pasca Tutup - Perusahaan Martinez'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Cash\nKas', '12,000', ''],
+          ['Accounts Receivable\nPiutang Usaha', '', ''],
+          ['Supplies\nPerlengkapan', '', ''],
+          ['Equipment\nPeralatan', '30,000', ''],
+          ['Accumulated Depreciation\nAkumulasi Penyusutan', '', ''],
+          ['Accounts Payable\nHutang Usaha', '', '5,000'],
+          ['Notes Payable\nCatatan Hutang', '', '15,000'],
+          ['Salaries Payable\nGaji Bayar', '', ''],
+          ['Interest Payable\nBunga Bayar', '', ''],
+          ['Share Capital\nModal Saham', '', '20,000'],
+          ['Retained Earnings\nLaba Ditahan', '', '29,300'],
+          ['TOTAL', '42,000+', '42,000+']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]}
     ],
     explanation: b(
       'The worksheet is a tool that facilitates the entire end-of-period process. It organizes: (1) Trial Balance (unadjusted), (2) Adjustments, (3) Adjusted Trial Balance, (4) Income Statement columns, (5) Statement of Financial Position columns. The worksheet bridges the gap between recording and reporting. Closing entries zero out temporary accounts. Post-closing trial balance contains only permanent (real) accounts - assets, liabilities, equity. This verifies the ledger is ready for the next period.',

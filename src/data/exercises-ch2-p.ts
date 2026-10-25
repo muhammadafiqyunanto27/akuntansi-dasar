@@ -40,8 +40,90 @@ export const chapter2PAndBYP = [
     ),
     parts: [
       { label: '(a)', given: b('9 June transactions to journalize', '9 transaksi Juni untuk dijurnalikan'), answer: b('1. Cash 15,000 / Share Capital 15,000\n2. Equipment 5,000 / Accounts Payable 5,000\n3. Rent Expense 2,000 / Cash 2,000\n4. Accounts Receivable 4,500 / Service Revenue 4,500\n5. Salaries Expense 1,200 / Cash 1,200\n6. Cash 3,000 / Accounts Receivable 3,000\n7. Advertising Expense 300 / Accounts Payable 300\n8. Utilities Expense 400 / Cash 400\n9. Dividends 500 / Cash 500', '1. Kas 15.000 / Modal Saham 15.000\n2. Peralatan 5.000 / Hutang Usaha 5.000\n3. Beban Sewa 2.000 / Kas 2.000\n4. Piutang Usaha 4.500 / Pendapatan Jasa 4.500\n5. Beban Gaji 1.200 / Kas 1.200\n6. Kas 3.000 / Piutang Usaha 3.000\n7. Beban Iklan 300 / Hutang Usaha 300\n8. Beban Utilitas 400 / Kas 400\n9. Dividen 500 / Kas 500') },
-      { label: '(b)', given: b('Post journal entries to T-accounts', 'Pos entri jurnal ke rekening T'), answer: b('Cash: 15,000 + 3,000 - 2,000 - 1,200 - 400 - 500 = 13,900\nAccounts Receivable: 4,500 - 3,000 = 1,500\nEquipment: 5,000\nAccounts Payable: 5,000 + 300 = 5,300\nShare Capital: 15,000\nService Revenue: 4,500\nRent Expense: 2,000\nSalaries Expense: 1,200\nAdvertising Expense: 300\nUtilities Expense: 400\nDividends: 500', 'Kas: 15.000 + 3.000 - 2.000 - 1.200 - 400 - 500 = 13.900\nPiutang Usaha: 4.500 - 3.000 = 1.500\nPeralatan: 5.000\nHutang Usaha: 5.000 + 300 = 5.300\nModal Saham: 15.000\nPendapatan Jasa: 4.500\nBeban Sewa: 2.000\nBeban Gaji: 1.200\nBeban Iklan: 300\nBeban Utilitas: 400\nDividen: 500') },
-      { label: '(c)', given: b('Prepare trial balance from ledger balances', 'Siapkan neraca saldo dari saldo buku besar'), answer: b('Trial Balance at June 30:\nCash 13,900 | Accounts Receivable 1,500 | Equipment 5,000\nAccounts Payable 5,300 | Share Capital 15,000\nService Revenue 4,500\nRent Expense 2,000 | Salaries Expense 1,200 | Advertising Expense 300 | Utilities Expense 400\nDividends 500\nTotal Debits = Total Credits = 28,200', 'Neraca Saldo 30 Juni:\nKas 13.900 | Piutang Usaha 1.500 | Peralatan 5.000\nHutang Usaha 5.300 | Modal Saham 15.000\nPendapatan Jasa 4.500\nBeban Sewa 2.000 | Beban Gaji 1.200 | Beban Iklan 300 | Beban Utilitas 400\nDividen 500\nTotal Debet = Total Kredit = 28.200') }
+      { label: '(a)', given: b('Journal Entries - General Journal', 'Entri Jurnal - Jurnal Umum'), blocks: [
+        { type: 'table', caption: b('General Journal - P2-1 Kaustav Sen Company', 'Jurnal Umum - P2-1 Perusahaan Kaustav Sen'), head: [
+          b('Date\nTgl', 'Date\nTgl'),
+          b('Account Title\nNama Akun', 'Account Title\nNama Akun'),
+          b('Ref\nRef', 'Ref\nRef'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Jun 1', 'Cash\nKas', '', '15,000', ''],
+          ['', 'Share Capital\nModal Saham', '', '', '15,000'],
+          ['Jun 2', 'Equipment\nPeralatan', '', '5,000', ''],
+          ['', 'Accounts Payable\nHutang Usaha', '', '', '5,000'],
+          ['Jun 3', 'Rent Expense\nBeban Sewa', '', '2,000', ''],
+          ['', 'Cash\nKas', '', '', '2,000'],
+          ['Jun 4', 'Accounts Receivable\nPiutang Usaha', '', '4,500', ''],
+          ['', 'Service Revenue\nPendapatan Jasa', '', '', '4,500'],
+          ['Jun 5', 'Salaries Expense\nBeban Gaji', '', '1,200', ''],
+          ['', 'Cash\nKas', '', '', '1,200'],
+          ['Jun 6', 'Cash\nKas', '', '3,000', ''],
+          ['', 'Accounts Receivable\nPiutang Usaha', '', '', '3,000'],
+          ['Jun 7', 'Advertising Expense\nBeban Iklan', '', '300', ''],
+          ['', 'Accounts Payable\nHutang Usaha', '', '', '300'],
+          ['Jun 8', 'Utilities Expense\nBeban Utilitas', '', '400', ''],
+          ['', 'Cash\nKas', '', '', '400'],
+          ['Jun 9', 'Dividends\nDividen', '', '500', ''],
+          ['', 'Cash\nKas', '', '', '500']
+        ], align: ['center', 'left', 'center', 'right', 'right'], compact: false }
+      ]},
+      { label: '(b)', given: b('Post journal entries to T-accounts / Ledger', 'Pos ke rekening T / Buku Besar'), blocks: [
+        { type: 'table', caption: b('T-Accounts / Ledger Accounts', 'Rekening T / Rekening Buku Besar'), head: [
+          b('Cash (101)\nKas', 'Cash (101)\nKas'),
+          b('Debit', 'Debet'),
+          b('Credit', 'Kredit'),
+          b('Balance', 'Saldo')
+        ], rows: [
+          ['Jun 1', '15,000', '', '15,000 Dr'],
+          ['Jun 3', '', '2,000', '13,000 Dr'],
+          ['Jun 5', '', '1,200', '11,800 Dr'],
+          ['Jun 6', '3,000', '', '14,800 Dr'],
+          ['Jun 8', '', '400', '14,400 Dr'],
+          ['Jun 9', '', '500', '13,900 Dr']
+        ], align: ['center', 'right', 'right', 'center'], compact: false }
+      ]},
+      { label: '(b)', given: b('All T-Accounts Summary', 'Ringkasan Semua Rekening T'), blocks: [
+        { type: 'table', caption: b('Complete T-Accounts', 'Rekening T Lengkap'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debits\nTotal Debet', 'Debits\nTotal Debet'),
+          b('Credits\nTotal Kredit', 'Credits\nTotal Kredit'),
+          b('Ending Balance\nSaldo Akhir', 'Ending Balance\nSaldo Akhir')
+        ], rows: [
+          ['Cash\nKas', '18,000', '4,100', '13,900 Dr'],
+          ['Accounts Receivable\nPiutang Usaha', '4,500', '3,000', '1,500 Dr'],
+          ['Equipment\nPeralatan', '5,000', '', '5,000 Dr'],
+          ['Accounts Payable\nHutang Usaha', '', '5,300', '5,300 Cr'],
+          ['Share Capital\nModal Saham', '', '15,000', '15,000 Cr'],
+          ['Service Revenue\nPendapatan Jasa', '', '4,500', '4,500 Cr'],
+          ['Rent Expense\nBeban Sewa', '2,000', '', '2,000 Dr'],
+          ['Salaries Expense\nBeban Gaji', '1,200', '', '1,200 Dr'],
+          ['Advertising Expense\nBeban Iklan', '300', '', '300 Dr'],
+          ['Utilities Expense\nBeban Utilitas', '400', '', '400 Dr'],
+          ['Dividends\nDividen', '500', '', '500 Dr']
+        ], align: ['left', 'right', 'right', 'center'], compact: false }
+      ]},
+      { label: '(c)', given: b('Prepare trial balance from ledger balances', 'Siapkan neraca saldo dari saldo buku besar'), answer: b('Trial Balance at June 30:\nCash 13,900 | Accounts Receivable 1,500 | Equipment 5,000\nAccounts Payable 5,300 | Share Capital 15,000\nService Revenue 4,500\nRent Expense 2,000 | Salaries Expense 1,200 | Advertising Expense 300 | Utilities Expense 400\nDividends 500\nTotal Debits = Total Credits = 28,200', 'Neraca Saldo 30 Juni:\nKas 13.900 | Piutang Usaha 1.500 | Peralatan 5.000\nHutang Usaha 5.300 | Modal Saham 15.000\nPendapatan Jasa 4.500\nBeban Sewa 2.000 | Beban Gaji 1.200 | Beban Iklan 300 | Beban Utilitas 400\nDividen 500\nTotal Debet = Total Kredit = 28.200') },
+      { label: '(c)', given: b('Trial Balance', 'Neraca Saldo'), blocks: [
+        { type: 'table', caption: b('Trial Balance - June 30', 'Neraca Saldo - 30 Juni'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Cash\nKas', '13,900', ''],
+          ['Accounts Receivable\nPiutang Usaha', '1,500', ''],
+          ['Equipment\nPeralatan', '5,000', ''],
+          ['Accounts Payable\nHutang Usaha', '', '5,300'],
+          ['Share Capital\nModal Saham', '', '15,000'],
+          ['Service Revenue\nPendapatan Jasa', '', '4,500'],
+          ['Rent Expense\nBeban Sewa', '2,000', ''],
+          ['Salaries Expense\nBeban Gaji', '1,200', ''],
+          ['Advertising Expense\nBeban Iklan', '300', ''],
+          ['Utilities Expense\nBeban Utilitas', '400', ''],
+          ['Dividends\nDividen', '500', ''],
+          ['TOTAL', '28,200', '28,200']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]}
     ],
     explanation: b(
       'This problem covers the complete recording process: journalizing, posting, and trial balance. Each transaction is recorded with debits and credits, posted to T-accounts, and the trial balance verifies that total debits equal total credits. The accounting equation remains in balance throughout.',
@@ -309,21 +391,6 @@ export const chapter2PAndBYP = [
     explanation: b(
       'The accounting cycle is the complete sequence of procedures for processing financial transactions throughout an accounting period. Mastery of the cycle is essential for accurate financial reporting.',
       'Siklus akuntansi adalah urutan lengkap prosedur untuk memproses transaksi keuangan sepanjang periode akuntansi. Penguasaan siklus penting untuk pelaporan keuangan yang akurat.'
-    )
-  },
-  {
-    id: 'BYP2-5',
-    title: b('BYP2-5: Worksheet Preparation', 'BYP2-5: Persiapan Kertas Kerja'),
-    question: b(
-      'Prepare a 10-column worksheet for Rodriguez Company using the following adjusted trial balance data. The worksheet columns are: Trial Balance, Adjustments, Adjusted Trial Balance, Income Statement, Statement of Financial Position.',
-      'Siapkan kertas kerja 10 kolom untuk Perusahaan Rodriguez menggunakan data neraca saldo disesuaikan berikut. Kolom kertas kerja: Neraca Saldo, Penyesuaian, Neraca Saldo Disesuaikan, Laporan Laba Rugi, Laporan Posisi Keuangan.'
-    ),
-    parts: [
-      { label: '', given: b('Adjusted trial balance data for worksheet', 'Data neraca saldo disesuaikan untuk kertas kerja'), answer: b('Extend Trial Balance amounts to Adjusted Trial Balance, Income Statement, and Statement of Financial Position columns. Net Income = Total Income Statement Credits - Total Income Statement Debits. Verify that Statement of Financial Position columns balance with Net Income included in Equity.', 'Perluas jumlah Neraca Saldo ke kolom Neraca Saldo Disesuaikan, Laporan Laba Rugi, dan Laporan Posisi Keuangan. Laba Bersih = Total Kredit Laporan Laba Rugi - Total Debet Laporan Laba Rugi. Verifikasi kolom Laporan Posisi Keuangan seimbang dengan Laba Bersih dimasukkan ke Ekuitas.') }
-    ],
-    explanation: b(
-      'The worksheet is an optional tool that facilitates the preparation of adjusting entries and financial statements. It organizes the data from trial balance through financial statements in a single table, making the process more efficient and reducing errors.',
-      'Kertas kerja adalah alat bantu opsional yang memudahkan penyusunan entri penyesuaian dan laporan keuangan. Ia mengorganisir data dari neraca saldo melalui laporan keuangan dalam satu tabel, membuat proses lebih efisien dan mengurangi kesalahan.'
     )
   },
   {

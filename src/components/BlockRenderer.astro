@@ -8,7 +8,8 @@ interface Props {
 
 const { block } = Astro.props;
 
-const isBi = (cell: Cell): cell is Bi => typeof cell !== 'string';
+const isBi = (cell: Cell): cell is Bi => typeof cell === 'object' && cell !== null && 'en' in cell && 'id' in cell;
+const safeCell = (cell: Cell): string | Bi => cell === undefined || cell === null ? '' : cell;
 const alignClass = (index: number): string => {
   if (block.type !== 'table') return '';
   const align = block.align?.[index];
@@ -69,11 +70,14 @@ const alignClass = (index: number): string => {
         <tbody>
           {block.rows.map((row) => (
             <tr>
-              {row.map((cell, index) => (
-                <td class={alignClass(index)}>
-                  {isBi(cell) ? <BiText value={cell} /> : cell}
-                </td>
-              ))}
+              {row.map((cell, index) => {
+                const safe = safeCell(cell);
+                return (
+                  <td class={alignClass(index)}>
+                    {isBi(safe) ? <BiText value={safe} /> : safe}
+                  </td>
+                );
+              })}
             </tr>
           ))}
         </tbody>
