@@ -48,28 +48,28 @@ export const chapter4PAndBYP = [
     parts: [
       {
         label: '(a)',
-        given: b('Complete Worksheet Columns: TB, Adjustments, Adj TB, IS, SFP', 'Lengkapi Kolom Kertas Kerja: NS, Penyesuaian, NS Disesuaikan, LR, LPK'),
+        given: b('Complete Worksheet Columns: TB, Adjustments, Adj TB, IS, SFP / Lengkapi Kolom Kertas Kerja: NS, Penyesuaian, NS Disesuaikan, LR, LPK', 'Lengkapi Kolom Kertas Kerja: NS, Penyesuaian, NS Disesuaikan, LR, LPK'),
         answer: b('', ''),
         blocks: [
           {
             type: 'table',
-            caption: b('Adjusting Entries - Martinez Company', 'Entri Penyesuaian - Perusahaan Martinez'),
+            caption: b('Adjusting Entries - Martinez Company / Entri Penyesuaian - Perusahaan Martinez', 'Entri Penyesuaian - Perusahaan Martinez'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Account / Akun', 'Account / Akun'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Supplies Expense\nBeban Perlengkapan', '1,300', ''],
-              ['Supplies\nPerlengkapan', '', '1,300'],
-              ['Depreciation Expense\nBeban Penyusutan', '3,000', ''],
-              ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '3,000'],
-              ['Salaries Expense\nBeban Gaji', '1,500', ''],
-              ['Salaries Payable\nGaji Bayar', '', '1,500'],
-              ['Insurance Expense\nBeban Asuransi', '1,200', ''],
-              ['Prepaid Insurance\nAsuransi Dibayar Dimuka', '', '1,200'],
-              ['Interest Expense\nBeban Bunga', '400', ''],
-              ['Interest Payable\nBunga Bayar', '', '400']
+              ['Supplies Expense / Beban Perlengkapan', '1,300', ''],
+              ['Supplies / Perlengkapan', '', '1,300'],
+              ['Depreciation Expense / Beban Penyusutan', '3,000', ''],
+              ['Accumulated Depreciation / Akumulasi Penyusutan', '', '3,000'],
+              ['Salaries Expense / Beban Gaji', '1,500', ''],
+              ['Salaries Payable / Gaji Bayar', '', '1,500'],
+              ['Insurance Expense / Beban Asuransi', '1,200', ''],
+              ['Prepaid Insurance / Asuransi Dibayar Dimuka', '', '1,200'],
+              ['Interest Expense / Beban Bunga', '400', ''],
+              ['Interest Payable / Bunga Bayar', '', '400']
             ],
             align: ['left', 'right', 'right'],
             compact: false
@@ -78,35 +78,35 @@ export const chapter4PAndBYP = [
       },
       {
         label: '(a)',
-        given: b('Adjusted Trial Balance', 'Neraca Saldo Disesuaikan'),
+        given: b('Adjusted Trial Balance / Neraca Saldo Disesuaikan', 'Neraca Saldo Disesuaikan'),
         blocks: [
           {
             type: 'table',
-            caption: b('Adjusted Trial Balance - Martinez Company', 'Neraca Saldo Disesuaikan - Perusahaan Martinez'),
+            caption: b('Adjusted Trial Balance - Martinez Company / Neraca Saldo Disesuaikan - Perusahaan Martinez', 'Neraca Saldo Disesuaikan - Perusahaan Martinez'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Account / Akun', 'Account / Akun'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Cash\nKas', '12,000', ''],
-              ['Accounts Receivable\nPiutang Usaha', '8,000', ''],
-              ['Supplies\nPerlengkapan', '1,200', ''],
-              ['Equipment\nPeralatan', '30,000', ''],
-              ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '12,000'],
-              ['Accounts Payable\nHutang Usaha', '', '5,000'],
-              ['Notes Payable\nCatatan Hutang', '', '15,000'],
-              ['Share Capital\nModal Saham', '', '20,000'],
-              ['Retained Earnings\nLaba Ditahan', '', '10,000'],
-              ['Dividends\nDividen', '4,000', ''],
-              ['Service Revenue\nPendapatan Jasa', '', '50,000'],
-              ['Salaries Expense\nBeban Gaji', '21,500', ''],
-              ['Rent Expense\nBeban Sewa', '10,000', ''],
-              ['Utilities Expense\nBeban Utilitas', '3,000', ''],
-              ['Advertising Expense\nBeban Iklan', '2,000', ''],
-              ['Insurance Expense\nBeban Asuransi', '2,700', ''],
-              ['Depreciation Expense\nBeban Penyusutan', '3,000', ''],
-              ['Interest Expense\nBeban Bunga', '400', ''],
+              ['Cash / Kas', '12,000', ''],
+              ['Accounts Receivable / Piutang Usaha', '8,000', ''],
+              ['Supplies / Perlengkapan', '1,200', ''],
+              ['Equipment / Peralatan', '30,000', ''],
+              ['Accumulated Depreciation / Akumulasi Penyusutan', '', '12,000'],
+              ['Accounts Payable / Hutang Usaha', '', '5,000'],
+              ['Notes Payable / Catatan Hutang', '', '15,000'],
+              ['Share Capital / Modal Saham', '', '20,000'],
+              ['Retained Earnings / Laba Ditahan', '', '10,000'],
+              ['Dividends / Dividen', '4,000', ''],
+              ['Service Revenue / Pendapatan Jasa', '', '50,000'],
+              ['Salaries Expense / Beban Gaji', '21,500', ''],
+              ['Rent Expense / Beban Sewa', '10,000', ''],
+              ['Utilities Expense / Beban Utilitas', '3,000', ''],
+              ['Advertising Expense / Beban Iklan', '2,000', ''],
+              ['Insurance Expense / Beban Asuransi', '2,700', ''],
+              ['Depreciation Expense / Beban Penyusutan', '3,000', ''],
+              ['Interest Expense / Beban Bunga', '400', ''],
               ['TOTAL', '87,700', '87,700']
             ],
             align: ['left', 'right', 'right'],
@@ -116,27 +116,27 @@ export const chapter4PAndBYP = [
       },
       {
         label: '(b)',
-        given: b('Prepare Financial Statements from Worksheet', 'Siapkan Laporan Keuangan dari Kertas Kerja'),
+        given: b('Prepare Financial Statements from Worksheet / Siapkan Laporan Keuangan dari Kertas Kerja', 'Siapkan Laporan Keuangan dari Kertas Kerja'),
         blocks: [
           {
             type: 'table',
-            caption: b('Income Statement - Martinez Company', 'Laporan Laba Rugi - Perusahaan Martinez'),
+            caption: b('Income Statement - Martinez Company / Laporan Laba Rugi - Perusahaan Martinez', 'Laporan Laba Rugi - Perusahaan Martinez'),
             head: [
-              b('Item\nItem', 'Item\nItem'),
-              b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+              b('Item / Item', 'Item / Item'),
+              b('Amount (€) / Jumlah (€)', 'Jumlah (€) / Jumlah (€)')
             ],
             rows: [
-              ['Service Revenue\nPendapatan Jasa', '50,000'],
-              ['Expenses:\nBeban:', ''],
-              ['  Salaries Expense\n  Beban Gaji', '21,500'],
-              ['  Rent Expense\n  Beban Sewa', '10,000'],
-              ['  Utilities Expense\n  Beban Utilitas', '3,000'],
-              ['  Advertising Expense\n  Beban Iklan', '2,000'],
-              ['  Insurance Expense\n  Beban Asuransi', '2,700'],
-              ['  Depreciation Expense\n  Beban Penyusutan', '3,000'],
-              ['  Interest Expense\n  Beban Bunga', '400'],
-              ['Total Expenses\nTotal Beban', '26,700'],
-              ['NET INCOME\nLABA BERSIH', '23,300']
+              ['Service Revenue / Pendapatan Jasa', '50,000'],
+              ['Expenses / Beban:', ''],
+              ['  Salaries Expense / Beban Gaji', '21,500'],
+              ['  Rent Expense / Beban Sewa', '10,000'],
+              ['  Utilities Expense / Beban Utilitas', '3,000'],
+              ['  Advertising Expense / Beban Iklan', '2,000'],
+              ['  Insurance Expense / Beban Asuransi', '2,700'],
+              ['  Depreciation Expense / Beban Penyusutan', '3,000'],
+              ['  Interest Expense / Beban Bunga', '400'],
+              ['Total Expenses / Total Beban', '26,700'],
+              ['NET INCOME / LABA BERSIH', '23,300']
             ],
             align: ['left', 'right'],
             compact: false
@@ -145,20 +145,20 @@ export const chapter4PAndBYP = [
       },
       {
         label: '(b)',
-        given: b('Retained Earnings Statement', 'Laporan Laba Ditahan'),
+        given: b('Retained Earnings Statement / Laporan Laba Ditahan', 'Laporan Laba Ditahan'),
         blocks: [
           {
             type: 'table',
-            caption: b('Retained Earnings Statement - Martinez Company', 'Laporan Laba Ditahan - Perusahaan Martinez'),
+            caption: b('Retained Earnings Statement - Martinez Company / Laporan Laba Ditahan - Perusahaan Martinez', 'Laporan Laba Ditahan - Perusahaan Martinez'),
             head: [
-              b('Item\nItem', 'Item\nItem'),
-              b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+              b('Item / Item', 'Item / Item'),
+              b('Amount (€) / Jumlah (€)', 'Jumlah (€) / Jumlah (€)')
             ],
             rows: [
-              ['Retained Earnings, Jan 1\nLaba Ditahan, 1 Jan', '10,000'],
-              ['Add: Net Income\nTambah: Laba Bersih', '23,300'],
-              ['Less: Dividends\nKurang: Dividen', '4,000'],
-              ['Retained Earnings, Dec 31\nLaba Ditahan, 31 Des', '29,300']
+              ['Retained Earnings, Jan 1 / Laba Ditahan, 1 Jan', '10,000'],
+              ['Add: Net Income / Tambah: Laba Bersih', '23,300'],
+              ['Less: Dividends / Kurang: Dividen', '4,000'],
+              ['Retained Earnings, Dec 31 / Laba Ditahan, 31 Des', '29,300']
             ],
             align: ['left', 'right'],
             compact: false
@@ -167,34 +167,34 @@ export const chapter4PAndBYP = [
       },
       {
         label: '(b)',
-        given: b('Statement of Financial Position', 'Laporan Posisi Keuangan'),
+        given: b('Statement of Financial Position / Laporan Posisi Keuangan', 'Laporan Posisi Keuangan'),
         blocks: [
           {
             type: 'table',
-            caption: b('Statement of Financial Position - Martinez Company (Dec 31)', 'Laporan Posisi Keuangan - Perusahaan Martinez (31 Des)'),
+            caption: b('Statement of Financial Position - Martinez Company (Dec 31) / Laporan Posisi Keuangan - Perusahaan Martinez (31 Des)', 'Laporan Posisi Keuangan - Perusahaan Martinez (31 Des)'),
             head: [
-              b('Item\nItem', 'Item\nItem'),
-              b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+              b('Item / Item', 'Item / Item'),
+              b('Amount (€) / Jumlah (€)', 'Jumlah (€) / Jumlah (€)')
             ],
             rows: [
-              ['ASSETS\nASET', ''],
-              ['  Cash\n  Kas', '12,000'],
-              ['  Accounts Receivable\n  Piutang Usaha', '8,000'],
-              ['  Supplies\n  Perlengkapan', '1,200'],
-              ['  Equipment\n  Peralatan', '30,000'],
-              ['  Less: Accumulated Depreciation\n  Kurang: Akum Penyusutan', '(12,000)'],
-              ['  Total Equipment (Net)\n  Total Peralatan (Bersih)', '18,000'],
-              ['Total Assets\nTotal Aset', '62,000'],
-              ['LIABILITIES & EQUITY\nLIABILITAS & EKUITAS', ''],
-              ['  Accounts Payable\n  Hutang Usaha', '5,000'],
-              ['  Notes Payable\n  Catatan Hutang', '15,000'],
-              ['  Salaries Payable\n  Gaji Bayar', '1,500'],
-              ['  Interest Payable\n  Bunga Bayar', '400'],
-              ['Total Liabilities\nTotal Liabilitas', '21,900'],
-              ['  Share Capital\n  Modal Saham', '20,000'],
-              ['  Retained Earnings\n  Laba Ditahan', '29,300'],
-              ['Total Equity\nTotal Ekuitas', '40,100'],
-              ['Total L & E\nTotal L & E', '62,000']
+              ['ASSETS / ASET', ''],
+              ['  Cash / Kas', '12,000'],
+              ['  Accounts Receivable / Piutang Usaha', '8,000'],
+              ['  Supplies / Perlengkapan', '1,200'],
+              ['  Equipment / Peralatan', '30,000'],
+              ['  Less: Accumulated Depreciation / Kurang: Akum Penyusutan', '(12,000)'],
+              ['  Total Equipment (Net) / Total Peralatan (Bersih)', '18,000'],
+              ['Total Assets / Total Aset', '62,000'],
+              ['LIABILITIES & EQUITY / LIABILITAS & EKUITAS', ''],
+              ['  Accounts Payable / Hutang Usaha', '5,000'],
+              ['  Notes Payable / Catatan Hutang', '15,000'],
+              ['  Salaries Payable / Gaji Bayar', '1,500'],
+              ['  Interest Payable / Bunga Bayar', '400'],
+              ['Total Liabilities / Total Liabilitas', '21,900'],
+              ['  Share Capital / Modal Saham', '20,000'],
+              ['  Retained Earnings / Laba Ditahan', '29,300'],
+              ['Total Equity / Total Ekuitas', '40,100'],
+              ['Total L & E / Total L & E', '62,000']
             ],
             align: ['left', 'right'],
             compact: false
@@ -203,31 +203,31 @@ export const chapter4PAndBYP = [
       },
       {
         label: '(c)',
-        given: b('Journalize Closing Entries', 'Jurnalikan Entri Penutupan'),
+        given: b('Journalize Closing Entries / Jurnalikan Entri Penutupan', 'Jurnalikan Entri Penutupan'),
         blocks: [
           {
             type: 'table',
-            caption: b('Closing Entries - Martinez Company', 'Entri Penutupan - Perusahaan Martinez'),
+            caption: b('Closing Entries - Martinez Company / Entri Penutupan - Perusahaan Martinez', 'Entri Penutupan - Perusahaan Martinez'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Account / Akun', 'Account / Akun'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Service Revenue\nPendapatan Jasa', '50,000', ''],
-              ['Income Summary\nIkhtisar Laba Rugi', '', '50,000'],
-              ['Income Summary\nIkhtisar Laba Rugi', '26,700', ''],
-              ['Salaries Expense\nBeban Gaji', '', '21,500'],
-              ['Rent Expense\nBeban Sewa', '', '10,000'],
-              ['Utilities Expense\nBeban Utilitas', '', '3,000'],
-              ['Advertising Expense\nBeban Iklan', '', '2,000'],
-              ['Insurance Expense\nBeban Asuransi', '', '2,700'],
-              ['Depreciation Expense\nBeban Penyusutan', '', '3,000'],
-              ['Interest Expense\nBeban Bunga', '', '400'],
-              ['Income Summary\nIkhtisar Laba Rugi', '23,300', ''],
-              ['Retained Earnings\nLaba Ditahan', '', '23,300'],
-              ['Retained Earnings\nLaba Ditahan', '4,000', ''],
-              ['Dividends\nDividen', '', '4,000']
+              ['Service Revenue / Pendapatan Jasa', '50,000', ''],
+              ['Income Summary / Ikhtisar Laba Rugi', '', '50,000'],
+              ['Income Summary / Ikhtisar Laba Rugi', '26,700', ''],
+              ['Salaries Expense / Beban Gaji', '', '21,500'],
+              ['Rent Expense / Beban Sewa', '', '10,000'],
+              ['Utilities Expense / Beban Utilitas', '', '3,000'],
+              ['Advertising Expense / Beban Iklan', '', '2,000'],
+              ['Insurance Expense / Beban Asuransi', '', '2,700'],
+              ['Depreciation Expense / Beban Penyusutan', '', '3,000'],
+              ['Interest Expense / Beban Bunga', '', '400'],
+              ['Income Summary / Ikhtisar Laba Rugi', '23,300', ''],
+              ['Retained Earnings / Laba Ditahan', '', '23,300'],
+              ['Retained Earnings / Laba Ditahan', '4,000', ''],
+              ['Dividends / Dividen', '', '4,000']
             ],
             align: ['left', 'right', 'right'],
             compact: false
@@ -236,26 +236,26 @@ export const chapter4PAndBYP = [
       },
       {
         label: '(d)',
-        given: b('Post-Closing Trial Balance', 'Neraca Saldo Pasca Tutup'),
+        given: b('Post-Closing Trial Balance / Neraca Saldo Pasca Tutup', 'Neraca Saldo Pasca Tutup'),
         blocks: [
           {
             type: 'table',
-            caption: b('Post-Closing Trial Balance - Martinez Company', 'Neraca Saldo Pasca Tutup - Perusahaan Martinez'),
+            caption: b('Post-Closing Trial Balance - Martinez Company / Neraca Saldo Pasca Tutup - Perusahaan Martinez', 'Neraca Saldo Pasca Tutup - Perusahaan Martinez'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Account / Akun', 'Account / Akun'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Cash\nKas', '12,000', ''],
-              ['Accounts Receivable\nPiutang Usaha', '8,000', ''],
-              ['Supplies\nPerlengkapan', '1,200', ''],
-              ['Equipment\nPeralatan', '30,000', ''],
-              ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '12,000'],
-              ['Accounts Payable\nHutang Usaha', '', '5,000'],
-              ['Notes Payable\nCatatan Hutang', '', '15,000'],
-              ['Share Capital\nModal Saham', '', '20,000'],
-              ['Retained Earnings\nLaba Ditahan', '', '29,300'],
+              ['Cash / Kas', '12,000', ''],
+              ['Accounts Receivable / Piutang Usaha', '8,000', ''],
+              ['Supplies / Perlengkapan', '1,200', ''],
+              ['Equipment / Peralatan', '30,000', ''],
+              ['Accumulated Depreciation / Akumulasi Penyusutan', '', '12,000'],
+              ['Accounts Payable / Hutang Usaha', '', '5,000'],
+              ['Notes Payable / Catatan Hutang', '', '15,000'],
+              ['Share Capital / Modal Saham', '', '20,000'],
+              ['Retained Earnings / Laba Ditahan', '', '29,300'],
               ['TOTAL', '59,200', '59,200']
             ],
             align: ['left', 'right', 'right'],
@@ -305,32 +305,32 @@ export const chapter4PAndBYP = [
     parts: [
       {
         label: '(a)',
-        given: b('Four Closing Entries from Adjusted TB', 'Empat Entri Penutupan dari Neraca Saldo Disesuaikan'),
+        given: b('Four Closing Entries from Adjusted TB / Empat Entri Penutupan dari Neraca Saldo Disesuaikan', 'Empat Entri Penutupan dari Neraca Saldo Disesuaikan'),
         blocks: [
           {
             type: 'table',
-            caption: b('Closing Entries - Torres Company', 'Entri Penutupan - Perusahaan Torres'),
+            caption: b('Closing Entries - Torres Company / Entri Penutupan - Perusahaan Torres', 'Entri Penutupan - Perusahaan Torres'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Account / Akun', 'Account / Akun'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Service Revenue\nPendapatan Jasa', '35,000', ''],
-              ['Income Summary\nIkhtisar Laba Rugi', '', '35,000'],
-              ['Income Summary\nIkhtisar Laba Rugi', '20,800', ''],
-              ['Salaries Expense\nBeban Gaji', '', '15,000'],
-              ['Rent Expense\nBeban Sewa', '', '8,000'],
-              ['Utilities Expense\nBeban Utilitas', '', '2,500'],
-              ['Advertising Expense\nBeban Iklan', '', '1,500'],
-              ['Insurance Expense\nBeban Asuransi', '', '1,000'],
-              ['Depreciation Expense\nBeban Penyusutan', '', '2,000'],
-              ['Interest Expense\nBeban Bunga', '', '500'],
-              ['Supplies Expense\nBeban Perlengkapan', '', '800'],
-              ['Income Summary\nIkhtisar Laba Rugi', '14,200', ''],
-              ['Retained Earnings\nLaba Ditahan', '', '14,200'],
-              ['Retained Earnings\nLaba Ditahan', '2,000', ''],
-              ['Dividends\nDividen', '', '2,000']
+              ['Service Revenue / Pendapatan Jasa', '35,000', ''],
+              ['Income Summary / Ikhtisar Laba Rugi', '', '35,000'],
+              ['Income Summary / Ikhtisar Laba Rugi', '20,800', ''],
+              ['Salaries Expense / Beban Gaji', '', '15,000'],
+              ['Rent Expense / Beban Sewa', '', '8,000'],
+              ['Utilities Expense / Beban Utilitas', '', '2,500'],
+              ['Advertising Expense / Beban Iklan', '', '1,500'],
+              ['Insurance Expense / Beban Asuransi', '', '1,000'],
+              ['Depreciation Expense / Beban Penyusutan', '', '2,000'],
+              ['Interest Expense / Beban Bunga', '', '500'],
+              ['Supplies Expense / Beban Perlengkapan', '', '800'],
+              ['Income Summary / Ikhtisar Laba Rugi', '14,200', ''],
+              ['Retained Earnings / Laba Ditahan', '', '14,200'],
+              ['Retained Earnings / Laba Ditahan', '2,000', ''],
+              ['Dividends / Dividen', '', '2,000']
             ],
             align: ['left', 'right', 'right'],
             compact: false
@@ -339,26 +339,26 @@ export const chapter4PAndBYP = [
       },
       {
         label: '(b)',
-        given: b('Post-Closing Trial Balance', 'Neraca Saldo Pasca Tutup'),
+        given: b('Post-Closing Trial Balance / Neraca Saldo Pasca Tutup', 'Neraca Saldo Pasca Tutup'),
         blocks: [
           {
             type: 'table',
-            caption: b('Post-Closing Trial Balance - Torres Company', 'Neraca Saldo Pasca Tutup - Perusahaan Torres'),
+            caption: b('Post-Closing Trial Balance - Torres Company / Neraca Saldo Pasca Tutup - Perusahaan Torres', 'Neraca Saldo Pasca Tutup - Perusahaan Torres'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Account / Akun', 'Account / Akun'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Cash\nKas', '8,000', ''],
-              ['Accounts Receivable\nPiutang Usaha', '5,000', ''],
-              ['Supplies\nPerlengkapan', '1,500', ''],
-              ['Equipment\nPeralatan', '25,000', ''],
-              ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '7,500'],
-              ['Accounts Payable\nHutang Usaha', '', '3,000'],
-              ['Notes Payable\nCatatan Hutang', '', '10,000'],
-              ['Share Capital\nModal Saham', '', '15,000'],
-              ['Retained Earnings\nLaba Ditahan', '', '22,200'],
+              ['Cash / Kas', '8,000', ''],
+              ['Accounts Receivable / Piutang Usaha', '5,000', ''],
+              ['Supplies / Perlengkapan', '1,500', ''],
+              ['Equipment / Peralatan', '25,000', ''],
+              ['Accumulated Depreciation / Akumulasi Penyusutan', '', '7,500'],
+              ['Accounts Payable / Hutang Usaha', '', '3,000'],
+              ['Notes Payable / Catatan Hutang', '', '10,000'],
+              ['Share Capital / Modal Saham', '', '15,000'],
+              ['Retained Earnings / Laba Ditahan', '', '22,200'],
               ['TOTAL', '39,500', '39,500']
             ],
             align: ['left', 'right', 'right'],
@@ -368,7 +368,7 @@ export const chapter4PAndBYP = [
       },
       {
         label: '(c)',
-        given: b('Explain RE Balance Change', 'Jelaskan Perubahan Saldo LD'),
+        given: b('Explain RE Balance Change / Jelaskan Perubahan Saldo LD', 'Jelaskan Perubahan Saldo LD'),
         answer: b('Retained Earnings changes because: (1) Net income (€14,200) is closed to RE via Income Summary, increasing RE. (2) Dividends (€2,000) are closed directly to RE, decreasing RE. The new RE balance = Beginning RE (€8,000) + Net Income (€14,200) - Dividends (€2,000) = €20,200. RE is the only equity account that changes during closing (besides temporary accounts being zeroed).', 'Laba Ditahan berubah karena: (1) Laba bersih (€14.200) ditutup ke LD lewat Ikhtisar Laba Rugi, menambah LD. (2) Dividen (€2.000) ditutup langsung ke LD, mengurangi LD. Saldo LD baru = LD Awal (€8.000) + Laba Bersih (€14.200) - Dividen (€2.000) = €20.200. LD adalah satu-satunya akun ekuitas yang berubah saat penutupan (selain akun sementara dinolkan).')
       }
     ],
@@ -399,30 +399,30 @@ export const chapter4PAndBYP = [
     parts: [
       {
         label: '(a)',
-        given: b('Four Closing Entries', 'Empat Entri Penutupan'),
+        given: b('Four Closing Entries / Empat Entri Penutupan', 'Empat Entri Penutupan'),
         blocks: [
           {
             type: 'table',
-            caption: b('Closing Entries - Vega Company', 'Entri Penutupan - Perusahaan Vega'),
+            caption: b('Closing Entries - Vega Company / Entri Penutupan - Perusahaan Vega', 'Entri Penutupan - Perusahaan Vega'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Account / Akun', 'Account / Akun'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Service Revenue\nPendapatan Jasa', '40,000', ''],
-              ['Income Summary\nIkhtisar Laba Rugi', '', '40,000'],
-              ['Income Summary\nIkhtisar Laba Rugi', '23,000', ''],
-              ['Salaries Expense\nBeban Gaji', '', '15,000'],
-              ['Rent Expense\nBeban Sewa', '', '10,000'],
-              ['Utilities Expense\nBeban Utilitas', '', '3,000'],
-              ['Advertising Expense\nBeban Iklan', '', '2,000'],
-              ['Depreciation Expense\nBeban Penyusutan', '', '4,000'],
-              ['Supplies Expense\nBeban Perlengkapan', '', '1,500'],
-              ['Income Summary\nIkhtisar Laba Rugi', '17,000', ''],
-              ['Retained Earnings\nLaba Ditahan', '', '17,000'],
-              ['Retained Earnings\nLaba Ditahan', '3,000', ''],
-              ['Dividends\nDividen', '', '3,000']
+              ['Service Revenue / Pendapatan Jasa', '40,000', ''],
+              ['Income Summary / Ikhtisar Laba Rugi', '', '40,000'],
+              ['Income Summary / Ikhtisar Laba Rugi', '23,000', ''],
+              ['Salaries Expense / Beban Gaji', '', '15,000'],
+              ['Rent Expense / Beban Sewa', '', '10,000'],
+              ['Utilities Expense / Beban Utilitas', '', '3,000'],
+              ['Advertising Expense / Beban Iklan', '', '2,000'],
+              ['Depreciation Expense / Beban Penyusutan', '', '4,000'],
+              ['Supplies Expense / Beban Perlengkapan', '', '1,500'],
+              ['Income Summary / Ikhtisar Laba Rugi', '17,000', ''],
+              ['Retained Earnings / Laba Ditahan', '', '17,000'],
+              ['Retained Earnings / Laba Ditahan', '3,000', ''],
+              ['Dividends / Dividen', '', '3,000']
             ],
             align: ['left', 'right', 'right'],
             compact: false
@@ -431,17 +431,17 @@ export const chapter4PAndBYP = [
       },
       {
         label: '(b)',
-        given: b('Net Income Calculation', 'Perhitungan Laba Bersih'),
+        given: b('Net Income Calculation / Perhitungan Laba Bersih', 'Perhitungan Laba Bersih'),
         answer: b('', ''),
         blocks: [
           {
             type: 'table',
-            caption: b('Net Income Calculation', 'Perhitungan Laba Bersih'),
+            caption: b('Net Income Calculation / Perhitungan Laba Bersih', 'Perhitungan Laba Bersih'),
             head: [
-              b('Item\nItem', 'Amount (€)\nJumlah (€)'),
-              ['Service Revenue\nPendapatan Jasa', '40,000'],
-              ['Total Expenses\nTotal Beban', '23,000'],
-              ['NET INCOME\nLABA BERSIH', '17,000']
+              b('Item / Item', 'Amount (€) / Jumlah (€)'),
+              ['Service Revenue / Pendapatan Jasa', '40,000'],
+              ['Total Expenses / Total Beban', '23,000'],
+              ['NET INCOME / LABA BERSIH', '17,000']
             ],
             align: ['left', 'right'],
             compact: false
@@ -450,18 +450,18 @@ export const chapter4PAndBYP = [
       },
       {
         label: '(c)',
-        given: b('Ending Retained Earnings', 'Laba Ditahan Akhir'),
+        given: b('Ending Retained Earnings / Laba Ditahan Akhir', 'Laba Ditahan Akhir'),
         answer: b('', ''),
         blocks: [
           {
             type: 'table',
-            caption: b('Retained Earnings Calculation', 'Perhitungan Laba Ditahan'),
+            caption: b('Retained Earnings Calculation / Perhitungan Laba Ditahan', 'Perhitungan Laba Ditahan'),
             head: [
-              b('Item\nItem', 'Amount (€)\nJumlah (€)'),
-              ['Beginning Retained Earnings\nLaba Ditahan Awal', '12,000'],
-              ['Add: Net Income\nTambah: Laba Bersih', '17,000'],
-              ['Less: Dividends\nKurang: Dividen', '3,000'],
-              ['Ending Retained Earnings\nLaba Ditahan Akhir', '26,000']
+              b('Item / Item', 'Amount (€) / Jumlah (€)'),
+              ['Beginning Retained Earnings / Laba Ditahan Awal', '12,000'],
+              ['Add: Net Income / Tambah: Laba Bersih', '17,000'],
+              ['Less: Dividends / Kurang: Dividen', '3,000'],
+              ['Ending Retained Earnings / Laba Ditahan Akhir', '26,000']
             ],
             align: ['left', 'right'],
             compact: false
@@ -496,23 +496,23 @@ export const chapter4PAndBYP = [
     parts: [
       {
         label: '(a)',
-        given: b('Reversing Entries for 3 Adjusting Entries', 'Entri Pembalikan untuk 3 Entri Penyesuaian'),
+        given: b('Reversing Entries for 3 Adjusting Entries / Entri Pembalikan untuk 3 Entri Penyesuaian', 'Entri Pembalikan untuk 3 Entri Penyesuaian'),
         blocks: [
           {
             type: 'table',
-            caption: b('Reversing Entries - January 1', 'Entri Pembalikan - 1 Januari'),
+            caption: b('Reversing Entries - January 1 / Entri Pembalikan - 1 Januari', 'Entri Pembalikan - 1 Januari'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Account / Akun', 'Account / Akun'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Salaries Payable\nGaji Bayar', '2,500', ''],
-              ['Salaries Expense\nBeban Gaji', '', '2,500'],
-              ['Interest Payable\nBunga Bayar', '400', ''],
-              ['Interest Expense\nBeban Bunga', '', '400'],
-              ['Service Revenue\nPendapatan Jasa', '3,000', ''],
-              ['Accounts Receivable\nPiutang Usaha', '', '3,000']
+              ['Salaries Payable / Gaji Bayar', '2,500', ''],
+              ['Salaries Expense / Beban Gaji', '', '2,500'],
+              ['Interest Payable / Bunga Bayar', '400', ''],
+              ['Interest Expense / Beban Bunga', '', '400'],
+              ['Service Revenue / Pendapatan Jasa', '3,000', ''],
+              ['Accounts Receivable / Piutang Usaha', '', '3,000']
             ],
             align: ['left', 'right', 'right'],
             compact: false
@@ -521,19 +521,19 @@ export const chapter4PAndBYP = [
       },
       {
         label: '(b)',
-        given: b('Subsequent Cash Payments With/Without Reversing Entries', 'Pembayaran Kas Berikutnya Dengan/Tanpa Entri Pembalikan'),
+        given: b('Subsequent Cash Payments With/Without Reversing Entries / Pembayaran Kas Berikutnya Dengan/Tanpa Entri Pembalikan', 'Pembayaran Kas Berikutnya Dengan/Tanpa Entri Pembalikan'),
         answer: b('', ''),
         blocks: [
           {
             type: 'table',
-            caption: b('Subsequent Salary Payment Comparison', 'Perbandingan Pembayaran Gaji Berikutnya'),
+            caption: b('Subsequent Salary Payment Comparison / Perbandingan Pembayaran Gaji Berikutnya', 'Perbandingan Pembayaran Gaji Berikutnya'),
             head: [
-              b('Scenario\nSkenario', 'Scenario\nSkenario'),
-              b('With Reversing Entries\nDengan Entri Pembalikan', 'With Reversing Entries\nDengan Entri Pembalikan'),
-              b('Without Reversing Entries\nTanpa Entri Pembalikan', 'Without Reversing Entries\nTanpa Entri Pembalikan')
+              b('Scenario / Skenario', 'Scenario / Skenario'),
+              b('With Reversing Entries / Dengan Entri Pembalikan', 'With Reversing Entries / Dengan Entri Pembalikan'),
+              b('Without Reversing Entries / Tanpa Entri Pembalikan', 'Without Reversing Entries / Tanpa Entri Pembalikan')
             ],
             rows: [
-              ['Jan 15 pay €4,000 salaries\n15 Jan bayar €4.000 gaji', 'Dr Salaries Exp 4,000 / Cr Cash 4,000\nDr Beban Gaji 4.000 / Cr Kas 4.000', 'Dr Salaries Payable 2,500\nDr Salaries Exp 1,500 / Cr Cash 4,000\nDr Gaji Bayar 2.500\nDr Beban Gaji 1.500 / Cr Kas 4.000']
+              ['Jan 15 pay €4,000 salaries / 15 Jan bayar €4.000 gaji', 'Dr Salaries Exp 4,000 / Cr Cash 4,000 / Dr Beban Gaji 4.000 / Cr Kas 4.000', 'Dr Salaries Payable 2,500\nDr Salaries Exp 1,500 / Cr Cash 4,000 / Dr Gaji Bayar 2.500\nDr Beban Gaji 1.500 / Cr Kas 4.000']
             ],
             align: ['left', 'center', 'center'],
             compact: false
@@ -570,30 +570,30 @@ export const chapter4PAndBYP = [
     parts: [
       {
         label: '',
-        given: b('Complete Accounting Cycle for New Business', 'Siklus Akuntansi Lengkap untuk Bisnis Baru'),
+        given: b('Complete Accounting Cycle for New Business / Siklus Akuntansi Lengkap untuk Bisnis Baru', 'Siklus Akuntansi Lengkap untuk Bisnis Baru'),
         answer: b('', ''),
         blocks: [
           {
             type: 'table',
-            caption: b('Complete Accounting Cycle Steps', 'Langkah-langkah Siklus Akuntansi Lengkap'),
+            caption: b('Complete Accounting Cycle Steps / Langkah-langkah Siklus Akuntansi Lengkap', 'Langkah-langkah Siklus Akuntansi Lengkap'),
             head: [
-              b('Step\nLangkah', 'Step\nLangkah'),
-              b('Chapter\nBab', 'Chapter\nBab'),
-              b('Description\nDeskripsi', 'Description\nDeskripsi'),
-              b('Key Output\nOutput Kunci', 'Key Output\nOutput Kunci')
+              b('Step / Langkah', 'Step / Langkah'),
+              b('Chapter / Bab', 'Chapter / Bab'),
+              b('Description / Deskripsi', 'Description / Deskripsi'),
+              b('Key Output / Output Kunci', 'Key Output / Output Kunci')
             ],
             rows: [
-              ['1', 'Ch 1', 'Analyze 25 transactions using accounting equation\nAnalisis 25 transaksi pakai persamaan akuntansi', 'Transaction Analysis\nAnalisis Transaksi'],
-              ['2', 'Ch 2', 'Journalize each transaction\nJurnalikan masing-masing', 'General Journal\nJurnal Umum'],
-              ['3', 'Ch 2', 'Post to ledger accounts\nPos ke buku besar', 'Ledger Accounts\nRekening Buku Besar'],
-              ['4', 'Ch 2', 'Prepare trial balance\nSiapkan neraca saldo', 'Trial Balance\nNeraca Saldo'],
-              ['5', 'Ch 3', 'Make 6-8 adjusting entries\nBuat 6-8 entri penyesuaian', 'Adjusting Entries\nEntri Penyesuaian'],
-              ['6', 'Ch 3', 'Prepare adjusted trial balance\nSiapkan neraca saldo disesuaikan', 'Adjusted Trial Balance\nNeraca Saldo Disesuaikan'],
-              ['7', 'Ch 3', 'Prepare all 3 financial statements\nSiapkan 3 laporan keuangan', 'IS, RE, SFP\nLR, LD, LPK'],
-              ['8', 'Ch 4', 'Journalize 4 closing entries\nJurnalikan 4 entri penutupan', 'Closing Entries\nEntri Penutupan'],
-              ['9', 'Ch 4', 'Prepare post-closing trial balance\nSiapkan neraca saldo pasca tutup', 'Post-Closing TB\nNeraca Saldo Pasca Tutup'],
-              ['10', 'Ch 4', 'Prepare 3-4 reversing entries\nSiapkan 3-4 entri pembalikan', 'Reversing Entries\nEntri Pembalikan'],
-              ['11', 'Ch 4', 'Verify post-closing TB has only permanent accounts\nVerifikasi neraca pasca tutup hanya akun permanen', 'Verification\nVerifikasi']
+              ['1', 'Ch 1', 'Analyze 25 transactions using accounting equation / Analisis 25 transaksi pakai persamaan akuntansi', 'Transaction Analysis / Analisis Transaksi'],
+              ['2', 'Ch 2', 'Journalize each / Jurnalikan masing-masing', 'General Journal / Jurnal Umum'],
+              ['3', 'Ch 2', 'Post to ledger / Pos ke buku besar', 'Ledger Accounts / Rekening Buku Besar'],
+              ['4', 'Ch 2', 'Prepare trial balance / Siapkan neraca saldo', 'Trial Balance / Neraca Saldo'],
+              ['5', 'Ch 3', 'Make 6-8 adjusting entries / Buat 6-8 entri penyesuaian', 'Adjusting Entries / Entri Penyesuaian'],
+              ['6', 'Ch 3', 'Prepare adjusted trial balance / Siapkan neraca saldo disesuaikan', 'Adjusted Trial Balance / Neraca Saldo Disesuaikan'],
+              ['7', 'Ch 3', 'Prepare all 3 financial statements / Siapkan 3 laporan keuangan', 'IS, RE, SFP / LR, LD, LPK'],
+              ['8', 'Ch 4', 'Journalize 4 closing entries / Jurnalikan 4 entri penutupan', 'Closing Entries / Entri Penutupan'],
+              ['9', 'Ch 4', 'Prepare post-closing trial balance / Siapkan neraca saldo pasca tutup', 'Post-Closing TB / Neraca Saldo Pasca Tutup'],
+              ['10', 'Ch 4', 'Prepare 3-4 reversing entries / Siapkan 3-4 entri pembalikan', 'Reversing Entries / Entri Pembalikan'],
+              ['11', 'Ch 4', 'Verify post-closing TB has only permanent accounts / Verifikasi neraca pasca tutup hanya akun permanen', 'Verification / Verifikasi']
             ],
             align: ['center', 'center', 'left', 'left'],
             compact: false

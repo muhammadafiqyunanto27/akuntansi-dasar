@@ -47,31 +47,31 @@ export const chapter2PAndBYP = [
             type: 'table',
             caption: b('General Journal - P2-1 Kaustav Sen Company', 'Jurnal Umum - P2-1 Perusahaan Kaustav Sen'),
             head: [
-              b('Date\nTgl', 'Date\nTgl'),
-              b('Account Title\nNama Akun', 'Account Title\nNama Akun'),
-              b('Ref\nRef', 'Ref\nRef'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Date / Tgl', 'Date / Tgl'),
+              b('Account Title / Nama Akun', 'Account Title / Nama Akun'),
+              b('Ref / Ref', 'Ref / Ref'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Jun 1', 'Cash\nKas', '', '15,000', ''],
-              ['', 'Share Capital\nModal Saham', '', '', '15,000'],
-              ['Jun 2', 'Equipment\nPeralatan', '', '5,000', ''],
-              ['', 'Accounts Payable\nHutang Usaha', '', '', '5,000'],
-              ['Jun 3', 'Rent Expense\nBeban Sewa', '', '2,000', ''],
-              ['', 'Cash\nKas', '', '', '2,000'],
-              ['Jun 4', 'Accounts Receivable\nPiutang Usaha', '', '4,500', ''],
-              ['', 'Service Revenue\nPendapatan Jasa', '', '', '4,500'],
-              ['Jun 5', 'Salaries Expense\nBeban Gaji', '', '1,200', ''],
-              ['', 'Cash\nKas', '', '', '1,200'],
-              ['Jun 6', 'Cash\nKas', '', '3,000', ''],
-              ['', 'Accounts Receivable\nPiutang Usaha', '', '', '3,000'],
-              ['Jun 7', 'Advertising Expense\nBeban Iklan', '', '300', ''],
-              ['', 'Accounts Payable\nHutang Usaha', '', '', '300'],
-              ['Jun 8', 'Utilities Expense\nBeban Utilitas', '', '400', ''],
-              ['', 'Cash\nKas', '', '', '400'],
-              ['Jun 9', 'Dividends\nDividen', '', '500', ''],
-              ['', 'Cash\nKas', '', '', '500']
+              ['Jun 1', 'Cash / Kas', '', '15,000', ''],
+              ['', 'Share Capital / Modal Saham', '', '', '15,000'],
+              ['Jun 2', 'Equipment / Peralatan', '', '5,000', ''],
+              ['', 'Accounts Payable / Hutang Usaha', '', '', '5,000'],
+              ['Jun 3', 'Rent Expense / Beban Sewa', '', '2,000', ''],
+              ['', 'Cash / Kas', '', '', '2,000'],
+              ['Jun 4', 'Accounts Receivable / Piutang Usaha', '', '4,500', ''],
+              ['', 'Service Revenue / Pendapatan Jasa', '', '', '4,500'],
+              ['Jun 5', 'Salaries Expense / Beban Gaji', '', '1,200', ''],
+              ['', 'Cash / Kas', '', '', '1,200'],
+              ['Jun 6', 'Cash / Kas', '', '3,000', ''],
+              ['', 'Accounts Receivable / Piutang Usaha', '', '', '3,000'],
+              ['Jun 7', 'Advertising Expense / Beban Iklan', '', '300', ''],
+              ['', 'Accounts Payable / Hutang Usaha', '', '', '300'],
+              ['Jun 8', 'Utilities Expense / Beban Utilitas', '', '400', ''],
+              ['', 'Cash / Kas', '', '', '400'],
+              ['Jun 9', 'Dividends / Dividen', '', '500', ''],
+              ['', 'Cash / Kas', '', '', '500']
             ],
             align: ['center', 'left', 'center', 'right', 'right'],
             compact: false
@@ -85,12 +85,12 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('T-Accounts / Ledger Accounts', 'Rekening T / Rekening Buku Besar'),
+            caption: b('Cash T-Account / Rekening T Kas', 'Rekening T Kas'),
             head: [
-              b('Cash (101)\nKas', 'Cash (101)\nKas'),
-              b('Debit', 'Debet'),
-              b('Credit', 'Kredit'),
-              b('Balance', 'Saldo')
+              b('Cash (101) / Kas', 'Cash (101) / Kas'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit'),
+              b('Balance / Saldo', 'Balance / Saldo')
             ],
             rows: [
               ['Jun 1', '15,000', '', '15,000 Dr'],
@@ -111,25 +111,25 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Complete T-Accounts', 'Rekening T Lengkap'),
+            caption: b('Complete T-Accounts / Rekening T Lengkap', 'Rekening T Lengkap'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Debits\nTotal Debet', 'Debits\nTotal Debet'),
-              b('Credits\nTotal Kredit', 'Credits\nTotal Kredit'),
-              b('Ending Balance\nSaldo Akhir', 'Ending Balance\nSaldo Akhir')
+              b('Account / Akun', 'Account / Akun'),
+              b('Debits / Total Debet', 'Debits / Total Debet'),
+              b('Credits / Total Kredit', 'Credits / Total Kredit'),
+              b('Ending Balance / Saldo Akhir', 'Ending Balance / Saldo Akhir')
             ],
             rows: [
-              ['Cash\nKas', '18,000', '4,100', '13,900 Dr'],
-              ['Accounts Receivable\nPiutang Usaha', '4,500', '3,000', '1,500 Dr'],
-              ['Equipment\nPeralatan', '5,000', '', '5,000 Dr'],
-              ['Accounts Payable\nHutang Usaha', '', '5,300', '5,300 Cr'],
-              ['Share Capital\nModal Saham', '', '15,000', '15,000 Cr'],
-              ['Service Revenue\nPendapatan Jasa', '', '4,500', '4,500 Cr'],
-              ['Rent Expense\nBeban Sewa', '2,000', '', '2,000 Dr'],
-              ['Salaries Expense\nBeban Gaji', '1,200', '', '1,200 Dr'],
-              ['Advertising Expense\nBeban Iklan', '300', '', '300 Dr'],
-              ['Utilities Expense\nBeban Utilitas', '400', '', '400 Dr'],
-              ['Dividends\nDividen', '500', '', '500 Dr']
+              ['Cash / Kas', '18,000', '4,100', '13,900 Dr'],
+              ['Accounts Receivable / Piutang Usaha', '4,500', '3,000', '1,500 Dr'],
+              ['Equipment / Peralatan', '5,000', '', '5,000 Dr'],
+              ['Accounts Payable / Hutang Usaha', '', '5,300', '5,300 Cr'],
+              ['Share Capital / Modal Saham', '', '15,000', '15,000 Cr'],
+              ['Service Revenue / Pendapatan Jasa', '', '4,500', '4,500 Cr'],
+              ['Rent Expense / Beban Sewa', '2,000', '', '2,000 Dr'],
+              ['Salaries Expense / Beban Gaji', '1,200', '', '1,200 Dr'],
+              ['Advertising Expense / Beban Iklan', '300', '', '300 Dr'],
+              ['Utilities Expense / Beban Utilitas', '400', '', '400 Dr'],
+              ['Dividends / Dividen', '500', '', '500 Dr']
             ],
             align: ['left', 'right', 'right', 'center'],
             compact: false
@@ -143,24 +143,24 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Trial Balance - June 30', 'Neraca Saldo - 30 Juni'),
+            caption: b('Trial Balance - June 30 / Neraca Saldo - 30 Juni', 'Neraca Saldo - 30 Juni'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Account / Akun', 'Account / Akun'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Cash\nKas', '13,900', ''],
-              ['Accounts Receivable\nPiutang Usaha', '1,500', ''],
-              ['Equipment\nPeralatan', '5,000', ''],
-              ['Accounts Payable\nHutang Usaha', '', '5,300'],
-              ['Share Capital\nModal Saham', '', '15,000'],
-              ['Service Revenue\nPendapatan Jasa', '', '4,500'],
-              ['Rent Expense\nBeban Sewa', '2,000', ''],
-              ['Salaries Expense\nBeban Gaji', '1,200', ''],
-              ['Advertising Expense\nBeban Iklan', '300', ''],
-              ['Utilities Expense\nBeban Utilitas', '400', ''],
-              ['Dividends\nDividen', '500', ''],
+              ['Cash / Kas', '13,900', ''],
+              ['Accounts Receivable / Piutang Usaha', '1,500', ''],
+              ['Equipment / Peralatan', '5,000', ''],
+              ['Accounts Payable / Hutang Usaha', '', '5,300'],
+              ['Share Capital / Modal Saham', '', '15,000'],
+              ['Service Revenue / Pendapatan Jasa', '', '4,500'],
+              ['Rent Expense / Beban Sewa', '2,000', ''],
+              ['Salaries Expense / Beban Gaji', '1,200', ''],
+              ['Advertising Expense / Beban Iklan', '300', ''],
+              ['Utilities Expense / Beban Utilitas', '400', ''],
+              ['Dividends / Dividen', '500', ''],
               ['TOTAL', '28,200', '28,200']
             ],
             align: ['left', 'right', 'right'],
@@ -209,28 +209,28 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Trial Balance, Dec 31, 2017', 'Neraca Saldo, 31 Des 2017'),
+            caption: b('Trial Balance, Dec 31, 2017 / Neraca Saldo, 31 Des 2017', 'Neraca Saldo, 31 Des 2017'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Account / Akun', 'Account / Akun'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Cash\nKas', '12,000', ''],
-              ['Accounts Receivable\nPiutang Usaha', '8,500', ''],
-              ['Supplies\nPerlengkapan', '2,500', ''],
-              ['Equipment\nPeralatan', '18,000', ''],
-              ['Dividends\nDividen', '3,000', ''],
-              ['Salaries Expense\nBeban Gaji', '9,000', ''],
-              ['Rent Expense\nBeban Sewa', '4,000', ''],
-              ['Advertising Expense\nBeban Iklan', '1,500', ''],
-              ['Utilities Expense\nBeban Utilitas', '1,200', ''],
-              ['Supplies Expense\nBeban Perlengkapan', '800', ''],
-              ['Accounts Payable\nHutang Usaha', '', '5,000'],
-              ['Notes Payable\nCatatan Hutang', '', '10,000'],
-              ['Share Capital\nModal Saham', '', '20,000'],
-              ['Retained Earnings\nLaba Ditahan', '', '12,000'],
-              ['Service Revenue\nPendapatan Jasa', '', '25,000'],
+              ['Cash / Kas', '12,000', ''],
+              ['Accounts Receivable / Piutang Usaha', '8,500', ''],
+              ['Supplies / Perlengkapan', '2,500', ''],
+              ['Equipment / Peralatan', '18,000', ''],
+              ['Dividends / Dividen', '3,000', ''],
+              ['Salaries Expense / Beban Gaji', '9,000', ''],
+              ['Rent Expense / Beban Sewa', '4,000', ''],
+              ['Advertising Expense / Beban Iklan', '1,500', ''],
+              ['Utilities Expense / Beban Utilitas', '1,200', ''],
+              ['Supplies Expense / Beban Perlengkapan', '800', ''],
+              ['Accounts Payable / Hutang Usaha', '', '5,000'],
+              ['Notes Payable / Catatan Hutang', '', '10,000'],
+              ['Share Capital / Modal Saham', '', '20,000'],
+              ['Retained Earnings / Laba Ditahan', '', '12,000'],
+              ['Service Revenue / Pendapatan Jasa', '', '25,000'],
               ['TOTAL', '65,500', '65,500']
             ],
             align: ['left', 'right', 'right'],
@@ -245,21 +245,21 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Income Statement - Marquez Company (Year Ended Dec 31, 2017)', 'Laporan Laba Rugi - Perusahaan Marquez (Tahun Berakhir 31 Des 2017)'),
+            caption: b('Income Statement - Marquez Company (Year Ended Dec 31, 2017) / Laporan Laba Rugi - Perusahaan Marquez (Tahun Berakhir 31 Des 2017)', 'Laporan Laba Rugi - Perusahaan Marquez (Tahun Berakhir 31 Des 2017)'),
             head: [
-              b('Item\nItem', 'Item\nItem'),
-              b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+              b('Item / Item', 'Item / Item'),
+              b('Amount (€) / Jumlah (€)', 'Jumlah (€) / Jumlah (€)')
             ],
             rows: [
-              ['Service Revenue\nPendapatan Jasa', '25,000'],
-              ['Expenses:\nBeban:', ''],
-              ['  Salaries Expense\n  Beban Gaji', '9,000'],
-              ['  Rent Expense\n  Beban Sewa', '4,000'],
-              ['  Advertising Expense\n  Beban Iklan', '1,500'],
-              ['  Utilities Expense\n  Beban Utilitas', '1,200'],
-              ['  Supplies Expense\n  Beban Perlengkapan', '800'],
-              ['Total Expenses\nTotal Beban', '16,500'],
-              ['NET INCOME\nLABA BERSIH', '8,500']
+              ['Service Revenue / Pendapatan Jasa', '25,000'],
+              ['Expenses / Beban:', ''],
+              ['  Salaries Expense / Beban Gaji', '9,000'],
+              ['  Rent Expense / Beban Sewa', '4,000'],
+              ['  Advertising Expense / Beban Iklan', '1,500'],
+              ['  Utilities Expense / Beban Utilitas', '1,200'],
+              ['  Supplies Expense / Beban Perlengkapan', '800'],
+              ['Total Expenses / Total Beban', '16,500'],
+              ['NET INCOME / LABA BERSIH', '8,500']
             ],
             align: ['left', 'right'],
             compact: false
@@ -307,18 +307,18 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Error Analysis', 'Analisis Kesalahan'),
+            caption: b('Error Analysis / Analisis Kesalahan', 'Analisis Kesalahan'),
             head: [
-              b('Error\nKesalahan', 'Error\nKesalahan'),
-              b('Description\nDeskripsi', 'Description\nDeskripsi'),
-              b('Correction\nKoreksi', 'Correction\nKoreksi')
+              b('Error / Kesalahan', 'Error / Kesalahan'),
+              b('Description / Deskripsi', 'Description / Deskripsi'),
+              b('Correction / Koreksi', 'Correction / Koreksi')
             ],
             rows: [
-              ['1', 'Cash receipt on account credited to Service Revenue instead of A/R', 'Dr Service Revenue 1,200 / Cr Accounts Receivable 1,200'],
-              ['2', 'Supplies debited €90 instead of €900 (transposition error)', 'Dr Supplies 810 / Cr Accounts Payable 810'],
-              ['3', 'Correct - Equipment purchase for cash', 'No correction needed'],
-              ['4', 'Correct - Cash dividend', 'No correction needed'],
-              ['5', 'Correct - Payment of accounts payable', 'No correction needed']
+              ['1', 'Cash receipt on account credited to Service Revenue instead of A/R / Penerimaan tunai pada rekening dikreditkan ke Pendapatan Jasa bukan Piutang', 'Dr Service Revenue 1,200 / Cr Accounts Receivable 1,200 / Dr Pendapatan Jasa 1.200 / Cr Piutang 1.200'],
+              ['2', 'Supplies debited €90 instead of €900 (transposition error) / Perlengkapan didebet €90 bukan €900 (kesalahan transposisi)', 'Dr Supplies 810 / Cr Accounts Payable 810 / Dr Perlengkapan 810 / Cr Hutang Usaha 810'],
+              ['3', 'Correct - Equipment purchase for cash / Benar - Pembelian peralatan tunai', 'No correction needed / Tidak perlu koreksi'],
+              ['4', 'Correct - Cash dividend / Benar - Dividen tunai', 'No correction needed / Tidak perlu koreksi'],
+              ['5', 'Correct - Payment of accounts payable / Benar - Pembayaran hutang usaha', 'No correction needed / Tidak perlu koreksi']
             ],
             align: ['center', 'left', 'left'],
             compact: false
@@ -332,19 +332,19 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Correcting Journal Entries', 'Entri Jurnal Pembetulan'),
+            caption: b('Correcting Journal Entries / Entri Jurnal Pembetulan', 'Entri Jurnal Pembetulan'),
             head: [
-              b('Date\nTgl', 'Date\nTgl'),
-              b('Account Title\nNama Akun', 'Account Title\nNama Akun'),
-              b('Ref\nRef', 'Ref\nRef'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Date / Tgl', 'Date / Tgl'),
+              b('Account Title / Nama Akun', 'Account Title / Nama Akun'),
+              b('Ref / Ref', 'Ref / Ref'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['', 'Accounts Receivable\nPiutang Usaha', '', '1,200', ''],
-              ['', 'Service Revenue\nPendapatan Jasa', '', '', '1,200'],
-              ['', 'Supplies\nPerlengkapan', '', '810', ''],
-              ['', 'Accounts Payable\nHutang Usaha', '', '', '810']
+              ['', 'Accounts Receivable / Piutang Usaha', '', '1,200', ''],
+              ['', 'Service Revenue / Pendapatan Jasa', '', '', '1,200'],
+              ['', 'Supplies / Perlengkapan', '', '810', ''],
+              ['', 'Accounts Payable / Hutang Usaha', '', '', '810']
             ],
             align: ['center', 'left', 'center', 'right', 'right'],
             compact: false
@@ -410,39 +410,39 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('General Journal - P2-4 Gomez Company', 'Jurnal Umum - P2-4 Perusahaan Gomez'),
+            caption: b('General Journal - P2-4 Gomez Company / Jurnal Umum - P2-4 Perusahaan Gomez', 'Jurnal Umum - P2-4 Perusahaan Gomez'),
             head: [
-              b('Date\nTgl', 'Date\nTgl'),
-              b('Account Title\nNama Akun', 'Account Title\nNama Akun'),
-              b('Ref\nRef', 'Ref\nRef'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Date / Tgl', 'Date / Tgl'),
+              b('Account Title / Nama Akun', 'Account Title / Nama Akun'),
+              b('Ref / Ref', 'Ref / Ref'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Jul 1', 'Cash\nKas', '', '20,000', ''],
-              ['', 'Share Capital\nModal Saham', '', '', '20,000'],
-              ['Jul 3', 'Supplies\nPerlengkapan', '', '1,200', ''],
-              ['', 'Accounts Payable\nHutang Usaha', '', '', '1,200'],
-              ['Jul 5', 'Rent Expense\nBeban Sewa', '', '3,000', ''],
-              ['', 'Cash\nKas', '', '', '3,000'],
-              ['Jul 8', 'Cash\nKas', '', '7,500', ''],
-              ['', 'Service Revenue\nPendapatan Jasa', '', '', '7,500'],
-              ['Jul 12', 'Salaries Expense\nBeban Gaji', '', '1,500', ''],
-              ['', 'Cash\nKas', '', '', '1,500'],
-              ['Jul 15', 'Accounts Receivable\nPiutang Usaha', '', '4,200', ''],
-              ['', 'Service Revenue\nPendapatan Jasa', '', '', '4,200'],
-              ['Jul 18', 'Accounts Payable\nHutang Usaha', '', '500', ''],
-              ['', 'Cash\nKas', '', '', '500'],
-              ['Jul 20', 'Cash\nKas', '', '2,800', ''],
-              ['', 'Accounts Receivable\nPiutang Usaha', '', '', '2,800'],
-              ['Jul 22', 'Advertising Expense\nBeban Iklan', '', '600', ''],
-              ['', 'Accounts Payable\nHutang Usaha', '', '', '600'],
-              ['Jul 25', 'Dividends\nDividen', '', '800', ''],
-              ['', 'Cash\nKas', '', '', '800'],
-              ['Jul 28', 'Utilities Expense\nBeban Utilitas', '', '400', ''],
-              ['', 'Cash\nKas', '', '', '400'],
-              ['Jul 31', 'Salaries Expense\nBeban Gaji', '', '2,000', ''],
-              ['', 'Cash\nKas', '', '', '2,000']
+              ['Jul 1', 'Cash / Kas', '', '20,000', ''],
+              ['', 'Share Capital / Modal Saham', '', '', '20,000'],
+              ['Jul 3', 'Supplies / Perlengkapan', '', '1,200', ''],
+              ['', 'Accounts Payable / Hutang Usaha', '', '', '1,200'],
+              ['Jul 5', 'Rent Expense / Beban Sewa', '', '3,000', ''],
+              ['', 'Cash / Kas', '', '', '3,000'],
+              ['Jul 8', 'Cash / Kas', '', '7,500', ''],
+              ['', 'Service Revenue / Pendapatan Jasa', '', '', '7,500'],
+              ['Jul 12', 'Salaries Expense / Beban Gaji', '', '1,500', ''],
+              ['', 'Cash / Kas', '', '', '1,500'],
+              ['Jul 15', 'Accounts Receivable / Piutang Usaha', '', '4,200', ''],
+              ['', 'Service Revenue / Pendapatan Jasa', '', '', '4,200'],
+              ['Jul 18', 'Accounts Payable / Hutang Usaha', '', '500', ''],
+              ['', 'Cash / Kas', '', '', '500'],
+              ['Jul 20', 'Cash / Kas', '', '2,800', ''],
+              ['', 'Accounts Receivable / Piutang Usaha', '', '', '2,800'],
+              ['Jul 22', 'Advertising Expense / Beban Iklan', '', '600', ''],
+              ['', 'Accounts Payable / Hutang Usaha', '', '', '600'],
+              ['Jul 25', 'Dividends / Dividen', '', '800', ''],
+              ['', 'Cash / Kas', '', '', '800'],
+              ['Jul 28', 'Utilities Expense / Beban Utilitas', '', '400', ''],
+              ['', 'Cash / Kas', '', '', '400'],
+              ['Jul 31', 'Salaries Expense / Beban Gaji', '', '2,000', ''],
+              ['', 'Cash / Kas', '', '', '2,000']
             ],
             align: ['center', 'left', 'center', 'right', 'right'],
             compact: false
@@ -456,24 +456,24 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Trial Balance - July 31', 'Neraca Saldo - 31 Juli'),
+            caption: b('Trial Balance - July 31 / Neraca Saldo - 31 Juli', 'Neraca Saldo - 31 Juli'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Debit\nDebet', 'Debit\nDebet'),
-              b('Credit\nKredit', 'Credit\nKredit')
+              b('Account / Akun', 'Account / Akun'),
+              b('Debit / Debet', 'Debit / Debet'),
+              b('Credit / Kredit', 'Credit / Kredit')
             ],
             rows: [
-              ['Cash\nKas', '15,000', ''],
-              ['Accounts Receivable\nPiutang Usaha', '1,400', ''],
-              ['Supplies\nPerlengkapan', '1,200', ''],
-              ['Accounts Payable\nHutang Usaha', '', '1,300'],
-              ['Share Capital\nModal Saham', '', '20,000'],
-              ['Service Revenue\nPendapatan Jasa', '', '11,700'],
-              ['Dividends\nDividen', '800', ''],
-              ['Rent Expense\nBeban Sewa', '3,000', ''],
-              ['Salaries Expense\nBeban Gaji', '3,500', ''],
-              ['Advertising Expense\nBeban Iklan', '600', ''],
-              ['Utilities Expense\nBeban Utilitas', '400', ''],
+              ['Cash / Kas', '15,000', ''],
+              ['Accounts Receivable / Piutang Usaha', '1,400', ''],
+              ['Supplies / Perlengkapan', '1,200', ''],
+              ['Accounts Payable / Hutang Usaha', '', '1,300'],
+              ['Share Capital / Modal Saham', '', '20,000'],
+              ['Service Revenue / Pendapatan Jasa', '', '11,700'],
+              ['Dividends / Dividen', '800', ''],
+              ['Rent Expense / Beban Sewa', '3,000', ''],
+              ['Salaries Expense / Beban Gaji', '3,500', ''],
+              ['Advertising Expense / Beban Iklan', '600', ''],
+              ['Utilities Expense / Beban Utilitas', '400', ''],
               ['TOTAL', '22,900', '22,900']
             ],
             align: ['left', 'right', 'right'],
@@ -488,20 +488,20 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Income Statement - Gomez Company (July)', 'Laporan Laba Rugi - Perusahaan Gomez (Juli)'),
+            caption: b('Income Statement - Gomez Company (July) / Laporan Laba Rugi - Perusahaan Gomez (Juli)', 'Laporan Laba Rugi - Perusahaan Gomez (Juli)'),
             head: [
-              b('Item\nItem', 'Item\nItem'),
-              b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+              b('Item / Item', 'Item / Item'),
+              b('Amount (€) / Jumlah (€)', 'Jumlah (€) / Jumlah (€)')
             ],
             rows: [
-              ['Service Revenue\nPendapatan Jasa', '11,700'],
-              ['Expenses:\nBeban:', ''],
-              ['  Rent Expense\n  Beban Sewa', '3,000'],
-              ['  Salaries Expense\n  Beban Gaji', '3,500'],
-              ['  Advertising Expense\n  Beban Iklan', '600'],
-              ['  Utilities Expense\n  Beban Utilitas', '400'],
-              ['Total Expenses\nTotal Beban', '7,500'],
-              ['NET INCOME\nLABA BERSIH', '4,200']
+              ['Service Revenue / Pendapatan Jasa', '11,700'],
+              ['Expenses / Beban:', ''],
+              ['  Rent Expense / Beban Sewa', '3,000'],
+              ['  Salaries Expense / Beban Gaji', '3,500'],
+              ['  Advertising Expense / Beban Iklan', '600'],
+              ['  Utilities Expense / Beban Utilitas', '400'],
+              ['Total Expenses / Total Beban', '7,500'],
+              ['NET INCOME / LABA BERSIH', '4,200']
             ],
             align: ['left', 'right'],
             compact: false
@@ -514,16 +514,16 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Retained Earnings Statement - July', 'Laporan Laba Ditahan - Juli'),
+            caption: b('Retained Earnings Statement - July / Laporan Laba Ditahan - Juli', 'Laporan Laba Ditahan - Juli'),
             head: [
-              b('Item\nItem', 'Item\nItem'),
-              b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+              b('Item / Item', 'Item / Item'),
+              b('Amount (€) / Jumlah (€)', 'Jumlah (€) / Jumlah (€)')
             ],
             rows: [
-              ['Retained Earnings, Jul 1\nLaba Ditahan, 1 Jul', '0'],
-              ['Add: Net Income\nTambah: Laba Bersih', '4,200'],
-              ['Less: Dividends\nKurang: Dividen', '800'],
-              ['Retained Earnings, Jul 31\nLaba Ditahan, 31 Jul', '3,400']
+              ['Retained Earnings, Jul 1 / Laba Ditahan, 1 Jul', '0'],
+              ['Add: Net Income / Tambah: Laba Bersih', '4,200'],
+              ['Less: Dividends / Kurang: Dividen', '800'],
+              ['Retained Earnings, Jul 31 / Laba Ditahan, 31 Jul', '3,400']
             ],
             align: ['left', 'right'],
             compact: false
@@ -536,23 +536,23 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Statement of Financial Position - July 31', 'Laporan Posisi Keuangan - 31 Juli'),
+            caption: b('Statement of Financial Position - July 31 / Laporan Posisi Keuangan - 31 Juli', 'Laporan Posisi Keuangan - 31 Juli'),
             head: [
-              b('Item\nItem', 'Item\nItem'),
-              b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+              b('Item / Item', 'Item / Item'),
+              b('Amount (€) / Jumlah (€)', 'Jumlah (€) / Jumlah (€)')
             ],
             rows: [
-              ['ASSETS\nASET', ''],
-              ['  Cash\n  Kas', '15,000'],
-              ['  Accounts Receivable\n  Piutang Usaha', '1,400'],
-              ['  Supplies\n  Perlengkapan', '1,200'],
-              ['Total Assets\nTotal Aset', '17,600'],
-              ['LIABILITIES & EQUITY\nLIABILITAS & EKUITAS', ''],
-              ['  Accounts Payable\n  Hutang Usaha', '1,300'],
-              ['  Share Capital\n  Modal Saham', '20,000'],
-              ['  Retained Earnings\n  Laba Ditahan', '3,400'],
-              ['Total Equity\nTotal Ekuitas', '23,400'],
-              ['Total L & E\nTotal L & E', '24,700']
+              ['ASSETS / ASET', ''],
+              ['  Cash / Kas', '15,000'],
+              ['  Accounts Receivable / Piutang Usaha', '1,400'],
+              ['  Supplies / Perlengkapan', '1,200'],
+              ['Total Assets / Total Aset', '17,600'],
+              ['LIABILITIES & EQUITY / LIABILITAS & EKUITAS', ''],
+              ['  Accounts Payable / Hutang Usaha', '1,300'],
+              ['  Share Capital / Modal Saham', '20,000'],
+              ['  Retained Earnings / Laba Ditahan', '3,400'],
+              ['Total Equity / Total Ekuitas', '23,400'],
+              ['Total L & E / Total L & E', '24,700']
             ],
             align: ['left', 'right'],
             compact: false
@@ -612,28 +612,28 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Normal Balances and Effects', 'Saldo Normal dan Efek'),
+            caption: b('Normal Balances and Effects / Saldo Normal dan Efek', 'Saldo Normal dan Efek'),
             head: [
-              b('Account\nAkun', 'Account\nAkun'),
-              b('Normal Balance\nSaldo Normal', 'Normal Balance\nSaldo Normal'),
-              b('Debit Effect\nEfek Debet', 'Debit Effect\nEfek Debet'),
-              b('Credit Effect\nEfek Kredit', 'Credit Effect\nEfek Kredit')
+              b('Account / Akun', 'Account / Akun'),
+              b('Normal Balance / Saldo Normal', 'Normal Balance / Saldo Normal'),
+              b('Debit Effect / Efek Debet', 'Debit Effect / Efek Debet'),
+              b('Credit Effect / Efek Kredit', 'Credit Effect / Efek Kredit')
             ],
             rows: [
-              ['Cash\nKas', 'Debit', 'Increase\nBertambah', 'Decrease\nBerkurang'],
-              ['Accounts Receivable\nPiutang Usaha', 'Debit', 'Increase\nBertambah', 'Decrease\nBerkurang'],
-              ['Supplies\nPerlengkapan', 'Debit', 'Increase\nBertambah', 'Decrease\nBerkurang'],
-              ['Equipment\nPeralatan', 'Debit', 'Increase\nBertambah', 'Decrease\nBerkurang'],
-              ['Accounts Payable\nHutang Usaha', 'Credit', 'Decrease\nBerkurang', 'Increase\nBertambah'],
-              ['Notes Payable\nCatatan Hutang', 'Credit', 'Decrease\nBerkurang', 'Increase\nBertambah'],
-              ['Share Capital\nModal Saham', 'Credit', 'Decrease\nBerkurang', 'Increase\nBertambah'],
-              ['Retained Earnings\nLaba Ditahan', 'Credit', 'Decrease\nBerkurang', 'Increase\nBertambah'],
-              ['Dividends\nDividen', 'Debit', 'Increase\nBertambah', 'Decrease\nBerkurang'],
-              ['Service Revenue\nPendapatan Jasa', 'Credit', 'Decrease\nBerkurang', 'Increase\nBertambah'],
-              ['Salaries Expense\nBeban Gaji', 'Debit', 'Increase\nBertambah', 'Decrease\nBerkurang'],
-              ['Rent Expense\nBeban Sewa', 'Debit', 'Increase\nBertambah', 'Decrease\nBerkurang'],
-              ['Advertising Expense\nBeban Iklan', 'Debit', 'Increase\nBertambah', 'Decrease\nBerkurang'],
-              ['Utilities Expense\nBeban Utilitas', 'Debit', 'Increase\nBertambah', 'Decrease\nBerkurang']
+              ['Cash / Kas', 'Debit', 'Increase / Bertambah', 'Decrease / Berkurang'],
+              ['Accounts Receivable / Piutang Usaha', 'Debit', 'Increase / Bertambah', 'Decrease / Berkurang'],
+              ['Supplies / Perlengkapan', 'Debit', 'Increase / Bertambah', 'Decrease / Berkurang'],
+              ['Equipment / Peralatan', 'Debit', 'Increase / Bertambah', 'Decrease / Berkurang'],
+              ['Accounts Payable / Hutang Usaha', 'Credit', 'Decrease / Berkurang', 'Increase / Bertambah'],
+              ['Notes Payable / Catatan Hutang', 'Credit', 'Decrease / Berkurang', 'Increase / Bertambah'],
+              ['Share Capital / Modal Saham', 'Credit', 'Decrease / Berkurang', 'Increase / Bertambah'],
+              ['Retained Earnings / Laba Ditahan', 'Credit', 'Decrease / Berkurang', 'Increase / Bertambah'],
+              ['Dividends / Dividen', 'Debit', 'Increase / Bertambah', 'Decrease / Berkurang'],
+              ['Service Revenue / Pendapatan Jasa', 'Credit', 'Decrease / Berkurang', 'Increase / Bertambah'],
+              ['Salaries Expense / Beban Gaji', 'Debit', 'Increase / Bertambah', 'Decrease / Berkurang'],
+              ['Rent Expense / Beban Sewa', 'Debit', 'Increase / Bertambah', 'Decrease / Berkurang'],
+              ['Advertising Expense / Beban Iklan', 'Debit', 'Increase / Bertambah', 'Decrease / Berkurang'],
+              ['Utilities Expense / Beban Utilitas', 'Debit', 'Increase / Bertambah', 'Decrease / Berkurang']
             ],
             align: ['left', 'center', 'center', 'center'],
             compact: false
@@ -683,25 +683,25 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Transaction Analysis and Journal Entries', 'Analisis Transaksi dan Entri Jurnal'),
+            caption: b('Transaction Analysis and Journal Entries / Analisis Transaksi dan Entri Jurnal', 'Analisis Transaksi dan Entri Jurnal'),
             head: [
               b('No.', 'No.'),
-              b('Transaction\nTransaksi', 'Transaction\nTransaksi'),
-              b('Accounts Affected\nAkun Terpengaruh', 'Accounts Affected\nAkun Terpengaruh'),
-              b('Account Types\nTipe Akun', 'Account Types\nTipe Akun'),
-              b('Debit/Credit\nDebet/Kredit', 'Debit/Credit\nDebet/Kredit'),
-              b('Journal Entry\nEntri Jurnal', 'Journal Entry\nEntri Jurnal')
+              b('Transaction / Transaksi', 'Transaction / Transaksi'),
+              b('Accounts Affected / Akun Terpengaruh', 'Accounts Affected / Akun Terpengaruh'),
+              b('Account Types / Tipe Akun', 'Account Types / Tipe Akun'),
+              b('Debit/Credit / Debet/Kredit', 'Debit/Credit / Debet/Kredit'),
+              b('Journal Entry / Entri Jurnal', 'Journal Entry / Entri Jurnal')
             ],
             rows: [
-              ['1', 'Invest €25,000 cash\nInvest €25.000 tunai', 'Cash, Share Capital\nKas, Modal Saham', 'Asset, Equity\nAset, Ekuitas', 'Dr Cash, Cr Share Capital\nDr Kas, Cr Modal Saham', 'Cash 25,000 / Share Capital 25,000\nKas 25.000 / Modal Saham 25.000'],
-              ['2', 'Equipment €8,000 cash\nPeralatan €8.000 tunai', 'Equipment, Cash\nPeralatan, Kas', 'Asset, Asset\nAset, Aset', 'Dr Equipment, Cr Cash\nDr Peralatan, Cr Kas', 'Equipment 8,000 / Cash 8,000\nPeralatan 8.000 / Kas 8.000'],
-              ['3', 'Prepaid insurance €1,500\nAsuransi dimuka €1.500', 'Prepaid Insurance, Cash\nAsuransi Dimuka, Kas', 'Asset, Asset\nAset, Aset', 'Dr Prepaid Ins, Cr Cash\nDr Asuransi Dimuka, Cr Kas', 'Prepaid Insurance 1,500 / Cash 1,500\nAsuransi Dimuka 1.500 / Kas 1.500'],
-              ['4', 'Supplies €600 on account\nPerlengkapan €600 rekening', 'Supplies, A/P\nPerlengkapan, H/Usaha', 'Asset, Liability\nAset, Liabilitas', 'Dr Supplies, Cr A/P\nDr Perlengkapan, Cr H/Usaha', 'Supplies 600 / A/P 600\nPerlengkapan 600 / H/Usaha 600'],
-              ['5', 'Billed €9,000 services\nTagih jasa €9.000', 'A/R, Service Revenue\nPiutang, Pendapatan Jasa', 'Asset, Revenue\nAset, Pendapatan', 'Dr A/R, Cr Service Revenue\nDr Piutang, Cr Pendapatan Jasa', 'A/R 9,000 / Service Revenue 9,000\nPiutang 9.000 / Pendapatan Jasa 9.000'],
-              ['6', 'Paid €2,000 salaries\nBayar gaji €2.000', 'Salaries Expense, Cash\nBeban Gaji, Kas', 'Expense, Asset\nBeban, Aset', 'Dr Salaries Exp, Cr Cash\nDr Beban Gaji, Cr Kas', 'Salaries Expense 2,000 / Cash 2,000\nBeban Gaji 2.000 / Kas 2.000'],
-              ['7', 'Received €3,500 on account\nTerima €3.500 rekening', 'Cash, A/R\nKas, Piutang', 'Asset, Asset\nAset, Aset', 'Dr Cash, Cr A/R\nDr Kas, Cr Piutang', 'Cash 3,500 / A/R 3,500\nKas 3.500 / Piutang 3.500'],
-              ['8', 'Paid €400 utilities\nBayar utilitas €400', 'Utilities Expense, Cash\nBeban Utilitas, Kas', 'Expense, Asset\nBeban, Aset', 'Dr Utilities Exp, Cr Cash\nDr Beban Util, Cr Kas', 'Utilities Expense 400 / Cash 400\nBeban Utilitas 400 / Kas 400'],
-              ['9', 'Paid €1,000 dividends\nBayar dividen €1.000', 'Dividends, Cash\nDividen, Kas', 'Equity/Dividend, Asset\nEkuitas/Dividen, Aset', 'Dr Dividends, Cr Cash\nDr Dividen, Cr Kas', 'Dividends 1,000 / Cash 1,000\nDividen 1.000 / Kas 1.000']
+              ['1', 'Invest €25,000 cash / Invest €25.000 tunai', 'Cash, Share Capital / Kas, Modal Saham', 'Asset, Equity / Aset, Ekuitas', 'Dr Cash, Cr Share Capital / Dr Kas, Cr Modal Saham', 'Cash 25,000 / Share Capital 25,000 / Kas 25.000 / Modal Saham 25.000'],
+              ['2', 'Equipment €8,000 cash / Peralatan €8.000 tunai', 'Equipment, Cash / Peralatan, Kas', 'Asset, Asset / Aset, Aset', 'Dr Equipment, Cr Cash / Dr Peralatan, Cr Kas', 'Equipment 8,000 / Cash 8,000 / Peralatan 8.000 / Kas 8.000'],
+              ['3', 'Prepaid insurance €1,500 / Asuransi dimuka €1.500', 'Prepaid Insurance, Cash / Asuransi Dimuka, Kas', 'Asset, Asset / Aset, Aset', 'Dr Prepaid Ins, Cr Cash / Dr Asuransi Dimuka, Cr Kas', 'Prepaid Insurance 1,500 / Cash 1,500 / Asuransi Dimuka 1.500 / Kas 1.500'],
+              ['4', 'Supplies €600 on account / Perlengkapan €600 rekening', 'Supplies, A/P / Perlengkapan, H/Usaha', 'Asset, Liability / Aset, Liabilitas', 'Dr Supplies, Cr A/P / Dr Perlengkapan, Cr H/Usaha', 'Supplies 600 / A/P 600 / Perlengkapan 600 / H/Usaha 600'],
+              ['5', 'Billed €9,000 services / Tagih jasa €9.000', 'A/R, Service Revenue / Piutang, Pendapatan Jasa', 'Asset, Revenue / Aset, Pendapatan', 'Dr A/R, Cr Service Revenue / Dr Piutang, Cr Pendapatan Jasa', 'A/R 9,000 / Service Revenue 9,000 / Piutang 9.000 / Pendapatan Jasa 9.000'],
+              ['6', 'Paid €2,000 salaries / Bayar gaji €2.000', 'Salaries Expense, Cash / Beban Gaji, Kas', 'Expense, Asset / Beban, Aset', 'Dr Salaries Exp, Cr Cash / Dr Beban Gaji, Cr Kas', 'Salaries Expense 2,000 / Cash 2,000 / Beban Gaji 2.000 / Kas 2.000'],
+              ['7', 'Received €3,500 on account / Terima €3.500 rekening', 'Cash, A/R / Kas, Piutang', 'Asset, Asset / Aset, Aset', 'Dr Cash, Cr A/R / Dr Kas, Cr Piutang', 'Cash 3,500 / A/R 3,500 / Kas 3.500 / Piutang 3.500'],
+              ['8', 'Paid €400 utilities / Bayar utilitas €400', 'Utilities Expense, Cash / Beban Utilitas, Kas', 'Expense, Asset / Beban, Aset', 'Dr Utilities Exp, Cr Cash / Dr Beban Util, Cr Kas', 'Utilities Expense 400 / Cash 400 / Beban Utilitas 400 / Kas 400'],
+              ['9', 'Paid €1,000 dividends / Bayar dividen €1.000', 'Dividends, Cash / Dividen, Kas', 'Equity/Dividend, Asset / Ekuitas/Dividen, Aset', 'Dr Dividends, Cr Cash / Dr Dividen, Cr Kas', 'Dividends 1,000 / Cash 1,000 / Dividen 1.000 / Kas 1.000']
             ],
             align: ['center', 'left', 'left', 'center', 'center', 'left'],
             compact: false
@@ -716,7 +716,7 @@ export const chapter2PAndBYP = [
   },
 
   // ============================================================
-  // BYP2-1: Ethics and Fraud
+  // BYP-type exercises for Chapter 2 (Summary only - no tables needed for essay questions)
   // ============================================================
   {
     id: 'BYP2-1',
@@ -737,10 +737,6 @@ export const chapter2PAndBYP = [
       'Asumsi entitas ekonomi adalah prinsip akuntansi fundamental yang mewajibkan entitas bisnis dicatat terpisah dari pemiliknya. Mencampur pengeluaran pribadi dan bisnis melanggar prinsip ini dan merupakan penipuan.'
     )
   },
-
-  // ============================================================
-  // BYP2-2: Comparative Statements
-  // ============================================================
   {
     id: 'BYP2-2',
     title: b('BYP2-2: Comparative Statements', 'BYP2-2: Laporan Perbandingan'),
@@ -760,10 +756,6 @@ export const chapter2PAndBYP = [
       'Analisis horizontal menunjukkan tren seiring waktu. Analisis vertikal menunjukkan ukuran relatif setiap item. Keduanya bersama-sama memberikan gambaran komprehensif tentang perubahan kinerja dan posisi keuangan.'
     )
   },
-
-  // ============================================================
-  // BYP2-3: Error Detection
-  // ============================================================
   {
     id: 'BYP2-3',
     title: b('BYP2-3: Error Detection', 'BYP2-3: Deteksi Kesalahan'),
@@ -789,17 +781,17 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Error Analysis', 'Analisis Kesalahan'),
+            caption: b('Error Analysis / Analisis Kesalahan', 'Analisis Kesalahan'),
             head: [
-              b('Error\nKesalahan', 'Error\nKesalahan'),
-              b('Description\nDeskripsi', 'Description\nDeskripsi'),
-              b('Correction\nKoreksi', 'Correction\nKoreksi')
+              b('Error / Kesalahan', 'Error / Kesalahan'),
+              b('Description / Deskripsi', 'Description / Deskripsi'),
+              b('Correction / Koreksi', 'Correction / Koreksi')
             ],
             rows: [
-              ['1', 'Rent payment €500 posted as credit to Cash €50 (understated by €450)', 'Dr Cash 450 / Cr Rent Expense 450'],
-              ['2', 'Credit sale €1,200 posted as credit to Service Revenue €120 (understated by €1,080)', 'Dr Service Revenue 1,080 / Cr Service Revenue 1,080'],
-              ['3', 'Correct - Supplies purchase', 'No correction needed'],
-              ['4', 'Correct - Cash dividend', 'No correction needed']
+              ['1', 'Rent payment €500 posted as credit to Cash €50 (understated by €450) / Bayar sewa €500 diposting kredit Kas €50 (tercatat kurang €450)', 'Dr Cash 450 / Cr Rent Expense 450 / Dr Kas 450 / Cr Beban Sewa 450'],
+              ['2', 'Credit sale €1,200 posted as credit to Service Revenue €120 (understated by €1,080) / Jual kredit €1.200 diposting kredit Pendapatan Jasa €120 (tercatat kurang €1.080)', 'Dr Service Revenue 1,080 / Cr Service Revenue 1,080 / Dr Pendapatan Jasa 1.080 / Cr Pendapatan Jasa 1.080'],
+              ['3', 'Correct - Supplies purchase / Benar - Pembelian perlengkapan', 'No correction needed / Tidak perlu koreksi'],
+              ['4', 'Correct - Cash dividend / Benar - Dividen tunai', 'No correction needed / Tidak perlu koreksi']
             ],
             align: ['center', 'left', 'left'],
             compact: false
@@ -813,20 +805,20 @@ export const chapter2PAndBYP = [
         blocks: [
           {
             type: 'table',
-            caption: b('Corrected Trial Balance', 'Neraca Saldo yang Dibetulkan'),
+            caption: b('Corrected Trial Balance / Neraca Saldo yang Dibetulkan', 'Neraca Saldo yang Dibetulkan'),
             head: [
-              b('Description\nDeskripsi', 'Description\nDeskripsi'),
-              b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+              b('Description / Deskripsi', 'Description / Deskripsi'),
+              b('Amount (€) / Jumlah (€)', 'Jumlah (€) / Jumlah (€)')
             ],
             rows: [
-              ['Original Debit Total\nTotal Debet Asli', '94,500'],
-              ['Correction Error 1: Cash understated €450\nKoreksi Kesalahan 1: Kas kurang €450', '450'],
-              ['Correction Error 2: Revenue understated €1,080\nKoreksi Kesalahan 2: Pendapatan kurang €1.080', '1,080'],
-              ['Corrected Debit Total\nTotal Debet Dibetulkan', '96,030'],
-              ['Original Credit Total\nTotal Kredit Asli', '91,300'],
-              ['Correction Error 1: Cash understated €450\nKoreksi Kesalahan 1: Kas kurang €450', '450'],
-              ['Correction Error 2: Revenue understated €1,080\nKoreksi Kesalahan 2: Pendapatan kurang €1.080', '1,080'],
-              ['Corrected Credit Total\nTotal Kredit Dibetulkan', '92,830']
+              ['Original Debit Total / Total Debet Asli', '94,500'],
+              ['Correction Error 1: Cash understated €450 / Koreksi Kesalahan 1: Kas kurang €450', '450'],
+              ['Correction Error 2: Revenue understated €1,080 / Koreksi Kesalahan 2: Pendapatan kurang €1.080', '1,080'],
+              ['Corrected Debit Total / Total Debet Dibetulkan', '96,030'],
+              ['Original Credit Total / Total Kredit Asli', '91,300'],
+              ['Correction Error 1: Cash understated €450 / Koreksi Kesalahan 1: Kas kurang €450', '450'],
+              ['Correction Error 2: Revenue understated €1,080 / Koreksi Kesalahan 2: Pendapatan kurang €1.080', '1,080'],
+              ['Corrected Credit Total / Total Kredit Dibetulkan', '92,830']
             ],
             align: ['left', 'right'],
             compact: false
