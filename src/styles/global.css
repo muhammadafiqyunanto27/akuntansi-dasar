@@ -1678,4 +1678,47 @@ footer.site-footer a { color: var(--on-inverse); }
   .card, .flow-card, .syl-chapter, .obj-card, .rule-card { break-inside: avoid; box-shadow: none; }
   .tag, .syl-roman, th, .dr { border: 1px solid #000; color: #000 !important; background: #fff !important; }
   .norm-table-wrap { max-height: none; overflow: visible; }
+
+/* Exercise item styles - prevent title overflow */
+.exercise-item {
+  margin-bottom: var(--space-4);
+  border-radius: var(--r-md);
+}
+
+.exercise-item summary {
+  padding: var(--space-4) var(--space-5);
+  font-size: 15px;
+  line-height: 1.5;
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+}
+
+.exercise-item summary span:first-child {
+  font-family: var(--serif);
+  font-weight: 700;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  color: var(--ink);
+  flex-shrink: 0;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.exercise-item summary span:last-child {
+  flex: 1;
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
 }
