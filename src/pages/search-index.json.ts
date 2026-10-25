@@ -78,6 +78,13 @@ export const GET: APIRoute = () => {
       text: 'Glosarium bilingual istilah akuntansi dari bab 1–4.',
       meta: 'glosarium glossary istilah terms',
     },
+    {
+      kind: 'Halaman · Page',
+      title: 'Latihan Soal · Practice Exercises',
+      url: 'latihan',
+      text: 'Semua Brief Exercises, DO IT! Exercises, dan Exercises dari Bab 1–4 Kieso IFRS dengan jawaban dan penjelasan lengkap untuk persiapan UTS.',
+      meta: 'latihan practice exercises brief exercises do it exercises jawaban answers penjelasan explanation uts',
+    },
   ];
 
   chapters.forEach((chapter) => {
