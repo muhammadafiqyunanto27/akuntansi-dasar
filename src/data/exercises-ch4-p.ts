@@ -47,25 +47,28 @@ export const chapter4PAndBYP = [
       '(d) Siapkan neraca saldo pasca tutup.'
     ),
     parts: [
-      { label: '(a)', given: b('Complete worksheet columns: TB, Adjustments, Adj TB, IS, SFP', 'Lengkapi kolom kertas kerja: NS, Penyesuaian, NS Disesuaikan, LR, LPK'), answer: b('Adjustments:\n1. Supplies Expense 1,300 / Supplies 1,300 (2,500 - 1,200)\n2. Depreciation Expense 3,000 / Accumulated Depreciation 3,000\n3. Salaries Expense 1,500 / Salaries Payable 1,500\n4. Insurance Expense 1,200 / Prepaid Insurance 1,200\n5. Interest Expense 400 / Interest Payable 400\n\nAdjusted TB totals: Debits = Credits = 87,700\nIncome Statement: Revenue 50,000; Expenses 26,700; Net Income 23,300\nSFP: Assets 62,000; Liabilities 15,500; Equity 46,500', 'Penyesuaian:\n1. Beban Perlengkapan 1.300 / Perlengkapan 1.300 (2.500 - 1.200)\n2. Beban Penyusutan 3.000 / Akumulasi Penyusutan 3.000\n3. Beban Gaji 1.500 / Gaji Bayar 1.500\n4. Beban Asuransi 1.200 / Asuransi Dibayar Dimuka 1.200\n5. Beban Bunga 400 / Bunga Bayar 400\n\nNS Disesuaikan total: Debet = Kredit = 87.700\nLaporan Laba Rugi: Pendapatan 50.000; Beban 26.700; Laba Bersih 23.300\nLPK: Aset 62.000; Liabilitas 15.500; Ekuitas 46.500') },
-      { label: '(a)', given: b('Adjusting Entries', 'Entri Penyesuaian'), blocks: [
-        { type: 'table', caption: b('Adjusting Entries - Martinez Company', 'Entri Penyesuaian - Perusahaan Martinez'), head: [
-          b('Account\nAkun', 'Account\nAkun'),
-          b('Debit\nDebet', 'Debit\nDebet'),
-          b('Credit\nKredit', 'Credit\nKredit')
-        ], rows: [
-          ['Supplies Expense\nBeban Perlengkapan', '1,300', ''],
-          ['Supplies\nPerlengkapan', '', '1,300'],
-          ['Depreciation Expense\nBeban Penyusutan', '3,000', ''],
-          ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '3,000'],
-          ['Salaries Expense\nBeban Gaji', '1,500', ''],
-          ['Salaries Payable\nGaji Bayar', '', '1,500'],
-          ['Insurance Expense\nBeban Asuransi', '1,200', ''],
-          ['Prepaid Insurance\nAsuransi Dibayar Dimuka', '', '1,200'],
-          ['Interest Expense\nBeban Bunga', '400', ''],
-          ['Interest Payable\nBunga Bayar', '', '400']
-        ], align: ['left', 'right', 'right'], compact: false }
-      ]},
+      {
+        label: '(a)',
+        given: b('Complete worksheet columns: TB, Adjustments, Adj TB, IS, SFP', 'Lengkapi kolom kertas kerja: NS, Penyesuaian, NS Disesuaikan, LR, LPK'),
+        answer: b('Adjustments:\n1. Supplies Expense 1,300 / Supplies 1,300 (2,500 - 1,200)\n2. Depreciation Expense 3,000 / Accumulated Depreciation 3,000\n3. Salaries Expense 1,500 / Salaries Payable 1,500\n4. Insurance Expense 1,200 / Prepaid Insurance 1,200\n5. Interest Expense 400 / Interest Payable 400\n\nAdjusted TB totals: Debits = Credits = 87,700\nIncome Statement: Revenue 50,000; Expenses 26,700; Net Income 23,300\nSFP: Assets 62,000; Liabilities 15,500; Equity 46,500', 'Penyesuaian:\n1. Beban Perlengkapan 1.300 / Perlengkapan 1.300 (2.500 - 1.200)\n2. Beban Penyusutan 3.000 / Akumulasi Penyusutan 3.000\n3. Beban Gaji 1.500 / Gaji Bayar 1.500\n4. Beban Asuransi 1.200 / Asuransi Dibayar Dimuka 1.200\n5. Beban Bunga 400 / Bunga Bayar 400\n\nNS Disesuaikan total: Debet = Kredit = 87.700\nLaporan Laba Rugi: Pendapatan 50.000; Beban 26.700; Laba Bersih 23.300\nLPK: Aset 62.000; Liabilitas 15.500; Ekuitas 46.500'),
+        blocks: [
+          { type: 'table', caption: b('Adjusting Entries - Martinez Company', 'Entri Penyesuaian - Perusahaan Martinez'), head: [
+            b('Account\nAkun', 'Account\nAkun'),
+            b('Debit\nDebet', 'Debit\nDebet'),
+            b('Credit\nKredit', 'Credit\nKredit')
+          ], rows: [
+            ['Supplies Expense\nBeban Perlengkapan', '1,300', ''],
+            ['Supplies\nPerlengkapan', '', '1,300'],
+            ['Depreciation Expense\nBeban Penyusutan', '3,000', ''],
+            ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '3,000'],
+            ['Salaries Expense\nBeban Gaji', '1,500', ''],
+            ['Salaries Payable\nGaji Bayar', '', '1,500'],
+            ['Insurance Expense\nBeban Asuransi', '1,200', ''],
+            ['Prepaid Insurance\nAsuransi Dibayar Dimuka', '', '1,200'],
+            ['Interest Expense\nBeban Bunga', '400', ''],
+            ['Interest Payable\nBunga Bayar', '', '400']
+          ], align: ['left', 'right', 'right'], compact: false }
+        ]},
       { label: '(a)', given: b('Adjusted Trial Balance', 'Neraca Saldo Disesuaikan'), blocks: [
         { type: 'table', caption: b('Adjusted Trial Balance - Martinez Company', 'Neraca Saldo Disesuaikan - Perusahaan Martinez'), head: [
           b('Account\nAkun', 'Account\nAkun'),
@@ -93,27 +96,26 @@ export const chapter4PAndBYP = [
           ['TOTAL', '87,700', '87,700']
         ], align: ['left', 'right', 'right'], compact: false }
       ]},
-      { label: '(b)', given: b('Prepare financial statements from worksheet', 'Siapkan laporan keuangan dari kertas kerja'), answer: b('Income Statement: Service Revenue €50,000; Expenses: Salaries €21,500, Rent €10,000, Utilities €3,000, Advertising €2,000, Insurance €2,700, Depreciation €3,000, Interest €400 = Total €26,700; Net Income €23,300\nRetained Earnings: Beg €10,000 + NI €23,300 - Div €4,000 = End €29,300\nStatement of Financial Position: Assets: Cash €12,000, A/R €?, Supplies €?, Equipment €30,000 - Acc Dep €? = Total; Liabilities: A/P €5,000, Notes Payable €15,000, Salaries Payable €?, Interest Payable €?; Equity: Share Capital €20,000 + RE €? = Total', 'Laporan Laba Rugi: Pendapatan Jasa €50.000; Beban: Gaji €21.500, Sewa €10.000, Utilitas €3.000, Iklan €2.000, Asuransi €2.700, Penyusutan €3.000, Bunga €400 = Total €26.700; Laba Bersih €23.300\nLaba Ditahan: Awal €10.000 + LB €23.300 - Div €4.000 = Akhir €29.300\nLaporan Posisi Keuangan: Aset: Kas €12.000, Piutang €?, Perlengkapan €?, Peralatan €30.000 - Akum Peny €? = Total; Liabilitas: H/Usaha €5.000, Catatan Hutang €15.000, Gaji Bayar €?, Bunga Bayar €?; Ekuitas: Modal Saham €20.000 + LD €? = Total') },
-      { label: '(b)', given: b('Income Statement', 'Laporan Laba Rugi'), blocks: [
-        { type: 'table', caption: b('Income Statement - Martinez Company', 'Laporan Laba Rugi - Perusahaan Martinez'), head: [
-          b('Item\nItem', 'Item\nItem'),
-          b('Amount\nJumlah', 'Amount\nJumlah')
-        ], rows: [
-          ['Service Revenue\nPendapatan Jasa', '50,000'],
-          ['Expenses:\nBeban:', '', ''],
-          ['  Salaries Expense\n  Beban Gaji', '21,500'],
-          ['  Rent Expense\n  Beban Sewa', '10,000'],
-          ['  Utilities Expense\n  Beban Utilitas', '3,000'],
-          ['  Advertising Expense\n  Beban Iklan', '2,000'],
-          ['  Insurance Expense\n  Beban Asuransi', '2,700'],
-          ['  Depreciation Expense\n  Beban Penyusutan', '3,000'],
-          ['  Interest Expense\n  Beban Bunga', '400'],
-          ['Total Expenses\nTotal Beban', '26,700'],
-          ['NET INCOME\nLABA BERSIH', '23,300']
-        ], align: ['left', 'right'], compact: false }
-      ]},
-      { label: '(c)', given: b('Journalize closing entries', 'Jurnalikan entri penutupan'), answer: b('1. Dr Service Revenue 50,000 / Cr Income Summary 50,000\n2. Dr Income Summary 26,700 / Cr Salaries Exp 21,500, Rent Exp 10,000, Util Exp 3,000, Adv Exp 2,000, Ins Exp 2,700, Dep Exp 3,000, Interest Exp 400\n3. Dr Income Summary 23,300 / Cr Retained Earnings 23,300\n4. Dr Retained Earnings 4,000 / Cr Dividends 4,000', '1. Dr Pendapatan Jasa 50.000 / Cr Ikhtisar Laba Rugi 50.000\n2. Dr Ikhtisar Laba Rugi 26.700 / Cr Beban Gaji 21.500, Beban Sewa 10.000, Beban Util 3.000, Beban Iklan 2.000, Beban Asuransi 2.700, Beban Peny 3.000, Beban Bunga 400\n3. Dr Ikhtisar Laba Rugi 23.300 / Cr Laba Ditahan 23.300\n4. Dr Laba Ditahan 4.000 / Cr Dividen 4.000') },
-      { label: '(c)', given: b('Closing Entries', 'Entri Penutupan'), blocks: [
+      { label: '(b)', given: b('Prepare financial statements from worksheet', 'Siapkan laporan keuangan dari kertas kerja'), answer: b('Income Statement: Service Revenue €50,000; Expenses: Salaries €21,500, Rent €10,000, Utilities €3,000, Advertising €2,000, Insurance €2,700, Depreciation €3,000, Interest €400 = Total €26,700; Net Income €23,300\nRetained Earnings: Beg €10,000 + NI €23,300 - Div €4,000 = End €29,300\nStatement of Financial Position: Assets: Cash €12,000, A/R €?, Supplies €?, Equipment €30,000 - Acc Dep €? = Total; Liabilities: A/P €5,000, Notes Payable €15,000, Salaries Payable €?, Interest Payable €?; Equity: Share Capital €20,000 + RE €? = Total', 'Laporan Laba Rugi: Pendapatan Jasa €50.000; Beban: Gaji €21.500, Sewa €10.000, Utilitas €3.000, Iklan €2.000, Asuransi €2.700, Penyusutan €3.000, Bunga €400 = Total €26.700; Laba Bersih €23.300\nLaba Ditahan: Awal €10.000 + LB €23.300 - Div €4.000 = Akhir €29.300\nLaporan Posisi Keuangan: Aset: Kas €12.000, Piutang €?, Perlengkapan €?, Peralatan €30.000 - Akum Peny €? = Total; Liabilitas: H/Usaha €5.000, Catatan Hutang €15.000, Gaji Bayar €?, Bunga Bayar €?; Ekuitas: Modal Saham €20.000 + LD €? = Total'),
+        blocks: [
+          { type: 'table', caption: b('Income Statement - Martinez Company', 'Laporan Laba Rugi - Perusahaan Martinez'), head: [
+            b('Item\nItem', 'Item\nItem'),
+            b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+          ], rows: [
+            ['Service Revenue\nPendapatan Jasa', '50,000'],
+            ['Expenses:\nBeban:', ''],
+            ['  Salaries Expense\n  Beban Gaji', '21,500'],
+            ['  Rent Expense\n  Beban Sewa', '10,000'],
+            ['  Utilities Expense\n  Beban Utilitas', '3,000'],
+            ['  Advertising Expense\n  Beban Iklan', '2,000'],
+            ['  Insurance Expense\n  Beban Asuransi', '2,700'],
+            ['  Depreciation Expense\n  Beban Penyusutan', '3,000'],
+            ['  Interest Expense\n  Beban Bunga', '400'],
+            ['Total Expenses\nTotal Beban', '26,700'],
+            ['NET INCOME\nLABA BERSIH', '23,300']
+          ], align: ['left', 'right'], compact: false }
+        ]},
+      { label: '(c)', given: b('Journalize closing entries', 'Jurnalikan entri penutupan'), answer: b('1. Dr Service Revenue 50,000 / Cr Income Summary 50,000\n2. Dr Income Summary 26,700 / Cr Salaries Exp 21,500, Rent Exp 10,000, Util Exp 3,000, Adv Exp 2,000, Ins Exp 2,700, Dep Exp 3,000, Interest Exp 400\n3. Dr Income Summary 23,300 / Cr Retained Earnings 23,300\n4. Dr Retained Earnings 4,000 / Cr Dividends 4,000', '1. Dr Pendapatan Jasa 50.000 / Cr Ikhtisar Laba Rugi 50.000\n2. Dr Ikhtisar Laba Rugi 26.700 / Cr Beban Gaji 21.500, Beban Sewa 10.000, Beban Util 3.000, Beban Iklan 2.000, Beban Asuransi 2.700, Beban Peny 3.000, Beban Bunga 400\n3. Dr Ikhtisar Laba Rugi 23.300 / Cr Laba Ditahan 23.300\n4. Dr Laba Ditahan 4.000 / Cr Dividen 4.000'), blocks: [
         { type: 'table', caption: b('Closing Entries - Martinez Company', 'Entri Penutupan - Perusahaan Martinez'), head: [
           b('Account\nAkun', 'Account\nAkun'),
           b('Debit\nDebet', 'Debit\nDebet'),
@@ -135,33 +137,34 @@ export const chapter4PAndBYP = [
           ['Dividends\nDividen', '', '4,000']
         ], align: ['left', 'right', 'right'], compact: false }
       ]},
-      { label: '(d)', given: b('Post-closing trial balance', 'Neraca saldo pasca tutup'), answer: b('Post-Closing Trial Balance:\nCash €12,000 | Accounts Receivable €? | Supplies €? | Equipment €30,000\nAccumulated Depreciation €? | Accounts Payable €5,000 | Notes Payable €15,000\nSalaries Payable €? | Interest Payable €?\nShare Capital €20,000 | Retained Earnings €29,300\nTotal Debits = Total Credits = ?\n(Only permanent accounts remain - all temporary accounts zero)', 'Neraca Saldo Pasca Tutup:\nKas €12.000 | Piutang Usaha €? | Perlengkapan €? | Peralatan €30.000\nAkum Penyusutan €? | Hutang Usaha €5.000 | Catatan Hutang €15.000\nGaji Bayar €? | Bunga Bayar €?\nModal Saham €20.000 | Laba Ditahan €29.300\nTotal Debet = Total Kredit = ?\n(Hanya akun permanen tersisa - semua akun sementara nol)') },
-      { label: '(d)', given: b('Post-Closing Trial Balance', 'Neraca Saldo Pasca Tutup'), blocks: [
-        { type: 'table', caption: b('Post-Closing Trial Balance - Martinez Company', 'Neraca Saldo Pasca Tutup - Perusahaan Martinez'), head: [
-          b('Account\nAkun', 'Account\nAkun'),
-          b('Debit\nDebet', 'Debit\nDebet'),
-          b('Credit\nKredit', 'Credit\nKredit')
-        ], rows: [
-          ['Cash\nKas', '12,000', ''],
-          ['Accounts Receivable\nPiutang Usaha', '', ''],
-          ['Supplies\nPerlengkapan', '', ''],
-          ['Equipment\nPeralatan', '30,000', ''],
-          ['Accumulated Depreciation\nAkumulasi Penyusutan', '', ''],
-          ['Accounts Payable\nHutang Usaha', '', '5,000'],
-          ['Notes Payable\nCatatan Hutang', '', '15,000'],
-          ['Salaries Payable\nGaji Bayar', '', ''],
-          ['Interest Payable\nBunga Bayar', '', ''],
-          ['Share Capital\nModal Saham', '', '20,000'],
-          ['Retained Earnings\nLaba Ditahan', '', '29,300'],
-          ['TOTAL', '42,000+', '42,000+']
-        ], align: ['left', 'right', 'right'], compact: false }
-      ]}
+      { label: '(d)', given: b('Post-closing trial balance', 'Neraca saldo pasca tutup'), answer: b('Post-Closing Trial Balance:\nCash €12,000 | Accounts Receivable €? | Supplies €? | Equipment €30,000\nAccumulated Depreciation €? | Accounts Payable €5,000 | Notes Payable €15,000\nSalaries Payable €? | Interest Payable €?\nShare Capital €20,000 | Retained Earnings €29,300\nTotal Debits = Total Credits = ?\n(Only permanent accounts remain - all temporary accounts zero)', 'Neraca Saldo Pasca Tutup:\nKas €12.000 | Piutang Usaha €? | Perlengkapan €? | Peralatan €30.000\nAkum Penyusutan €? | Hutang Usaha €5.000 | Catatan Hutang €15.000\nGaji Bayar €? | Bunga Bayar €?\nModal Saham €20.000 | Laba Ditahan €29.300\nTotal Debet = Total Kredit = ?\n(Hanya akun permanen tersisa - semua akun sementara nol)'),
+        blocks: [
+          { type: 'table', caption: b('Post-Closing Trial Balance - Martinez Company', 'Neraca Saldo Pasca Tutup - Perusahaan Martinez'), head: [
+            b('Account\nAkun', 'Account\nAkun'),
+            b('Debit\nDebet', 'Debit\nDebet'),
+            b('Credit\nKredit', 'Credit\nKredit')
+          ], rows: [
+            ['Cash\nKas', '12,000', ''],
+            ['Accounts Receivable\nPiutang Usaha', '', ''],
+            ['Supplies\nPerlengkapan', '', ''],
+            ['Equipment\nPeralatan', '30,000', ''],
+            ['Accumulated Depreciation\nAkumulasi Penyusutan', '', ''],
+            ['Accounts Payable\nHutang Usaha', '', '5,000'],
+            ['Notes Payable\nCatatan Hutang', '', '15,000'],
+            ['Salaries Payable\nGaji Bayar', '', ''],
+            ['Interest Payable\nBunga Bayar', '', ''],
+            ['Share Capital\nModal Saham', '', '20,000'],
+            ['Retained Earnings\nLaba Ditahan', '', '29,300'],
+            ['TOTAL', '42,000+', '42,000+']
+          ], align: ['left', 'right', 'right'], compact: false }
+        ]}
     ],
     explanation: b(
       'The worksheet is a tool that facilitates the entire end-of-period process. It organizes: (1) Trial Balance (unadjusted), (2) Adjustments, (3) Adjusted Trial Balance, (4) Income Statement columns, (5) Statement of Financial Position columns. The worksheet bridges the gap between recording and reporting. Closing entries zero out temporary accounts. Post-closing trial balance contains only permanent (real) accounts - assets, liabilities, equity. This verifies the ledger is ready for the next period.',
       'Kertas kerja adalah alat yang memudahkan seluruh proses akhir periode. Ia mengorganisir: (1) Neraca Saldo (tidak disesuaikan), (2) Penyesuaian, (3) Neraca Saldo Disesuaikan, (4) Kolom Laporan Laba Rugi, (5) Kolom Laporan Posisi Keuangan. Kertas kerja menjembatani pencatatan dan pelaporan. Entri penutupan mengosongkan akun sementara. Neraca saldo pasca tutup hanya berisi akun permanen (real) - aset, liabilitas, ekuitas. Ini memverifikasi buku besar siap untuk periode berikutnya.'
     )
   },
+
   {
     id: 'P4-2',
     title: b('P4-2: Post-Closing Trial Balance', 'P4-2: Neraca Saldo Pasca Tutup'),
@@ -192,8 +195,48 @@ export const chapter4PAndBYP = [
       '(c) Jelaskan mengapa Laba Ditahan memiliki saldo berbeda setelah penutupan.'
     ),
     parts: [
-      { label: '(a)', given: b('Four closing entries from adjusted TB', 'Empat entri penutupan dari neraca saldo disesuaikan'), answer: b('1. Dr Service Revenue 35,000 / Cr Income Summary 35,000\n2. Dr Income Summary 20,800 / Cr Salaries Exp 15,000, Rent Exp 8,000, Util Exp 2,500, Adv Exp 1,500, Ins Exp 1,000, Dep Exp 2,000, Interest Exp 500, Supplies Exp 800\n3. Dr Income Summary 14,200 / Cr Retained Earnings 14,200\n4. Dr Retained Earnings 2,000 / Cr Dividends 2,000', '1. Dr Pendapatan Jasa 35.000 / Cr Ikhtisar Laba Rugi 35.000\n2. Dr Ikhtisar Laba Rugi 20.800 / Cr Beban Gaji 15.000, Beban Sewa 8.000, Beban Util 2.500, Beban Iklan 1.500, Beban Asuransi 1.000, Beban Peny 2.000, Beban Bunga 500, Beban Perl 800\n3. Dr Ikhtisar Laba Rugi 14.200 / Cr Laba Ditahan 14.200\n4. Dr Laba Ditahan 2.000 / Cr Dividen 2.000') },
-      { label: '(b)', given: b('Post-closing trial balance', 'Neraca saldo pasca tutup'), answer: b('Post-Closing Trial Balance:\nCash €8,000 | Accounts Receivable €? | Supplies €? | Equipment €25,000\nAccumulated Depreciation €? | Accounts Payable €3,000 | Notes Payable €10,000\nShare Capital €15,000 | Retained Earnings €22,200 (8,000 + 14,200 - 2,000)\nTotal Debits = Total Credits = ?\n(Only permanent accounts: Cash, A/R, Supplies, Equipment, Acc Dep, A/P, Notes Payable, Share Capital, Retained Earnings)', 'Neraca Saldo Pasca Tutup:\nKas €8.000 | Piutang Usaha €? | Perlengkapan €? | Peralatan €25.000\nAkum Penyusutan €? | Hutang Usaha €3.000 | Catatan Hutang €10.000\nModal Saham €15.000 | Laba Ditahan €22.200 (8.000 + 14.200 - 2.000)\nTotal Debet = Total Kredit = ?\n(Hanya akun permanen: Kas, Piutang, Perlengkapan, Peralatan, Akum Peny, H/Usaha, Catatan Hutang, Modal Saham, Laba Ditahan)') },
+      { label: '(a)', given: b('Four closing entries from adjusted TB', 'Empat entri penutupan dari neraca saldo disesuaikan'), answer: b('1. Dr Service Revenue 35,000 / Cr Income Summary 35,000\n2. Dr Income Summary 20,800 / Cr Salaries Exp 15,000, Rent Exp 8,000, Util Exp 2,500, Adv Exp 1,500, Ins Exp 1,000, Dep Exp 2,000, Interest Exp 500, Supplies Exp 800\n3. Dr Income Summary 14,200 / Cr Retained Earnings 14,200\n4. Dr Retained Earnings 2,000 / Cr Dividends 2,000', '1. Dr Pendapatan Jasa 35.000 / Cr Ikhtisar Laba Rugi 35.000\n2. Dr Ikhtisar Laba Rugi 20.800 / Cr Beban Gaji 15.000, Beban Sewa 8.000, Beban Util 2.500, Beban Iklan 1.500, Beban Asuransi 1.000, Beban Peny 2.000, Beban Bunga 500, Beban Perl 800\n3. Dr Ikhtisar Laba Rugi 14.200 / Cr Laba Ditahan 14.200\n4. Dr Laba Ditahan 2.000 / Cr Dividen 2.000'), blocks: [
+        { type: 'table', caption: b('Closing Entries - Torres Company', 'Entri Penutupan - Perusahaan Torres'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Service Revenue\nPendapatan Jasa', '35,000', ''],
+          ['Income Summary\nIkhtisar Laba Rugi', '', '35,000'],
+          ['Income Summary\nIkhtisar Laba Rugi', '20,800', ''],
+          ['Salaries Expense\nBeban Gaji', '', '15,000'],
+          ['Rent Expense\nBeban Sewa', '', '8,000'],
+          ['Utilities Expense\nBeban Utilitas', '', '2,500'],
+          ['Advertising Expense\nBeban Iklan', '', '1,500'],
+          ['Insurance Expense\nBeban Asuransi', '', '1,000'],
+          ['Depreciation Expense\nBeban Penyusutan', '', '2,000'],
+          ['Interest Expense\nBeban Bunga', '', '500'],
+          ['Supplies Expense\nBeban Perlengkapan', '', '800'],
+          ['Income Summary\nIkhtisar Laba Rugi', '14,200', ''],
+          ['Retained Earnings\nLaba Ditahan', '', '14,200'],
+          ['Retained Earnings\nLaba Ditahan', '2,000', ''],
+          ['Dividends\nDividen', '', '2,000']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]},
+      { label: '(b)', given: b('Post-closing trial balance', 'Neraca saldo pasca tutup'), answer: b('Post-Closing Trial Balance:\nCash €8,000 | Accounts Receivable €? | Supplies €? | Equipment €25,000\nAccumulated Depreciation €? | Accounts Payable €3,000 | Notes Payable €10,000\nShare Capital €15,000 | Retained Earnings €22,200 (8,000 + 14,200 - 2,000)\nTotal Debits = Total Credits = ?\n(Only permanent accounts: Cash, A/R, Supplies, Equipment, Acc Dep, A/P, Notes Payable, Share Capital, Retained Earnings)', 'Neraca Saldo Pasca Tutup:\nKas €8.000 | Piutang Usaha €? | Perlengkapan €? | Peralatan €25.000\nAkum Penyusutan €? | Hutang Usaha €3.000 | Catatan Hutang €10.000\nModal Saham €15.000 | Laba Ditahan €22.200 (8.000 + 14.200 - 2.000)\nTotal Debet = Total Kredit = ?\n(Hanya akun permanen: Kas, Piutang, Perlengkapan, Peralatan, Akum Peny, H/Usaha, Catatan Hutang, Modal Saham, Laba Ditahan)'),
+        blocks: [
+          { type: 'table', caption: b('Post-Closing Trial Balance - Torres Company', 'Neraca Saldo Pasca Tutup - Perusahaan Torres'), head: [
+            b('Account\nAkun', 'Account\nAkun'),
+            b('Debit\nDebet', 'Debit\nDebet'),
+            b('Credit\nKredit', 'Credit\nKredit')
+          ], rows: [
+            ['Cash\nKas', '8,000', ''],
+            ['Accounts Receivable\nPiutang Usaha', '', ''],
+            ['Supplies\nPerlengkapan', '', ''],
+            ['Equipment\nPeralatan', '25,000', ''],
+            ['Accumulated Depreciation\nAkumulasi Penyusutan', '', ''],
+            ['Accounts Payable\nHutang Usaha', '', '3,000'],
+            ['Notes Payable\nCatatan Hutang', '', '10,000'],
+            ['Share Capital\nModal Saham', '', '15,000'],
+            ['Retained Earnings\nLaba Ditahan', '', '22,200'],
+            ['TOTAL', '33,000+', '33,000+']
+          ], align: ['left', 'right', 'right'], compact: false }
+        ]},
       { label: '(c)', given: b('Explain RE balance change', 'Jelaskan perubahan saldo LD'), answer: b('Retained Earnings changes because: (1) Net income (€14,200) is closed to RE via Income Summary, increasing RE. (2) Dividends (€2,000) are closed directly to RE, decreasing RE. The new RE balance = Beginning RE (€8,000) + Net Income (€14,200) - Dividends (€2,000) = €20,200. RE is the only equity account that changes during closing (besides temporary accounts being zeroed).', 'Laba Ditahan berubah karena: (1) Laba bersih (€14.200) ditutup ke LD lewat Ikhtisar Laba Rugi, menambah LD. (2) Dividen (€2.000) ditutup langsung ke LD, mengurangi LD. Saldo LD baru = LD Awal (€8.000) + Laba Bersih (€14.200) - Dividen (€2.000) = €20.200. LD adalah satu-satunya akun ekuitas yang berubah saat penutupan (selain akun sementara dinolkan).') }
     ],
     explanation: b(
@@ -219,7 +262,27 @@ export const chapter4PAndBYP = [
       'Instruksi: (a) Siapkan empat entri penutupan. (b) Berapa laba bersih? (c) Berapa Laba Ditahan akhir jika awalnya €12.000?'
     ),
     parts: [
-      { label: '(a)', given: b('Four closing entries', 'Empat entri penutupan'), answer: b('1. Dr Service Revenue 40,000 / Cr Income Summary 40,000\n2. Dr Income Summary 23,000 / Cr Salaries Exp 15,000, Rent Exp 10,000, Util Exp 3,000, Adv Exp 2,000, Dep Exp 4,000, Supplies Exp 1,500\n3. Dr Income Summary 17,000 / Cr Retained Earnings 17,000\n4. Dr Retained Earnings 3,000 / Cr Dividends 3,000', '1. Dr Pendapatan Jasa 40.000 / Cr Ikhtisar Laba Rugi 40.000\n2. Dr Ikhtisar Laba Rugi 23.000 / Cr Beban Gaji 15.000, Beban Sewa 10.000, Beban Util 3.000, Beban Iklan 2.000, Beban Peny 4.000, Beban Perl 1.500\n3. Dr Ikhtisar Laba Rugi 17.000 / Cr Laba Ditahan 17.000\n4. Dr Laba Ditahan 3.000 / Cr Dividen 3.000') },
+      { label: '(a)', given: b('Four closing entries', 'Empat entri penutupan'), answer: b('1. Dr Service Revenue 40,000 / Cr Income Summary 40,000\n2. Dr Income Summary 23,000 / Cr Salaries Exp 15,000, Rent Exp 10,000, Util Exp 3,000, Adv Exp 2,000, Dep Exp 4,000, Supplies Exp 1,500\n3. Dr Income Summary 17,000 / Cr Retained Earnings 17,000\n4. Dr Retained Earnings 3,000 / Cr Dividends 3,000', '1. Dr Pendapatan Jasa 40.000 / Cr Ikhtisar Laba Rugi 40.000\n2. Dr Ikhtisar Laba Rugi 23.000 / Cr Beban Gaji 15.000, Beban Sewa 10.000, Beban Util 3.000, Beban Iklan 2.000, Beban Peny 4.000, Beban Perl 1.500\n3. Dr Ikhtisar Laba Rugi 17.000 / Cr Laba Ditahan 17.000\n4. Dr Laba Ditahan 3.000 / Cr Dividen 3.000'), blocks: [
+        { type: 'table', caption: b('Closing Entries - Vega Company', 'Entri Penutupan - Perusahaan Vega'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Service Revenue\nPendapatan Jasa', '40,000', ''],
+          ['Income Summary\nIkhtisar Laba Rugi', '', '40,000'],
+          ['Income Summary\nIkhtisar Laba Rugi', '23,000', ''],
+          ['Salaries Expense\nBeban Gaji', '', '15,000'],
+          ['Rent Expense\nBeban Sewa', '', '10,000'],
+          ['Utilities Expense\nBeban Utilitas', '', '3,000'],
+          ['Advertising Expense\nBeban Iklan', '', '2,000'],
+          ['Depreciation Expense\nBeban Penyusutan', '', '4,000'],
+          ['Supplies Expense\nBeban Perlengkapan', '', '1,500'],
+          ['Income Summary\nIkhtisar Laba Rugi', '17,000', ''],
+          ['Retained Earnings\nLaba Ditahan', '', '17,000'],
+          ['Retained Earnings\nLaba Ditahan', '3,000', ''],
+          ['Dividends\nDividen', '', '3,000']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]},
       { label: '(b)', given: b('Net income calculation', 'Perhitungan laba bersih'), answer: b('Net Income = €40,000 - €23,000 = €17,000', 'Laba Bersih = €40.000 - €23.000 = €17.000') },
       { label: '(c)', given: b('Ending Retained Earnings', 'Laba Ditahan akhir'), answer: b('Ending RE = €12,000 + €17,000 - €3,000 = €26,000', 'Akhir LD = €12.000 + €17.000 - €3.000 = €26.000') }
     ],
@@ -244,8 +307,29 @@ export const chapter4PAndBYP = [
       'Instruksi: (a) Siapkan entri pembalikan tanggal 1 Januari. (b) Tunjukkan bagaimana pembayaran/penerimaan kas berikutnya dicatat dengan dan tanpa entri pembalikan.'
     ),
     parts: [
-      { label: '(a)', given: b('Reversing entries for 3 adjusting entries', 'Entri pembalikan untuk 3 entri penyesuaian'), answer: b('Reversing Entry 1 (Jan 1): Salaries Payable 2,500 / Salaries Expense 2,500\nReversing Entry 2 (Jan 1): Interest Payable 400 / Interest Expense 400\nReversing Entry 3 (Jan 1): Service Revenue 3,000 / Accounts Receivable 3,000\n\nNote: Reversing entries are optional. They simplify subsequent cash transaction recording by eliminating the need to remember which portion of the payment relates to prior period accruals.', 'Entri Pembalikan 1 (1 Jan): Gaji Bayar 2.500 / Beban Gaji 2.500\nEntri Pembalikan 2 (1 Jan): Bunga Bayar 400 / Beban Bunga 400\nEntri Pembalikan 3 (1 Jan): Pendapatan Jasa 3.000 / Piutang Usaha 3.000\n\nCatatan: Entri pembalikan bersifat opsional. Mereka menyederhanakan pencatatan transaksi kas berikutnya dengan menghilangkan kebutuhan mengingat bagian mana dari pembayaran terkait akrual periode sebelumnya.') },
-      { label: '(b)', given: b('Subsequent cash payments with/without reversing entries', 'Pembayaran kas berikutnya dengan/tanpa entri pembalikan'), answer: b('WITH reversing entries: When cash paid for salaries, debit Salaries Expense full amount (no need to split between Payable and Expense).\nWITHOUT reversing entries: Must debit Salaries Payable (for prior period) and Salaries Expense (for current period portion) separately.\n\nExample: Jan 15 pay €4,000 salaries.\nWith RE: Dr Salaries Exp 4,000 / Cr Cash 4,000\nWithout RE: Dr Salaries Payable 2,500, Dr Salaries Exp 1,500 / Cr Cash 4,000', 'DENGAN entri pembalikan: Saat bayar gaji, debet Beban Gaji jumlah penuh (tidak perlu bagi antara Bayar dan Beban).\nTANPA entri pembalikan: Harus debet Gaji Bayar (untuk periode lalu) dan Beban Gaji (untuk bagian periode ini) terpisah.\n\nContoh: 15 Jan bayar €4.000 gaji.\nDgn RE: Dr Beban Gaji 4.000 / Cr Kas 4.000\nTdk RE: Dr Gaji Bayar 2.500, Dr Beban Gaji 1.500 / Cr Kas 4.000') }
+      { label: '(a)', given: b('Reversing entries for 3 adjusting entries', 'Entri pembalikan untuk 3 entri penyesuaian'), answer: b('Reversing Entry 1 (Jan 1): Salaries Payable 2,500 / Salaries Expense 2,500\nReversing Entry 2 (Jan 1): Interest Payable 400 / Interest Expense 400\nReversing Entry 3 (Jan 1): Service Revenue 3,000 / Accounts Receivable 3,000\n\nNote: Reversing entries are optional. They simplify subsequent cash transaction recording by eliminating the need to remember which portion of the payment relates to prior period accruals.', 'Entri Pembalikan 1 (1 Jan): Gaji Bayar 2.500 / Beban Gaji 2.500\nEntri Pembalikan 2 (1 Jan): Bunga Bayar 400 / Beban Bunga 400\nEntri Pembalikan 3 (1 Jan): Pendapatan Jasa 3.000 / Piutang Usaha 3.000\n\nCatatan: Entri pembalikan bersifat opsional. Mereka menyederhanakan pencatatan transaksi kas berikutnya dengan menghilangkan kebutuhan mengingat bagian mana dari pembayaran terkait akrual periode sebelumnya.'), blocks: [
+        { type: 'table', caption: b('Reversing Entries - January 1', 'Entri Pembalikan - 1 Januari'), head: [
+          b('Account\nAkun', 'Account\nAkun'),
+          b('Debit\nDebet', 'Debit\nDebet'),
+          b('Credit\nKredit', 'Credit\nKredit')
+        ], rows: [
+          ['Salaries Payable\nGaji Bayar', '2,500', ''],
+          ['Salaries Expense\nBeban Gaji', '', '2,500'],
+          ['Interest Payable\nBunga Bayar', '400', ''],
+          ['Interest Expense\nBeban Bunga', '', '400'],
+          ['Service Revenue\nPendapatan Jasa', '3,000', ''],
+          ['Accounts Receivable\nPiutang Usaha', '', '3,000']
+        ], align: ['left', 'right', 'right'], compact: false }
+      ]},
+      { label: '(b)', given: b('Subsequent cash payments with/without reversing entries', 'Pembayaran kas berikutnya dengan/tanpa entri pembalikan'), answer: b('WITH reversing entries: When cash paid for salaries, debit Salaries Expense full amount (no need to split between Payable and Expense).\nWITHOUT reversing entries: Must debit Salaries Payable (for prior period) and Salaries Expense (for current period portion) separately.\n\nExample: Jan 15 pay €4,000 salaries.\nWith RE: Dr Salaries Exp 4,000 / Cr Cash 4,000\nWithout RE: Dr Salaries Payable 2,500, Dr Salaries Exp 1,500 / Cr Cash 4,000', 'DENGAN entri pembalikan: Saat bayar gaji, debet Beban Gaji jumlah penuh (tidak perlu bagi antara Bayar dan Beban).\nTANPA entri pembalikan: Harus debet Gaji Bayar (untuk periode lalu) dan Beban Gaji (untuk bagian periode ini) terpisah.\n\nContoh: 15 Jan bayar €4.000 gaji.\nDgn RE: Dr Beban Gaji 4.000 / Cr Kas 4.000\nTdk RE: Dr Gaji Bayar 2.500, Dr Beban Gaji 1.500 / Cr Kas 4.000'), blocks: [
+        { type: 'table', caption: b('Subsequent Salary Payment Comparison', 'Perbandingan Pembayaran Gaji Berikutnya'), head: [
+          b('Scenario\nSkenario', 'Scenario\nSkenario'),
+          b('With Reversing Entries\nDengan Entri Pembalikan', 'With Reversing Entries\nDengan Entri Pembalikan'),
+          b('Without Reversing Entries\nTanpa Entri Pembalikan', 'Without Reversing Entries\nTanpa Entri Pembalikan')
+        ], rows: [
+          ['Jan 15 pay €4,000 salaries\n15 Jan bayar €4.000 gaji', 'Dr Salaries Exp 4,000 / Cr Cash 4,000\nDr Beban Gaji 4.000 / Cr Kas 4.000', 'Dr Salaries Payable 2,500\nDr Salaries Exp 1,500 / Cr Cash 4,000\nDr Gaji Bayar 2.500\nDr Beban Gaji 1.500 / Cr Kas 4.000']
+        ], align: ['left', 'center', 'center'], compact: false }
+      ]}
     ],
     explanation: b(
       'Reversing entries are optional journal entries made at the beginning of a new period to reverse certain adjusting entries (accrued expenses and accrued revenues). They simplify the recording of subsequent cash transactions by eliminating the need to split payments between prior period liabilities and current period expenses. Reversing entries are NOT used for prepaid expenses, unearned revenues, or depreciation.',
