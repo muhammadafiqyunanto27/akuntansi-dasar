@@ -1636,6 +1636,70 @@ footer.site-footer a { color: var(--on-inverse); }
   .norm-table td.stmt { white-space: normal; }
   .norm-table .norm-note { font-size: 12px; }
 }
+@media (width <= 980px) {
+  .main-links { display: none; }
+}
+@media (width <= 860px) {
+  .search-kbd { display: none; }
+}
+@media (width <= 760px) {
+  .search-open-label { display: none; }
+  .search-open { border-radius: 12px; justify-content: center; width: 44px; height: 44px; padding: 0; }
+  .brand small { display: none; }
+  .brand { font-size: 15.5px; }
+  .lang-toggle button { min-width: 34px; padding: var(--space-1) var(--space-2); }
+  .stat-strip { grid-template-columns: 1fr 1fr; }
+  .stat:nth-child(3) { border-left: 0; border-top: 1px solid var(--border); }
+  .stat:nth-child(4) { border-top: 1px solid var(--border); }
+  .glossary-item { grid-template-columns: 1fr; }
+  .example-ledger { grid-template-columns: 1fr; }
+  .fin-grid { grid-template-columns: 1fr; gap: 0; }
+  .fin-grid .fin-card { margin-bottom: var(--space-4); }
+  .filter-bar { top: 70px; }
+  .norm-table-wrap { max-height: none; overflow: visible; }
+  .norm-table { min-width: 0; font-size: 14px; display: block; }
+  .norm-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .norm-table tbody, .norm-table tr, .norm-table td { display: block; width: 100%; }
+  .norm-table tbody tr {
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--border);
+  }
+  .norm-table tbody tr:last-child { border-bottom: 0; }
+  .norm-table td { border: 0; padding: var(--space-1) 0; }
+  .norm-table tbody tr:nth-child(even) td { background: transparent; }
+  .norm-table td.acc b { font-size: 15px; }
+  .norm-table td.cls,
+  .norm-table td.stmt,
+  .norm-table td.side-cell {
+    display: grid;
+    grid-template-columns: minmax(96px, 38%) minmax(0, 1fr);
+    gap: var(--space-2);
+    align-items: baseline;
+    margin-top: var(--space-1);
+    color: var(--ink);
+  }
+  .norm-table .cell-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .norm-table .cell-value { min-width: 0; }
+  .norm-table td.side-cell .cell-value { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1); }
+  .norm-table td.side-cell .norm-note { flex-basis: 100%; }
+  .norm-table td.stmt { white-space: normal; }
+  .norm-table .norm-note { font-size: 12px; }
+}
 @media (width <= 640px) {
   .wrap { padding: 0 var(--space-4); }
   header.hero { padding: var(--space-13) var(--space-4) var(--space-11); }
@@ -1664,6 +1728,79 @@ footer.site-footer a { color: var(--on-inverse); }
 @media (width <= 480px) {
   .brand-long { display: none; }
   .brand-short { display: inline; }
+  .exercise-item summary {
+    padding: var(--space-3) var(--space-4);
+    font-size: 14px;
+  }
+  .exercise-item summary span:first-child {
+    min-width: 24px;
+    height: 24px;
+    font-size: 9px;
+    padding: 0 4px;
+  }
+  .exercise-id-badge.large {
+    min-width: 28px;
+    height: 28px;
+    padding: 0 6px;
+    font-size: 9px;
+  }
+  .pager-nav a { padding: var(--space-2) var(--space-3); font-size: 13px; }
+}
+
+@media (width <= 420px) {
+  .lang-toggle button { min-width: 28px; }
+}
+
+@media (width <= 760px) {
+  .drawer {
+    width: 100%;
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    padding: var(--space-4) var(--space-3) var(--space-8);
+  }
+  .drawer.open { transform: translateY(0); }
+  .scrim.show { opacity: 1; visibility: visible; }
+  .drawer { transform: translateY(103%); }
+  .drawer.open { transform: translateY(0); }
+  .drawer-head { margin-bottom: var(--space-3); }
+  .drawer-pages a { min-height: 44px; padding: var(--space-2) var(--space-3); }
+  .drawer-link { min-height: 40px; font-size: 14px; }
+}
+
+@media (width <= 640px) {
+  .search-panel {
+    width: 100%;
+    max-height: 80vh;
+    border-radius: 0;
+    border: none;
+  }
+  .search-overlay {
+    padding: max(9vh, 44px) var(--space-3) var(--space-3);
+  }
+}
+
+@media (width <= 480px) {
+  .brand-long { display: none; }
+  .brand-short { display: inline; }
+  .exercise-item summary {
+    padding: var(--space-3) var(--space-4);
+    font-size: 14px;
+  }
+  .exercise-item summary span:first-child {
+    min-width: 24px;
+    height: 24px;
+    font-size: 9px;
+    padding: 0 4px;
+  }
+  .exercise-id-badge.large {
+    min-width: 28px;
+    height: 28px;
+    padding: 0 6px;
+    font-size: 9px;
+  }
+  .pager-nav a { padding: var(--space-2) var(--space-3); font-size: 13px; }
 }
 
 @media (width <= 420px) {
