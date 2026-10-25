@@ -60,7 +60,7 @@ const alignClass = (index: number): string => {
       <table>
         <thead>
           <tr>
-            {block.head.map((cell, index) => (
+            {(block.head || []).map((cell, index) => (
               <th class={alignClass(index)}>
                 {isBi(cell) ? <BiText value={cell} /> : cell}
               </th>
@@ -68,9 +68,9 @@ const alignClass = (index: number): string => {
           </tr>
         </thead>
         <tbody>
-          {block.rows.map((row) => (
+          {(block.rows || []).map((row) => (
             <tr>
-              {row.map((cell, index) => {
+              {(row || []).map((cell, index) => {
                 const safe = safeCell(cell);
                 return (
                   <td class={alignClass(index)}>

@@ -2,14 +2,16 @@
 import type { Bi } from '../data/types';
 
 interface Props {
-  value: Bi;
+  value: Bi | undefined | null;
   class?: string;
 }
 
 const { value, class: className = '' } = Astro.props;
+
+const safeValue = value || { en: '', id: '' };
 ---
 
 <span class={className || undefined}>
-  <span class="bi-id" set:html={value.id}></span>
-  <span class="bi-en" set:html={value.en}></span>
+  <span class="bi-id" set:html={safeValue.id}></span>
+  <span class="bi-en" set:html={safeValue.en}></span>
 </span>

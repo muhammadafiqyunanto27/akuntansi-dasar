@@ -1,10 +1,9 @@
 import { b } from '../data/types';
 
-// P-type and BYP-type exercises for Chapter 1
-// Extracted from PDF Pages 1-20 (approx)
-
 export const chapter1PAndBYP = [
-  // P-type exercises for Chapter 1
+  // ============================================================
+  // P1-1A: Kinney Repair Ltd - Tabular Analysis
+  // ============================================================
   {
     id: 'P1-1A',
     title: b('P1-1A: Kinney\'s Repair Ltd', 'P1-1A: Kinney\'s Repair Ltd'),
@@ -43,44 +42,38 @@ export const chapter1PAndBYP = [
     parts: [
       {
         label: '(a)',
-        given: b(
-          'Tabular analysis format with columns: Cash, A/R, Supplies, Equipment, A/P, Share Capital, Retained Earnings (Rev., Exp., Div.)',
-          'Format analisis tabel dengan kolom: Kas, Piutang Usaha, Perlengkapan, Peralatan, Hutang Usaha, Modal Saham, Laba Ditahan (Pend., Beban, Div.)'
-        ),
-        answer: b(
-          'Transaction analysis showing all 11 transactions with effects on each account. Key: Cash ends at €8,020; A/R €860; Supplies €700; Equipment €5,000; A/P €250; Share Capital €10,000; Retained Earnings €1,450 (Service Revenue €4,700 - Rent Expense €400 - Advertising Expense €250 - Salaries €1,000 - Utilities €160 - Dividends €1,000).',
-          'Analisis transaksi menunjukkan 11 transaksi dengan efek pada setiap akun. Kunci: Kas akhir €8.020; Piutang Usaha €860; Perlengkapan €700; Peralatan €5.000; Hutang Usaha €250; Modal Saham €10.000; Laba Ditahan €1.450 (Pendapatan Jasa €4.700 - Beban Sewa €400 - Beban Iklan €250 - Gaji €1.000 - Utilitas €160 - Dividen €1.000).'
-        ),
+        given: b('Tabular Analysis Format', 'Format Analisis Tabel'),
+        answer: b('', ''),
         blocks: [
           {
             type: 'table',
-            caption: b('Tabular Analysis - P1-1A Kinney Repair Ltd', 'Analisis Tabel - P1-1A Kinney Repair Ltd'),
+            caption: b('Tabular Analysis - Kinney Repair Ltd (May)', 'Analisis Tabel - Kinney Repair Ltd (Mei)'),
             head: [
-              b('Date\nTgl', 'Date\nTgl'),
+              b('Trans.\nTrans.', 'Trans.\nTrans.'),
               b('Cash\nKas', 'Cash\nKas'),
-              b('A/R\nPiutang', 'A/R\nPiutang'),
+              b('Accts. Rec.\nPiutang Usaha', 'Accts. Rec.\nPiutang Usaha'),
               b('Supplies\nPerlengkapan', 'Supplies\nPerlengkapan'),
               b('Equipment\nPeralatan', 'Equipment\nPeralatan'),
-              b('A/P\nHutang', 'A/P\nHutang'),
-              b('Share Capital\nModal Saham', 'Share Capital\nModal Saham'),
-              b('Rev.\nPend.', 'Rev.\nPend.'),
-              b('Exp.\nBeban', 'Exp.\nBeban'),
-              b('Div.\nDiv.', 'Div.\nDiv.'),
-              b('Laba Ditahan\nRetained Earnings', 'Laba Ditahan\nRetained Earnings')
+              b('Accts. Pay.\nHutang Usaha', 'Accts. Pay.\nHutang Usaha'),
+              b('Share Cap.\nModal Saham', 'Share Cap.\nModal Saham'),
+              b('Revenue\nPendapatan', 'Revenue\nPendapatan'),
+              b('Expenses\nBeban', 'Expenses\nBeban'),
+              b('Dividends\nDividen', 'Dividends\nDividen'),
+              b('Ret. Earnings\nLaba Ditahan', 'Ret. Earnings\nLaba Ditahan')
             ],
             rows: [
               ['1', '10,000', '', '', '', '', '10,000', '', '', '', ''],
               ['2', '-5,000', '', '', '5,000', '', '', '', '', '', ''],
-              ['3', '-400', '', '', '', '', '', '', '400', '', '-400'],
+              ['3', '-400', '', '', '', '', '', '400', '', '-400'],
               ['4', '-700', '', '700', '', '', '', '', '', '', ''],
               ['5', '', '', '', '', '250', '', '', '', '', ''],
               ['6', '4,700', '', '', '', '', '', '4,700', '', '', '4,700'],
               ['7', '-1,000', '', '', '', '', '', '', '', '1,000', '-1,000'],
-              ['8', '-1,000', '', '', '', '', '', '', '1,000', '', '-1,000'],
-              ['9', '-160', '', '', '', '', '', '', '160', '', '-160'],
+              ['8', '-1,000', '', '', '', '', '', '1,000', '', '-1,000'],
+              ['9', '-160', '', '', '', '', '', '160', '', '-160'],
               ['10', '', '980', '', '', '', '', '980', '', '', '980'],
               ['11', '120', '-120', '', '', '', '', '', '', '', ''],
-              ['Bal', '8,020', '860', '700', '5,000', '250', '10,000', '4,700', '3,250', '1,000', '1,450']
+              ['Bal.', '8,020', '860', '700', '5,000', '250', '10,000', '4,700', '3,250', '1,000', '1,450']
             ],
             align: ['center', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right'],
             compact: false
@@ -89,8 +82,8 @@ export const chapter1PAndBYP = [
       },
       {
         label: '(b)',
-        given: b('Compute net income/loss from Retained Earnings columns', 'Hitung laba/rugi bersih dari kolom Laba Ditahan'),
-        answer: b('Net income = €2,890 (Service Revenue €4,700 - Total Expenses €1,810). After Dividends €1,000, Retained Earnings = €1,890. Ending RE per tabular analysis = €1,450 (difference due to transaction timing).', 'Laba bersih = €2.890 (Pendapatan Jasa €4.700 - Total Beban €1.810). Setelah Dividen €1.000, Laba Ditahan = €1.890. Laba Ditahan akhir per analisis tabel = €1.450 (perbedaan karena timing transaksi).'),
+        given: b('Compute Net Income from Retained Earnings', 'Hitung Laba Bersih dari Laba Ditahan'),
+        answer: b('', ''),
         blocks: [
           {
             type: 'table',
@@ -118,11 +111,14 @@ export const chapter1PAndBYP = [
       }
     ],
     explanation: b(
-      'Each transaction affects the accounting equation. Revenue increases equity, expenses and dividends decrease equity. The tabular analysis tracks each account separately. Net income is computed from the Retained Earnings columns: Revenue minus Expenses minus Dividends = Ending Retained Earnings (since beginning was 0). The income statement properly presents revenue and expenses to show net income.',
-      'Setiap transaksi mempengaruhi persamaan akuntansi. Pendapatan menambah ekuitas, beban dan dividen mengurangi ekuitas. Analisis tabel melacak setiap akun terpisah. Laba bersih dihitung dari kolom Laba Ditahan: Pendapatan minus Beban minus Dividen = Laba Ditahan Akhir (karena awalnya 0). Laporan laba rugi menyajikan pendapatan dan beban dengan benar untuk menunjukkan laba bersih.'
+      'Each transaction affects the accounting equation. Revenue increases equity, expenses and dividends decrease equity. The tabular analysis tracks each account separately. Net income is computed from the Retained Earnings columns: Revenue minus Expenses minus Dividends = Ending Retained Earnings (since beginning was 0).',
+      'Setiap transaksi mempengaruhi persamaan akuntansi. Pendapatan menambah ekuitas, beban dan dividen mengurangi ekuitas. Analisis tabel melacak setiap akun terpisah. Laba bersih dihitung dari kolom Laba Ditahan: Pendapatan minus Beban minus Dividen = Laba Ditahan Akhir (karena awalnya 0).'
     )
   },
 
+  // ============================================================
+  // P1-1B: Holiday Travel Agency - Tabular Analysis
+  // ============================================================
   {
     id: 'P1-1B',
     title: b('P1-1B: Holiday Travel Agency', 'P1-1B: Holiday Travel Agency'),
@@ -159,37 +155,37 @@ export const chapter1PAndBYP = [
     parts: [
       {
         label: '(a)',
-        given: b('Tabular analysis with all April transactions', 'Analisis tabel dengan semua transaksi April'),
-        answer: b('Cash €13,500; A/R €2,200; Supplies €800; Equipment €3,000; A/P €800; Share Capital €15,000; Retained Earnings €3,100 (Service Revenue €5,700 - Rent €600 - Salaries €1,200 - Advertising €400 - Dividends €800)', 'Kas €13.500; Piutang Usaha €2.200; Perlengkapan €800; Peralatan €3.000; Hutang Usaha €800; Modal Saham €15.000; Laba Ditahan €3.100 (Pendapatan Jasa €5.700 - Sewa €600 - Gaji €1.200 - Iklan €400 - Dividen €800)'),
+        given: b('Tabular Analysis Format', 'Format Analisis Tabel'),
+        answer: b('', ''),
         blocks: [
           {
             type: 'table',
-            caption: b('Tabular Analysis - P1-1B Holiday Travel Agency', 'Analisis Tabel - P1-1B Holiday Travel Agency'),
+            caption: b('Tabular Analysis - Holiday Travel Agency (April)', 'Analisis Tabel - Holiday Travel Agency (April)'),
             head: [
-              b('Date\nTgl', 'Date\nTgl'),
+              b('Trans.\nTrans.', 'Trans.\nTrans.'),
               b('Cash\nKas', 'Cash\nKas'),
-              b('A/R\nPiutang', 'A/R\nPiutang'),
+              b('Accts. Rec.\nPiutang Usaha', 'Accts. Rec.\nPiutang Usaha'),
               b('Supplies\nPerlengkapan', 'Supplies\nPerlengkapan'),
               b('Equipment\nPeralatan', 'Equipment\nPeralatan'),
-              b('A/P\nHutang', 'A/P\nHutang'),
-              b('Share Capital\nModal Saham', 'Share Capital\nModal Saham'),
-              b('Rev.\nPend.', 'Rev.\nPend.'),
-              b('Exp.\nBeban', 'Exp.\nBeban'),
-              b('Div.\nDiv.', 'Div.\nDiv.'),
-              b('Laba Ditahan\nRetained Earnings', 'Laba Ditahan\nRetained Earnings')
+              b('Accts. Pay.\nHutang Usaha', 'Accts. Pay.\nHutang Usaha'),
+              b('Share Cap.\nModal Saham', 'Share Cap.\nModal Saham'),
+              b('Revenue\nPendapatan', 'Revenue\nPendapatan'),
+              b('Expenses\nBeban', 'Expenses\nBeban'),
+              b('Dividends\nDividen', 'Dividends\nDividen'),
+              b('Ret. Earnings\nLaba Ditahan', 'Ret. Earnings\nLaba Ditahan')
             ],
             rows: [
               ['1', '15,000', '', '', '', '', '15,000', '', '', '', ''],
               ['2', '-3,000', '', '', '3,000', '', '', '', '', '', ''],
-              ['3', '-600', '', '', '', '', '', '', '600', '', '-600'],
+              ['3', '-600', '', '', '', '', '', '600', '', '-600'],
               ['4', '', '', '800', '', '800', '', '', '', '', ''],
               ['5', '2,500', '', '', '', '', '', '2,500', '', '', '2,500'],
-              ['6', '-1,200', '', '', '', '', '', '', '1,200', '', '-1,200'],
+              ['6', '-1,200', '', '', '', '', '', '1,200', '', '-1,200'],
               ['7', '', '3,200', '', '', '', '', '3,200', '', '', '3,200'],
-              ['8', '-400', '', '', '', '', '', '', '400', '', '-400'],
+              ['8', '-400', '', '', '', '', '', '400', '', '-400'],
               ['9', '1,000', '-1,000', '', '', '', '', '', '', '', ''],
               ['10', '-800', '', '', '', '', '', '', '', '800', '-800'],
-              ['Bal', '13,500', '2,200', '800', '3,000', '800', '15,000', '5,700', '2,200', '800', '3,100']
+              ['Bal.', '13,500', '2,200', '800', '3,000', '800', '15,000', '5,700', '2,200', '800', '3,100']
             ],
             align: ['center', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right'],
             compact: false
@@ -198,8 +194,8 @@ export const chapter1PAndBYP = [
       },
       {
         label: '(b)',
-        given: b('Compute net income from Retained Earnings', 'Hitung laba bersih dari Laba Ditahan'),
-        answer: b('Net income = €3,900 (Service Revenue €5,700 - Expenses €1,800). After dividends €800, Retained Earnings = €3,100', 'Laba bersih = €3.900 (Pendapatan Jasa €5.700 - Beban €1.800). Setelah dividen €800, Laba Ditahan = €3.100'),
+        given: b('Compute Net Income from Retained Earnings', 'Hitung Laba Bersih dari Laba Ditahan'),
+        answer: b('', ''),
         blocks: [
           {
             type: 'table',
@@ -231,6 +227,9 @@ export const chapter1PAndBYP = [
     )
   },
 
+  // ============================================================
+  // P1-2A: Donahue Veterinary Clinic - Tabular Analysis + Financial Statements
+  // ============================================================
   {
     id: 'P1-2A',
     title: b('P1-2A: Donahue Veterinary Clinic', 'P1-2A: Donahue Veterinary Clinic'),
@@ -271,25 +270,25 @@ export const chapter1PAndBYP = [
     parts: [
       {
         label: '(a)',
-        given: b('Beginning balances + 8 September transactions', 'Saldo awal + 8 transaksi September'),
-        answer: b('Check figures: (a) Total assets €13,120; (b) Net income €4,330. Final balances: Cash €13,100; A/R €4,800; Supplies €600; Equipment €8,100; Notes Payable €10,000; A/P €970; Share Capital €13,000; Retained Earnings €4,570 (Rev €7,300 - Exp €2,970 - Div €400 + Beg RE €700)', 'Angka kunci: (a) Total aset €13.120; (b) Laba bersih €4.330. Saldo akhir: Kas €13.100; Piutang €4.800; Perlengkapan €600; Peralatan €8.100; Catatan Hutang €10.000; Hutang Usaha €970; Modal Saham €13.000; Laba Ditahan €4.570 (Pend €7.300 - Beban €2.970 - Div €400 + Laba Ditahan Awal €700)'),
+        given: b('Beginning Balances + 8 September Transactions', 'Saldo Awal + 8 Transaksi September'),
+        answer: b('', ''),
         blocks: [
           {
             type: 'table',
-            caption: b('Tabular Analysis - September Transactions', 'Analisis Tabel - Transaksi September'),
+            caption: b('Tabular Analysis - September Transactions (Donahue Veterinary Clinic)', 'Analisis Tabel - Transaksi September (Klinik Hewan Donahue)'),
             head: [
               b('Date\nTgl', 'Date\nTgl'),
               b('Cash\nKas', 'Cash\nKas'),
-              b('A/R\nPiutang', 'A/R\nPiutang'),
+              b('Accts. Rec.\nPiutang Usaha', 'Accts. Rec.\nPiutang Usaha'),
               b('Supplies\nPerlengkapan', 'Supplies\nPerlengkapan'),
               b('Equipment\nPeralatan', 'Equipment\nPeralatan'),
-              b('Notes Payable\nCatatan Hutang', 'Notes Payable\nCatatan Hutang'),
-              b('A/P\nHutang Usaha', 'A/P\nHutang Usaha'),
-              b('Share Capital\nModal Saham', 'Share Capital\nModal Saham'),
-              b('Retained Earnings\nLaba Ditahan', 'Retained Earnings\nLaba Ditahan'),
-              b('Rev.\nPend.', 'Rev.\nPend.'),
-              b('Exp.\nBeban', 'Exp.\nBeban'),
-              b('Div.\nDiv.', 'Div.\nDiv.')
+              b('Notes Pay.\nCatatan Hutang', 'Notes Pay.\nCatatan Hutang'),
+              b('Accts. Pay.\nHutang Usaha', 'Accts. Pay.\nHutang Usaha'),
+              b('Share Cap.\nModal Saham', 'Share Cap.\nModal Saham'),
+              b('Ret. Earn.\nLaba Ditahan', 'Ret. Earn.\nLaba Ditahan'),
+              b('Revenue\nPendapatan', 'Revenue\nPendapatan'),
+              b('Expenses\nBeban', 'Expenses\nBeban'),
+              b('Dividends\nDividen', 'Dividends\nDividen')
             ],
             rows: [
               ['Aug 31 Bal', '9,000', '1,700', '600', '6,000', '', '3,600', '13,000', '700', '', '', ''],
@@ -301,7 +300,7 @@ export const chapter1PAndBYP = [
               ['6', '-3,600', '', '', '', '', '', '', '', '3,600', '-3,600'],
               ['7', '', '', '', '', '', '170', '', '', '170', '-170'],
               ['8', '10,000', '', '', '', '10,000', '', '', '', '', ''],
-              ['Bal', '13,100', '4,800', '600', '8,100', '10,000', '970', '13,000', '4,570', '7,300', '2,970', '400']
+              ['Bal.', '13,100', '4,800', '600', '8,100', '10,000', '970', '13,000', '4,570', '7,300', '2,970', '400']
             ],
             align: ['center', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right'],
             compact: false
@@ -310,8 +309,8 @@ export const chapter1PAndBYP = [
       },
       {
         label: '(b)',
-        given: b('Prepare financial statements from tabular analysis', 'Siapkan laporan keuangan dari analisis tabel'),
-        answer: b('Income Statement: Service Revenue €7,300; Expenses: Salaries €1,700, Rent €900, Advertising €200, Utilities €170 = Total €2,970; Net Income €4,330\nRetained Earnings: Beg €700 + NI €4,330 - Div €400 = End €4,630\nStatement of Financial Position: Assets €26,600; Liabilities €10,970; Equity €17,630', 'Laporan Laba Rugi: Pendapatan Jasa €7.300; Beban: Gaji €1.700, Sewa €900, Iklan €200, Utilitas €170 = Total Beban €2.970; Laba Bersih €4.330\nLaba Ditahan: Awal €700 + LB €4.330 - Div €400 = Akhir €4.630\nLaporan Posisi Keuangan: Aset €26.600; Liabilitas €10.970; Ekuitas €17.630'),
+        given: b('Prepare Financial Statements from Tabular Analysis', 'Siapkan Laporan Keuangan dari Analisis Tabel'),
+        answer: b('', ''),
         blocks: [
           {
             type: 'table',
@@ -398,6 +397,9 @@ export const chapter1PAndBYP = [
     )
   },
 
+  // ============================================================
+  // P1-3A: Park Flying School - Financial Statements
+  // ============================================================
   {
     id: 'P1-3A',
     title: b('P1-3A: Park Flying School', 'P1-3A: Park Flying School'),
@@ -426,8 +428,8 @@ export const chapter1PAndBYP = [
     parts: [
       {
         label: '(a)',
-        given: b('Assets, liabilities, revenues, expenses for May (in thousands)', 'Aset, liabilitas, pendapatan, beban untuk Mei (dalam ribuan)'),
-        answer: b('Check figures: (a) Net income W2,000; Total assets W75,920. Income Statement: Service Revenue W6,800; Total Expenses W4,800 (Rent 1,000 + Maint 400 + Adv 500 + Gas 2,500 + Util 400); Net Income W2,000. Retained Earnings: Beg 0 + NI 2,000 - Div 480 = End RE W1,520. Statement of Financial Position: Total Assets W75,920 (Cash 4,500 + A/R 7,420 + Equipment 64,000); Total Liabilities W29,400 (Notes Payable 28,000 + A/P 1,400); Equity W46,520 (Share Capital 45,000 + RE 1,520)', 'Angka kunci: (a) Laba bersih W2.000; Total aset W75.920. Laporan Laba Rugi: Pendapatan Jasa W6.800; Total Beban W4.800 (Sewa 1.000 + Perawatan 400 + Iklan 500 + Bensin 2.500 + Util 400); Laba Bersih W2.000. Laba Ditahan: Awal 0 + LB 2.000 - Div 480 = Akhir LD W1.520. Laporan Posisi Keuangan: Total Aset W75.920 (Kas 4.500 + Piutang 7.420 + Peralatan 64.000); Total Liabilitas W29.400 (Catatan Hutang 28.000 + H/Usaha 1.400); Ekuitas W46.520 (Modal Saham 45.000 + LD 1.520)'),
+        given: b('Income Statement', 'Laporan Laba Rugi'),
+        answer: b('', ''),
         blocks: [
           {
             type: 'table',
@@ -508,7 +510,7 @@ export const chapter1PAndBYP = [
       {
         label: '(b)',
         given: b('Additional accruals: unbilled revenue W900, unpaid gas expense W1,500', 'Penyesuaian tambahan: pendapatan belum ditagih W900, beban bensin belum dibayar W1.500'),
-        answer: b('Check figure: (b) Net income W1,400. Adjusted: Service Revenue W7,700 (6,800 + 900); Gasoline Expense W4,000 (2,500 + 1,500); Total Expenses W6,300; Net Income W1,400. Retained Earnings: Beg 0 + NI 1,400 - Div 480 = End RE W920', 'Angka kunci: (b) Laba bersih W1.400. Disesuaikan: Pendapatan Jasa W7.700 (6.800 + 900); Beban Bensin W4.000 (2.500 + 1.500); Total Beban W6.300; Laba Bersih W1.400. Laba Ditahan: Awal 0 + LB 1.400 - Div 480 = Akhir LD W920'),
+        answer: b('', ''),
         blocks: [
           {
             type: 'table',
@@ -540,6 +542,9 @@ export const chapter1PAndBYP = [
     )
   },
 
+  // ============================================================
+  // P1-4A: Stiner Deliveries - Accounting Equation + Financial Statements
+  // ============================================================
   {
     id: 'P1-4A',
     title: b('P1-4A: Stiner Deliveries', 'P1-4A: Stiner Deliveries'),
@@ -588,8 +593,8 @@ export const chapter1PAndBYP = [
     parts: [
       {
         label: '(a)',
-        given: b('13 June transactions with beginning zero balances', '13 transaksi Juni dengan saldo awal nol'),
-        answer: b('Check: Ending cash €15,900. Tabular analysis shows: Cash €15,900; A/R €2,050 (4,800 - 1,250 - 1,500); Supplies €150; Van/Equipment €14,000; A/P €250 (150 + 100 - 100); Note Payable €11,500 (12,000 - 500); Share Capital €10,000; Retained Earnings €4,330 (Service Rev 6,300 - Rent 500 - Gas 100 - Utilities 250 - Salaries 1,000 - Div 300)', 'Cek: Kas akhir €15.900. Analisis tabel: Kas €15.900; Piutang €2.050 (4.800 - 1.250 - 1.500); Perlengkapan €150; Van/Peralatan €14.000; H/Usaha €250 (150 + 100 - 100); Catatan Hutang €11.500 (12.000 - 500); Modal Saham €10.000; Laba Ditahan €4.330 (Pend Jasa 6.300 - Sewa 500 - Bensin 100 - Util 250 - Gaji 1.000 - Div 300)'),
+        given: b('13 June Transactions with Beginning Zero Balances', '13 Transaksi Juni dengan Saldo Awal Nol'),
+        answer: b('', ''),
         blocks: [
           {
             type: 'table',
@@ -597,16 +602,16 @@ export const chapter1PAndBYP = [
             head: [
               b('Date\nTgl', 'Date\nTgl'),
               b('Cash\nKas', 'Cash\nKas'),
-              b('A/R\nPiutang', 'A/R\nPiutang'),
+              b('Accts. Rec.\nPiutang Usaha', 'Accts. Rec.\nPiutang Usaha'),
               b('Supplies\nPerlengkapan', 'Supplies\nPerlengkapan'),
-              b('Van/Equipment\nVan/Peralatan', 'Van/Equipment\nVan/Peralatan'),
-              b('A/P\nHutang', 'A/P\nHutang'),
-              b('Note Payable\nCatatan Hutang', 'Note Payable\nCatatan Hutang'),
-              b('Share Capital\nModal Saham', 'Share Capital\nModal Saham'),
-              b('Rev.\nPend.', 'Rev.\nPend.'),
-              b('Exp.\nBeban', 'Exp.\nBeban'),
-              b('Div.\nDiv.', 'Div.\nDiv.'),
-              b('Laba Ditahan\nRetained Earnings', 'Laba Ditahan\nRetained Earnings')
+              b('Van/Equip.\nVan/Peralatan', 'Van/Equip.\nVan/Peralatan'),
+              b('Accts. Pay.\nHutang Usaha', 'Accts. Pay.\nHutang Usaha'),
+              b('Note Pay.\nCatatan Hutang', 'Note Pay.\nCatatan Hutang'),
+              b('Share Cap.\nModal Saham', 'Share Cap.\nModal Saham'),
+              b('Revenue\nPendapatan', 'Revenue\nPendapatan'),
+              b('Expenses\nBeban', 'Expenses\nBeban'),
+              b('Dividends\nDividen', 'Dividends\nDividen'),
+              b('Ret. Earn.\nLaba Ditahan', 'Ret. Earn.\nLaba Ditahan')
             ],
             rows: [
               ['1', '10,000', '', '', '', '', '', '10,000', '', '', '', ''],
@@ -622,7 +627,7 @@ export const chapter1PAndBYP = [
               ['26', '-250', '', '', '', '', '', '', '250', '', '-250'],
               ['29', '', '', '', '', '-100', '', '', '', '', ''],
               ['30', '-1,000', '', '', '', '', '', '', '1,000', '', '-1,000'],
-              ['Bal', '15,900', '2,050', '150', '14,000', '250', '11,500', '10,000', '6,300', '1,850', '300', '4,330']
+              ['Bal.', '15,900', '2,050', '150', '14,000', '250', '11,500', '10,000', '6,300', '1,850', '300', '4,330']
             ],
             align: ['center', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right'],
             compact: false
@@ -631,8 +636,8 @@ export const chapter1PAndBYP = [
       },
       {
         label: '(b)',
-        given: b('Prepare income statement from tabular analysis', 'Siapkan laporan laba rugi dari analisis tabel'),
-        answer: b('Income Statement: Service Revenue €6,300; Expenses: Rent €500, Gasoline €100, Utilities €250, Salaries €1,000 = Total Expenses €1,850; Net Income €4,450 (Check figure: €4,330 - minor rounding/tax difference)', 'Laporan Laba Rugi: Pendapatan Jasa €6.300; Beban: Sewa €500, Bensin €100, Utilitas €250, Gaji €1.000 = Total Beban €1.850; Laba Bersih €4.450 (Angka kunci: €4.330 - perbedaan kecil pembulatan/pajak)'),
+        given: b('Prepare Income Statement from Tabular Analysis', 'Siapkan Laporan Laba Rugi dari Analisis Tabel'),
+        answer: b('', ''),
         blocks: [
           {
             type: 'table',
@@ -658,8 +663,8 @@ export const chapter1PAndBYP = [
       },
       {
         label: '(c)',
-        given: b('Prepare statement of financial position at June 30', 'Siapkan laporan posisi keuangan 30 Juni'),
-        answer: b('Check: Total assets €29,800. Assets: Cash €15,900, A/R €2,050, Supplies €150, Van €14,000 = €32,100. Wait - check figure says €29,800. Liabilities: A/P €250, Note Payable €11,500 = €11,750. Equity: Share Capital €10,000, Retained Earnings €4,330 = €14,330. Total L+E = €26,080. Discrepancy suggests equipment net of depreciation or van recorded differently.', 'Cek: Total aset €29.800. Aset: Kas €15.900, Piutang €2.050, Perlengkapan €150, Van €14.000 = €32.100. Tunggu - angka kunci €29.800. Liabilitas: H/Usaha €250, Catatan Hutang €11.500 = €11.750. Ekuitas: Modal Saham €10.000, Laba Ditahan €4.330 = €14.330. Total L+E = €26.080. Discrepansi menunjukkan peralatan neto penyusutan atau van dicatat berbeda.'),
+        given: b('Prepare Statement of Financial Position at June 30', 'Siapkan Laporan Posisi Keuangan 30 Juni'),
+        answer: b('', ''),
         blocks: [
           {
             type: 'table',
@@ -673,7 +678,7 @@ export const chapter1PAndBYP = [
               ['  Cash\n  Kas', '15,900'],
               ['  Accounts Receivable\n  Piutang Usaha', '2,050'],
               ['  Supplies\n  Perlengkapan', '150'],
-              ['  Equipment (Van)\n  Peralatan (Van)', '14,000'],
+              ['  Van/Equipment\n  Van/Peralatan', '14,000'],
               ['Total Assets\nTotal Aset', '32,100'],
               ['LIABILITIES & EQUITY\nLIABILITAS & EKUITAS', ''],
               ['  Accounts Payable\n  Hutang Usaha', '250'],
@@ -696,7 +701,9 @@ export const chapter1PAndBYP = [
     )
   },
 
+  // ============================================================
   // BYP-type exercises for Chapter 1
+  // ============================================================
   {
     id: 'BYP1-1',
     title: b('BYP1-1: Ethics and Investments', 'BYP1-1: Etika dan Investasi'),

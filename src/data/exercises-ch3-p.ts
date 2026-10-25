@@ -1,10 +1,9 @@
 import { b } from '../data/types';
 
-// P-type and BYP-type exercises for Chapter 3
-// Extracted from PDF Pages 41-60 (approx)
-
 export const chapter3PAndBYP = [
-  // P-type exercises for Chapter 3
+  // ============================================================
+  // P3-1: Timing Concepts
+  // ============================================================
   {
     id: 'P3-1',
     title: b('P3-1: Timing Concepts', 'P3-1: Konsep Waktu'),
@@ -25,23 +24,96 @@ export const chapter3PAndBYP = [
     parts: [
       {
         label: '(a)',
-        given: b('Accrual vs cash basis', 'Akrual vs kas basis'),
-        answer: b('Accrual basis: Revenues recognized when earned, expenses when incurred (regardless of cash flow). Cash basis: Revenues when cash received, expenses when cash paid. Accrual provides better matching of revenues and expenses to the period they relate to.', 'Akrual basis: Pendapatan diakui saat diperoleh, beban saat timbul (terlepas dari arus kas). Kas basis: Pendapatan saat kas diterima, beban saat kas dibayar. Akrual memberikan pencocokan yang lebih baik antara pendapatan dan beban ke periode terkait.')
+        given: b('Accrual vs Cash Basis', 'Akrual vs Kas Basis'),
+        answer: b('', ''),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Accrual vs Cash Basis Comparison', 'Perbandingan Akrual vs Kas Basis'),
+            head: [
+              b('Aspect\nAspek', 'Aspect\nAspek'),
+              b('Accrual Basis\nAkrual Basis', 'Accrual Basis\nAkrual Basis'),
+              b('Cash Basis\nKas Basis', 'Cash Basis\nKas Basis')
+            ],
+            rows: [
+              ['Revenue Recognition\nPengakuan Pendapatan', 'When earned (service performed)\nSaat diperoleh (jasa dilakukan)', 'When cash received\nSaat kas diterima'],
+              ['Expense Recognition\nPengakuan Beban', 'When incurred (resource consumed)\nSaat timbul (sumber daya digunakan)', 'When cash paid\nSaat kas dibayar'],
+              ['Matching Principle\nPrinsip Pencocokan', 'Followed - revenues matched with expenses\nDiikuti - pendapatan dicocokkan dengan beban', 'Not followed - no matching\nTidak diikuti - tidak ada pencocokan'],
+              ['GAAP/IFRS Compliance\nKepatuhan GAAP/IFRS', 'Required\nDiwajibkan', 'Not permitted for external reporting\nTidak diperbolehkan untuk pelaporan eksternal']
+            ],
+            align: ['left', 'left', 'left'],
+            compact: false
+          }
+        ]
       },
       {
         label: '(b)',
-        given: b('Revenue recognition principle', 'Prinsip pengakuan pendapatan'),
-        answer: b('Revenue is recognized when: (1) performance obligation is satisfied, (2) amount can be measured reliably, (3) probable economic benefits will flow. Example: Service performed in December but paid in January - recognize revenue in December.', 'Pendapatan diakui ketika: (1) kewajiban kinerja terpenuhi, (2) jumlah bisa diukur andal, (3) manfaat ekonomis mungkin mengalir. Contoh: Jasa dilakukan Desember dibayar Januari - akui pendapatan Desember.')
+        given: b('Revenue Recognition Principle', 'Prinsip Pengakuan Pendapatan'),
+        answer: b('', ''),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Revenue Recognition Principle', 'Prinsip Pengakuan Pendapatan'),
+            head: [
+              b('Criteria\nKriteria', 'Criteria\nKriteria'),
+              b('Description\nDeskripsi', 'Description\nDeskripsi')
+            ],
+            rows: [
+              ['Performance Obligation\nKewajiban Kinerja', 'Revenue recognized when obligation satisfied\nPendapatan diakui saat kewajiban terpenuhi'],
+              ['Measurability\nDapat Diukur', 'Amount can be measured reliably\nJumlah dapat diukur andal'],
+              ['Collectibility\nKetertagihan', 'Probable economic benefits will flow\nManfaat ekonomis mungkin mengalir'],
+              ['Example\nContoh', 'Service performed Dec, paid Jan -> Recognize Dec\nJasa Des, bayar Jan -> Akui Des']
+            ],
+            align: ['left', 'left'],
+            compact: false
+          }
+        ]
       },
       {
         label: '(c)',
-        given: b('Matching principle', 'Prinsip pencocokan'),
-        answer: b('Expenses recognized in the same period as the revenues they help generate. Example: Cost of goods sold matched with sales revenue in same period. Depreciation matches equipment cost to periods of use.', 'Beban diakui di periode yang sama dengan pendapatan yang dibantu men-generate. Contoh: HPP dicocokkan dengan pendapatan penjualan di periode yang sama. Penyusutan mencocokkan biaya peralatan ke periode penggunaan.')
+        given: b('Matching Principle', 'Prinsip Pencocokan'),
+        answer: b('', ''),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Matching Principle (Prinsip Pencocokan)', 'Prinsip Pencocokan'),
+            head: [
+              b('Concept\nKonsep', 'Concept\nKonsep'),
+              b('Application\nAplikasi', 'Application\nAplikasi')
+            ],
+            rows: [
+              ['Definition\nDefinisi', 'Expenses recognized in same period as revenues they help generate\nBeban diakui di periode yang sama dengan pendapatan yang dibantu generate'],
+              ['COGS\nHPP', 'Matched with sales revenue in same period\nDicocokkan dengan pendapatan penjualan di periode yang sama'],
+              ['Depreciation\nPenyusutan', 'Matches equipment cost to periods of use\nMencocokkan biaya peralatan ke periode penggunaan'],
+              ['Accrued Expenses\nBeban Akrual', 'Recorded when incurred, not when paid\nDicatat saat timbul, bukan saat dibayar']
+            ],
+            align: ['left', 'left'],
+            compact: false
+          }
+        ]
       },
       {
         label: '(d)',
-        given: b('Time period assumption', 'Asumsi periode waktu'),
-        answer: b('Economic life of a business can be divided into artificial time periods (months, quarters, years) for reporting purposes. Enables periodic financial statements but requires adjusting entries to properly assign revenues/expenses to correct periods.', 'Usia ekonomis bisnis bisa dibagi ke periode waktu artifisial (bulan, kuartal, tahun) untuk pelaporan. Memungkinkan laporan keuangan berkala tetapi memerlukan entri penyesuaian untuk menetapkan pendapatan/beban ke periode yang benar.')
+        given: b('Time Period Assumption', 'Asumsi Periode Waktu'),
+        answer: b('', ''),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Time Period Assumption (Asumsi Periode Waktu)', 'Asumsi Periode Waktu'),
+            head: [
+              b('Aspect\nAspek', 'Aspect\nAspek'),
+              b('Description\nDeskripsi', 'Description\nDeskripsi')
+            ],
+            rows: [
+              ['Definition\nDefinisi', 'Economic life divided into artificial time periods\nUsia ekonomis dibagi ke periode waktu artifisial'],
+              ['Periods\nPeriode', 'Months, quarters, years\nBulan, kuartal, tahun'],
+              ['Purpose\nTujuan', 'Enables periodic reporting\nMemungkinkan pelaporan berkala'],
+              ['Adjusting Entries\nEntri Penyesuaian', 'Required to assign revenues/expenses to correct periods\nDiperlukan untuk menetapkan pendapatan/beban ke periode yg benar']
+            ],
+            align: ['left', 'left'],
+            compact: false
+          }
+        ]
       }
     ],
     explanation: b(
@@ -50,6 +122,9 @@ export const chapter3PAndBYP = [
     )
   },
 
+  // ============================================================
+  // P3-2: Adjusting Entries Practice - All 7 Types
+  // ============================================================
   {
     id: 'P3-2',
     title: b('P3-2: Adjusting Entries Practice', 'P3-2: Latihan Entri Penyesuaian'),
@@ -72,7 +147,17 @@ export const chapter3PAndBYP = [
       '7. Jasa dilakukan tetapi belum ditagih 31 Des: €3.500.'
     ),
     parts: [
-      { label: '1', given: b('Supplies adjustment: Beginning 2,500 + Purchases 4,200 - Ending 800 = Expense 5,900', 'Penyesuaian perlengkapan: Awal 2.500 + Pembelian 4.200 - Akhir 800 = Beban 5.900'), answer: b('Supplies Expense 5,900 / Supplies 5,900', 'Beban Perlengkapan 5.900 / Perlengkapan 5.900'), blocks: [
+      { label: '1', given: b('Supplies Adjustment', 'Penyesuaian Perlengkapan'), answer: b('', ''), blocks: [
+        { type: 'table', caption: b('Supplies Adjustment Calculation', 'Perhitungan Penyesuaian Perlengkapan'), head: [
+          b('Item\nItem', 'Amount (€)\nJumlah (€)'),
+          ['Beginning Supplies\nPerlengkapan Awal', '2,500'],
+          ['Purchases\nPembelian', '4,200'],
+          ['Total Available\nTotal Tersedia', '6,700'],
+          ['Ending Supplies\nPerlengkapan Akhir', '(800)'],
+          ['Supplies Expense\nBeban Perlengkapan', '5,900']
+        ], align: ['left', 'right'], compact: false }
+      ]},
+      { label: '1', given: b('Supplies Adjusting Entry', 'Entri Penyesuaian Perlengkapan'), blocks: [
         { type: 'table', caption: b('Adjusting Entry - Supplies', 'Entri Penyesuaian - Perlengkapan'), head: [
           b('Account\nAkun', 'Account\nAkun'),
           b('Debit\nDebet', 'Debit\nDebet'),
@@ -82,7 +167,7 @@ export const chapter3PAndBYP = [
           ['Supplies\nPerlengkapan', '', '5,900']
         ], align: ['left', 'right', 'right'], compact: false }
       ]},
-      { label: '2', given: b('Prepaid insurance: 3,600 / 24 months = 150/month × 12 months = 1,800', 'Asuransi dibayar dimuka: 3.600 / 24 bulan = 150/bulan × 12 bulan = 1.800'), answer: b('Insurance Expense 1,800 / Prepaid Insurance 1,800', 'Beban Asuransi 1.800 / Asuransi Dibayar Dimuka 1.800'), blocks: [
+      { label: '2', given: b('Prepaid Insurance: 3,600 / 24 months = 150/month × 12 months = 1,800', 'Asuransi dibayar dimuka: 3.600 / 24 bulan = 150/bulan × 12 bulan = 1.800'), blocks: [
         { type: 'table', caption: b('Adjusting Entry - Prepaid Insurance', 'Entri Penyesuaian - Asuransi Dibayar Dimuka'), head: [
           b('Account\nAkun', 'Account\nAkun'),
           b('Debit\nDebet', 'Debit\nDebet'),
@@ -92,7 +177,7 @@ export const chapter3PAndBYP = [
           ['Prepaid Insurance\nAsuransi Dibayar Dimuka', '', '1,800']
         ], align: ['left', 'right', 'right'], compact: false }
       ]},
-      { label: '3', given: b('Depreciation: (50,000 - 5,000) / 10 = 4,500/year', 'Penyusutan: (50.000 - 5.000) / 10 = 4.500/tahun'), answer: b('Depreciation Expense 4,500 / Accumulated Depreciation 4,500', 'Beban Penyusutan 4.500 / Akumulasi Penyusutan 4.500'), blocks: [
+      { label: '3', given: b('Depreciation: (50,000 - 5,000) / 10 = 4,500/year', 'Penyusutan: (50.000 - 5.000) / 10 = 4.500/tahun'), blocks: [
         { type: 'table', caption: b('Adjusting Entry - Depreciation', 'Entri Penyesuaian - Penyusutan'), head: [
           b('Account\nAkun', 'Account\nAkun'),
           b('Debit\nDebet', 'Debit\nDebet'),
@@ -102,7 +187,7 @@ export const chapter3PAndBYP = [
           ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '4,500']
         ], align: ['left', 'right', 'right'], compact: false }
       ]},
-      { label: '4', given: b('Unearned revenue: Beg 5,000 + Received 15,000 - End 1,200 = Earned 18,800', 'Pendapatan blm diperoleh: Awal 5.000 + Diterima 15.000 - Akhir 1.200 = Diperoleh 18.800'), answer: b('Unearned Service Revenue 18,800 / Service Revenue 18,800', 'Pendapatan Jasa Blm Diperoleh 18.800 / Pendapatan Jasa 18.800'), blocks: [
+      { label: '4', given: b('Unearned Revenue: Beg 5,000 + Received 15,000 - End 1,200 = Earned 18,800', 'Pendapatan blm diperoleh: Awal 5.000 + Diterima 15.000 - Akhir 1.200 = Diperoleh 18.800'), blocks: [
         { type: 'table', caption: b('Adjusting Entry - Unearned Revenue', 'Entri Penyesuaian - Pendapatan Belum Diperoleh'), head: [
           b('Account\nAkun', 'Account\nAkun'),
           b('Debit\nDebet', 'Debit\nDebet'),
@@ -112,7 +197,7 @@ export const chapter3PAndBYP = [
           ['Service Revenue\nPendapatan Jasa', '', '18,800']
         ], align: ['left', 'right', 'right'], compact: false }
       ]},
-      { label: '5', given: b('Accrued salaries: 5 employees × €480/week × 3 days (Mon-Wed) = 5 × 480 × 3/5 = 1,440', 'Gaji akrual: 5 karyawan × €480/minggu × 3 hari (Sen-Rab) = 5 × 480 × 3/5 = 1.440'), answer: b('Salaries Expense 1,440 / Salaries Payable 1,440', 'Beban Gaji 1.440 / Gaji Bayar 1.440'), blocks: [
+      { label: '5', given: b('Accrued Salaries: 5 employees × €480/week × 3 days (Mon-Wed) = 5 × 480 × 3/5 = 1,440', 'Gaji akrual: 5 karyawan × €480/minggu × 3 hari (Sen-Rab) = 5 × 480 × 3/5 = 1.440'), blocks: [
         { type: 'table', caption: b('Adjusting Entry - Accrued Salaries', 'Entri Penyesuaian - Gaji Akrual'), head: [
           b('Account\nAkun', 'Account\nAkun'),
           b('Debit\nDebet', 'Debit\nDebet'),
@@ -122,7 +207,7 @@ export const chapter3PAndBYP = [
           ['Salaries Payable\nGaji Bayar', '', '1,440']
         ], align: ['left', 'right', 'right'], compact: false }
       ]},
-      { label: '6', given: b('Accrued interest: 20,000 × 6% × 3/12 = 300', 'Bunga akrual: 20.000 × 6% × 3/12 = 300'), answer: b('Interest Expense 300 / Interest Payable 300', 'Beban Bunga 300 / Bunga Bayar 300'), blocks: [
+      { label: '6', given: b('Accrued Interest: 20,000 × 6% × 3/12 = 300', 'Bunga akrual: 20.000 × 6% × 3/12 = 300'), blocks: [
         { type: 'table', caption: b('Adjusting Entry - Accrued Interest', 'Entri Penyesuaian - Bunga Akrual'), head: [
           b('Account\nAkun', 'Account\nAkun'),
           b('Debit\nDebet', 'Debit\nDebet'),
@@ -132,7 +217,7 @@ export const chapter3PAndBYP = [
           ['Interest Payable\nBunga Bayar', '', '300']
         ], align: ['left', 'right', 'right'], compact: false }
       ]},
-      { label: '7', given: b('Accrued revenue: Services performed but not billed €3,500', 'Pendapatan akrual: Jasa dilakukan tapi belum ditagih €3.500'), answer: b('Accounts Receivable 3,500 / Service Revenue 3,500', 'Piutang Usaha 3.500 / Pendapatan Jasa 3.500'), blocks: [
+      { label: '7', given: b('Accrued Revenue: Services performed but not billed €3,500', 'Pendapatan akrual: Jasa dilakukan tapi belum ditagih €3.500'), blocks: [
         { type: 'table', caption: b('Adjusting Entry - Accrued Revenue', 'Entri Penyesuaian - Pendapatan Akrual'), head: [
           b('Account\nAkun', 'Account\nAkun'),
           b('Debit\nDebet', 'Debit\nDebet'),
@@ -149,6 +234,9 @@ export const chapter3PAndBYP = [
     )
   },
 
+  // ============================================================
+  // P3-3: Financial Statements from Adjusted Trial Balance
+  // ============================================================
   {
     id: 'P3-3',
     title: b('P3-3: Financial Statements from Adjusted TB', 'P3-3: Laporan Keuangan dari Neraca Saldo Disesuaikan'),
@@ -185,83 +273,128 @@ export const chapter3PAndBYP = [
       '(d) Siapkan entri penutupan.'
     ),
     parts: [
-      { label: '(a)', given: b('Income statement from adjusted TB', 'Laporan laba rugi dari neraca saldo disesuaikan'), answer: b('Income Statement for Year Ended Dec 31:\nService Revenue €45,000\nExpenses: Salaries €18,000, Rent €12,000, Insurance €1,500, Depreciation €4,000,\nUtilities €3,000, Interest €600, Supplies €1,200 = Total €23,700\nNet Income = €45,000 - €23,700 = €21,300', 'Laporan Laba Rugi Tahun Berakhir 31 Des:\nPendapatan Jasa €45.000\nBeban: Gaji €18.000, Sewa €12.000, Asuransi €1.500, Penyusutan €4.000,\nUtilitas €3.000, Bunga €600, Perlengkapan €1.200 = Total €23.700\nLaba Bersih = €45.000 - €23.700 = €21.300'), blocks: [
-        { type: 'table', caption: b('Income Statement - Chen Company (Year Ended Dec 31, 2017)', 'Laporan Laba Rugi - Perusahaan Chen (Tahun Berakhir 31 Des 2017)'), head: [
-          b('Item\nItem', 'Item\nItem'),
-          b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
-        ], rows: [
-          ['Service Revenue\nPendapatan Jasa', '45,000'],
-          ['Expenses:\nBeban:', ''],
-          ['  Salaries Expense\n  Beban Gaji', '18,000'],
-          ['  Rent Expense\n  Beban Sewa', '12,000'],
-          ['  Insurance Expense\n  Beban Asuransi', '1,500'],
-          ['  Depreciation Expense\n  Beban Penyusutan', '4,000'],
-          ['  Utilities Expense\n  Beban Utilitas', '3,000'],
-          ['  Interest Expense\n  Beban Bunga', '600'],
-          ['  Supplies Expense\n  Beban Perlengkapan', '1,200'],
-          ['Total Expenses\nTotal Beban', '23,700'],
-          ['NET INCOME\nLABA BERSIH', '21,300']
-        ], align: ['left', 'right'], compact: false }
-      ]},
-      { label: '(b)', given: b('Retained earnings statement', 'Laporan laba ditahan'), answer: b('Retained Earnings Statement:\nBeginning Retained Earnings €15,000\nAdd: Net Income €21,300\nLess: Dividends €4,000\nEnding Retained Earnings = €32,300', 'Laporan Laba Ditahan:\nLaba Ditahan Awal €15.000\nTambah: Laba Bersih €21.300\nKurang: Dividen €4.000\nLaba Ditahan Akhir = €32.300'), blocks: [
-        { type: 'table', caption: b('Retained Earnings Statement - Chen Company (Year Ended Dec 31, 2017)', 'Laporan Laba Ditahan - Perusahaan Chen (Tahun Berakhir 31 Des 2017)'), head: [
-          b('Item\nItem', 'Item\nItem'),
-          b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
-        ], rows: [
-          ['Retained Earnings, Jan 1\nLaba Ditahan, 1 Jan', '15,000'],
-          ['Add: Net Income\nTambah: Laba Bersih', '21,300'],
-          ['Less: Dividends\nKurang: Dividen', '4,000'],
-          ['Retained Earnings, Dec 31\nLaba Ditahan, 31 Des', '32,300']
-        ], align: ['left', 'right'], compact: false }
-      ]},
-      { label: '(c)', given: b('Statement of financial position', 'Laporan posisi keuangan'), answer: b('Statement of Financial Position, Dec 31:\nAssets: Cash €12,000 + A/R €8,500 + Supplies €2,500 + Prepaid Ins €1,200 + Equipment €40,000 - Acc Dep €12,000 = Total Assets €52,200\nLiabilities: A/P €5,000 + Salaries Payable €1,200 + Interest Payable €300 + Unearned Rev €2,000 + Notes Payable €20,000 = Total Liabilities €28,500\nEquity: Share Capital €30,000 + Retained Earnings €32,300 = €32,300\nTotal L+E = €60,800', 'Laporan Posisi Keuangan, 31 Des:\nAset: Kas €12.000 + Piutang €8.500 + Perlengkapan €2.500 + Asuransi Dibayar Dimuka €1.200 + Peralatan €40.000 - Akum Peny €12.000 = Total Aset €52.200\nLiabilitas: H/Usaha €5.000 + Gaji Bayar €1.200 + Bunga Bayar €300 + Pend Blm Diperoleh €2.000 + Catatan Hutang €20.000 = Total Liabilitas €28.500\nEkuitas: Modal Saham €30.000 + Laba Ditahan €32.300 = €32.300\nTotal L+E = €60.800'), blocks: [
-        { type: 'table', caption: b('Statement of Financial Position - December 31, 2017', 'Laporan Posisi Keuangan - 31 Desember 2017'), head: [
-          b('Item\nItem', 'Item\nItem'),
-          b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
-        ], rows: [
-          ['ASSETS\nASET', ''],
-          ['  Cash\n  Kas', '12,000'],
-          ['  Accounts Receivable\n  Piutang Usaha', '8,500'],
-          ['  Supplies\n  Perlengkapan', '2,500'],
-          ['  Prepaid Insurance\n  Asuransi Dibayar Dimuka', '1,200'],
-          ['  Equipment\n  Peralatan', '40,000'],
-          ['  Accumulated Depreciation\n  Akumulasi Penyusutan', '-12,000'],
-          ['Total Assets\nTotal Aset', '52,200'],
-          ['LIABILITIES & EQUITY\nLIABILITAS & EKUITAS', ''],
-          ['  Accounts Payable\n  Hutang Usaha', '5,000'],
-          ['  Salaries Payable\n  Gaji Bayar', '1,200'],
-          ['  Interest Payable\n  Bunga Bayar', '300'],
-          ['  Unearned Service Revenue\n  Pendapatan Jasa Blm Diperoleh', '2,000'],
-          ['  Notes Payable\n  Catatan Hutang', '20,000'],
-          ['Total Liabilities\nTotal Liabilitas', '28,500'],
-          ['  Share Capital\n  Modal Saham', '30,000'],
-          ['  Retained Earnings\n  Laba Ditahan', '32,300'],
-          ['Total Equity\nTotal Ekuitas', '32,300'],
-          ['Total L & E\nTotal L & E', '60,800']
-        ], align: ['left', 'right'], compact: false }
-      ]},
-      { label: '(d)', given: b('Closing entries from adjusted TB', 'Entri penutupan dari neraca saldo disesuaikan'), answer: b('1. Dr Service Revenue 45,000 / Cr Income Summary 45,000\n2. Dr Income Summary 23,700 / Cr Salaries Exp 18,000, Rent Exp 12,000, Insurance Exp 1,500, Dep Exp 4,000, Util Exp 3,000, Interest Exp 600, Supplies Exp 1,200\n3. Dr Income Summary 21,300 / Cr Retained Earnings 21,300\n4. Dr Retained Earnings 4,000 / Cr Dividends 4,000', '1. Dr Pendapatan Jasa 45.000 / Cr Ikhtisar Laba Rugi 45.000\n2. Dr Ikhtisar Laba Rugi 23.700 / Cr Beban Gaji 18.000, Beban Sewa 12.000, Beban Asuransi 1.500, Beban Peny 4.000, Beban Util 3.000, Beban Bunga 600, Beban Perl 1.200\n3. Dr Ikhtisar Laba Rugi 21.300 / Cr Laba Ditahan 21.300\n4. Dr Laba Ditahan 4.000 / Cr Dividen 4.000'), blocks: [
-        { type: 'table', caption: b('Closing Entries - Chen Company', 'Entri Penutupan - Perusahaan Chen'), head: [
-          b('Account\nAkun', 'Account\nAkun'),
-          b('Debit\nDebet', 'Debit\nDebet'),
-          b('Credit\nKredit', 'Credit\nKredit')
-        ], rows: [
-          ['Service Revenue\nPendapatan Jasa', '45,000', ''],
-          ['Income Summary\nIkhtisar Laba Rugi', '', '45,000'],
-          ['Income Summary\nIkhtisar Laba Rugi', '23,700', ''],
-          ['Salaries Expense\nBeban Gaji', '', '18,000'],
-          ['Rent Expense\nBeban Sewa', '', '12,000'],
-          ['Insurance Expense\nBeban Asuransi', '', '1,500'],
-          ['Depreciation Expense\nBeban Penyusutan', '', '4,000'],
-          ['Utilities Expense\nBeban Utilitas', '', '3,000'],
-          ['Interest Expense\nBeban Bunga', '', '600'],
-          ['Supplies Expense\nBeban Perlengkapan', '', '1,200'],
-          ['Income Summary\nIkhtisar Laba Rugi', '21,300', ''],
-          ['Retained Earnings\nLaba Ditahan', '', '21,300'],
-          ['Retained Earnings\nLaba Ditahan', '4,000', ''],
-          ['Dividends\nDividen', '', '4,000']
-        ], align: ['left', 'right', 'right'], compact: false }
-      ]}
+      {
+        label: '(a)',
+        given: b('Income Statement from Adjusted TB', 'Laporan Laba Rugi dari Neraca Saldo Disesuaikan'),
+        answer: b('', ''),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Income Statement - Chen Company (Year Ended Dec 31, 2017)', 'Laporan Laba Rugi - Perusahaan Chen (Tahun Berakhir 31 Des 2017)'),
+            head: [
+              b('Item\nItem', 'Item\nItem'),
+              b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+            ],
+            rows: [
+              ['Service Revenue\nPendapatan Jasa', '45,000'],
+              ['Expenses:\nBeban:', ''],
+              ['  Salaries Expense\n  Beban Gaji', '18,000'],
+              ['  Rent Expense\n  Beban Sewa', '12,000'],
+              ['  Insurance Expense\n  Beban Asuransi', '1,500'],
+              ['  Depreciation Expense\n  Beban Penyusutan', '4,000'],
+              ['  Utilities Expense\n  Beban Utilitas', '3,000'],
+              ['  Interest Expense\n  Beban Bunga', '600'],
+              ['  Supplies Expense\n  Beban Perlengkapan', '1,200'],
+              ['Total Expenses\nTotal Beban', '23,700'],
+              ['NET INCOME\nLABA BERSIH', '21,300']
+            ],
+            align: ['left', 'right'],
+            compact: false
+          }
+        ]
+      },
+      {
+        label: '(b)',
+        given: b('Retained Earnings Statement', 'Laporan Laba Ditahan'),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Retained Earnings Statement - Chen Company (Year Ended Dec 31, 2017)', 'Laporan Laba Ditahan - Perusahaan Chen (Tahun Berakhir 31 Des 2017)'),
+            head: [
+              b('Item\nItem', 'Item\nItem'),
+              b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+            ],
+            rows: [
+              ['Retained Earnings, Jan 1\nLaba Ditahan, 1 Jan', '15,000'],
+              ['Add: Net Income\nTambah: Laba Bersih', '21,300'],
+              ['Less: Dividends\nKurang: Dividen', '4,000'],
+              ['Retained Earnings, Dec 31\nLaba Ditahan, 31 Des', '32,300']
+            ],
+            align: ['left', 'right'],
+            compact: false
+          }
+        ]
+      },
+      {
+        label: '(c)',
+        given: b('Statement of Financial Position', 'Laporan Posisi Keuangan'),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Statement of Financial Position - December 31, 2017', 'Laporan Posisi Keuangan - 31 Desember 2017'),
+            head: [
+              b('Item\nItem', 'Item\nItem'),
+              b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+            ],
+            rows: [
+              ['ASSETS\nASET', ''],
+              ['  Cash\n  Kas', '12,000'],
+              ['  Accounts Receivable\n  Piutang Usaha', '8,500'],
+              ['  Supplies\n  Perlengkapan', '2,500'],
+              ['  Prepaid Insurance\n  Asuransi Dibayar Dimuka', '1,200'],
+              ['  Equipment\n  Peralatan', '40,000'],
+              ['  Accumulated Depreciation\n  Akumulasi Penyusutan', '-12,000'],
+              ['Total Assets\nTotal Aset', '52,200'],
+              ['LIABILITIES & EQUITY\nLIABILITAS & EKUITAS', ''],
+              ['  Accounts Payable\n  Hutang Usaha', '5,000'],
+              ['  Salaries Payable\n  Gaji Bayar', '1,200'],
+              ['  Interest Payable\n  Bunga Bayar', '300'],
+              ['  Unearned Service Revenue\n  Pendapatan Jasa Blm Diperoleh', '2,000'],
+              ['  Notes Payable\n  Catatan Hutang', '20,000'],
+              ['Total Liabilities\nTotal Liabilitas', '28,500'],
+              ['  Share Capital\n  Modal Saham', '30,000'],
+              ['  Retained Earnings\n  Laba Ditahan', '32,300'],
+              ['Total Equity\nTotal Ekuitas', '32,300'],
+              ['Total L & E\nTotal L & E', '60,800']
+            ],
+            align: ['left', 'right'],
+            compact: false
+          }
+        ]
+      },
+      {
+        label: '(d)',
+        given: b('Closing Entries from Adjusted TB', 'Entri Penutupan dari Neraca Saldo Disesuaikan'),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Closing Entries - Chen Company', 'Entri Penutupan - Perusahaan Chen'),
+            head: [
+              b('Account\nAkun', 'Account\nAkun'),
+              b('Debit\nDebet', 'Debit\nDebet'),
+              b('Credit\nKredit', 'Credit\nKredit')
+            ],
+            rows: [
+              ['Service Revenue\nPendapatan Jasa', '45,000', ''],
+              ['Income Summary\nIkhtisar Laba Rugi', '', '45,000'],
+              ['Income Summary\nIkhtisar Laba Rugi', '23,700', ''],
+              ['Salaries Expense\nBeban Gaji', '', '18,000'],
+              ['Rent Expense\nBeban Sewa', '', '12,000'],
+              ['Insurance Expense\nBeban Asuransi', '', '1,500'],
+              ['Depreciation Expense\nBeban Penyusutan', '', '4,000'],
+              ['Utilities Expense\nBeban Utilitas', '', '3,000'],
+              ['Interest Expense\nBeban Bunga', '', '600'],
+              ['Supplies Expense\nBeban Perlengkapan', '', '1,200'],
+              ['Income Summary\nIkhtisar Laba Rugi', '21,300', ''],
+              ['Retained Earnings\nLaba Ditahan', '', '21,300'],
+              ['Retained Earnings\nLaba Ditahan', '4,000', ''],
+              ['Dividends\nDividen', '', '4,000']
+            ],
+            align: ['left', 'right', 'right'],
+            compact: false
+          }
+        ]
+      }
     ],
     explanation: b(
       'Financial statements are prepared from the adjusted trial balance in sequence: (1) Income Statement determines net income, (2) Retained Earnings Statement uses net income to compute ending RE, (3) Statement of Financial Position uses ending RE. Closing entries zero out temporary accounts (revenue, expense, dividends) and transfer net income to Retained Earnings. The four closing entries are: close revenues to IS, close expenses to IS, close IS to RE, close dividends to RE.',
@@ -269,7 +402,9 @@ export const chapter3PAndBYP = [
     )
   },
 
-  // BYP-type exercises for Chapter 3
+  // ============================================================
+  // BYP3-1: Lafaye Adjusting Entries
+  // ============================================================
   {
     id: 'BYP3-1',
     title: b('BYP3-1: Lafaye Adjusting Entries', 'BYP3-1: Entri Penyesuaian Lafaye'),
@@ -292,26 +427,37 @@ export const chapter3PAndBYP = [
       'Instruksi: Siapkan semua entri penyesuaian.'
     ),
     parts: [
-      { label: '', given: b('6 adjusting entry situations', '6 situasi entri penyesuaian'), answer: b('1. Salaries Expense 3,500 / Salaries Payable 3,500\n2. Depreciation Expense 2,800 / Accumulated Depreciation 2,800\n3. Supplies Expense 4,400 (2,000 + Purchases - 600) / Supplies 4,400\n4. Unearned Revenue 1,200 / Service Revenue 1,200\n5. Interest Expense 400 / Interest Payable 400\n6. Accounts Receivable 3,000 / Service Revenue 3,000', '1. Beban Gaji 3.500 / Gaji Bayar 3.500\n2. Beban Penyusutan 2.800 / Akumulasi Penyusutan 2.800\n3. Beban Perlengkapan 4.400 (2.000 + Pembelian - 600) / Perlengkapan 4.400\n4. Pendapatan Blm Diperoleh 1.200 / Pendapatan Jasa 1.200\n5. Beban Bunga 400 / Bunga Bayar 400\n6. Piutang Usaha 3.000 / Pendapatan Jasa 3.000'), blocks: [
-        { type: 'table', caption: b('Adjusting Entries - Lafaye SA', 'Entri Penyesuaian - Lafaye SA'), head: [
-          b('Account\nAkun', 'Account\nAkun'),
-          b('Debit\nDebet', 'Debit\nDebet'),
-          b('Credit\nKredit', 'Credit\nKredit')
-        ], rows: [
-          ['Salaries Expense\nBeban Gaji', '3,500', ''],
-          ['Salaries Payable\nGaji Bayar', '', '3,500'],
-          ['Depreciation Expense\nBeban Penyusutan', '2,800', ''],
-          ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '2,800'],
-          ['Supplies Expense\nBeban Perlengkapan', '4,400', ''],
-          ['Supplies\nPerlengkapan', '', '4,400'],
-          ['Unearned Revenue\nPendapatan Blm Diperoleh', '1,200', ''],
-          ['Service Revenue\nPendapatan Jasa', '', '1,200'],
-          ['Interest Expense\nBeban Bunga', '400', ''],
-          ['Interest Payable\nBunga Bayar', '', '400'],
-          ['Accounts Receivable\nPiutang Usaha', '3,000', ''],
-          ['Service Revenue\nPendapatan Jasa', '', '3,000']
-        ], align: ['left', 'right', 'right'], compact: false }
-      ]}
+      {
+        label: '',
+        given: b('6 Adjusting Entry Situations', '6 Situasi Entri Penyesuaian'),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Adjusting Entries - Lafaye SA', 'Entri Penyesuaian - Lafaye SA'),
+            head: [
+              b('Account\nAkun', 'Account\nAkun'),
+              b('Debit\nDebet', 'Debit\nDebet'),
+              b('Credit\nKredit', 'Credit\nKredit')
+            ],
+            rows: [
+              ['Salaries Expense\nBeban Gaji', '3,500', ''],
+              ['Salaries Payable\nGaji Bayar', '', '3,500'],
+              ['Depreciation Expense\nBeban Penyusutan', '2,800', ''],
+              ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '2,800'],
+              ['Supplies Expense\nBeban Perlengkapan', '4,400', ''],
+              ['Supplies\nPerlengkapan', '', '4,400'],
+              ['Unearned Revenue\nPendapatan Blm Diperoleh', '1,200', ''],
+              ['Service Revenue\nPendapatan Jasa', '', '1,200'],
+              ['Interest Expense\nBeban Bunga', '400', ''],
+              ['Interest Payable\nBunga Bayar', '', '400'],
+              ['Accounts Receivable\nPiutang Usaha', '3,000', ''],
+              ['Service Revenue\nPendapatan Jasa', '', '3,000']
+            ],
+            align: ['left', 'right', 'right'],
+            compact: false
+          }
+        ]
+      }
     ],
     explanation: b(
       'This problem reviews all four categories of adjusting entries. Remember: Cash is never in an adjusting entry. Each entry pairs a balance sheet account with an income statement account. The goal is to match revenues and expenses to the correct period per the matching principle.',
@@ -319,6 +465,9 @@ export const chapter3PAndBYP = [
     )
   },
 
+  // ============================================================
+  // BYP3-2: Pegasus Computer Services
+  // ============================================================
   {
     id: 'BYP3-2',
     title: b('BYP3-2: Pegasus Computer Services', 'BYP3-2: Pegasus Computer Services'),
@@ -351,42 +500,66 @@ export const chapter3PAndBYP = [
       'Instruksi: (a) Siapkan entri penyesuaian. (b) Siapkan neraca saldo disesuaikan. (c) Siapkan laporan keuangan.'
     ),
     parts: [
-      { label: '(a)', given: b('5 adjusting entries needed', '5 entri penyesuaian diperlukan'), answer: b('1. Supplies Expense 1,200 / Supplies 1,200 (2,000 - 800)\n2. Depreciation Expense 3,000 / Accumulated Depreciation 3,000\n3. Salaries Expense 1,500 / Salaries Payable 1,500\n4. Insurance Expense 1,200 / Prepaid Insurance 1,200\n5. Interest Expense 400 / Interest Payable 400', '1. Beban Perlengkapan 1.200 / Perlengkapan 1.200 (2.000 - 800)\n2. Beban Penyusutan 3.000 / Akumulasi Penyusutan 3.000\n3. Beban Gaji 1.500 / Gaji Bayar 1.500\n4. Beban Asuransi 1.200 / Asuransi Dibayar Dimuka 1.200\n5. Beban Bunga 400 / Bunga Bayar 400'), blocks: [
-        { type: 'table', caption: b('Adjusting Entries - Pegasus Computer Services', 'Entri Penyesuaian - Pegasus Computer Services'), head: [
-          b('Account\nAkun', 'Account\nAkun'),
-          b('Debit\nDebet', 'Debit\nDebet'),
-          b('Credit\nKredit', 'Credit\nKredit')
-        ], rows: [
-          ['Supplies Expense\nBeban Perlengkapan', '1,200', ''],
-          ['Supplies\nPerlengkapan', '', '1,200'],
-          ['Depreciation Expense\nBeban Penyusutan', '3,000', ''],
-          ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '3,000'],
-          ['Salaries Expense\nBeban Gaji', '1,500', ''],
-          ['Salaries Payable\nGaji Bayar', '', '1,500'],
-          ['Insurance Expense\nBeban Asuransi', '1,200', ''],
-          ['Prepaid Insurance\nAsuransi Dibayar Dimuka', '', '1,200'],
-          ['Interest Expense\nBeban Bunga', '400', ''],
-          ['Interest Payable\nBunga Bayar', '', '400']
-        ], align: ['left', 'right', 'right'], compact: false }
-      ]},
-      { label: '(c)', given: b('Prepare financial statements from adjusted TB', 'Siapkan laporan keuangan dari neraca saldo disesuaikan'), answer: b('Net Income = Service Revenue 60,000 - Expenses (Salaries 26,500 + Rent 12,000 + Utilities 4,000 + Advertising 2,000 + Insurance 4,200 + Depreciation 3,000 + Interest 400) = 60,000 - 49,700 = €10,300\nEnding RE = 10,000 + 10,300 - 5,000 = €15,300', 'Laba Bersih = Pendapatan Jasa 60.000 - Beban (Gaji 26.500 + Sewa 12.000 + Utilitas 4.000 + Iklan 2.000 + Asuransi 4.200 + Penyusutan 3.000 + Bunga 400) = 60.000 - 49.700 = €10.300\nAkhir LD = 10.000 + 10.300 - 5.000 = €15.300'), blocks: [
-        { type: 'table', caption: b('Income Statement - Pegasus Computer Services', 'Laporan Laba Rugi - Pegasus Computer Services'), head: [
-          b('Item\nItem', 'Item\nItem'),
-          b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
-        ], rows: [
-          ['Service Revenue\nPendapatan Jasa', '60,000'],
-          ['Expenses:\nBeban:', ''],
-          ['  Salaries Expense\n  Beban Gaji', '26,500'],
-          ['  Rent Expense\n  Beban Sewa', '12,000'],
-          ['  Utilities Expense\n  Beban Utilitas', '4,000'],
-          ['  Advertising Expense\n  Beban Iklan', '2,000'],
-          ['  Insurance Expense\n  Beban Asuransi', '4,200'],
-          ['  Depreciation Expense\n  Beban Penyusutan', '3,000'],
-          ['  Interest Expense\n  Beban Bunga', '400'],
-          ['Total Expenses\nTotal Beban', '49,700'],
-          ['NET INCOME\nLABA BERSIH', '10,300']
-        ], align: ['left', 'right'], compact: false }
-      ]}
+      {
+        label: '(a)',
+        given: b('5 Adjusting Entries Needed', '5 Entri Penyesuaian Diperlukan'),
+        answer: b('', ''),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Adjusting Entries - Pegasus Computer Services', 'Entri Penyesuaian - Pegasus Computer Services'),
+            head: [
+              b('Account\nAkun', 'Account\nAkun'),
+              b('Debit\nDebet', 'Debit\nDebet'),
+              b('Credit\nKredit', 'Credit\nKredit')
+            ],
+            rows: [
+              ['Supplies Expense\nBeban Perlengkapan', '1,200', ''],
+              ['Supplies\nPerlengkapan', '', '1,200'],
+              ['Depreciation Expense\nBeban Penyusutan', '3,000', ''],
+              ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '3,000'],
+              ['Salaries Expense\nBeban Gaji', '1,500', ''],
+              ['Salaries Payable\nGaji Bayar', '', '1,500'],
+              ['Insurance Expense\nBeban Asuransi', '1,200', ''],
+              ['Prepaid Insurance\nAsuransi Dibayar Dimuka', '', '1,200'],
+              ['Interest Expense\nBeban Bunga', '400', ''],
+              ['Interest Payable\nBunga Bayar', '', '400']
+            ],
+            align: ['left', 'right', 'right'],
+            compact: false
+          }
+        ]
+      },
+      {
+        label: '(c)',
+        given: b('Prepare Financial Statements from Adjusted TB', 'Siapkan Laporan Keuangan dari Neraca Saldo Disesuaikan'),
+        answer: b('', ''),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Income Statement - Pegasus Computer Services', 'Laporan Laba Rugi - Pegasus Computer Services'),
+            head: [
+              b('Item\nItem', 'Item\nItem'),
+              b('Amount (€)\nJumlah (€)', 'Jumlah (€)\nJumlah (€)')
+            ],
+            rows: [
+              ['Service Revenue\nPendapatan Jasa', '60,000'],
+              ['Expenses:\nBeban:', ''],
+              ['  Salaries Expense\n  Beban Gaji', '26,500'],
+              ['  Rent Expense\n  Beban Sewa', '12,000'],
+              ['  Utilities Expense\n  Beban Utilitas', '4,000'],
+              ['  Advertising Expense\n  Beban Iklan', '2,000'],
+              ['  Insurance Expense\n  Beban Asuransi', '4,200'],
+              ['  Depreciation Expense\n  Beban Penyusutan', '3,000'],
+              ['  Interest Expense\n  Beban Bunga', '400'],
+              ['Total Expenses\nTotal Beban', '49,700'],
+              ['NET INCOME\nLABA BERSIH', '10,300']
+            ],
+            align: ['left', 'right'],
+            compact: false
+          }
+        ]
+      }
     ],
     explanation: b(
       'This problem integrates adjusting entries with financial statement preparation. The adjusted trial balance is the key link - all adjustments must be posted before financial statements are prepared. Net income flows from income statement to retained earnings statement to statement of financial position.',
@@ -394,6 +567,9 @@ export const chapter3PAndBYP = [
     )
   },
 
+  // ============================================================
+  // BYP3-3: Natal Co. Quarterly
+  // ============================================================
   {
     id: 'BYP3-3',
     title: b('BYP3-3: Natal Co. Quarterly', 'BYP3-3: Natal Co. Triwulanan'),
@@ -416,27 +592,43 @@ export const chapter3PAndBYP = [
       'Instruksi: (a) Siapkan entri penyesuaian. (b) Diskusikan perbedaan penyesuaian kuartal vs tahunan.'
     ),
     parts: [
-      { label: '(a)', given: b('6 quarterly adjusting entries', '6 entri penyesuaian triwulanan'), answer: b('1. Supplies Expense 1,200 / Supplies 1,200\n2. Depreciation Expense 2,500 / Accumulated Depreciation 2,500\n3. Interest Expense 600 / Interest Payable 600\n4. Accounts Receivable 4,000 / Service Revenue 4,000\n5. Rent Expense 3,000 / Prepaid Rent 3,000\n6. Unearned Revenue 2,500 / Service Revenue 2,500', '1. Beban Perlengkapan 1.200 / Perlengkapan 1.200\n2. Beban Penyusutan 2.500 / Akumulasi Penyusutan 2.500\n3. Beban Bunga 600 / Bunga Bayar 600\n4. Piutang Usaha 4.000 / Pendapatan Jasa 4.000\n5. Beban Sewa 3.000 / Sewa Dibayar Dimuka 3.000\n6. Pendapatan Blm Diperoleh 2.500 / Pendapatan Jasa 2.500'), blocks: [
-        { type: 'table', caption: b('Quarterly Adjusting Entries - Natal Co.', 'Entri Penyesuaian Triwulanan - Natal Co.'), head: [
-          b('Account\nAkun', 'Account\nAkun'),
-          b('Debit\nDebet', 'Debit\nDebet'),
-          b('Credit\nKredit', 'Credit\nKredit')
-        ], rows: [
-          ['Supplies Expense\nBeban Perlengkapan', '1,200', ''],
-          ['Supplies\nPerlengkapan', '', '1,200'],
-          ['Depreciation Expense\nBeban Penyusutan', '2,500', ''],
-          ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '2,500'],
-          ['Interest Expense\nBeban Bunga', '600', ''],
-          ['Interest Payable\nBunga Bayar', '', '600'],
-          ['Accounts Receivable\nPiutang Usaha', '4,000', ''],
-          ['Service Revenue\nPendapatan Jasa', '', '4,000'],
-          ['Rent Expense\nBeban Sewa', '3,000', ''],
-          ['Prepaid Rent\nSewa Dibayar Dimuka', '', '3,000'],
-          ['Unearned Revenue\nPendapatan Blm Diperoleh', '2,500', ''],
-          ['Service Revenue\nPendapatan Jasa', '', '2,500']
-        ], align: ['left', 'right', 'right'], compact: false }
-      ]},
-      { label: '(b)', given: b('Quarterly vs annual adjustments discussion', 'Diskusi penyesuaian triwulanan vs tahunan'), answer: b('Quarterly adjustments: Use 3-month periods for accruals/deferrals. Depreciation = annual/4. Accruals based on 3-month activity. More frequent but smaller amounts. Requires more estimation for partial periods. Annual adjustments: Use full year. Less frequent but larger amounts. More accurate for items like physical inventory counts. Both follow same principles but quarterly requires more interim estimates.', 'Penyesuaian triwulanan: Gunakan periode 3 bulan untuk akrual/tangguhan. Penyusutan = tahunan/4. Akrual berdasarkan aktivitas 3 bulan. Lebih sering tapi jumlah lebih kecil. Memerlukan lebih banyak estimasi untuk periode parsial. Penyesuaian tahunan: Gunakan tahun penuh. Lebih jarang tapi jumlah lebih besar. Lebih akurat untuk item seperti penghitungan inventaris fisik. Keduanya mengikuti prinsip sama tapi triwulanan butuh lebih banyak estimasi interim.') }
+      {
+        label: '(a)',
+        given: b('6 Quarterly Adjusting Entries', '6 Entri Penyesuaian Triwulanan'),
+        answer: b('', ''),
+        blocks: [
+          {
+            type: 'table',
+            caption: b('Quarterly Adjusting Entries - Natal Co.', 'Entri Penyesuaian Triwulanan - Natal Co.'),
+            head: [
+              b('Account\nAkun', 'Account\nAkun'),
+              b('Debit\nDebet', 'Debit\nDebet'),
+              b('Credit\nKredit', 'Credit\nKredit')
+            ],
+            rows: [
+              ['Supplies Expense\nBeban Perlengkapan', '1,200', ''],
+              ['Supplies\nPerlengkapan', '', '1,200'],
+              ['Depreciation Expense\nBeban Penyusutan', '2,500', ''],
+              ['Accumulated Depreciation\nAkumulasi Penyusutan', '', '2,500'],
+              ['Interest Expense\nBeban Bunga', '600', ''],
+              ['Interest Payable\nBunga Bayar', '', '600'],
+              ['Accounts Receivable\nPiutang Usaha', '4,000', ''],
+              ['Service Revenue\nPendapatan Jasa', '', '4,000'],
+              ['Rent Expense\nBeban Sewa', '3,000', ''],
+              ['Prepaid Rent\nSewa Dibayar Dimuka', '', '3,000'],
+              ['Unearned Revenue\nPendapatan Blm Diperoleh', '2,500', ''],
+              ['Service Revenue\nPendapatan Jasa', '', '2,500']
+            ],
+            align: ['left', 'right', 'right'],
+            compact: false
+          }
+        ]
+      },
+      {
+        label: '(b)',
+        given: b('Quarterly vs Annual Adjustments Discussion', 'Diskusi Penyesuaian Triwulanan vs Tahunan'),
+        answer: b('Quarterly adjustments: Use 3-month periods for accruals/deferrals. Depreciation = annual/4. Accruals based on 3-month activity. More frequent but smaller amounts. Requires more estimation for partial periods. Annual adjustments: Use full year. Less frequent but larger amounts. More accurate for items like physical inventory counts. Both follow same principles but quarterly requires more interim estimates.', 'Penyesuaian triwulanan: Gunakan periode 3 bulan untuk akrual/tangguhan. Penyusutan = tahunan/4. Akrual berdasarkan aktivitas 3 bulan. Lebih sering tapi jumlah lebih kecil. Memerlukan lebih banyak estimasi untuk periode parsial. Penyesuaian tahunan: Gunakan tahun penuh. Lebih jarang tapi jumlah lebih besar. Lebih akurat untuk item seperti penghitungan inventaris fisik. Keduanya mengikuti prinsip sama tapi triwulanan butuh lebih banyak estimasi interim.')
+      }
     ],
     explanation: b(
       'Quarterly financial statements require the same adjusting entry principles as annual statements, but with shorter time periods. This means more frequent estimates and smaller adjustment amounts. The matching principle applies equally - revenues and expenses must be matched to the quarter they relate to.',
@@ -444,6 +636,9 @@ export const chapter3PAndBYP = [
     )
   },
 
+  // ============================================================
+  // BYP3-4: Comprehensive Chapter 3
+  // ============================================================
   {
     id: 'BYP3-4',
     title: b('BYP3-4: Comprehensive Chapter 3', 'BYP3-4: Komprehensif Bab 3'),
@@ -452,7 +647,11 @@ export const chapter3PAndBYP = [
       'Masalah komprehensif mencakup semua konsep Bab 3: Konsep waktu, entri penyesuaian (4 tipe), neraca saldo disesuaikan, laporan keuangan dari neraca saldo disesuaikan, dan hubungan entri penyesuaian dengan kualitas laporan keuangan.'
     ),
     parts: [
-      { label: '', given: b('Full Chapter 3 review', 'Ulasan penuh Bab 3'), answer: b('Key concepts: (1) Accrual vs cash basis - accrual matches revenues/expenses to period. (2) Revenue recognition - when earned, not when cash received. (3) Matching principle - expenses matched to revenues they generate. (4) Four adjusting entry types: prepaid expenses, unearned revenues, accrued expenses, accrued revenues. (5) Adjusted trial balance verifies equality after adjustments. (6) Financial statements prepared in order: IS → RE → SFP. (7) Quality of earnings depends on proper accruals - aggressive accruals can manipulate earnings.', 'Konsep kunci: (1) Akrual vs kas basis - akrual mencocokkan pendapatan/beban ke periode. (2) Pengakuan pendapatan - saat diperoleh, bukan saat kas diterima. (3) Prinsip pencocokan - beban dicocokkan ke pendapatan yang di-generate. (4) 4 tipe entri penyesuaian: beban dibayar dimuka, pendapatan blm diperoleh, beban akrual, pendapatan akrual. (5) Neraca saldo disesuaikan verifikasi keseimbangan setelah penyesuaian. (6) Laporan keuangan urutan: LR → LD → LPK. (7) Kualitas laba bergantung pada akrual yang benar - akrual agresif bisa memanipulasi laba.') }
+      {
+        label: '',
+        given: b('Full Chapter 3 Review', 'Ulasan Penuh Bab 3'),
+        answer: b('Key concepts: (1) Accrual vs cash basis - accrual matches revenues/expenses to period. (2) Revenue recognition - when earned, not when cash received. (3) Matching principle - expenses matched to revenues they generate. (4) Four adjusting entry types: prepaid expenses, unearned revenues, accrued expenses, accrued revenues. (5) Adjusted trial balance verifies equality after adjustments. (6) Financial statements prepared in order: IS → RE → SFP. (7) Quality of earnings depends on proper accruals - aggressive accruals can manipulate earnings.', 'Konsep kunci: (1) Akrual vs kas basis - akrual mencocokkan pendapatan/beban ke periode. (2) Pengakuan pendapatan - saat diperoleh, bukan saat kas diterima. (3) Prinsip pencocokan - beban dicocokkan ke pendapatan yang di-generate. (4) 4 tipe entri penyesuaian: beban dibayar dimuka, pendapatan blm diperoleh, beban akrual, pendapatan akrual. (5) Neraca saldo disesuaikan verifikasi keseimbangan setelah penyesuaian. (6) Laporan keuangan urutan: LR → LD → LPK. (7) Kualitas laba bergantung pada akrual yang benar - akrual agresif bisa memanipulasi laba.')
+      }
     ],
     explanation: b(
       'Chapter 3 is the heart of accrual accounting. Understanding the four types of adjusting entries and their impact on financial statement quality is critical. The matching principle drives all adjusting entries - ensuring revenues and expenses are reported in the correct period. This is the foundation for reliable financial reporting under IFRS.',
