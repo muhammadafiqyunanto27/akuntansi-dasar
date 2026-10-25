@@ -1,0 +1,332 @@
+---
+import Base from '../../layouts/Base.astro';
+import BiText from '../../components/Bi.astro';
+import { b } from '../../data/types';
+import { chapter1PAndBYP } from '../../data/exercises-ch1-p';
+import { chapter2PAndBYP } from '../../data/exercises-ch2-p';
+import { chapter3PAndBYP } from '../../data/exercises-ch3-p';
+import { chapter4PAndBYP } from '../../data/exercises-ch4-p';
+
+// Flatten all P-type and BYP exercises
+const allPEXercises = [
+  ...chapter1PAndBYP,
+  ...chapter2PAndBYP,
+  ...chapter3PAndBYP,
+  ...chapter4PAndBYP,
+];
+
+const totalPEXercises = allPEXercises.length;
+
+export async function getStaticPaths() {
+  const allPEXercises = [
+    ...chapter1PAndBYP,
+    ...chapter2PAndBYP,
+    ...chapter3PAndBYP,
+    ...chapter4PAndBYP,
+  ];
+  return allPEXercises.map((ex) => ({
+    params: { exerciseId: ex.id },
+    props: { exercise: ex },
+  }));
+}
+
+interface Props {
+  exerciseId: string;
+}
+
+const { exercise } = Astro.props;
+const exerciseIndex = allPEXercises.findIndex((ex) => ex.id === exercise.id);
+const prevIndex = exerciseIndex > 0 ? exerciseIndex - 1 : null;
+const nextIndex = exerciseIndex < totalPEXercises - 1 ? exerciseIndex + 1 : null;
+---
+<!DOCTYPE html>
+<html lang="id" data-lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{exercise.id} — Latihan Soal P-type</title>
+    <meta name="description" content={`Latihan soal ${exercise.id} Kieso Financial Accounting: IFRS dengan jawaban lengkap`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <Base
+      title={`Soal ${exercise.id}`}
+      description={`Latihan soal ${exercise.id} Kieso Financial Accounting: IFRS`}
+      active="p-latihan"
+    >
+      <header class="page-hero">
+        <div class="wrap">
+          <p class="crumb">
+            <span class="bi-id">Latihan / P-type / {exercise.id}</span>
+            <span class="bi-en">Practice / P-type / {exercise.id}</span>
+          </p>
+          <h1>
+            <BiText value={exercise.title} />
+          </h1>
+        </div>
+      </header>
+
+      <div class="wrap page-body">
+
+        <details class="exercise-item" open style="border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); margin-bottom: var(--space-4); overflow: hidden">
+          <summary
+            style="
+              cursor: default;
+              padding: var(--space-4) var(--space-5);
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 1.5;
+              list-style: none;
+              display: flex;
+              gap: var(--space-3);
+              align-items: baseline;
+              background: var(--surface-2)
+            "
+          >
+            <span
+              style="
+                font-family: var(--serif);
+                font-weight: 700;
+                flex-shrink: 0;
+                width: 28px;
+                height: 28px;
+                border: 1px solid var(--border-strong);
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                font-size: 11px;
+                color: var(--ink)
+              "
+            >
+              {exercise.id}
+            </span>
+            <BiText value={exercise.title} />
+          </summary>
+          <div style="padding: var(--space-5)">
+            <div style="margin-bottom: var(--space-4)">
+              <div
+                style="
+                  font-size: 11.5px;
+                  font-weight: 800;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--muted);
+                  margin-bottom: var(--space-2);
+                  display: block
+                "
+              >
+                <span class="bi-id">Pertanyaan</span>
+                <span class="bi-en">Question</span>
+              </div>
+              <p style="font-size: 14.8px; line-height: 1.6">
+                <BiText value={exercise.question} />
+              </p>
+            </div>
+
+            {exercise.parts.map((part) => (
+              <div
+                style="
+                  margin-bottom: var(--space-3);
+                  padding: var(--space-3);
+                  background: var(--bg);
+                  border-radius: var(--r-sm);
+                  border-left: 3px solid var(--ink)
+                "
+              >
+                {part.label && (
+                  <span
+                    style="
+                      font-weight: 700;
+                      font-variant-numeric: tabular-nums;
+                      min-width: 40px;
+                      color: var(--ink)
+                    "
+                  >
+                    {part.label}
+                  </span>
+                )}
+                <div style="flex: 1; min-width: 0">
+                  <div
+                    style="
+                      font-size: 13px;
+                      color: var(--muted);
+                      margin-bottom: 2px
+                    "
+                  >
+                    <span class="bi-id">Diberikan</span>
+                    <span class="bi-en">Given</span>
+                  </div>
+                  <div style="font-size: 14px"><BiText value={part.given} /></div>
+                </div>
+              </div>
+            ))}
+
+            <div
+              style="
+                margin-top: var(--space-4);
+                padding: var(--space-4);
+                background: color-mix(in srgb, var(--inverse) 8%, var(--surface));
+                border-radius: var(--r-sm);
+                border-left: 3px solid var(--inverse)
+              "
+            >
+              <div
+                style="
+                  font-size: 11.5px;
+                  font-weight: 800;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--on-inverse);
+                  margin-bottom: var(--space-2);
+                  display: block
+                "
+              >
+                <span class="bi-id">Jawaban</span>
+                <span class="bi-en">Answer</span>
+              </div>
+              {exercise.parts.map((part) => (
+                <div
+                  style="
+                    margin-bottom: var(--space-2);
+                    display: flex;
+                    gap: var(--space-3);
+                    flex-wrap: wrap;
+                    align-items: baseline
+                  "
+                >
+                  {part.label && (
+                    <span
+                      style="
+                        font-weight: 700;
+                        font-variant-numeric: tabular-nums;
+                        min-width: 40px;
+                        color: var(--on-inverse)
+                      "
+                    >
+                      {part.label}
+                    </span>
+                  )}
+                  <span style="flex: 1; min-width: 0"><BiText value={part.answer} /></span>
+                </div>
+              ))}
+
+              <div
+                style="
+                  margin-top: var(--space-4);
+                  padding: var(--space-4);
+                  background: var(--surface-2);
+                  border-radius: var(--r-sm);
+                  border-left: 3px solid var(--border-strong)
+                "
+              >
+                <div
+                  style="
+                    font-size: 11.5px;
+                    font-weight: 800;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    color: var(--muted);
+                    margin-bottom: var(--space-2);
+                    display: block
+                  "
+                >
+                  <span class="bi-id">Penjelasan</span>
+                  <span class="bi-en">Explanation</span>
+                </div>
+                <p style="font-size: 14.5px; line-height: 1.6; margin: 0">
+                  <BiText value={exercise.explanation} />
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        {/* Pagination: Prev/Next between exercises */}
+        <div style="margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid var(--border);">
+          <div style="display: flex; justify-content: space-between; gap: var(--space-3); margin-top: var(--space-4)">
+            {prevIndex !== null && (
+              <a
+                href={`/p-latihan/${allPEXercises[prevIndex].id}`}
+                class="pager-prev"
+                style="
+                  border: 1px solid var(--border-strong);
+                  background: var(--surface);
+                  border-radius: 999px;
+                  padding: var(--space-2) var(--space-5);
+                  font-size: var(--fs-sm);
+                  font-weight: 700;
+                  text-decoration: none;
+                  display: inline-flex;
+                  gap: var(--space-2);
+                  align-items: center;
+                  min-width: 48%;
+                  color: var(--ink);
+                "
+              >
+                <span>Prev</span>
+                <small>{allPEXercises[prevIndex].id}</small>
+              </a>
+            )}
+            {nextIndex !== null && (
+              <a
+                href={`/p-latihan/${allPEXercises[nextIndex].id}`}
+                class="pager-next"
+                style="
+                  border: 1px solid var(--border-strong);
+                  background: var(--surface);
+                  border-radius: 999px;
+                  padding: var(--space-2) var(--space-5);
+                  font-size: var(--fs-sm);
+                  font-weight: 700;
+                  text-decoration: none;
+                  display: inline-flex;
+                  gap: var(--space-2);
+                  align-items: center;
+                  min-width: 48%;
+                  color: var(--ink);
+                "
+              >
+                <small>{allPEXercises[nextIndex].id}</small>
+                <span>Next</span>
+              </a>
+            )}
+            {prevIndex === null && nextIndex === null && (
+              <span
+                style="
+                  font-size: var(--fs-sm);
+                  color: var(--muted);
+                  padding: var(--space-2) var(--space-5);
+                "
+              >
+                <BiText value={b('Hanya 1 soal', 'Only 1 exercise')} />
+              </span>
+            )}
+          </div>
+        </div>
+
+        <div style="margin-top: var(--space-6); text-align: center;">
+          <a href="/p-latihan" style="
+            border: 1px solid var(--border-strong);
+            background: var(--surface);
+            border-radius: 999px;
+            padding: var(--space-2) var(--space-5);
+            font-size: var(--fs-sm);
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--ink);
+            display: inline-block;
+          ">
+            <BiText value={b('← Kembali ke Daftar P-type', '← Back to P-type List')} />
+          </a>
+        </div>
+
+      </div>
+    </Base>
+  </body>
+</html>

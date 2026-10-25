@@ -200,7 +200,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
         const normPath = (p) => (p || '/').replace(/\/+$/, '') || '/';
         const cur = normPath(location.pathname);
         document.querySelectorAll('.drawer-pages a[data-nav]').forEach((link) => {
-          link.classList.toggle('active', normPath(link.getAttribute('href')) === cur);
+          const href = normPath(link.getAttribute('href'));
+          // Match exact or dynamic routes starting with the base path (e.g., /p-latihan/P1-1A matches /p-latihan)
+          const isActive = href === cur || (href !== '/' && cur.startsWith(href + '/'));
+          link.classList.toggle('active', isActive);
         });
         document.querySelectorAll('.drawer-link').forEach((link) => {
           link.classList.toggle('active', normPath(link.getAttribute('href')) === cur);

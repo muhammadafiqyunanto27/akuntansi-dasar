@@ -1,0 +1,119 @@
+---
+import Base from '../../layouts/Base.astro';
+import BiText from '../../components/Bi.astro';
+import { b } from '../../data/types';
+import { chapter1PAndBYP } from '../../data/exercises-ch1-p';
+import { chapter2PAndBYP } from '../../data/exercises-ch2-p';
+import { chapter3PAndBYP } from '../../data/exercises-ch3-p';
+import { chapter4PAndBYP } from '../../data/exercises-ch4-p';
+
+// Flatten all P-type and BYP exercises
+const allPEXercises = [
+  ...chapter1PAndBYP,
+  ...chapter2PAndBYP,
+  ...chapter3PAndBYP,
+  ...chapter4PAndBYP,
+];
+
+const totalPEXercises = allPEXercises.length;
+---
+<!DOCTYPE html>
+<html lang="id" data-lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Latihan Soal P-type — Kieso Financial Accounting: IFRS</title>
+    <meta name="description" content="Latihan soal P-type Kieso Financial Accounting: IFRS Bab 1–4 dengan penjelasan lengkap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <Base
+      title="Latihan Soal P-type"
+      description="Latihan soal tipe P Kieso Financial Accounting: IFRS Bab 1–4 dengan penjelasan lengkap"
+      active="p-latihan"
+    >
+      <header class="page-hero">
+        <div class="wrap">
+          <p class="crumb">
+            <span class="bi-id">Latihan / P-type</span>
+            <span class="bi-en">Practice / P-type</span>
+          </p>
+          <h1>
+            <span class="bi-id">Latihan Soal Tipe P</span>
+            <span class="bi-en">P-type Exercises</span>
+          </h1>
+          <p>
+            <span class="bi-id">
+              Latihan soal tipe P dari Kieso Financial Accounting: IFRS Bab 1–4.
+              Setiap soal memiliki halaman tersendiri dengan jawaban dan penjelasan lengkap.
+            </span>
+            <span class="bi-en">
+              P-type exercises from Kieso Financial Accounting: IFRS Chapters 1–4.
+              Each question has its own page with complete answers and step-by-step explanations.
+            </span>
+          </p>
+        </div>
+      </header>
+
+      <div class="wrap page-body">
+
+        {totalPEXercises === 0 && (
+          <div style="padding: var(--space-8); text-align: center; color: var(--muted)">
+            <h3><BiText value={b('Tidak ada soal ditemukan', 'No exercises found')} /></h3>
+            <p>{b('Pastikan file data exercise P-type sudah benar diinisialisasi.', 'Make sure P-type exercise data files are properly initialized.')} /></p>
+          </div>
+        )}
+
+        {totalPEXercises > 0 && (
+          <>
+            <div style="margin-bottom: var(--space-6); padding: var(--space-4); background: var(--surface-2); border-radius: var(--r-md); border: 1px solid var(--border);">
+              <p style="margin: 0; font-size: var(--fs-sm);">
+                <BiText value={b(
+                  'Total {0} soal P-type & BYP dari Bab 1–4. Klik soal untuk melihat jawaban lengkap.',
+                  'Total {0} P-type & BYP exercises from Chapters 1–4. Click an exercise to view complete solution.'
+                )} />
+              </p>
+            </div>
+
+            <div style="display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+              {allPEXercises.map((exercise) => (
+                <a href={`/p-latihan/${exercise.id}`} style="
+                  display: block;
+                  padding: var(--space-4);
+                  background: var(--surface);
+                  border: 1px solid var(--border);
+                  border-radius: var(--r-md);
+                  text-decoration: none;
+                  color: var(--ink);
+                  transition: border-color var(--fast), box-shadow var(--fast);
+                ">
+                  <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
+                    <span class="exercise-id-badge large">
+                      {exercise.id}
+                    </span>
+                    <div style="flex: 1; min-width: 0;">
+                      <BiText value={exercise.title} style="font-weight: 600; font-size: 14px; line-height: 1.4; margin-bottom: var(--space-1);" />
+                      <p style="font-size: 12px; color: var(--muted); margin: 0; line-height: 1.4;">
+                        <BiText value={exercise.question} />
+                      </p>
+                    </div>
+                    <svg viewBox="0 0 24 24" style="flex-shrink: 0; width: 20px; height: 20px; color: var(--muted);" aria-hidden="true">
+                      <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </>
+        )}
+
+      </div>
+    </Base>
+  </body>
+</html>

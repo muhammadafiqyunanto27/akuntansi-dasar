@@ -1698,17 +1698,19 @@ footer.site-footer a { color: var(--on-inverse); }
   font-family: var(--serif);
   font-weight: 700;
   flex-shrink: 0;
-  width: 28px;
+  min-width: 28px;
   height: 28px;
+  padding: 0 6px;
   border: 1px solid var(--border-strong);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 11px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
   color: var(--ink);
-  flex-shrink: 0;
-  overflow-wrap: break-word;
-  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .exercise-item summary span:last-child {
@@ -1721,4 +1723,31 @@ footer.site-footer a { color: var(--on-inverse); }
   white-space: normal;
   overflow-wrap: break-word;
 }
+
+/* Exercise ID badge - pill shape for variable-width IDs */
+.exercise-id-badge {
+  font-family: var(--serif);
+  font-weight: 700;
+  flex-shrink: 0;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.exercise-id-badge.large {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  font-size: 10px;
+  background: var(--surface-2);
 }

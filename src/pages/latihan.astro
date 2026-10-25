@@ -208,7 +208,7 @@ const totalExercises = allExercises.length;
                               <span class="bi-id">Diberikan</span>
                               <span class="bi-en">Given</span>
                             </div>
-                            <div style="font-size: 14px">{part.given}</div>
+                            <div style="font-size: 14px"><BiText value={part.given} /></div>
                           </div>
                         </div>
                       ))}
@@ -258,7 +258,7 @@ const totalExercises = allExercises.length;
                                 {part.label}
                               </span>
                             )}
-                            <span style="flex: 1; min-width: 0">{part.answer}</span>
+                            <span style="flex: 1; min-width: 0"><BiText value={part.answer} /></span>
                           </div>
                         ))}
 
