@@ -3,180 +3,433 @@ import Base from '../layouts/Base.astro';
 import BiText from '../components/Bi.astro';
 import { exercisesByChapter } from '../data/exercises';
 import { b } from '../data/types';
+
+const allExercises = exercisesByChapter.reduce(
+  (acc, chapter) =>
+    acc.concat(chapter.sections.flatMap((section) => section.items)),
+  []
+);
+const totalExercises = allExercises.length;
 ---
+<!DOCTYPE html>
+<html lang="id" data-lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Latihan Soal & Jawaban</title>
+    <meta name="description" content="Kumpulan lengkap latihan soal Kieso Financial Accounting: IFRS Bab 1–4" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <Base
+      title="Latihan Soal & Jawaban"
+      description="Kumpulan lengkap latihan soal Kieso Financial Accounting: IFRS Bab 1–4 dengan jawaban dan penjelasan lengkap untuk persiapan UTS."
+      active="latihan"
+    >
+      <header class="page-hero">
+        <div class="wrap">
+          <p class="crumb">
+            <span class="bi-id">Beranda / Latihan Soal</span>
+            <span class="bi-en">Home / Practice Exercises</span>
+          </p>
+          <h1>
+            <span class="bi-id">Latihan Soal & Jawaban Lengkap</span>
+            <span class="bi-en">Practice Exercises & Complete Solutions</span>
+          </h1>
+          <p>
+            <span class="bi-id">
+              Semua <strong>Brief Exercises</strong>, <strong>DO IT! Exercises</strong>, dan <strong>Exercises</strong> dari Bab 1–4
+              Kieso <em>Financial Accounting: IFRS</em> edisi 3 — dilengkapi jawaban dan penjelasan langkah demi langkah.
+            </span>
+            <span class="bi-en">
+              All <strong>Brief Exercises</strong>, <strong>DO IT! Exercises</strong>, and <strong>Exercises</strong> from Chapters 1–4
+              of Kieso <em>Financial Accounting: IFRS</em> 3rd edition — with answers and step-by-step explanations.
+            </span>
+          </p>
+        </div>
+      </header>
 
-<Base
-  title="Latihan Soal & Jawaban"
-  description="Kumpulan lengkap latihan soal Brief Exercises, DO IT! Exercises, dan Exercises dari Bab 1–4 Kieso IFRS dengan jawaban dan penjelasan lengkap untuk persiapan UTS."
-  active="latihan"
->
-  <header class="page-hero">
-    <div class="wrap">
-      <p class="crumb">
-        <span class="bi-id">Beranda / Latihan Soal</span>
-        <span class="bi-en">Home / Practice Exercises</span>
-      </p>
-      <h1>
-        <span class="bi-id">Latihan Soal & Jawaban Lengkap</span>
-        <span class="bi-en">Practice Exercises & Complete Solutions</span>
-      </h1>
-      <p>
-        <span class="bi-id">
-          Semua <strong>Brief Exercises</strong>, <strong>DO IT! Exercises</strong>, dan <strong>Exercises</strong> dari Bab 1–4
-          Kieso <em>Financial Accounting: IFRS</em> edisi 3 — dilengkapi jawaban dan penjelasan langkah demi langkah.
-        </span>
-        <span class="bi-en">
-          All <strong>Brief Exercises</strong>, <strong>DO IT! Exercises</strong>, and <strong>Exercises</strong> from Chapters 1–4
-          of Kieso <em>Financial Accounting: IFRS</em> 3rd edition — with answers and step-by-step explanations.
-        </span>
-      </p>
-    </div>
-  </header>
-
-  <div class="wrap page-body">
-    <div class="stat-strip" aria-label="Ringkasan latihan">
-      <div class="stat">
-        <b>{exercisesByChapter.length}</b>
-        <span><span class="bi-id">Bab</span><span class="bi-en">Chapters</span></span>
-      </div>
-      <div class="stat">
-        <b>
-          {exercisesByChapter.reduce((sum, ch) => sum + ch.sections.reduce((s, sec) => s + sec.items.length, 0), 0)}
-        </b>
-        <span><span class="bi-id">Total Soal</span><span class="bi-en">Total Questions</span></span>
-      </div>
-      <div class="stat">
-        <b>
-          {exercisesByChapter.reduce((sum, ch) => sum + ch.sections.filter(s => s.id === 'brief-exercises').reduce((s, sec) => s + sec.items.length, 0), 0)}
-        </b>
-        <span><span class="bi-id">Brief Exercises</span><span class="bi-en">Brief Exercises</span></span>
-      </div>
-      <div class="stat">
-        <b>
-          {exercisesByChapter.reduce((sum, ch) => sum + ch.sections.filter(s => s.id === 'do-it-exercises').reduce((s, sec) => s + sec.items.length, 0), 0)}
-        </b>
-        <span><span class="bi-id">DO IT! Exercises</span><span class="bi-en">DO IT! Exercises</span></span>
-      </div>
-    </div>
-
-    <div class="card" style="margin-bottom: var(--space-6);">
-      <h3><BiText value={b('Cara Menggunakan Halaman Ini', 'How to Use This Page')} /></h3>
-      <ul style="margin: var(--space-3) 0 0 24px;">
-        <li><BiText value={b('Setiap soal memiliki jawaban di bagian <strong>Answer</strong> dan penjelasan di <strong>Explanation</strong>.', 'Each question has an <strong>Answer</strong> and an <strong>Explanation</strong>.')} /></li>
-        <li><BiText value={b('Gunakan tombol bahasa <strong>ID/EN</strong> di kanan atas untuk berganti bahasa.', 'Use the <strong>ID/EN</strong> toggle at top right to switch languages.')} /></li>
-        <li><BiText value={b('Cobalah menjawab sendiri dulu sebelum melihat jawaban — ini latihan UTS!', 'Try solving yourself first before revealing answers — this is UTS practice!')} /></li>
-        <li><BiText value={b('Fokus pada pemahaman <strong>konsep</strong>, bukan hanya menghafal jawaban.', 'Focus on understanding <strong>concepts</strong>, not just memorizing answers.')} /></li>
-      </ul>
-    </div>
-
-    {exercisesByChapter.map((chapter) => (
-      <section class="chapter-section" id={`chapter-${chapter.chapter}`}>
-        <div class="sec-title">
-          <h2>
-            <span class="bi-id">Bab {chapter.chapter}: </span>
-            <span class="bi-en">Chapter {chapter.chapter}: </span>
-            <BiText value={chapter.title} />
-          </h2>
+      <div class="wrap page-body">
+        <div class="stat-strip" aria-label="Ringkasan latihan">
+          <div class="stat">
+            <b>{exercisesByChapter.length}</b>
+            <span><span class="bi-id">Bab</span><span class="bi-en">Chapters</span></span>
+          </div>
+          <div class="stat">
+            <b>{totalExercises}</b>
+            <span><span class="bi-id">Total Soal</span><span class="bi-en">Total Questions</span></span>
+          </div>
+          <div class="stat">
+            <b>
+              {exercisesByChapter.reduce((sum, ch) => sum + ch.sections.filter(s => s.id === 'brief-exercises').reduce((s, sec) => s + sec.items.length, 0), 0)}
+            </b>
+            <span><span class="bi-id">Brief Exercises</span><span class="bi-en">Brief Exercises</span></span>
+          </div>
+          <div class="stat">
+            <b>
+              {exercisesByChapter.reduce((sum, ch) => sum + ch.sections.filter(s => s.id === 'do-it-exercises').reduce((s, sec) => s + sec.items.length, 0), 0)}
+            </b>
+            <span><span class="bi-id">DO IT! Exercises</span><span class="bi-en">DO IT! Exercises</span></span>
+          </div>
         </div>
 
-        {chapter.sections.map((section) => (
-          <div class="section-block" style="margin-bottom: var(--space-8);">
-            <h3 style="font-family: var(--sans); font-size: 15px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-4);">
-              <BiText value={section.title} />
-            </h3>
+        <div class="card" style="margin-bottom: var(--space-6);">
+          <h3>
+            <BiText value={b('Cara Menggunakan Halaman Ini', 'How to Use This Page')} />
+          </h3>
+          <ul style="margin: var(--space-3) 0 0 24px">
+            <li>
+              <BiText value={b('Setiap soal memiliki jawaban di bagian <strong>Answer</strong> dan penjelasan di <strong>Explanation</strong>.', 'Each question has an <strong>Answer</strong> and an <strong>Explanation</strong>.')} />
+            </li>
+            <li>
+              <BiText value={b('Gunakan tombol bahasa <strong>ID/EN</strong> di kanan atas untuk berganti bahasa.', 'Use the <strong>ID/EN</strong> toggle at top right to switch languages.')} />
+            </li>
+            <li>
+              <BiText value={b('Cobalah menjawab sendiri dulu sebelum melihat jawaban — ini latihan UTS!', 'Try solving yourself first before revealing answers — this is UTS practice!')} />
+            </li>
+            <li>
+              <BiText value={b('Fokus pada pemahaman <strong>konsep</strong>, bukan hanya menghafal jawaban.', 'Focus on understanding <strong>concepts</strong>, not just memorizing answers.')} />
+            </li>
+            <li>
+              <BiText value={b('Navigasi per-soal: gunakan tombol <strong>Prev</strong> dan <strong>Next</strong> di bawah setiap soal.', 'Per-soal navigation: use <strong>Prev</strong> and <strong>Next</strong> buttons below each question.')} />
+            </li>
+          </ul>
+        </div>
 
-            {section.items.map((item) => (
-              <details class="exercise-item" style="border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); margin-bottom: var(--space-4); overflow: hidden;">
-                <summary style="cursor: pointer; padding: var(--space-4) var(--space-5); font-weight: 600; font-size: 15px; line-height: 1.5; list-style: none; display: flex; gap: var(--space-3); align-items: baseline; background: var(--surface-2);">
-                  <span style="font-family: var(--serif); font-weight: 700; flex-shrink: 0; width: 28px; height: 28px; border: 1px solid var(--border-strong); border-radius: 50%; display: grid; place-items: center; font-size: 11px; transform: translateY(2px); color: var(--ink);">{item.id}</span>
-                  <BiText value={item.title} />
-                </summary>
-                <div style="padding: var(--space-5);">
-                  <div style="margin-bottom: var(--space-4);">
-                    <div style="font-size: 11.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--space-2); display: block;">
-                      <span class="bi-id">Pertanyaan</span>
-                      <span class="bi-en">Question</span>
-                    </div>
-                    <p style="font-size: 14.8px; line-height: 1.6;"><BiText value={item.question} /></p>
-                  </div>
+        {exercisesByChapter.map((chapter) => (
+          <section class="chapter-section" id={`chapter-${chapter.chapter}`}>
+            <div class="sec-title">
+              <h2>
+                <span class="bi-id">Bab {chapter.chapter}: </span>
+                <span class="bi-en">Chapter {chapter.chapter}: </span>
+                <BiText value={chapter.title} />
+              </h2>
+            </div>
 
-                  {item.parts.map((part) => (
-                    <div style="margin-bottom: var(--space-3); padding: var(--space-3); background: var(--bg); border-radius: var(--r-sm); border-left: 3px solid var(--ink);">
-                      <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: flex-start;">
-                        {part.label && (
-                          <span style="font-weight: 700; font-variant-numeric: tabular-nums; min-width: 40px; color: var(--ink);">{part.label}</span>
-                        )}
-                        <div style="flex: 1; min-width: 0;">
-                          <div style="font-size: 13px; color: var(--muted); margin-bottom: 2px;">
-                            <span class="bi-id">Diberikan</span>
-                            <span class="bi-en">Given</span>
+            {chapter.sections.map((section) => (
+              <div class="section-block" style="margin-bottom: var(--space-8);">
+                <h3 style="font-family: var(--sans); font-size: 15px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-4);">
+                  <BiText value={section.title} />
+                </h3>
+
+                {section.items.map((item, index) => (
+                  <details class="exercise-item" style="border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); margin-bottom: var(--space-4); overflow: hidden">
+                    <summary
+                      style="
+                        cursor: pointer;
+                        padding: var(--space-4) var(--space-5);
+                        font-weight: 600;
+                        font-size: 15px;
+                        line-height: 1.5;
+                        list-style: none;
+                        display: flex;
+                        gap: var(--space-3);
+                        align-items: baseline;
+                        background: var(--surface-2)
+                      "
+                    >
+                      <span
+                        style="
+                          font-family: var(--serif);
+                          font-weight: 700;
+                          flex-shrink: 0;
+                          width: 28px;
+                          height: 28px;
+                          border: 1px solid var(--border-strong);
+                          border-radius: 50%;
+                          display: grid;
+                          place-items: center;
+                          font-size: 11px;
+                          transform: translateY(2px);
+                          color: var(--ink)
+                        "
+                      >
+                        {item.id}
+                      </span>
+                      <BiText value={item.title} />
+                    </summary>
+                    <div style="padding: var(--space-5)">
+                      <div style="margin-bottom: var(--space-4)">
+                        <div
+                          style="
+                            font-size: 11.5px;
+                            font-weight: 800;
+                            letter-spacing: 0.08em;
+                            text-transform: uppercase;
+                            color: var(--muted);
+                            margin-bottom: var(--space-2);
+                            display: block
+                          "
+                        >
+                          <span class="bi-id">Pertanyaan</span>
+                          <span class="bi-en">Question</span>
+                        </div>
+                        <p style="font-size: 14.8px; line-height: 1.6">
+                          <BiText value={item.question} />
+                        </p>
+                      </div>
+
+                      {item.parts.map((part) => (
+                        <div
+                          style="
+                            margin-bottom: var(--space-3);
+                            padding: var(--space-3);
+                            background: var(--bg);
+                            border-radius: var(--r-sm);
+                            border-left: 3px solid var(--ink)
+                          "
+                        >
+                          {part.label && (
+                            <span
+                              style="
+                                font-weight: 700;
+                                font-variant-numeric: tabular-nums;
+                                min-width: 40px;
+                                color: var(--ink)
+                              "
+                            >
+                              {part.label}
+                            </span>
+                          )}
+                          <div style="flex: 1; min-width: 0">
+                            <div
+                              style="
+                                font-size: 13px;
+                                color: var(--muted);
+                                margin-bottom: 2px
+                              "
+                            >
+                              <span class="bi-id">Diberikan</span>
+                              <span class="bi-en">Given</span>
+                            </div>
+                            <div style="font-size: 14px">{part.given}</div>
                           </div>
-                          <div style="font-size: 14px;"><BiText value={part.given} /></div>
+                        </div>
+                      ))}
+
+                      <div
+                        style="
+                          margin-top: var(--space-4);
+                          padding: var(--space-4);
+                          background: color-mix(in srgb, var(--inverse) 8%, var(--surface));
+                          border-radius: var(--r-sm);
+                          border-left: 3px solid var(--inverse)
+                        "
+                      >
+                        <div
+                          style="
+                            font-size: 11.5px;
+                            font-weight: 800;
+                            letter-spacing: 0.08em;
+                            text-transform: uppercase;
+                            color: var(--on-inverse);
+                            margin-bottom: var(--space-2);
+                            display: block
+                          "
+                        >
+                          <span class="bi-id">Jawaban</span>
+                          <span class="bi-en">Answer</span>
+                        </div>
+                        {item.parts.map((part) => (
+                          <div
+                            style="
+                              margin-bottom: var(--space-2);
+                              display: flex;
+                              gap: var(--space-3);
+                              flex-wrap: wrap;
+                              align-items: baseline
+                            "
+                          >
+                            {part.label && (
+                              <span
+                                style="
+                                  font-weight: 700;
+                                  font-variant-numeric: tabular-nums;
+                                  min-width: 40px;
+                                  color: var(--on-inverse)
+                                "
+                                >
+                                {part.label}
+                              </span>
+                            )}
+                            <span style="flex: 1; min-width: 0">{part.answer}</span>
+                          </div>
+                        ))}
+
+                        <div
+                          style="
+                            margin-top: var(--space-4);
+                            padding: var(--space-4);
+                            background: var(--surface-2);
+                            border-radius: var(--r-sm);
+                            border-left: 3px solid var(--border-strong)
+                          "
+                        >
+                          <div
+                            style="
+                              font-size: 11.5px;
+                              font-weight: 800;
+                              letter-spacing: 0.08em;
+                              text-transform: uppercase;
+                              color: var(--muted);
+                              margin-bottom: var(--space-2);
+                              display: block
+                            "
+                          >
+                            <span class="bi-id">Penjelasan</span>
+                            <span class="bi-en">Explanation</span>
+                          </div>
+                          <p style="font-size: 14.5px; line-height: 1.6; margin: 0">
+                            <BiText value={item.explanation} />
+                          </p>
                         </div>
                       </div>
                     </div>
-                  ))}
-
-                  <div style="margin-top: var(--space-4); padding: var(--space-4); background: color-mix(in srgb, var(--inverse) 8%, var(--surface)); border-radius: var(--r-sm); border-left: 3px solid var(--inverse);">
-                    <div style="font-size: 11.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--on-inverse); margin-bottom: var(--space-2); display: block;">
-                      <span class="bi-id">Jawaban</span>
-                      <span class="bi-en">Answer</span>
-                    </div>
-                    {item.parts.map((part) => (
-                      <div style="margin-bottom: var(--space-2); display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: baseline;">
-                        {part.label && <span style="font-weight: 700; font-variant-numeric: tabular-nums; min-width: 40px; color: var(--on-inverse);">{part.label}</span>}
-                        <span style="flex: 1; min-width: 0;"><BiText value={part.answer} /></span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div style="margin-top: var(--space-4); padding: var(--space-4); background: var(--surface-2); border-radius: var(--r-sm); border-left: 3px solid var(--border-strong);">
-                    <div style="font-size: 11.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--space-2); display: block;">
-                      <span class="bi-id">Penjelasan</span>
-                      <span class="bi-en">Explanation</span>
-                    </div>
-                    <p style="font-size: 14.5px; line-height: 1.6; margin: 0;"><BiText value={item.explanation} /></p>
-                  </div>
-                </div>
-              </details>
+                  </details>
+                ))}
+              </div>
             ))}
-          </div>
+
+            <div style="margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid var(--border);">
+              <div style="display: flex; justify-content: space-between; gap: var(--space-3); margin-top: var(--space-4)">
+                <a
+                  href="#chapter-1"
+                  class="pager-prev"
+                  style="
+                    border: 1px solid var(--border-strong);
+                    background: var(--surface);
+                    border-radius: 999px;
+                    padding: var(--space-2) var(--space-5);
+                    font-size: var(--fs-sm);
+                    font-weight: 700;
+                    text-decoration: none;
+                    display: inline-flex;
+                    gap: var(--space-2);
+                    align-items: center;
+                    min-width: 48%
+                  "
+                >
+                  <span>Top</span>
+                  <small>Chapter 1</small>
+                </a>
+                <a
+                  href="#chapter-4"
+                  class="pager-next"
+                  style="
+                    border: 1px solid var(--border-strong);
+                    background: var(--surface);
+                    border-radius: 999px;
+                    padding: var(--space-2) var(--space-5);
+                    font-size: var(--fs-sm);
+                    font-weight: 700;
+                    text-decoration: none;
+                    display: inline-flex;
+                    gap: var(--space-2);
+                    align-items: center;
+                    min-width: 48%
+                  "
+                >
+                  <small>Chapter 4</small>
+                  <span>Bottom</span>
+                </a>
+              </div>
+            </div>
+          </section>
         ))}
-      </section>
-    ))}
 
-    <div class="card" style="margin-top: var(--space-8);">
-      <h3><BiText value={b('Tips Persiapan UTS', 'UTS Preparation Tips')} /></h3>
-      <ul style="margin: var(--space-3) 0 0 24px;">
-        <li><BiText value={b('Kuasi <strong>persamaan akuntansi</strong> dan efek transaksi (Bab 1–2).', 'Master the <strong>accounting equation</strong> and transaction effects (Ch 1–2).')} /></li>
-        <li><BiText value={b('Hafal <strong>saldo normal</strong> setiap tipe akun — ini fundamental.', 'Memorize <strong>normal balances</strong> for each account type — this is fundamental.')} /></li>
-        <li><BiText value={b('Latihan <strong>entri penyesuaian</strong> ke-4 jenis: deferred expense, deferred revenue, accrued expense, accrued revenue (Bab 3).', 'Practice the <strong>four adjusting entry types</strong>: deferred expense, deferred revenue, accrued expense, accrued revenue (Ch 3).')} /></li>
-        <li><BiText value={b('Paham <strong>entri penutupan</strong> 4 langkah dan perbedaan akun sementara vs permanen (Bab 4).', 'Understand the <strong>four closing entries</strong> and temporary vs permanent accounts (Ch 4).')} /></li>
-        <li><BiText value={b('Bisa buat <strong>neraca saldo</strong>, <strong>laporan laba rugi</strong>, <strong>laba ditahan</strong>, dan <strong>posisi keuangan</strong> dari TB disesuaikan.', 'Be able to prepare <strong>trial balance</strong>, <strong>income statement</strong>, <strong>retained earnings</strong>, and <strong>financial position</strong> from adjusted TB.')} /></li>
-        <li><BiText value={b('Latih soal <strong>DO IT!</strong> — mirip format ujian dan punya jawaban di buku.', 'Practice <strong>DO IT!</strong> questions — similar to exam format with answers in the book.')} /></li>
-      </ul>
-    </div>
-  </div>
-</Base>
+        <div class="card" style="margin-top: var(--space-8);">
+          <h3>
+            <BiText value={b('Tips Persiapan UTS', 'UTS Preparation Tips')} />
+          </h3>
+          <ul style="margin: var(--space-3) 0 0 24px">
+            <li>
+              <BiText value={b('Kuasi <strong>persamaan akuntansi</strong> dan efek transaksi (Bab 1–2).', 'Master the <strong>accounting equation</strong> and transaction effects (Ch 1–2).')} />
+            </li>
+            <li>
+              <BiText value={b('Hafal <strong>saldo normal</strong> setiap tipe akun — ini fundamental.', 'Memorize <strong>normal balances</strong> for each account type — this is fundamental.')} />
+            </li>
+            <li>
+              <BiText value={b('Latihan <strong>entri penyesuaian</strong> ke-4 jenis: deferred expense, deferred revenue, accrued expense, accrued revenue (Bab 3).', 'Practice the <strong>four adjusting entry types</strong>: deferred expense, deferred revenue, accrued expense, accrued revenue (Ch 3).')} />
+            </li>
+            <li>
+              <BiText value={b('Paham <strong>entri penutupan</strong> 4 langkah dan perbedaan akun sementara vs permanen (Bab 4).', 'Understand the <strong>four closing entries</strong> and temporary vs permanent accounts (Ch 4).')} />
+            </li>
+            <li>
+              <BiText value={b('Bisa buat <strong>neraca saldo</strong>, <strong>laporan laba rugi</strong>, <strong>laba ditahan</strong>, dan <strong>posisi keuangan</strong> dari TB disesuaikan.', 'Be able to prepare <strong>trial balance</strong>, <strong>income statement</strong>, <strong>retained earnings</strong>, and <strong>financial position</strong> from adjusted TB.')} />
+            </li>
+            <li>
+              <BiText value={b('Latih soal <strong>DO IT!</strong> — mirip format ujian dan punya jawaban di buku.', 'Practice <strong>DO IT!</strong> questions — similar to exam format with answers in the book.')} />
+            </li>
+            <li>
+              <BiText value={b('Gunakan navigasi per-soal di bawah setiap soal untuk melanjutkan ke soal berikutnya.', 'Use per-soal navigation below each question to move to the next exercise.')} />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </Base>
 
-<style>
-  .exercise-item summary::-webkit-details-marker { display: none; }
-  .exercise-item summary::before {
-    content: "+";
-    font-family: var(--serif);
-    font-weight: 700;
-    flex-shrink: 0;
-    width: 28px;
-    height: 28px;
-    border: 1px solid var(--border-strong);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 14px;
-    color: var(--ink);
-    margin-right: var(--space-2);
-  }
-  .exercise-item[open] summary::before { content: "−"; }
-  .exercise-item[open] summary { border-bottom: 1px solid var(--border); }
-  .exercise-item summary:hover { background: var(--surface); }
-</style>
+    <style>
+      .exercise-item summary::-webkit-details-marker {
+        display: none;
+      }
+      .exercise-item summary::before {
+        content: '+';
+        font-family: var(--serif);
+        font-weight: 700;
+        flex-shrink: 0;
+        width: 28px;
+        height: 28px;
+        border: 1px solid var(--border-strong);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 14px;
+        color: var(--ink);
+        margin-right: var(--space-2);
+      }
+      .exercise-item[open] summary::before {
+        content: '−';
+      }
+      .exercise-item[open] summary {
+        border-bottom: 1px solid var(--border);
+      }
+      .exercise-item summary:hover {
+        background: var(--surface);
+      }
+
+      .pager-prev,
+      .pager-next {
+        border: 1px solid var(--border-strong);
+        background: var(--surface);
+        border-radius: 999px;
+        padding: var(--space-2) var(--space-5);
+        font-size: var(--fs-sm);
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-flex;
+        gap: var(--space-2);
+        align-items: center;
+        min-width: 48%
+      }
+      .pager-prev:hover,
+      .pager-next:hover {
+        background: var(--inverse);
+        color: var(--on-inverse);
+        border-color: var(--inverse)
+      }
+      .pager-prev small,
+      .pager-next small {
+        display: block;
+        font-weight: 500;
+        opacity: 0.65;
+        font-size: 11px
+      }
+    </style>
+  </body>
+</html>
