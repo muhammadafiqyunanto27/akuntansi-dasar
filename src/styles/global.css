@@ -1446,7 +1446,7 @@ td strong { font-weight: 700; }
   margin-right: 4px;
 }
 .table-caption {
-  margin: 0;
+  margin: var(--space-3) 0 0;
   padding: 8px 13px 10px;
   border-top: 1px solid var(--border);
   color: var(--muted);
