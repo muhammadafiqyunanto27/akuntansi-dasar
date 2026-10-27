@@ -255,6 +255,125 @@ export const chapter4: Chapter = {
         },
       ],
     },
+    {
+      id: 'reversing',
+      num: '4.7',
+      tag: b('Optional', 'Opsional'),
+      title: b('Reversing entries', 'Ayat pembalik'),
+      blocks: [
+        {
+          type: 'p',
+          text: b(
+            'After preparing the financial statements and closing the books, it is often helpful to reverse some of the adjusting entries before recording the regular transactions of the next period. Such entries are <strong>reversing entries</strong>. A company makes a reversing entry at the beginning of the next accounting period, and each one is the exact opposite of the adjusting entry made in the previous period. Recording reversing entries is an <strong>optional</strong> step in the accounting cycle.',
+            'Setelah menyusun laporan keuangan dan menutup buku, sering kali berguna untuk membalik beberapa ayat penyesuaian sebelum mencatat transaksi reguler periode berikutnya. Ayat semacam itu disebut <strong>ayat pembalik</strong>. Perusahaan membuat ayat pembalik di awal periode akuntansi berikutnya, dan setiap ayat pembalik adalah kebalikan persis dari ayat penyesuaian yang dibuat pada periode sebelumnya. Pencatatan ayat pembalik adalah langkah <strong>opsional</strong> dalam siklus akuntansi.'
+          ),
+        },
+        {
+          type: 'p',
+          text: b(
+            'The purpose of reversing entries is to <strong>simplify the recording of a subsequent transaction</strong> related to an adjusting entry. For example, in Chapter 3 the payment of salaries after an adjusting entry required two debits: one to Salaries and Wages Payable and one to Salaries and Wages Expense. With reversing entries, the company can debit the entire subsequent payment to Salaries and Wages Expense. Reversing entries do not change the amounts reported in the financial statements; they only simplify the recording of later transactions.',
+            'Tujuan ayat pembalik adalah untuk <strong>menyederhanakan pencatatan transaksi berikutnya</strong> yang terkait dengan ayat penyesuaian. Misalnya, pada Bab 3 pembayaran gaji setelah ayat penyesuaian memerlukan dua debit: satu ke Utang Gaji dan Upah dan satu ke Beban Gaji dan Upah. Dengan ayat pembalik, perusahaan dapat mendebit seluruh pembayaran berikutnya ke Beban Gaji dan Upah. Ayat pembalik tidak mengubah jumlah yang dilaporkan dalam laporan keuangan; ia hanya menyederhanakan pencatatan transaksi berikutnya.'
+          ),
+        },
+        {
+          type: 'callout',
+          title: b('Which adjusting entries are reversed?', 'Ayat penyesuaian mana yang dibalik?'),
+          text: b(
+            'Companies most often use reversing entries to reverse two types of adjusting entries: <strong>accrued revenues</strong> and <strong>accrued expenses</strong>. Deferrals (prepaid expenses and unearned revenues) are not reversed.',
+            'Perusahaan paling sering memakai ayat pembalik untuk membalik dua jenis ayat penyesuaian: <strong>pendapatan yang masih harus diterima</strong> dan <strong>beban yang masih harus dibayar</strong>. Deferral (beban dibayar di muka dan pendapatan diterima di muka) tidak dibalik.'
+          ),
+          tone: 'tip',
+        },
+        {
+          type: 'h4',
+          text: b('Yazici Advertising — accrued salaries', 'Yazici Advertising — gaji akrual'),
+        },
+        {
+          type: 'p',
+          text: b(
+            'Yazici pays salaries of 4,000 on October 26 for work from October 15–26, then makes an adjusting entry on October 31 for 1,200 of salaries earned October 29–31 (to be paid in the November 9 payroll). The November 9 payroll is 4,000: 1,200 for the accrued salaries and 2,800 earned November 1–9.',
+            'Yazici membayar gaji 4.000 pada 26 Oktober untuk pekerjaan 15–26 Oktober, lalu membuat ayat penyesuaian pada 31 Oktober sebesar 1.200 gaji yang diperoleh 29–31 Oktober (akan dibayar pada penggajian 9 November). Penggajian 9 November sebesar 4.000: 1.200 untuk gaji akrual dan 2.800 yang diperoleh 1–9 November.'
+          ),
+        },
+        {
+          type: 'table',
+          caption: b('Illustration 4A-1 — entries WITHOUT reversing entries', 'Ilustrasi 4A-1 — entri TANPA ayat pembalik'),
+          head: [b('Date', 'Tanggal'), b('Account', 'Akun'), b('Debit', 'Debit'), b('Credit', 'Kredit')],
+          align: ['left', 'left', 'right', 'right'],
+          rows: [
+            ['Oct. 26', b('Salaries and Wages Expense', 'Beban Gaji dan Upah'), '4,000', ''],
+            ['', b('Cash', 'Kas'), '', '4,000'],
+            ['Oct. 31', b('Salaries and Wages Expense', 'Beban Gaji dan Upah'), '1,200', ''],
+            ['', b('Salaries and Wages Payable', 'Utang Gaji dan Upah'), '', '1,200'],
+            ['Oct. 31', b('Income Summary', 'Ikhtisar Laba Rugi'), '5,200', ''],
+            ['', b('Salaries and Wages Expense', 'Beban Gaji dan Upah'), '', '5,200'],
+            ['Nov. 1', b('No reversing entry is made.', 'Tidak ada ayat pembalik yang dibuat.'), '', ''],
+            ['Nov. 9', b('Salaries and Wages Payable', 'Utang Gaji dan Upah'), '1,200', ''],
+            ['', b('Salaries and Wages Expense', 'Beban Gaji dan Upah'), '2,800', ''],
+            ['', b('Cash', 'Kas'), '', '4,000'],
+          ],
+        },
+        {
+          type: 'table',
+          caption: b('Illustration 4A-1 — entries WITH reversing entries', 'Ilustrasi 4A-1 — entri DENGAN ayat pembalik'),
+          head: [b('Date', 'Tanggal'), b('Account', 'Akun'), b('Debit', 'Debit'), b('Credit', 'Kredit')],
+          align: ['left', 'left', 'right', 'right'],
+          rows: [
+            ['Oct. 26', b('Salaries and Wages Expense', 'Beban Gaji dan Upah'), '4,000', ''],
+            ['', b('Cash', 'Kas'), '', '4,000'],
+            ['Oct. 31', b('Salaries and Wages Expense', 'Beban Gaji dan Upah'), '1,200', ''],
+            ['', b('Salaries and Wages Payable', 'Utang Gaji dan Upah'), '', '1,200'],
+            ['Oct. 31', b('Income Summary', 'Ikhtisar Laba Rugi'), '5,200', ''],
+            ['', b('Salaries and Wages Expense', 'Beban Gaji dan Upah'), '', '5,200'],
+            ['Nov. 1', b('Salaries and Wages Payable', 'Utang Gaji dan Upah'), '1,200', ''],
+            ['', b('Salaries and Wages Expense', 'Beban Gaji dan Upah'), '', '1,200'],
+            ['Nov. 9', b('Salaries and Wages Expense', 'Beban Gaji dan Upah'), '4,000', ''],
+            ['', b('Cash', 'Kas'), '', '4,000'],
+          ],
+        },
+        {
+          type: 'p',
+          text: b(
+            'The first three entries are the same whether or not Yazici uses reversing entries. The November 1 reversing entry eliminates the 1,200 balance in Salaries and Wages Payable created by the October 31 adjusting entry, and it creates a 1,200 <strong>credit balance</strong> in Salaries and Wages Expense. That credit balance is correct because it anticipates that the entire first salaries payment in the new period will be debited to the expense account; the debit then eliminates the credit balance, leaving a debit balance of 2,800 — exactly the expense incurred in the new period.',
+            'Tiga entri pertama sama, baik Yazici memakai ayat pembalik maupun tidak. Ayat pembalik 1 November menghapus saldo 1.200 di Utang Gaji dan Upah yang dibuat oleh ayat penyesuaian 31 Oktober, dan menciptakan saldo <strong>kredit</strong> 1.200 di Beban Gaji dan Upah. Saldo kredit itu benar karena mengantisipasi bahwa seluruh pembayaran gaji pertama pada periode baru akan didebit ke akun beban; debit itu lalu menghapus saldo kredit, menyisakan saldo debit 2.800 — persis beban yang terjadi pada periode baru.'
+          ),
+        },
+        {
+          type: 'p',
+          text: b(
+            'With reversing entries, Yazici can debit all cash payments of expenses to the expense account, without regard to any accrued salaries payable. Being able to make the same entry each payday simplifies the recording process: subsequent transactions are recorded as if the related adjusting entry had never been made.',
+            'Dengan ayat pembalik, Yazici dapat mendebit semua pembayaran kas beban ke akun beban, tanpa memperhatikan utang gaji akrual. Kemampuan membuat entri yang sama setiap hari gaji menyederhanakan proses pencatatan: transaksi berikutnya dicatat seolah-olah ayat penyesuaian terkait tidak pernah dibuat.'
+          ),
+        },
+        {
+          type: 'table',
+          caption: b('Reversing an accrued revenue adjusting entry', 'Membalik ayat penyesuaian pendapatan akrual'),
+          head: [b('Date', 'Tanggal'), b('Account', 'Akun'), b('Debit', 'Debit'), b('Credit', 'Kredit')],
+          align: ['left', 'left', 'right', 'right'],
+          rows: [
+            ['Nov. 1', b('Service Revenue', 'Pendapatan Jasa'), '200', ''],
+            ['', b('Accounts Receivable', 'Piutang Usaha'), '', '200'],
+            ['', b('(To reverse the October 31 adjusting entry)', '(Membalik ayat penyesuaian 31 Oktober)'), '', ''],
+          ],
+        },
+        {
+          type: 'p',
+          text: b(
+            'When Yazici later collects the accrued service revenue, it debits Cash and credits Service Revenue. The same logic applies: the reversing entry makes the collection entry straightforward.',
+            'Saat Yazici kemudian menagih pendapatan jasa akrual itu, ia mendebit Kas dan mengkredit Pendapatan Jasa. Logika yang sama berlaku: ayat pembalik membuat entri penagihan menjadi sederhana.'
+          ),
+        },
+        {
+          type: 'callout',
+          title: b('Key points', 'Poin kunci'),
+          text: b(
+            'Reversing entries are optional and occur between closing (step 8) and the next period’s first transaction. They only reverse accrued (accrual) adjusting entries, not deferrals. They do not change reported financial-statement amounts; they only simplify later recording. They are most useful for accrued salaries and accrued revenues.',
+            'Ayat pembalik bersifat opsional dan terjadi antara penutupan (langkah 8) dan transaksi pertama periode berikutnya. Ia hanya membalik ayat penyesuaian akrual (accrued), bukan deferral. Ia tidak mengubah jumlah yang dilaporkan dalam laporan keuangan; ia hanya menyederhanakan pencatatan berikutnya. Paling berguna untuk gaji akrual dan pendapatan akrual.'
+          ),
+          tone: 'note',
+        },
+      ],
+    },
   ],
   quiz: [
     {
@@ -272,6 +391,10 @@ export const chapter4: Chapter = {
     {
       q: b('In what order are current assets usually listed?', 'Dalam urutan apa aset lancar biasanya disajikan?'),
       a: b('Reverse order of expected conversion to cash: prepaid expenses, inventory, receivables, short-term investments, cash.', 'Urutan terbalik dari perkiraan konversi ke kas: beban dibayar di muka, persediaan, piutang, investasi jangka pendek, kas.'),
+    },
+    {
+      q: b('What is the purpose of a reversing entry?', 'Apa tujuan ayat pembalik?'),
+      a: b('To simplify the recording of a subsequent transaction related to an accrued adjusting entry, by making the entry the exact opposite of the prior adjusting entry. It is optional and does not change reported amounts.', 'Untuk menyederhanakan pencatatan transaksi berikutnya yang terkait dengan ayat penyesuaian akrual, dengan membuat entri yang merupakan kebalikan persis dari ayat penyesuaian sebelumnya. Bersifat opsional dan tidak mengubah jumlah yang dilaporkan.'),
     },
   ],
 };
