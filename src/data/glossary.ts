@@ -128,12 +128,30 @@ export const glossary: GlossaryTerm[] = [
     ),
   },
   {
+    term: 'Contra revenue account',
+    id: 'Akun kontra pendapatan',
+    chapter: 5,
+    def: b(
+      'An account offset against a revenue account on the income statement, such as Sales Returns and Allowances or Sales Discounts; it has a normal debit balance.',
+      'Akun yang dikurangkan dari akun pendapatan pada laporan laba rugi, seperti Retur dan Potongan Penjualan atau Diskon Penjualan; saldo normalnya debit.'
+    ),
+  },
+  {
     term: 'Convergence',
     id: 'Konvergensi',
     chapter: 1,
     def: b(
       'The effort to reduce differences between IFRS and U.S. GAAP.',
       'Upaya mengurangi perbedaan antara IFRS dan U.S. GAAP.'
+    ),
+  },
+  {
+    term: 'Cost of goods sold',
+    id: 'Harga pokok penjualan',
+    chapter: 5,
+    def: b(
+      'The total cost of merchandise sold during the period, matched against the sales revenue it helped generate.',
+      'Total biaya barang dagangan yang terjual selama periode, dipasangkan dengan pendapatan penjualan yang dihasilkannya.'
     ),
   },
   {
@@ -245,6 +263,33 @@ export const glossary: GlossaryTerm[] = [
     ),
   },
   {
+    term: 'FOB destination',
+    id: 'FOB tujuan',
+    chapter: 5,
+    def: b(
+      'Freight terms meaning the seller places the goods free on board to the buyer’s place of business and therefore pays the freight.',
+      'Termin pengiriman yang berarti penjual menyerahkan barang sampai tempat usaha pembeli sehingga penjual membayar ongkos angkut.'
+    ),
+  },
+  {
+    term: 'FOB shipping point',
+    id: 'FOB titik pengiriman',
+    chapter: 5,
+    def: b(
+      'Freight terms meaning the seller places the goods free on board the carrier and therefore the buyer pays the freight.',
+      'Termin pengiriman yang berarti penjual menyerahkan barang di atas alat angkut sehingga pembeli membayar ongkos angkut.'
+    ),
+  },
+  {
+    term: 'Freight-out',
+    id: 'Beban angkut keluar',
+    chapter: 5,
+    def: b(
+      'An operating expense account debited by the seller for freight costs on outgoing merchandise (also called Delivery Expense).',
+      'Akun beban operasi yang didebit penjual untuk ongkos angkut barang keluar (juga disebut Beban Pengiriman).'
+    ),
+  },
+  {
     term: 'General journal',
     id: 'Jurnal umum',
     chapter: 2,
@@ -260,6 +305,15 @@ export const glossary: GlossaryTerm[] = [
     def: b(
       'The ledger containing all asset, liability, and equity accounts.',
       'Buku besar yang memuat semua akun aset, liabilitas, dan ekuitas.'
+    ),
+  },
+  {
+    term: 'Gross profit',
+    id: 'Laba bruto',
+    chapter: 5,
+    def: b(
+      'Sales revenue less cost of goods sold; the margin available to cover operating expenses and produce net income.',
+      'Pendapatan penjualan dikurangi harga pokok penjualan; marjin yang tersedia untuk menutup beban operasi dan menghasilkan laba bersih.'
     ),
   },
   {
@@ -299,6 +353,15 @@ export const glossary: GlossaryTerm[] = [
     ),
   },
   {
+    term: 'Inventory',
+    id: 'Persediaan',
+    chapter: 5,
+    def: b(
+      'The asset account for goods held for resale; under a perpetual system it is debited for purchases and credited for sales at cost.',
+      'Akun aset untuk barang yang dimiliki untuk dijual kembali; dalam sistem perpetual didebit saat pembelian dan dikredit saat penjualan sebesar biaya.'
+    ),
+  },
+  {
     term: 'Journalising',
     id: 'Penjurnalan',
     chapter: 2,
@@ -314,6 +377,15 @@ export const glossary: GlossaryTerm[] = [
     def: b(
       'Claims against assets — existing debts and obligations owed to creditors.',
       'Klaim atas aset — utang dan kewajiban yang ada kepada kreditor.'
+    ),
+  },
+  {
+    term: 'Merchandising company',
+    id: 'Perusahaan dagang',
+    chapter: 5,
+    def: b(
+      'A business that buys and sells merchandise rather than performing services; retailers sell to consumers and wholesalers sell to retailers.',
+      'Bisnis yang membeli dan menjual barang dagangan, bukan memberikan jasa; pengecer menjual ke konsumen dan pedagang grosir menjual ke pengecer.'
     ),
   },
   {
@@ -335,6 +407,15 @@ export const glossary: GlossaryTerm[] = [
     ),
   },
   {
+    term: 'Net sales',
+    id: 'Penjualan neto',
+    chapter: 5,
+    def: b(
+      'Sales revenue less sales returns and allowances and sales discounts.',
+      'Pendapatan penjualan dikurangi retur dan potongan penjualan serta diskon penjualan.'
+    ),
+  },
+  {
     term: 'Normal balance',
     id: 'Saldo normal',
     chapter: 2,
@@ -353,12 +434,39 @@ export const glossary: GlossaryTerm[] = [
     ),
   },
   {
+    term: 'Operating expenses',
+    id: 'Beban operasi',
+    chapter: 5,
+    def: b(
+      'Expenses of running the business other than cost of goods sold, such as salaries, utilities, advertising, depreciation, and freight-out.',
+      'Beban menjalankan usaha selain harga pokok penjualan, seperti gaji, utilitas, iklan, penyusutan, dan beban angkut keluar.'
+    ),
+  },
+  {
+    term: 'Periodic inventory system',
+    id: 'Sistem persediaan periodik',
+    chapter: 5,
+    def: b(
+      'An inventory system in which cost of goods sold is determined only at the end of the period, using a physical count; no detailed records are kept during the period.',
+      'Sistem persediaan yang menentukan harga pokok penjualan hanya pada akhir periode melalui perhitungan fisik; tidak ada catatan rinci selama periode.'
+    ),
+  },
+  {
     term: 'Permanent accounts',
     id: 'Akun permanen',
     chapter: 4,
     def: b(
       'Statement of financial position accounts — assets, liabilities, and equity — whose balances carry forward to the next period.',
       'Akun laporan posisi keuangan — aset, liabilitas, dan ekuitas — yang saldonya berlanjut ke periode berikutnya.'
+    ),
+  },
+  {
+    term: 'Perpetual inventory system',
+    id: 'Sistem persediaan perpetual',
+    chapter: 5,
+    def: b(
+      'An inventory system that keeps detailed records of the cost of each purchase and sale and determines cost of goods sold at the time of each sale.',
+      'Sistem persediaan yang menyimpan catatan rinci biaya setiap pembelian dan penjualan serta menentukan harga pokok penjualan pada saat setiap penjualan.'
     ),
   },
   {
@@ -389,12 +497,48 @@ export const glossary: GlossaryTerm[] = [
     ),
   },
   {
+    term: 'Purchase allowance',
+    id: 'Potongan pembelian',
+    chapter: 5,
+    def: b(
+      'A deduction from the purchase price granted by the seller so the buyer will keep goods that are damaged, defective, or not as ordered; the buyer debits Accounts Payable and credits Inventory.',
+      'Potongan harga dari penjual agar pembeli tetap menyimpan barang yang rusak, cacat, atau tidak sesuai pesanan; pembeli mendebit Utang Usaha dan mengkredit Persediaan.'
+    ),
+  },
+  {
+    term: 'Purchase discount',
+    id: 'Diskon pembelian',
+    chapter: 5,
+    def: b(
+      'A cash discount offered to the buyer for prompt payment, such as 2/10, n/30; the buyer credits Inventory for the discount taken.',
+      'Diskon tunai yang ditawarkan kepada pembeli untuk pembayaran cepat, seperti 2/10, n/30; pembeli mengkredit Persediaan sebesar diskon yang diambil.'
+    ),
+  },
+  {
+    term: 'Purchase return',
+    id: 'Retur pembelian',
+    chapter: 5,
+    def: b(
+      'Goods returned by the buyer to the seller for credit or refund; the buyer debits Accounts Payable and credits Inventory.',
+      'Barang yang dikembalikan pembeli kepada penjual untuk kredit atau pengembalian uang; pembeli mendebit Utang Usaha dan mengkredit Persediaan.'
+    ),
+  },
+  {
     term: 'Relevance and faithful representation',
     id: 'Relevansi dan penyajian jujur',
     chapter: 1,
     def: b(
       'The two primary qualities that make accounting information useful: it can make a difference in a decision, and it matches what really happened.',
       'Dua kualitas utama yang membuat informasi akuntansi berguna: dapat memengaruhi keputusan, dan sesuai dengan kenyataan.'
+    ),
+  },
+  {
+    term: 'Retailer',
+    id: 'Pengecer',
+    chapter: 5,
+    def: b(
+      'A merchandising company that sells directly to consumers.',
+      'Perusahaan dagang yang menjual langsung kepada konsumen.'
     ),
   },
   {
@@ -422,6 +566,33 @@ export const glossary: GlossaryTerm[] = [
     def: b(
       'An optional entry at the start of the next period that is the exact opposite of a prior adjusting entry.',
       'Ayat opsional di awal periode berikutnya yang merupakan kebalikan persis dari ayat penyesuaian sebelumnya.'
+    ),
+  },
+  {
+    term: 'Sales discounts',
+    id: 'Diskon penjualan',
+    chapter: 5,
+    def: b(
+      'A contra revenue account debited by the seller for cash discounts taken by customers for prompt payment.',
+      'Akun kontra pendapatan yang didebit penjual atas diskon tunai yang diambil pelanggan karena membayar cepat.'
+    ),
+  },
+  {
+    term: 'Sales returns and allowances',
+    id: 'Retur dan potongan penjualan',
+    chapter: 5,
+    def: b(
+      'A contra revenue account debited by the seller when goods are returned or a price allowance is granted; it is offset against Sales Revenue.',
+      'Akun kontra pendapatan yang didebit penjual saat barang diretur atau potongan harga diberikan; dikurangkan dari Pendapatan Penjualan.'
+    ),
+  },
+  {
+    term: 'Sales revenue',
+    id: 'Pendapatan penjualan',
+    chapter: 5,
+    def: b(
+      'The primary revenue of a merchandising company, recognised when goods transfer to the buyer and the performance obligation is satisfied.',
+      'Pendapatan utama perusahaan dagang, diakui saat barang berpindah ke pembeli dan kewajiban pelaksanaan terpenuhi.'
     ),
   },
   {
@@ -485,6 +656,15 @@ export const glossary: GlossaryTerm[] = [
     def: b(
       'Cash received before the service is performed or the goods delivered; reported as a liability until earned.',
       'Kas yang diterima sebelum jasa dikerjakan atau barang diserahkan; dilaporkan sebagai liabilitas sampai menjadi pendapatan.'
+    ),
+  },
+  {
+    term: 'Wholesaler',
+    id: 'Pedagang grosir',
+    chapter: 5,
+    def: b(
+      'A merchandising company that sells to retailers rather than directly to consumers.',
+      'Perusahaan dagang yang menjual kepada pengecer, bukan langsung kepada konsumen.'
     ),
   },
   {

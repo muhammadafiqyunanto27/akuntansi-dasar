@@ -1,15 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
 import BiText from '../components/Bi.astro';
+import BlockRenderer from '../components/BlockRenderer.astro';
 import { exercisesByChapter } from '../data/exercises';
 import { b } from '../data/types';
 
-const allExercises = exercisesByChapter.reduce(
-  (acc, chapter) =>
-    acc.concat(chapter.sections.flatMap((section) => section.items)),
-  []
+const totalExercises = exercisesByChapter.reduce(
+  (sum, chapter) =>
+    sum + chapter.sections.reduce((sectionSum, section) => sectionSum + section.items.length, 0),
+  0
 );
-const totalExercises = allExercises.length;
+const lastChapter = exercisesByChapter[exercisesByChapter.length - 1];
 ---
 <!DOCTYPE html>
 <html lang="id" data-lang="id">
@@ -17,19 +18,18 @@ const totalExercises = allExercises.length;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Latihan Soal & Jawaban</title>
-    <meta name="description" content="Kumpulan lengkap latihan soal Kieso Financial Accounting: IFRS Bab 1–4" />
+    <meta name="description" content="Kumpulan lengkap latihan soal Kieso Financial Accounting: IFRS Bab 1–5" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital@0;1&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body>
     <Base
       title="Latihan Soal & Jawaban"
-      description="Kumpulan lengkap latihan soal Kieso Financial Accounting: IFRS Bab 1–4 dengan jawaban dan penjelasan lengkap untuk persiapan UTS."
+      description="Kumpulan lengkap latihan soal Kieso Financial Accounting: IFRS Bab 1–5 dengan jawaban dan penjelasan lengkap untuk persiapan UTS."
       active="latihan"
     >
       <header class="page-hero">
@@ -44,11 +44,11 @@ const totalExercises = allExercises.length;
           </h1>
           <p>
             <span class="bi-id">
-              Semua <strong>Brief Exercises</strong>, <strong>DO IT! Exercises</strong>, dan <strong>Exercises</strong> dari Bab 1–4
+              Semua <strong>Brief Exercises</strong>, <strong>DO IT! Exercises</strong>, dan <strong>Exercises</strong> dari Bab 1–5
               Kieso <em>Financial Accounting: IFRS</em> edisi 3 — dilengkapi jawaban dan penjelasan langkah demi langkah.
             </span>
             <span class="bi-en">
-              All <strong>Brief Exercises</strong>, <strong>DO IT! Exercises</strong>, and <strong>Exercises</strong> from Chapters 1–4
+              All <strong>Brief Exercises</strong>, <strong>DO IT! Exercises</strong>, and <strong>Exercises</strong> from Chapters 1–5
               of Kieso <em>Financial Accounting: IFRS</em> 3rd edition — with answers and step-by-step explanations.
             </span>
           </p>
@@ -118,7 +118,7 @@ const totalExercises = allExercises.length;
                   <BiText value={section.title} />
                 </h3>
 
-                {section.items.map((item, index) => (
+                {section.items.map((item) => (
                   <details class="exercise-item" style="border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); margin-bottom: var(--space-4); overflow: hidden">
                     <summary
                       style="
@@ -262,6 +262,16 @@ const totalExercises = allExercises.length;
                           </div>
                         ))}
 
+                        {item.parts.map((part) => (
+                          'blocks' in part && part.blocks
+                            ? part.blocks.map((block) => (
+                                <div style="margin-top: var(--space-4); margin-bottom: var(--space-4);">
+                                  <BlockRenderer block={block as any} />
+                                </div>
+                              ))
+                            : null
+                        ))}
+
                         <div
                           style="
                             margin-top: var(--space-4);
@@ -319,7 +329,7 @@ const totalExercises = allExercises.length;
                   <small>Chapter 1</small>
                 </a>
                 <a
-                  href="#chapter-4"
+                  href={`#chapter-${lastChapter.chapter}`}
                   class="pager-next"
                   style="
                     border: 1px solid var(--border-strong);
@@ -335,7 +345,7 @@ const totalExercises = allExercises.length;
                     min-width: 48%
                   "
                 >
-                  <small>Chapter 4</small>
+                  <small>Chapter {lastChapter.chapter}</small>
                   <span>Bottom</span>
                 </a>
               </div>
@@ -359,6 +369,9 @@ const totalExercises = allExercises.length;
             </li>
             <li>
               <BiText value={b('Paham <strong>entri penutupan</strong> 4 langkah dan perbedaan akun sementara vs permanen (Bab 4).', 'Understand the <strong>four closing entries</strong> and temporary vs permanent accounts (Ch 4).')} />
+            </li>
+            <li>
+              <BiText value={b('Kuasi <strong>pembelian dan penjualan barang dagang</strong>: Persediaan, HPP, retur, diskon, dan ongkos angkut (Bab 5).', 'Master <strong>purchases and sales of merchandise</strong>: Inventory, COGS, returns, discounts, and freight (Ch 5).')} />
             </li>
             <li>
               <BiText value={b('Bisa buat <strong>neraca saldo</strong>, <strong>laporan laba rugi</strong>, <strong>laba ditahan</strong>, dan <strong>posisi keuangan</strong> dari TB disesuaikan.', 'Be able to prepare <strong>trial balance</strong>, <strong>income statement</strong>, <strong>retained earnings</strong>, and <strong>financial position</strong> from adjusted TB.')} />

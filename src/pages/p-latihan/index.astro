@@ -30,7 +30,6 @@ const totalPEXercises = allPEXercises.length;
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital@0;1&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body>
     <Base
@@ -74,10 +73,8 @@ const totalPEXercises = allPEXercises.length;
           <>
             <div style="margin-bottom: var(--space-6); padding: var(--space-4); background: var(--surface-2); border-radius: var(--r-md); border: 1px solid var(--border);">
               <p style="margin: 0; font-size: var(--fs-sm);">
-                <BiText value={b(
-                  'Total {0} soal P-type & BYP dari Bab 1–4. Klik soal untuk melihat jawaban lengkap.',
-                  'Total {0} P-type & BYP exercises from Chapters 1–4. Click an exercise to view complete solution.'
-                )} />
+                <span class="bi-id">Total {totalPEXercises} soal P-type &amp; BYP dari Bab 1–4. Klik soal untuk melihat jawaban lengkap.</span>
+                <span class="bi-en">Total {totalPEXercises} P-type &amp; BYP exercises from Chapters 1–4. Click an exercise to view the complete solution.</span>
               </p>
             </div>
 
@@ -98,7 +95,9 @@ const totalPEXercises = allPEXercises.length;
                       {exercise.id}
                     </span>
                     <div style="flex: 1; min-width: 0;">
-                      <BiText value={exercise.title} style="font-weight: 600; font-size: 14px; line-height: 1.4; margin-bottom: var(--space-1);" />
+                      <div style="font-weight: 600; font-size: 14px; line-height: 1.4; margin-bottom: var(--space-1);">
+                        <BiText value={exercise.title} />
+                      </div>
                       <p style="font-size: 12px; color: var(--muted); margin: 0; line-height: 1.4;">
                         <BiText value={exercise.question} />
                       </p>

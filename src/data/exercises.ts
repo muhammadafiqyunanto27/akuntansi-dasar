@@ -841,5 +841,178 @@ export const exercisesByChapter = [
         ]
       }
     ]
+  },
+  {
+    chapter: 5,
+    title: b('Chapter 5: Accounting for Merchandising Operations', 'Bab 5: Akuntansi untuk Operasi Perdagangan'),
+    sections: [
+      {
+        id: 'do-it-exercises',
+        title: b('DO IT! Exercises', 'Latihan DO IT!'),
+        items: [
+          {
+            id: 'DOIT5-1',
+            title: b('DO IT! 5-1: Merchandising Operations and Inventory Systems', 'DO IT! 5-1: Operasi Perdagangan dan Sistem Persediaan'),
+            question: b(
+              'Indicate whether each statement is true or false.',
+              'Tentukan apakah setiap pernyataan berikut benar atau salah.'
+            ),
+            parts: [
+              {
+                label: '1',
+                given: b(
+                  'The primary source of revenue for a merchandising company results from performing services for customers.',
+                  'Sumber pendapatan utama perusahaan dagang berasal dari pemberian jasa kepada pelanggan.'
+                ),
+                answer: b(
+                  'False. That is the primary source of revenue for a service company; a merchandiser earns revenue from selling merchandise.',
+                  'Salah. Itu sumber pendapatan utama perusahaan jasa; perusahaan dagang memperoleh pendapatan dari penjualan barang.'
+                )
+              },
+              {
+                label: '2',
+                given: b(
+                  'The operating cycle of a service company is usually shorter than that of a merchandising company.',
+                  'Siklus operasi perusahaan jasa biasanya lebih pendek daripada perusahaan dagang.'
+                ),
+                answer: b(
+                  'True. Buying and selling inventory lengthens the merchandiser’s cycle.',
+                  'Benar. Membeli dan menjual persediaan memanjangkan siklus perusahaan dagang.'
+                )
+              },
+              {
+                label: '3',
+                given: b(
+                  'Sales revenue less cost of goods sold equals gross profit.',
+                  'Pendapatan penjualan dikurangi harga pokok penjualan sama dengan laba bruto.'
+                ),
+                answer: b('True.', 'Benar.')
+              },
+              {
+                label: '4',
+                given: b(
+                  'Ending inventory plus the cost of goods purchased equals cost of goods available for sale.',
+                  'Persediaan akhir ditambah biaya barang yang dibeli sama dengan biaya barang tersedia untuk dijual.'
+                ),
+                answer: b(
+                  'False. Beginning inventory (not ending inventory) plus cost of goods purchased equals cost of goods available for sale.',
+                  'Salah. Persediaan awal (bukan persediaan akhir) ditambah biaya barang yang dibeli sama dengan biaya barang tersedia untuk dijual.'
+                )
+              }
+            ],
+            explanation: b(
+              'A merchandiser earns sales revenue and has two expense categories: cost of goods sold and operating expenses. Gross profit is sales revenue minus cost of goods sold. Cost of goods available for sale = beginning inventory + cost of goods purchased; the goods not sold become ending inventory.',
+              'Perusahaan dagang memperoleh pendapatan penjualan dan memiliki dua kategori beban: harga pokok penjualan dan beban operasi. Laba bruto adalah pendapatan penjualan dikurangi harga pokok penjualan. Biaya barang tersedia untuk dijual = persediaan awal + biaya barang dibeli; barang yang tidak terjual menjadi persediaan akhir.'
+            )
+          },
+          {
+            id: 'DOIT5-2',
+            title: b('DO IT! 5-2: Purchase Transactions', 'DO IT! 5-2: Transaksi Pembelian'),
+            question: b(
+              'On September 5, Zhu Company buys merchandise on account from Gao Company. The selling price of the goods is ¥15,000, and the cost to Gao Company was ¥8,000. On September 8, Zhu returns defective goods with a selling price of ¥2,000. Record the transactions on the books of Zhu Company.',
+              'Pada 5 September, Perusahaan Zhu membeli barang secara kredit dari Perusahaan Gao. Harga jual barang ¥15.000, dan biaya bagi Perusahaan Gao ¥8.000. Pada 8 September, Zhu mengembalikan barang cacat dengan harga jual ¥2.000. Catat transaksi tersebut pada buku Perusahaan Zhu.'
+            ),
+            parts: [
+              {
+                label: '',
+                given: b(
+                  'Buyer’s books: purchase ¥15,000 on account, then return ¥2,000 of defective goods.',
+                  'Buku pembeli: pembelian kredit ¥15.000, lalu retur barang cacat ¥2.000.'
+                ),
+                answer: b(
+                  'Sept. 5: Inventory 15,000 / Accounts Payable 15,000. Sept. 8: Accounts Payable 2,000 / Inventory 2,000.',
+                  '5 Sept: Persediaan 15.000 / Utang Usaha 15.000. 8 Sept: Utang Usaha 2.000 / Persediaan 2.000.'
+                ),
+                blocks: [
+                  {
+                    type: 'table',
+                    caption: b('Zhu Company — buyer’s journal', 'Perusahaan Zhu — jurnal pembeli'),
+                    head: [b('Date', 'Tanggal'), b('Account', 'Akun'), b('Debit', 'Debit'), b('Credit', 'Kredit')],
+                    align: ['left', 'left', 'right', 'right'],
+                    rows: [
+                      ['Sept. 5', b('Inventory', 'Persediaan'), '15,000', ''],
+                      ['', b('Accounts Payable', 'Utang Usaha'), '', '15,000'],
+                      ['', b('(To record goods purchased on account)', '(Mencatat pembelian barang secara kredit)'), '', ''],
+                      ['Sept. 8', b('Accounts Payable', 'Utang Usaha'), '2,000', ''],
+                      ['', b('Inventory', 'Persediaan'), '', '2,000'],
+                      ['', b('(To record return of defective goods)', '(Mencatat retur barang cacat)'), '', ''],
+                    ]
+                  },
+                  {
+                    type: 'callout',
+                    title: b('Why ¥8,000 does not appear', 'Mengapa ¥8.000 tidak muncul'),
+                    text: b(
+                      'The buyer records goods at cost to the buyer — the ¥15,000 invoice price. Gao Company’s ¥8,000 cost is relevant only on the seller’s books.',
+                      'Pembeli mencatat barang sebesar biaya bagi pembeli — harga faktur ¥15.000. Biaya ¥8.000 Perusahaan Gao hanya relevan pada buku penjual.'
+                    ),
+                    tone: 'tip'
+                  }
+                ]
+              }
+            ],
+            explanation: b(
+              'Under a perpetual system the buyer debits Inventory, not Purchases. Returning goods reduces the asset: debit Accounts Payable and credit Inventory. The seller’s cost is not recorded by the buyer.',
+              'Dalam sistem perpetual pembeli mendebit Persediaan, bukan akun Pembelian. Retur barang mengurangi aset: debit Utang Usaha dan kredit Persediaan. Biaya penjual tidak dicatat oleh pembeli.'
+            )
+          },
+          {
+            id: 'DOIT5-3',
+            title: b('DO IT! 5-3: Sales Transactions', 'DO IT! 5-3: Transaksi Penjualan'),
+            question: b(
+              'On September 5, Zhu Company buys merchandise on account from Gao Company. The selling price of the goods is ¥15,000, and the cost to Gao Company was ¥8,000. On September 8, Zhu returns defective goods with a selling price of ¥2,000 and a fair value of ¥300. Record the transactions on the books of Gao Company.',
+              'Pada 5 September, Perusahaan Zhu membeli barang secara kredit dari Perusahaan Gao. Harga jual barang ¥15.000, dan biaya bagi Perusahaan Gao ¥8.000. Pada 8 September, Zhu mengembalikan barang cacat dengan harga jual ¥2.000 dan nilai wajar ¥300. Catat transaksi tersebut pada buku Perusahaan Gao.'
+            ),
+            parts: [
+              {
+                label: '',
+                given: b(
+                  'Seller’s books: credit sale ¥15,000, cost ¥8,000; return of defective goods, selling price ¥2,000, fair value ¥300.',
+                  'Buku penjual: penjualan kredit ¥15.000, biaya ¥8.000; retur barang cacat, harga jual ¥2.000, nilai wajar ¥300.'
+                ),
+                answer: b(
+                  'Sept. 5: A/R 15,000 / Sales Revenue 15,000; COGS 8,000 / Inventory 8,000. Sept. 8: Sales Returns and Allowances 2,000 / A/R 2,000; Inventory 300 / COGS 300.',
+                  '5 Sept: Piutang Usaha 15.000 / Pendapatan Penjualan 15.000; HPP 8.000 / Persediaan 8.000. 8 Sept: Retur dan Potongan Penjualan 2.000 / Piutang Usaha 2.000; Persediaan 300 / HPP 300.'
+                ),
+                blocks: [
+                  {
+                    type: 'table',
+                    caption: b('Gao Company — seller’s journal', 'Perusahaan Gao — jurnal penjual'),
+                    head: [b('Date', 'Tanggal'), b('Account', 'Akun'), b('Debit', 'Debit'), b('Credit', 'Kredit')],
+                    align: ['left', 'left', 'right', 'right'],
+                    rows: [
+                      ['Sept. 5', b('Accounts Receivable', 'Piutang Usaha'), '15,000', ''],
+                      ['', b('Sales Revenue', 'Pendapatan Penjualan'), '', '15,000'],
+                      ['', b('(To record credit sale)', '(Mencatat penjualan kredit)'), '', ''],
+                      ['Sept. 5', b('Cost of Goods Sold', 'Harga Pokok Penjualan'), '8,000', ''],
+                      ['', b('Inventory', 'Persediaan'), '', '8,000'],
+                      ['', b('(To record cost of goods sold)', '(Mencatat harga pokok penjualan)'), '', ''],
+                      ['Sept. 8', b('Sales Returns and Allowances', 'Retur dan Potongan Penjualan'), '2,000', ''],
+                      ['', b('Accounts Receivable', 'Piutang Usaha'), '', '2,000'],
+                      ['', b('(To record credit granted for returned goods)', '(Mencatat kredit atas barang retur)'), '', ''],
+                      ['Sept. 8', b('Inventory', 'Persediaan'), '300', ''],
+                      ['', b('Cost of Goods Sold', 'Harga Pokok Penjualan'), '', '300'],
+                      ['', b('(To record fair value of defective goods returned)', '(Mencatat nilai wajar barang cacat yang diretur)'), '', ''],
+                    ]
+                  },
+                  {
+                    type: 'callout',
+                    title: b('Fair value, not cost', 'Nilai wajar, bukan biaya'),
+                    text: b(
+                      'Goods returned in good condition go back to Inventory at cost. Defective goods are recorded at fair value — here ¥300, not the ¥8,000 original cost — and Cost of Goods Sold is reduced by the same amount.',
+                      'Barang retur dalam kondisi baik kembali ke Persediaan sebesar biaya. Barang cacat dicatat sebesar nilai wajar — di sini ¥300, bukan biaya awal ¥8.000 — dan Harga Pokok Penjualan dikurangi dengan jumlah yang sama.'
+                    ),
+                    tone: 'note'
+                  }
+                ]
+              }
+            ],
+            explanation: b(
+              'Every sale needs two entries: the selling price (debit Accounts Receivable or Cash, credit Sales Revenue) and the cost (debit Cost of Goods Sold, credit Inventory). Returns are recorded in the contra revenue account Sales Returns and Allowances at selling price, while Inventory and Cost of Goods Sold are adjusted at cost — or at fair value if the goods are defective.',
+              'Setiap penjualan memerlukan dua ayat: harga jual (debit Piutang Usaha atau Kas, kredit Pendapatan Penjualan) dan biaya (debit Harga Pokok Penjualan, kredit Persediaan). Retur dicatat pada akun kontra pendapatan Retur dan Potongan Penjualan sebesar harga jual, sementara Persediaan dan Harga Pokok Penjualan disesuaikan sebesar biaya — atau nilai wajar bila barang cacat.'
+            )
+          }
+        ]
+      }
+    ]
   }
 ];

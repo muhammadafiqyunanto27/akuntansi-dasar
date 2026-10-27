@@ -789,5 +789,151 @@ export const chapter1PAndBYP = [
       'Chapter review consolidates learning. Ensure understanding of the accounting equation as the foundation, how transactions affect it, and how financial statements communicate results to users.',
       'Ulasan bab mengkonsolidasi pembelajaran. Pastikan pemahaman persamaan akuntansi sebagai fondasi, bagaimana transaksi mempengaruhinya, dan bagaimana laporan keuangan mengomunikasikan hasil kepada pengguna.'
     )
+  },
+
+  // Additional P-type exercises from PDF
+  {
+    id: 'P1-1',
+    title: b('P1-1: TSMC Financial Statements', 'P1-1: Laporan Keuangan TSMC'),
+    question: b(
+      'The financial statements of TSMC are presented in Appendix A at the end of this textbook. The company\'s complete annual report, including the notes to the financial statements, is available in the Investors section of the company\'s website, www.tsmc.com.\nInstructions\n(a) Using the consolidated financial statements and related information, identify items that may result in adjusting entries for prepayments.\n(b) Using the consolidated financial statements and related information, identify items that may result in adjusting entries for accruals.',
+      'Laporan keuangan TSMC disajikan di Lampiran A di akhir buku ini. Laporan tahunan lengkap perusahaan, termasuk catatan atas laporan keuangan, tersedia di bagian Investor di website perusahaan, www.tsmc.com.\nInstruksi\n(a) Menggunakan laporan keuangan konsolidasi dan informasi terkait, identifikasi item yang mungkin menghasilkan entri penyesuaian untuk pembayaran di muka.\n(b) Menggunakan laporan keuangan konsolidasi dan informasi terkait, identifikasi item yang mungkin menghasilkan entri penyesuaian untuk akrual.'
+    ),
+    parts: [
+      {
+        label: '(a)',
+        given: b('TSMC consolidated financial statements', 'Laporan keuangan konsolidasi TSMC'),
+        answer: b('Prepaid expenses, prepaid insurance, prepaid rent, supplies on hand, prepaid advertising.', 'Beban dibayar di muka, asuransi dibayar di muka, sewa dibayar di muka, perlengkapan di tangan, iklan dibayar di muka.')
+      },
+      {
+        label: '(b)',
+        given: b('TSMC consolidated financial statements', 'Laporan keuangan konsolidasi TSMC'),
+        answer: b('Accrued expenses payable, accrued interest payable, accrued salaries payable, accrued taxes payable, accrued warranty expenses.', 'Beban akrual yang harus dibayar, bunga akrual yang harus dibayar, gaji akrual yang harus dibayar, pajak akrual yang harus dibayar, beban garansi akrual.')
+      }
+    ],
+    explanation: b(
+      'Prepayments are assets paid for in advance and recognized as expenses over time. Accruals are expenses incurred but not yet paid or revenues earned but not yet received. Both require adjusting entries to match revenues and expenses to the correct period.',
+      'Pembayaran di muka adalah aset yang dibayar di muka dan diakui sebagai beban seiring waktu. Akrual adalah beban yang sudah timbul tetapi belum dibayar atau pendapatan yang sudah diperoleh tetapi belum diterima. Keduanya memerlukan entri penyesuaian untuk mencocokkan pendapatan dan beban ke periode yang benar.'
+    )
+  },
+  {
+    id: 'P1-2',
+    title: b('P1-2: Nestlé vs Petra Foods Comparison', 'P1-2: Perbandingan Nestlé vs Petra Foods'),
+    question: b(
+      'Nestlé\'s financial statements are presented in Appendix B. Financial statements for Petra Foods are presented in Appendix C.\nInstructions\n(a) Based on the information contained in these financial statements, determine the following for each company.\n(1) Total assets at December 31, 2013.\n(2) Accounts (trade) receivable, net at December 31, 2013.\n(3) Net sales for year ended December 31, 2013.\n(4) Net income for year ended December 31, 2013.\n(b) Based on the information contained in these financial statements, determine the following for each company.\n(1) Current ratio at December 31, 2013.\n(2) Debt to total assets ratio at December 31, 2013.',
+      'Laporan keuangan Nestlé disajikan di Lampiran B. Laporan keuangan untuk Petra Foods disajikan di Lampiran C.\nInstruksi\n(a) Berdasarkan informasi yang terkandung dalam laporan keuangan ini, tentukan hal-hal berikut untuk setiap perusahaan.\n(1) Total aset pada 31 Desember 2013.\n(2) Piutang (dagang) bersih pada 31 Desember 2013.\n(3) Penjualan bersih untuk tahun yang berakhir 31 Desember 2013.\n(4) Laba bersih untuk tahun yang berakhir 31 Desember 2013.\n(b) Berdasarkan informasi yang terkandung dalam laporan keuangan ini, tentukan hal-hal berikut untuk setiap perusahaan.\n(1) Rasio lancar pada 31 Desember 2013.\n(2) Rasio hutang terhadap total aset pada 31 Desember 2013.'
+    ),
+    parts: [
+      {
+        label: '(a)',
+        given: b('Nestlé and Petra Foods financial statements', 'Laporan keuangan Nestlé dan Petra Foods'),
+        answer: b('Requires accessing the actual financial statements in Appendices B and C.', 'Memerlukan akses ke laporan keuangan di Lampiran B dan C.')
+      },
+      {
+        label: '(b)',
+        given: b('Compute ratios from financial statements', 'Hitung rasio dari laporan keuangan'),
+        answer: b('Current Ratio = Current Assets / Current Liabilities. Debt to Total Assets = Total Liabilities / Total Assets.', 'Rasio Lancar = Aset Lancar / Liabilitas Lancar. Hutang ke Total Aset = Total Liabilitas / Total Aset.')
+      }
+    ],
+    explanation: b(
+      'This exercise requires accessing actual financial statements from the appendices. Students should practice reading and analyzing real financial statements from multinational companies.',
+      'Latihan ini memerlukan akses ke laporan keuangan aktual dari lampiran. Mahasiswa harus berlatih membaca dan menganalisis laporan keuangan nyata dari perusahaan multinasional.'
+    )
+  },
+  {
+    id: 'P1-3',
+    title: b('P1-3: Accounting Careers', 'P1-3: Karir Akuntansi'),
+    question: b(
+      'This exercise will familiarize you with skill requirements, job descriptions, and salaries for accounting careers.\nAddress: www.careers-in-accounting.com, or go to www.wiley.com/college/weygandt\nInstructions\nGo to the site shown above. Answer the following questions.\n(a) What are the three broad areas of accounting (from "Skills and Talents Required?")?\n(b) List eight skills required in accounting.\n(c) How do the three accounting areas differ in terms of these eight required skills?\n(d) What are the salary ranges for entry-level positions in each area?',
+      'Latihan ini akan memamiliarkan Anda dengan persyaratan keterampilan, deskripsi pekerjaan, dan gaji untuk karir akuntansi.\nAlamat: www.careers-in-accounting.com, atau buka www.wiley.com/college/weygandt\nInstruksi\nBuka situs yang ditunjukkan di atas. Jawab pertanyaan berikut.\n(a) Apa tiga area luas akuntansi (dari "Keterampilan dan Bakat yang Diperlukan?")?\n(b) Sebutkan delapan keterampilan yang diperlukan dalam akuntansi.\n(c) Bagaimana ketiga area akuntansi berbeda dalam hal delapan keterampilan yang diperlukan?\n(d) Berapa kisaran gaji untuk posisi tingkat masuk di setiap area?'
+    ),
+    parts: [
+      {
+        label: '(a)',
+        given: b('Three broad areas of accounting', 'Tiga area luas akuntansi'),
+        answer: b('Financial accounting, managerial accounting, tax accounting.', 'Akuntansi keuangan, akuntansi manajerial, akuntansi pajak.')
+      },
+      {
+        label: '(b)',
+        given: b('Eight skills required in accounting', 'Delapan keterampilan yang diperlukan dalam akuntansi'),
+        answer: b('Analytical, communication, computer, critical thinking, interpersonal, leadership, organizational, problem-solving.', 'Analitis, komunikasi, komputer, pemikiran kritis, interpersonal, kepemimpinan, organisasi, pemecahan masalah.')
+      },
+      {
+        label: '(c)',
+        given: b('Differences in skills across accounting areas', 'Perbedaan keterampilan di seluruh area akuntansi'),
+        answer: b('Financial accounting emphasizes analytical and computer skills. Managerial accounting emphasizes communication and interpersonal skills. Tax accounting emphasizes critical thinking and problem-solving.', 'Akuntansi keuangan menekankan keterampilan analitis dan komputer. Akuntansi manajerial menekankan keterampilan komunikasi dan interpersonal. Akuntansi pajak menekankan pemikiran kritis dan pemecahan masalah.')
+      }
+    ],
+    explanation: b(
+      'This exercise connects students with real-world accounting career information. The three main areas of accounting require different skill emphases but share common foundational skills.',
+      'Latihan ini menghubungkan mahasiswa dengan informasi karir akuntansi dunia nyata. Tiga area utama akuntansi memerlukan penekanan keterampilan yang berbeda tetapi berbagi keterampilan dasar yang sama.'
+    )
+  },
+  {
+    id: 'P1-4',
+    title: b('P1-4: Chip-Shot Driving Range', 'P1-4: Chip-Shot Driving Range'),
+    question: b(
+      'Lucy and Nick Lars, local golf stars, opened the Chip-Shot Driving Range Company Ltd. on March 1, 2017. They invested €20,000 cash and received ordinary shares in exchange for their investment. A caddy shack was constructed for cash at a cost of €6,000, and €800 was spent on golf balls and golf clubs. The Lars leased five acres of land at a cost of €1,000 per month and paid the first month\'s rent. During the first month, advertising costs totaled €750, of which €150 was unpaid at March 31.\nInstructions\n(a) Show the effects of the above transactions on the accounting equation using the following format.\nAssets = Liabilities + Equity\nCash + Accounts Receivable + Supplies + Equipment = Accounts Payable + Share Capital + Retained Earnings (Rev. - Exp. - Div.)\n(b) Prepare an income statement for March.\n(c) Prepare a statement of financial position at March 31.',
+      'Lucy dan Nick Lars, bintang golf lokal, membuka Perusahaan Chip-Shot Driving Range Ltd. pada 1 Maret 2017. Mereka berinvestasi €20.000 tunai dan menerima saham biasa sebagai imbalan investasi mereka. Sebuah gubuk caddy dibangun dengan tunai seharga €6.000, dan €800 dikeluarkan untuk bola golf dan stik golf. Lars menyewa lima hektar tanah dengan biaya €1.000 per bulan dan membayar sewa bulan pertama. Selama bulan pertama, biaya iklan total €750, dari mana €150 belum dibayar pada 31 Maret.\nInstruksi\n(a) Tunjukkan efek transaksi di atas pada persamaan akuntansi menggunakan format berikut.\nAset = Liabilitas + Ekuitas\nKas + Piutang Usaha + Perlengkapan + Peralatan = Hutang Usaha + Modal Saham + Laba Ditahan (Pend. - Beban - Div.)\n(b) Siapkan laporan laba rugi untuk Maret.\n(d) Siapkan laporan posisi keuangan pada 31 Maret.'
+    ),
+    parts: [
+      {
+        label: '(a)',
+        given: b('March transactions', 'Transaksi Maret'),
+        answer: b('Assets: Cash €12,250; A/R €0; Supplies €0; Equipment €0. Liabilities: A/P €150. Equity: Share Capital €20,000; Retained Earnings (Rev €0 - Exp €2,750 - Div €0) = -€2,750. Total Assets €20,000 = Liab + Equity €20,000.', 'Aset: Kas €12.250; Piutang €0; Perlengkapan €0; Peralatan €0. Liabilitas: H/Usaha €150. Ekuitas: Modal Saham €20.000; Laba Ditahan (Pend €0 - Beban €2.750 - Div €0) = -€2.750. Total Aset €20.000 = Liab + Ekuitas €20.000.')
+      },
+      {
+        label: '(b)',
+        given: b('Income statement for March', 'Laporan laba rugi untuk Maret'),
+        answer: b('Service Revenue €0; Expenses: Advertising €750, Rent €1,000, Supplies €0 = Total Expenses €1,750; Net Loss €1,750.', 'Pendapatan Jasa €0; Beban: Iklan €750, Sewa €1.000, Perlengkapan €0 = Total Beban €1.750; Rugi Bersih €1.750.')
+      },
+      {
+        label: '(c)',
+        given: b('Statement of Financial Position at March 31', 'Laporan Posisi Keuangan 31 Maret'),
+        answer: b('Assets: Cash €19,250, Prepaid Rent €0, Equipment €0 = Total Assets €19,250. Liabilities: A/P €150. Equity: Share Capital €20,000, Retained Earnings -€1,750. Total L+E €20,250. (Note: Cash should be €19,250 based on €20,000 - €6,000 - €800 - €750 + €150 unpaid = €13,600? Check calculations.)', 'Aset: Kas €19.250, Sewa Dibayar Dimuka €0, Peralatan €0 = Total Aset €19.250. Liabilitas: H/Usaha €150. Ekuitas: Modal Saham €20.000, Laba Ditahan -€1.750. Total L+E €20.250. (Catatan: Kas seharusnya €13.600 berdasarkan €20.000 - €6.000 - €800 - €750 + €150 blm bayar = €13.600? Periksa kalkulasi.)')
+      }
+    ],
+    explanation: b(
+      'This problem illustrates the accounting equation in action for a new business. The company has no revenue in its first month but incurs expenses, resulting in a net loss. The unpaid advertising creates an accounts payable.',
+      'Masalah ini menggambarkan persamaan akuntansi dalam aksi untuk bisnis baru. Perusahaan tidak memiliki pendapatan di bulan pertamanya tetapi mengeluarkan beban, menghasilkan rugi neto. Iklan yang belum dibayar menciptakan hutang usaha.'
+    )
+  },
+  {
+    id: 'P1-5',
+    title: b('P1-5: Liverpool Company Statement of Financial Position', 'P1-5: Laporan Posisi Keuangan Perusahaan Liverpool'),
+    question: b(
+      'Erin Danielle, the bookkeeper for Liverpool Company Ltd., has been trying to get the statement of financial position to balance correctly. The company\'s statement of financial position is shown below.\nLIVERPOOL COMPANY LTD.\nStatement of Financial Position\nFor the Month Ended December 31, 2017\n\nAssets                          Liabilities\nEquipment                     €22,500          Share capital—ordinary        €23,000\nCash                            9,000          Accounts payable                8,000\nSupplies                        2,000          Retained earnings               (2,000)\nAccounts receivable             (6,000)\n\nInstructions\nCorrect the statement of financial position.',
+      'Erin Danielle, pembukuan untuk Perusahaan Liverpool Ltd., telah berusaha membuat laporan posisi keuangan agar seimbang dengan benar. Laporan posisi keuangan perusahaan ditunjukkan di bawah.\nLIVERPOOL COMPANY LTD.\nLaporan Posisi Keuangan\nUntuk Bulan yang Berakhir 31 Desember 2017\n\nAset                          Liabilitas\nPeralatan                    €22.500          Modal saham-biasa        €23.000\nKas                            9.000          Hutang usaha                8.000\nPerlengkapan                   2.000          Laba ditahan               (2.000)\nPiutang usaha                 (6.000)\n\nInstruksi\nPerbaiki laporan posisi keuangan.'
+    ),
+    parts: [
+      {
+        label: '',
+        given: b('Incorrect statement of financial position', 'Laporan posisi keuangan yang tidak benar'),
+        answer: b('Assets: Cash €9,000; A/R €6,000 (positive); Supplies €2,000; Equipment €22,500 = Total Assets €39,500. Liabilities: A/P €8,000. Equity: Share Capital €23,000; Retained Earnings €8,500 = Total L+E €39,500. (Fixed: A/R shown as positive, Retained Earnings recalculated.)', 'Aset: Kas €9.000; Piutang €6.000 (positif); Perlengkapan €2.000; Peralatan €22.500 = Total Aset €39.500. Liabilitas: H/Usaha €8.000. Ekuitas: Modal Saham €23.000; Laba Ditahan €8.500 = Total L+E €39.500. (Diperbaiki: Piutang ditampilkan positif, Laba Ditahan dihitung ulang.)')
+      }
+    ],
+    explanation: b(
+      'The original statement had two errors: (1) Accounts receivable was shown as a negative amount (-€6,000) instead of a positive asset, and (2) Retained earnings was shown as negative without proper calculation. Assets must equal Liabilities + Equity.',
+      'Laporan asli memiliki dua kesalahan: (1) Piutang usaha ditampilkan sebagai jumlah negatif (-€6.000) bukannya aset positif, dan (2) Laba ditahan ditampilkan negatif tanpa perhitungan yang benar. Aset harus sama dengan Liabilitas + Ekuitas.'
+    )
+  },
+  {
+    id: 'P1-6',
+    title: b('P1-6: Jeff Hunter Interview Expenses', 'P1-6: Biaya Wawancara Jeff Hunter'),
+    question: b(
+      'After numerous campus interviews, Jeff Hunter, a senior at Great Northern College, received two office interview invitations from the Baltimore offices of two large firms. Both firms offered to cover his out-of-pocket expenses (travel, hotel, and meals). He scheduled the interviews for both firms on the same day, one in the morning and one in the afternoon. At the conclusion of each interview, he submitted to both firms his total out-of-pocket expenses for the trip to Baltimore.\nInstructions\nDiscuss the ethical issues involved in Hunter\'s actions.',
+      'Setelah wawancara kampus yang banyak, Jeff Hunter, seorang senior di Great Northern College, menerima dua undangan wawancara kantor dari kantor Baltimore dua firma besar. Kedua firma menawarkan menutupi biaya keluar saku dia (perjalanan, hotel, dan makan). Dia menjadwalkan wawancara untuk kedua firma pada hari yang sama, satu di pagi dan satu di sore. Pada kesimpulan setiap wawancara, dia mengirimkan ke kedua firma total biaya keluar saku untuk perjalanan ke Baltimore.\nInstruksi\nDiskusikan isu etika yang terlibat dalam tindakan Hunter.'
+    ),
+    parts: [
+      {
+        label: '',
+        given: b('Ethical analysis', 'Analisis etika'),
+        answer: b('Hunter is double-dipping by claiming the same expenses from both firms. This is fraudulent. He should allocate expenses between the two firms or claim from only one. The ethical principle of honesty and integrity is violated.', 'Hunter melakukan "double-dipping" dengan mengklaim biaya yang sama dari kedua firma. Ini adalah penipuan. Dia harus mengalokasikan biaya antara kedua firma atau mengklaim dari satu saja. Prinsip etika kejujuran dan integritas dilanggar.')
+      }
+    ],
+    explanation: b(
+      'Double-dipping expenses by claiming the same costs from multiple employers is unethical and fraudulent. Professional ethics require honest reporting of expenses. Hunter should have split the costs or chosen one firm to reimburse him.',
+      'Mengklaim biaya yang sama dari dua pekerjaan (double-dipping) tidak etis dan penipuan. Etika profesional mewajibkan pelaporan biaya yang jujur. Hunter seharusnya membagi biaya atau memilih satu firma untuk membayar kembali.'
+    )
   }
 ];

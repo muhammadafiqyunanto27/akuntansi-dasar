@@ -8,7 +8,7 @@ const byChapter = (chapter: number) => glossary.filter((term) => term.chapter ==
 
 <Base
   title="Glosarium"
-  description="Glosarium bilingual istilah akuntansi Kieso IFRS bab 1–4: definisi bahasa Indonesia dan Inggris, dengan pencarian dan filter bab."
+  description="Glosarium bilingual istilah akuntansi Kieso IFRS bab 1–5: definisi bahasa Indonesia dan Inggris, dengan pencarian dan filter bab."
   active="glosarium"
 >
   <header class="page-hero">
@@ -23,11 +23,11 @@ const byChapter = (chapter: number) => glossary.filter((term) => term.chapter ==
       </h1>
       <p>
         <span class="bi-id">
-          Padanan istilah Inggris–Indonesia beserta definisi singkat, diambil dari bab 1–4.
+          Padanan istilah Inggris–Indonesia beserta definisi singkat, diambil dari bab 1–5.
           Gunakan pencarian untuk menemukan istilah dengan cepat.
         </span>
         <span class="bi-en">
-          English–Indonesian equivalents with short definitions, drawn from chapters 1–4. Use the
+          English–Indonesian equivalents with short definitions, drawn from chapters 1–5. Use the
           search box to find a term quickly.
         </span>
       </p>
@@ -52,6 +52,10 @@ const byChapter = (chapter: number) => glossary.filter((term) => term.chapter ==
         <b>{byChapter(4)}</b>
         <span><span class="bi-id">dari bab 4</span><span class="bi-en">from chapter 4</span></span>
       </div>
+      <div class="stat">
+        <b>{byChapter(5)}</b>
+        <span><span class="bi-id">dari bab 5</span><span class="bi-en">from chapter 5</span></span>
+      </div>
     </div>
 
     <div class="filter-bar">
@@ -71,6 +75,7 @@ const byChapter = (chapter: number) => glossary.filter((term) => term.chapter ==
         <option value="2">Bab 2 · Chapter 2</option>
         <option value="3">Bab 3 · Chapter 3</option>
         <option value="4">Bab 4 · Chapter 4</option>
+        <option value="5">Bab 5 · Chapter 5</option>
       </select>
       <span class="filter-count" id="glossaryCount" aria-live="polite">
         <span id="glossaryCountId">{glossary.length} istilah</span>

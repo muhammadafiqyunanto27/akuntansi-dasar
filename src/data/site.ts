@@ -2,16 +2,16 @@ import { b } from './types';
 
 export const site = {
   name: 'Akuntansi Dasar',
-  tagline: b('Kieso · IFRS · Chapters 1–4', 'Kieso · IFRS · Bab 1–4'),
+  tagline: b('Kieso · IFRS · Chapters 1–5', 'Kieso · IFRS · Bab 1–5'),
   title: 'Accounting in Action — Rangkuman Bilingual',
   description: b(
-    'A structured bilingual summary of the first 200 pages of Kieso, Weygandt & Kimmel, Financial Accounting: IFRS (3rd edition) — chapters 1–4, plus a complete normal-balance table and the accounting cycle.',
-    'Rangkuman terstruktur dua bahasa dari 200 halaman pertama Kieso, Weygandt & Kimmel, Financial Accounting: IFRS (edisi 3) — bab 1–4, lengkap dengan tabel saldo normal dan alur akuntansi.'
+    'A structured bilingual summary of the first 250 pages of Kieso, Weygandt & Kimmel, Financial Accounting: IFRS (3rd edition) — chapters 1–5, plus a complete normal-balance table and the accounting cycle.',
+    'Rangkuman terstruktur dua bahasa dari 250 halaman pertama Kieso, Weygandt & Kimmel, Financial Accounting: IFRS (edisi 3) — bab 1–5, lengkap dengan tabel saldo normal dan alur akuntansi.'
   ),
   book: 'Kieso, Weygandt & Kimmel — Financial Accounting: IFRS, 3rd Edition',
   sourceNote: b(
-    'Source: the first 200 PDF pages (front matter and chapters 1–4, book pages 1–183). Page references use the printed book page numbers.',
-    'Sumber: 200 halaman PDF pertama (front matter dan bab 1–4, halaman buku 1–183). Rujukan halaman memakai nomor halaman cetak buku.'
+    'Source: PDF pages 1–250 (front matter and chapters 1–5, book pages 1–232). Page references use the printed book page numbers. Chapter 5 covers pages 219–232; its remaining material lies beyond the extracted range.',
+    'Sumber: halaman PDF 1–250 (front matter dan bab 1–5, halaman buku 1–232). Rujukan halaman memakai nomor halaman cetak buku. Bab 5 mencakup hlm. 219–232; materi sisanya berada di luar rentang yang diekstrak.'
   ),
 };
 

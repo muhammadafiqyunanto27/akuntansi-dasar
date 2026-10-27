@@ -47,14 +47,14 @@ export const GET: APIRoute = () => {
       kind: 'Halaman · Page',
       title: 'Beranda · Home',
       url: '',
-      text: 'Rangkuman bilingual 200 halaman pertama Kieso Financial Accounting IFRS, bab 1–4, tabel saldo normal, alur akuntansi, glosarium.',
+      text: 'Rangkuman bilingual 250 halaman pertama Kieso Financial Accounting IFRS, bab 1–5, tabel saldo normal, alur akuntansi, glosarium.',
       meta: 'home beranda akuntansi dasar kieso ifrs',
     },
     {
       kind: 'Halaman · Page',
       title: 'Rangkuman · Summaries',
       url: 'rangkuman',
-      text: 'Daftar empat bab: Accounting in Action, The Recording Process, Adjusting the Accounts, Completing the Accounting Cycle.',
+      text: 'Daftar lima bab: Accounting in Action, The Recording Process, Adjusting the Accounts, Completing the Accounting Cycle, Accounting for Merchandising Operations.',
       meta: 'rangkuman summaries bab chapters',
     },
     {
@@ -75,14 +75,14 @@ export const GET: APIRoute = () => {
       kind: 'Halaman · Page',
       title: 'Glosarium · Glossary',
       url: 'glosarium',
-      text: 'Glosarium bilingual istilah akuntansi dari bab 1–4.',
+      text: 'Glosarium bilingual istilah akuntansi dari bab 1–5.',
       meta: 'glosarium glossary istilah terms',
     },
     {
       kind: 'Halaman · Page',
       title: 'Latihan Soal · Practice Exercises',
       url: 'latihan',
-      text: 'Semua Brief Exercises, DO IT! Exercises, dan Exercises dari Bab 1–4 Kieso IFRS dengan jawaban dan penjelasan lengkap untuk persiapan UTS.',
+      text: 'Semua Brief Exercises, DO IT! Exercises, dan Exercises dari Bab 1–5 Kieso IFRS dengan jawaban dan penjelasan lengkap untuk persiapan UTS.',
       meta: 'latihan practice exercises brief exercises do it exercises jawaban answers penjelasan explanation uts',
     },
   ];

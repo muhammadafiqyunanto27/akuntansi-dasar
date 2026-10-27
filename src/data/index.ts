@@ -3,8 +3,9 @@ import { chapter1 } from './ch1';
 import { chapter2 } from './ch2';
 import { chapter3 } from './ch3';
 import { chapter4 } from './ch4';
+import { chapter5 } from './ch5';
 
-export const chapters: Chapter[] = [chapter1, chapter2, chapter3, chapter4];
+export const chapters: Chapter[] = [chapter1, chapter2, chapter3, chapter4, chapter5];
 
 export function getChapter(slug: string): Chapter | undefined {
   return chapters.find((chapter) => chapter.slug === slug);
