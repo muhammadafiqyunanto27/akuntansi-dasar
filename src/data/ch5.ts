@@ -9,8 +9,8 @@ export const chapter5: Chapter = {
     'Inventory, purchases, sales, freight, returns, discounts, and closing the cycle for a merchandiser.',
     'Persediaan, pembelian, penjualan, ongkos angkut, retur, diskon, dan penutupan siklus perusahaan dagang.'
   ),
-  kicker: b('Chapter 5 · pages 219–232', 'Bab 5 · hlm. 219–232'),
-  sourcePages: '219–232',
+  kicker: b('Chapter 5 · pages 219–239', 'Bab 5 · hlm. 219–239'),
+  sourcePages: '219–239',
   lead: b(
     'A merchandising company earns revenue by buying and selling goods, not by performing services. That single difference adds an Inventory account, a cost of goods sold expense, and a longer operating cycle — and it changes how purchases, sales, freight, returns, and discounts are journalised.',
     'Perusahaan dagang memperoleh pendapatan dengan membeli dan menjual barang, bukan dengan memberikan jasa. Perbedaan itu menambah akun Persediaan, beban harga pokok penjualan, dan siklus operasi yang lebih panjang — serta mengubah cara pembelian, penjualan, ongkos angkut, retur, dan diskon dijurnal.'
@@ -20,6 +20,7 @@ export const chapter5: Chapter = {
     b('Explain the recording of purchases under a perpetual inventory system.', 'Menjelaskan pencatatan pembelian dalam sistem persediaan perpetual.'),
     b('Explain the recording of sales revenues under a perpetual inventory system.', 'Menjelaskan pencatatan pendapatan penjualan dalam sistem persediaan perpetual.'),
     b('Explain the steps in the accounting cycle for a merchandising company.', 'Menjelaskan langkah-langkah siklus akuntansi perusahaan dagang.'),
+    b('Prepare an income statement for a merchandiser.', 'Menyusun laporan laba rugi untuk perusahaan dagang.'),
   ],
   sections: [
     {
@@ -430,18 +431,197 @@ export const chapter5: Chapter = {
         },
         {
           type: 'callout',
-          title: b('Scope note for this site', 'Catatan cakupan situs ini'),
+          title: b('Appendices not included here', 'Lampiran tidak disertakan di sini'),
           text: b(
-            'This summary stops at page 232. The multiple-step income statement and the remaining forms of financial statements (Learning Objective 5) lie beyond the requested page range and are not included.',
-            'Ringkasan ini berhenti di halaman 232. Laporan laba rugi bertahap dan bentuk laporan keuangan lainnya (Tujuan Pembelajaran 5) berada di luar rentang halaman yang diminta dan belum disertakan.'
+            'Appendix 5A (worksheet for a merchandiser) and Appendix 5B (periodic inventory system) are covered in the book beyond this summary. The perpetual system is the one illustrated throughout.',
+            'Lampiran 5A (kertas kerja perusahaan dagang) dan Lampiran 5B (sistem persediaan periodik) dibahas dalam buku di luar ringkasan ini. Sistem yang diilustrasikan di sini adalah sistem perpetual.'
           ),
-          tone: 'warn',
+          tone: 'note',
+        },
+      ],
+    },
+    {
+      id: 'forms',
+      num: '5.5',
+      tag: b('LO5 · Statements', 'LO5 · Laporan'),
+      title: b('Forms of financial statements', 'Bentuk laporan keuangan'),
+      blocks: [
+        {
+          type: 'p',
+          text: b(
+            'A merchandiser’s income statement is organised to disclose the sources of income and the expenses incurred. It presents sales, cost of goods sold, gross profit, operating expenses, other income and expense, and interest expense.',
+            'Laporan laba rugi perusahaan dagang disusun untuk mengungkapkan sumber pendapatan dan beban yang terjadi. Ia menyajikan penjualan, harga pokok penjualan, laba bruto, beban operasi, pendapatan dan beban lain, serta beban bunga.'
+          ),
+        },
+        {
+          type: 'h4',
+          text: b('Sales section', 'Bagian penjualan'),
+        },
+        {
+          type: 'p',
+          text: b(
+            'The statement begins with sales revenue, then deducts the contra revenue accounts — sales returns and allowances and sales discounts — to arrive at net sales.',
+            'Laporan dimulai dengan pendapatan penjualan, lalu dikurangi akun kontra pendapatan — retur dan potongan penjualan serta diskon penjualan — untuk sampai pada penjualan neto.'
+          ),
+        },
+        {
+          type: 'table',
+          caption: b('PW Audio Supply — computation of net sales', 'PW Audio Supply — perhitungan penjualan neto'),
+          head: [b('Item', 'Pos'), b('Amount', 'Jumlah')],
+          align: ['left', 'right'],
+          rows: [
+            [b('Sales revenue', 'Pendapatan penjualan'), '480,000'],
+            [b('Less: Sales returns and allowances', 'Dikurangi: Retur dan potongan penjualan'), '(12,000)'],
+            [b('Less: Sales discounts', 'Dikurangi: Diskon penjualan'), '(8,000)'],
+            [b('Net sales', 'Penjualan neto'), '460,000'],
+          ],
+        },
+        {
+          type: 'h4',
+          text: b('Gross profit', 'Laba bruto'),
+        },
+        {
+          type: 'p',
+          text: b(
+            'Gross profit is net sales less cost of goods sold. It is the merchandising profit, before operating expenses are deducted.',
+            'Laba bruto adalah penjualan neto dikurangi harga pokok penjualan. Ia adalah laba perdagangan, sebelum beban operasi dikurangkan.'
+          ),
+        },
+        {
+          type: 'table',
+          caption: b('Computation of gross profit', 'Perhitungan laba bruto'),
+          head: [b('Item', 'Pos'), b('Amount', 'Jumlah')],
+          align: ['left', 'right'],
+          rows: [
+            [b('Net sales', 'Penjualan neto'), '460,000'],
+            [b('Cost of goods sold', 'Harga pokok penjualan'), '(316,000)'],
+            [b('Gross profit', 'Laba bruto'), '144,000'],
+          ],
+        },
+        {
+          type: 'formula',
+          label: b('Gross profit rate', 'Tingkat laba bruto'),
+          expr: 'Gross profit ÷ Net sales = Gross profit rate<br>€144,000 ÷ €460,000 = 31.3%',
+          note: b(
+            'The rate is more meaningful than the amount: it shows how many cents of each euro of sales become gross profit. Managers compare it with past periods and with competitors.',
+            'Tingkat lebih bermakna daripada jumlahnya: ia menunjukkan berapa sen dari setiap euro penjualan menjadi laba bruto. Manajer membandingkannya dengan periode lalu dan dengan pesaing.'
+          ),
+        },
+        {
+          type: 'h4',
+          text: b('Operating expenses', 'Beban operasi'),
+        },
+        {
+          type: 'p',
+          text: b(
+            'Operating expenses are the costs of earning sales revenue. PW Audio Supply reports total operating expenses of €114,000. IFRS allows two presentation formats: by nature (detailed line items such as salaries, utilities, depreciation) and by function (a single operating-expenses line). Illustration 5-12 combines both: a functional grouping with the nature of the costs shown in detail. Use this combined approach in homework.',
+            'Beban operasi adalah biaya untuk memperoleh pendapatan penjualan. PW Audio Supply melaporkan total beban operasi €114.000. IFRS mengizinkan dua format penyajian: menurut sifat (rincian pos seperti gaji, utilitas, penyusutan) dan menurut fungsi (satu baris beban operasi). Ilustrasi 5-12 menggabungkan keduanya: pengelompokan fungsional dengan rincian sifat biaya. Gunakan pendekatan gabungan ini dalam tugas.'
+          ),
+        },
+        {
+          type: 'table',
+          caption: b('Operating expenses', 'Beban operasi'),
+          head: [b('Expense', 'Beban'), b('Amount', 'Jumlah')],
+          align: ['left', 'right'],
+          rows: [
+            [b('Salaries and wages expense', 'Beban gaji dan upah'), '64,000'],
+            [b('Utilities expense', 'Beban utilitas'), '17,000'],
+            [b('Advertising expense', 'Beban iklan'), '16,000'],
+            [b('Depreciation expense', 'Beban penyusutan'), '8,000'],
+            [b('Freight-out', 'Beban angkut keluar'), '7,000'],
+            [b('Insurance expense', 'Beban asuransi'), '2,000'],
+            [b('Total operating expenses', 'Total beban operasi'), '114,000'],
+          ],
+        },
+        {
+          type: 'h4',
+          text: b('Other income and expense and interest expense', 'Pendapatan dan beban lain serta beban bunga'),
+        },
+        {
+          type: 'p',
+          text: b(
+            'Other income and expense contains revenues, gains, expenses, and losses unrelated to the main line of business (for example interest revenue, gains or losses on disposal of plant assets, rent revenue, casualty losses). Interest expense is shown separately because financing activities are a distinct type of cost and must be disclosed on the face of the statement when material.',
+            'Pendapatan dan beban lain berisi pendapatan, laba, beban, dan rugi yang tidak terkait dengan kegiatan utama (misalnya pendapatan bunga, laba/rugi pelepasan aset tetap, pendapatan sewa, rugi kecelakaan). Beban bunga disajikan terpisah karena aktivitas pendanaan merupakan jenis biaya yang berbeda dan harus diungkapkan pada laporan jika material.'
+          ),
+        },
+        {
+          type: 'table',
+          caption: b('PW Audio Supply — complete income statement', 'PW Audio Supply — laporan laba rugi lengkap'),
+          head: [b('Line', 'Pos'), b('Amount', 'Jumlah')],
+          align: ['left', 'right'],
+          rows: [
+            [b('Sales revenue', 'Pendapatan penjualan'), '480,000'],
+            [b('Less: Sales returns and allowances', 'Dikurangi: Retur dan potongan penjualan'), '(12,000)'],
+            [b('Less: Sales discounts', 'Dikurangi: Diskon penjualan'), '(8,000)'],
+            [b('Net sales', 'Penjualan neto'), '460,000'],
+            [b('Cost of goods sold', 'Harga pokok penjualan'), '(316,000)'],
+            [b('Gross profit', 'Laba bruto'), '144,000'],
+            [b('Total operating expenses', 'Total beban operasi'), '(114,000)'],
+            [b('Income from operations', 'Laba dari operasi'), '30,000'],
+            [b('Other income (interest revenue 3,000; gain on sale of equipment 600)', 'Pendapatan lain (pendapatan bunga 3.000; laba penjualan peralatan 600)'), '3,600'],
+            [b('Less: Casualty loss from vandalism', 'Dikurangi: Rugi kecelakaan akibat vandalisme'), '(200)'],
+            [b('Less: Interest expense', 'Dikurangi: Beban bunga'), '(1,800)'],
+            [b('Net income', 'Laba bersih'), '31,600'],
+          ],
+        },
+        {
+          type: 'h4',
+          text: b('Comprehensive income', 'Laba komprehensif'),
+        },
+        {
+          type: 'p',
+          text: b(
+            'IFRS requires companies to report comprehensive income, a more inclusive earnings measure. It starts with net income and adds other comprehensive income — items excluded from net income but included in comprehensive income, such as unrealized holding gains on investment securities, foreign-currency translation adjustments, and certain pension-plan adjustments. These may be presented in a combined statement or in a separate comprehensive income statement.',
+            'IFRS mewajibkan perusahaan melaporkan laba komprehensif, ukuran laba yang lebih inklusif. Ia dimulai dari laba bersih ditambah laba komprehensif lain — pos yang dikecualikan dari laba bersih tetapi disertakan dalam laba komprehensif, seperti keuntungan penahanan yang belum direalisasi atas sekuritas investasi, penyesuaian translasi mata uang asing, dan penyesuaian rencana pensiun tertentu. Pos-pos ini dapat disajikan dalam laporan gabungan atau laporan laba komprehensif terpisah.'
+          ),
+        },
+        {
+          type: 'table',
+          caption: b('Separate comprehensive income statement', 'Laporan laba komprehensif terpisah'),
+          head: [b('Item', 'Pos'), b('Amount', 'Jumlah')],
+          align: ['left', 'right'],
+          rows: [
+            [b('Net income', 'Laba bersih'), '31,600'],
+            [b('Other comprehensive income: unrealized holding gain on investment securities', 'Laba komprehensif lain: keuntungan penahanan yang belum direalisasi atas sekuritas investasi'), '2,300'],
+            [b('Comprehensive income', 'Laba komprehensif'), '33,900'],
+          ],
+        },
+        {
+          type: 'h4',
+          text: b('Inventory in the classified statement of financial position', 'Persediaan pada laporan posisi keuangan terklasifikasi'),
+        },
+        {
+          type: 'p',
+          text: b(
+            'Merchandisers report inventory as a current asset, listed in reverse order of liquidity — usually immediately above accounts receivable, because inventory is less close to cash than receivables: the goods must first be sold and then collected.',
+            'Perusahaan dagang melaporkan persediaan sebagai aset lancar, disajikan dalam urutan terbalik likuiditas — biasanya tepat di atas piutang usaha, karena persediaan kurang dekat ke kas daripada piutang: barang harus dijual dulu baru ditagih.'
+          ),
+        },
+        {
+          type: 'table',
+          caption: b('PW Audio Supply — assets section (partial)', 'PW Audio Supply — bagian aset (parsial)'),
+          head: [b('Item', 'Pos'), b('Amount', 'Jumlah')],
+          align: ['left', 'right'],
+          rows: [
+            [b('Property, plant, and equipment: equipment 80,000 less accumulated depreciation 24,000', 'Aset tetap: peralatan 80.000 dikurangi akumulasi penyusutan 24.000'), '56,000'],
+            [b('Current assets: prepaid insurance 1,800; inventory 40,000; accounts receivable 16,100; cash 9,500', 'Aset lancar: asuransi dibayar di muka 1.800; persediaan 40.000; piutang usaha 16.100; kas 9.500'), '67,400'],
+            [b('Total assets', 'Total aset'), '123,400'],
+          ],
+        },
+        {
+          type: 'callout',
+          title: b('Cost, not selling price', 'Biaya, bukan harga jual'),
+          text: b(
+            'The inventory amount reported (€40,000) is the cost of the goods on hand, not their expected selling price.',
+            'Jumlah persediaan yang dilaporkan (€40.000) adalah biaya barang yang ada di tangan, bukan harga jualnya yang diharapkan.'
+          ),
+          tone: 'tip',
         },
       ],
     },
     {
       id: 'entries',
-      num: '5.5',
+      num: '5.6',
       tag: b('Reference', 'Rujukan'),
       title: b('Merchandising entries at a glance', 'Ayat jurnal perdagangan sekilas'),
       blocks: [

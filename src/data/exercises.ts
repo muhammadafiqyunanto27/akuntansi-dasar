@@ -1010,6 +1010,107 @@ export const exercisesByChapter = [
               'Every sale needs two entries: the selling price (debit Accounts Receivable or Cash, credit Sales Revenue) and the cost (debit Cost of Goods Sold, credit Inventory). Returns are recorded in the contra revenue account Sales Returns and Allowances at selling price, while Inventory and Cost of Goods Sold are adjusted at cost — or at fair value if the goods are defective.',
               'Setiap penjualan memerlukan dua ayat: harga jual (debit Piutang Usaha atau Kas, kredit Pendapatan Penjualan) dan biaya (debit Harga Pokok Penjualan, kredit Persediaan). Retur dicatat pada akun kontra pendapatan Retur dan Potongan Penjualan sebesar harga jual, sementara Persediaan dan Harga Pokok Penjualan disesuaikan sebesar biaya — atau nilai wajar bila barang cacat.'
             )
+          },
+          {
+            id: 'DOIT5-4',
+            title: b('DO IT! 5-4: Closing Entries for a Merchandiser', 'DO IT! 5-4: Entri Penutupan Perusahaan Dagang'),
+            question: b(
+              'The trial balance of Alagoas Boutique at December 31 shows Inventory R$21,000, Sales Revenue R$156,000, Sales Returns and Allowances R$4,100, Sales Discounts R$3,000, Cost of Goods Sold R$92,400, Interest Revenue R$3,000, Freight-Out R$2,200, Utilities Expense R$7,400, and Salaries and Wages Expense R$19,500. Prepare the closing entries.',
+              'Neraca saldo Perusahaan Alagoas pada 31 Desember menunjukkan Persediaan R$21.000, Pendapatan Penjualan R$156.000, Retur dan Potongan Penjualan R$4.100, Diskon Penjualan R$3.000, Harga Pokok Penjualan R$92.400, Pendapatan Bunga R$3.000, Beban Angkut Keluar R$2.200, Beban Utilitas R$7.400, dan Beban Gaji dan Upah R$19.500. Buat entri penutupan.'
+            ),
+            parts: [
+              {
+                label: '',
+                given: b('Closing entries for the above accounts (dividends not listed).', 'Entri penutupan untuk akun di atas (dividen tidak tercantum).'),
+                answer: b('Three closing entries: close revenues 159,000; close expenses/contras 128,600; close Income Summary 30,400 to Retained Earnings.', 'Tiga entri penutupan: tutup pendapatan 159.000; tutup beban/kontra 128.600; tutup Ikhtisar Laba Rugi 30.400 ke Saldo Laba.'),
+                blocks: [
+                  {
+                    type: 'table',
+                    caption: b('Alagoas Boutique - closing entries at December 31', 'Perusahaan Alagoas - entri penutupan pada 31 Desember'),
+                    head: [b('Date', 'Tanggal'), b('Account', 'Akun'), b('Debit', 'Debit'), b('Credit', 'Kredit')],
+                    align: ['left', 'left', 'right', 'right'],
+                    rows: [
+                      ['Dec. 31', b('Sales Revenue', 'Pendapatan Penjualan'), '156,000', ''],
+                      ['', b('Interest Revenue', 'Pendapatan Bunga'), '3,000', ''],
+                      ['', b('Income Summary', 'Ikhtisar Laba Rugi'), '', '159,000'],
+                      ['', b('(To close accounts with credit balances)', '(Menutup akun bersaldo kredit)'), '', ''],
+                      ['Dec. 31', b('Income Summary', 'Ikhtisar Laba Rugi'), '128,600', ''],
+                      ['', b('Cost of Goods Sold', 'Harga Pokok Penjualan'), '', '92,400'],
+                      ['', b('Sales Returns and Allowances', 'Retur dan Potongan Penjualan'), '', '4,100'],
+                      ['', b('Sales Discounts', 'Diskon Penjualan'), '', '3,000'],
+                      ['', b('Freight-Out', 'Beban Angkut Keluar'), '', '2,200'],
+                      ['', b('Utilities Expense', 'Beban Utilitas'), '', '7,400'],
+                      ['', b('Salaries and Wages Expense', 'Beban Gaji dan Upah'), '', '19,500'],
+                      ['', b('(To close accounts with debit balances)', '(Menutup akun bersaldo debit)'), '', ''],
+                      ['Dec. 31', b('Income Summary', 'Ikhtisar Laba Rugi'), '30,400', ''],
+                      ['', b('Retained Earnings', 'Saldo Laba'), '', '30,400'],
+                      ['', b('(To close net income to retained earnings)', '(Menutup laba bersih ke saldo laba)'), '', ''],
+                    ]
+                  },
+                  {
+                    type: 'formula',
+                    label: b('Check', 'Pemeriksaan'),
+                    expr: 'Sales 156,000 - Contras 7,100 = Net sales 148,900<br>148,900 - COGS 92,400 = Gross profit 56,500<br>56,500 - Operating expenses 29,100 = Income from operations 27,400<br>27,400 + Interest revenue 3,000 = Net income 30,400',
+                    note: b('Dividends are not listed, so no fourth closing entry is needed.', 'Dividen tidak tercantum, sehingga tidak ada entri penutupan keempat.')
+                  }
+                ]
+              }
+            ],
+            explanation: b(
+              'Total revenues 159,000 (156,000 + 3,000) are closed first, then all expense and contra-revenue accounts totalling 128,600, leaving net income of 30,400 in Income Summary, which is closed to Retained Earnings.',
+              'Total pendapatan 159.000 (156.000 + 3.000) ditutup dulu, lalu semua akun beban dan kontra-pendapatan yang berjumlah 128.600, menyisakan laba bersih 30.400 di Ikhtisar Laba Rugi, yang ditutup ke Saldo Laba.'
+            )
+          },
+          {
+            id: 'DOIT5-5',
+            title: b('DO IT! 5-5: Classifying Accounts on Financial Statements', 'DO IT! 5-5: Klasifikasi Akun pada Laporan Keuangan'),
+            question: b(
+              'Indicate in which financial statement (income statement IS; statement of financial position SFP; or retained earnings statement RES) and under what classification each account would be reported.',
+              'Tunjukkan pada laporan keuangan mana (laporan laba rugi IS; laporan posisi keuangan SFP; atau laporan saldo laba RES) dan dalam klasifikasi apa setiap akun akan dilaporkan.'
+            ),
+            parts: [
+              {
+                label: '',
+                given: b('24 accounts from the adjusted trial balance of a merchandiser.', '24 akun dari neraca saldo disesuaikan perusahaan dagang.'),
+                answer: b('See the table: IS for sales/cost of goods sold/operating expenses/other income & expense/interest expense; SFP for assets, liabilities, and equity; RES for dividends.', 'Lihat tabel: IS untuk penjualan/HPP/beban operasi/pendapatan & beban lain/beban bunga; SFP untuk aset, liabilitas, dan ekuitas; RES untuk dividen.'),
+                blocks: [
+                  {
+                    type: 'table',
+                    caption: b('Classification of accounts', 'Klasifikasi akun'),
+                    head: [b('Account', 'Akun'), b('Financial Statement', 'Laporan Keuangan'), b('Classification', 'Klasifikasi')],
+                    rows: [
+                      [b('Accounts Payable', 'Utang Usaha'), 'SFP', b('Current liabilities', 'Liabilitas lancar')],
+                      [b('Accounts Receivable', 'Piutang Usaha'), 'SFP', b('Current assets', 'Aset lancar')],
+                      [b('Accumulated Depreciation - Buildings', 'Akumulasi Penyusutan - Bangunan'), 'SFP', b('Property, plant, and equipment', 'Aset tetap')],
+                      [b('Cash', 'Kas'), 'SFP', b('Current assets', 'Aset lancar')],
+                      [b('Casualty Loss from Vandalism', 'Rugi Kecelakaan akibat Vandalisme'), 'IS', b('Other income and expense', 'Pendapatan dan beban lain')],
+                      [b('Cost of Goods Sold', 'Harga Pokok Penjualan'), 'IS', b('Cost of goods sold', 'Harga pokok penjualan')],
+                      [b('Depreciation Expense', 'Beban Penyusutan'), 'IS', b('Operating expenses', 'Beban operasi')],
+                      [b('Dividends', 'Dividen'), 'RES', b('Deduction section', 'Bagian pengurangan')],
+                      [b('Equipment', 'Peralatan'), 'SFP', b('Property, plant, and equipment', 'Aset tetap')],
+                      [b('Freight-Out', 'Beban Angkut Keluar'), 'IS', b('Operating expenses', 'Beban operasi')],
+                      [b('Insurance Expense', 'Beban Asuransi'), 'IS', b('Operating expenses', 'Beban operasi')],
+                      [b('Interest Payable', 'Utang Bunga'), 'SFP', b('Current liabilities', 'Liabilitas lancar')],
+                      [b('Inventory', 'Persediaan'), 'SFP', b('Current assets', 'Aset lancar')],
+                      [b('Land', 'Tanah'), 'SFP', b('Property, plant, and equipment', 'Aset tetap')],
+                      [b('Notes Payable (due in 5 years)', 'Utang Wesel (jatuh tempo 5 tahun)'), 'SFP', b('Non-current liabilities', 'Liabilitas jangka panjang')],
+                      [b('Property Taxes Payable', 'Utang Pajak Properti'), 'SFP', b('Current liabilities', 'Liabilitas lancar')],
+                      [b('Salaries and Wages Expense', 'Beban Gaji dan Upah'), 'IS', b('Operating expenses', 'Beban operasi')],
+                      [b('Salaries and Wages Payable', 'Utang Gaji dan Upah'), 'SFP', b('Current liabilities', 'Liabilitas lancar')],
+                      [b('Sales Returns and Allowances', 'Retur dan Potongan Penjualan'), 'IS', b('Sales', 'Penjualan')],
+                      [b('Sales Revenue', 'Pendapatan Penjualan'), 'IS', b('Sales', 'Penjualan')],
+                      [b('Share Capital - Ordinary', 'Modal Saham - Biasa'), 'SFP', b('Equity', 'Ekuitas')],
+                      [b('Unearned Rent Revenue', 'Pendapatan Sewa Diterima di Muka'), 'SFP', b('Current liabilities', 'Liabilitas lancar')],
+                      [b('Utilities Expense', 'Beban Utilitas'), 'IS', b('Operating expenses', 'Beban operasi')],
+                    ]
+                  }
+                ]
+              }
+            ],
+            explanation: b(
+              'Sales, cost of goods sold, operating expenses, other income and expense, and interest expense go to the income statement. Assets, liabilities, and equity go to the statement of financial position. Dividends go to the retained earnings statement.',
+              'Penjualan, harga pokok penjualan, beban operasi, pendapatan dan beban lain, serta beban bunga masuk ke laporan laba rugi. Aset, liabilitas, dan ekuitas masuk ke laporan posisi keuangan. Dividen masuk ke laporan saldo laba.'
+            )
           }
         ]
       }

@@ -10,8 +10,8 @@ export const site = {
   ),
   book: 'Kieso, Weygandt & Kimmel — Financial Accounting: IFRS, 3rd Edition',
   sourceNote: b(
-    'Source: PDF pages 1–250 (front matter and chapters 1–5, book pages 1–232). Page references use the printed book page numbers. Chapter 5 covers pages 219–232; its remaining material lies beyond the extracted range.',
-    'Sumber: halaman PDF 1–250 (front matter dan bab 1–5, halaman buku 1–232). Rujukan halaman memakai nomor halaman cetak buku. Bab 5 mencakup hlm. 219–232; materi sisanya berada di luar rentang yang diekstrak.'
+    'Source: PDF pages 1–250 plus 251–275 (front matter and chapters 1–5, book pages 1–239). Page references use the printed book page numbers.',
+    'Sumber: halaman PDF 1–250 ditambah 251–275 (front matter dan bab 1–5, halaman buku 1–239). Rujukan halaman memakai nomor halaman cetak buku.'
   ),
 };
 

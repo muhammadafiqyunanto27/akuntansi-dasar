@@ -137,6 +137,15 @@ export const glossary: GlossaryTerm[] = [
     ),
   },
   {
+    term: 'Comprehensive income',
+    id: 'Laba komprehensif',
+    chapter: 5,
+    def: b(
+      'A more inclusive earnings measure: net income plus other comprehensive income (items excluded from net income, such as unrealized holding gains, foreign-currency translation adjustments, and certain pension adjustments).',
+      'Ukuran laba yang lebih inklusif: laba bersih ditambah laba komprehensif lain (pos yang dikecualikan dari laba bersih, seperti keuntungan penahanan yang belum direalisasi, penyesuaian translasi mata uang asing, dan penyesuaian pensiun tertentu).'
+    ),
+  },
+  {
     term: 'Convergence',
     id: 'Konvergensi',
     chapter: 1,
@@ -317,6 +326,15 @@ export const glossary: GlossaryTerm[] = [
     ),
   },
   {
+    term: 'Gross profit rate',
+    id: 'Tingkat laba bruto',
+    chapter: 5,
+    def: b(
+      'Gross profit divided by net sales, expressing how much of each unit of sales becomes gross profit.',
+      'Laba bruto dibagi penjualan neto, menyatakan berapa banyak dari setiap unit penjualan menjadi laba bruto.'
+    ),
+  },
+  {
     term: 'Historical cost principle',
     id: 'Prinsip biaya historis',
     chapter: 1,
@@ -341,6 +359,15 @@ export const glossary: GlossaryTerm[] = [
     def: b(
       'A temporary clearing account used to close revenues and expenses before transferring net income to Retained Earnings.',
       'Akun penampung sementara untuk menutup pendapatan dan beban sebelum memindahkan laba bersih ke Saldo Laba.'
+    ),
+  },
+  {
+    term: 'Income from operations',
+    id: 'Laba dari operasi',
+    chapter: 5,
+    def: b(
+      'Gross profit less operating expenses; the profit from the company’s primary operating activities.',
+      'Laba bruto dikurangi beban operasi; laba dari kegiatan operasi utama perusahaan.'
     ),
   },
   {
@@ -443,6 +470,24 @@ export const glossary: GlossaryTerm[] = [
     ),
   },
   {
+    term: 'Other comprehensive income',
+    id: 'Laba komprehensif lain',
+    chapter: 5,
+    def: b(
+      'Items excluded from net income but included in comprehensive income, such as unrealized holding gains, foreign-currency translation adjustments, and certain pension adjustments.',
+      'Pos yang dikecualikan dari laba bersih tetapi disertakan dalam laba komprehensif, seperti keuntungan penahanan yang belum direalisasi, penyesuaian translasi mata uang asing, dan penyesuaian pensiun tertentu.'
+    ),
+  },
+  {
+    term: 'Other income and expense',
+    id: 'Pendapatan dan beban lain',
+    chapter: 5,
+    def: b(
+      'Revenues, gains, expenses, and losses unrelated to the company’s main line of operations, reported after income from operations.',
+      'Pendapatan, laba, beban, dan rugi yang tidak terkait dengan kegiatan utama perusahaan, disajikan setelah laba dari operasi.'
+    ),
+  },
+  {
     term: 'Periodic inventory system',
     id: 'Sistem persediaan periodik',
     chapter: 5,
@@ -485,6 +530,24 @@ export const glossary: GlossaryTerm[] = [
     def: b(
       'Expenses paid in advance that benefit more than the current period; initially recorded as assets.',
       'Beban yang dibayar lebih dulu dan manfaatnya melebihi periode berjalan; awalnya dicatat sebagai aset.'
+    ),
+  },
+  {
+    term: 'Presentation by function',
+    id: 'Penyajian menurut fungsi',
+    chapter: 5,
+    def: b(
+      'Aggregating costs into groupings based on the primary functional activities in which the company engages, such as a single operating-expenses line.',
+      'Mengelompokkan biaya ke dalam kelompok berdasarkan aktivitas fungsional utama yang dijalankan perusahaan, seperti satu baris beban operasi.'
+    ),
+  },
+  {
+    term: 'Presentation by nature',
+    id: 'Penyajian menurut sifat',
+    chapter: 5,
+    def: b(
+      'Presenting detailed line items that reveal the nature of the costs incurred, such as salaries, utilities, and depreciation.',
+      'Menyajikan rincian pos yang mengungkapkan sifat biaya yang terjadi, seperti gaji, utilitas, dan penyusutan.'
     ),
   },
   {
